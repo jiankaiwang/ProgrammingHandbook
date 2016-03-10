@@ -2,5 +2,5 @@
 
 * [Introduction](README.md)
 * [Webpage](chapter1.md)
-   * 1.2 Syntax Compare
+   * [1.2 Syntax Compare](12_syntax_compare.md)
 
