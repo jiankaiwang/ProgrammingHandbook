@@ -10,6 +10,11 @@
 }
 ```
 #### Configuration
-1. 
+You can map file extensions that don't match syntax used in contents by adding a mapping in your book.json plugin configuration section。
+```Javascript
+
+```
+
+ 
 
 
