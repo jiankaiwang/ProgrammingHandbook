@@ -13,8 +13,7 @@
 *  HTML (網頁內容)
 
 ###程式碼如下
-```javascript
-var s = "JavaScript syntax highlighting";
+```R
 # ----------
 # Date: 2015/11/30
 # Version: v.1.a
