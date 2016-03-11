@@ -27,10 +27,28 @@
 getTxtData <- read.table("xxx.txt",sep="\t",header = TRUE)
 getCSVData <- read.table("xxx.csv",sep=",",header = TRUE)
 calData <- cbind(as.numeric(getTxtData[,3]),as.numeric(getTxtData[,7]))
-savData <- cbind(c("xxx","xxx"),c(mean(calData[1:181,1]),mean(calData[182:365,1])),c(mean(calData[1:181,2]),mean(calData[182:365,2])))
+savData <- cbind(
+  c("xxx","xxx"),
+  c(mean(calData[1:181,1]),mean(calData[182:365,1])),
+  c(mean(calData[1:181,2]),mean(calData[182:365,2]))
+)
 colnames(savData) <- c("date","ave_atom","ave_temp")
-write.table(savData, file="calTxt.txt", quote=FALSE,sep="\t",col.names=TRUE,row.names=FALSE)
-write.table(savData, file="calTxt.csv", quote=FALSE,sep=",",col.names=TRUE,row.names=FALSE)
+write.table(
+  savData, 
+  file="calTxt.txt", 
+  quote=FALSE,
+  sep="\t",
+  col.names=TRUE,
+  row.names=FALSE
+)
+write.table(
+  savData, 
+  file="calTxt.csv", 
+  quote=FALSE,
+  sep=",",
+  col.names=TRUE,
+  row.names=FALSE
+)
 # ----------
 
 # ----------
@@ -45,10 +63,15 @@ conn = odbcConnect("R2ACCESS")
 
 # analyze data
 df = sqlFetch(conn, "cityData")
-barplot(as.numeric(df[c(1,3,2),4]),names.arg=df[c(1,3,2),2],col=c("red","green","blue"),
-        main="CITY POPULATION",xlab="CITY",ylab="POPULATION (10 thousand)", 
-        legend.text = df[c(1,3,2),3],
-        )
+barplot(
+  as.numeric(df[c(1,3,2),4]),
+  names.arg=df[c(1,3,2),2],
+  col=c("red","green","blue"),
+  main="CITY POPULATION",
+  xlab="CITY",
+  ylab="POPULATION (10 thousand)", 
+  legend.text = df[c(1,3,2),3],
+)
 
 # insert (or delete) a new data into access db
 savData <- matrix(c("4","Kyoto","Japan","1335"),nrow=1)
@@ -118,8 +141,10 @@ conXlsx <- read.xlsx("xxx.xlsx", sheetIndex = 1)
 # write xlsx table (must be data.frame type)
 savData <- cbind(conXls[,1],conXls[,2],conXls[,3])
 colnames(savData) <- colnames(conXls)[1:3]
-getWriteStatus <- write.xlsx(savData, "ooo.xlsx", sheetName="weather", col.names=TRUE, 
-                             row.names=FALSE, append=FALSE, showNA=TRUE)
+getWriteStatus <- write.xlsx(
+                     savData, "ooo.xlsx", sheetName="weather", col.names=TRUE, 
+                     row.names=FALSE, append=FALSE, showNA=TRUE
+                   )
 # ----------
 
 # ----------
@@ -150,7 +175,14 @@ install.packages("DBI")
 install.packages("RMySQL")
 library(DBI)
 library(RMySQL)
-con <-  dbConnect( RMySQL::MySQL(), username = "user", password = "password", host = "IP address", port = 3306, dbname = "test" )
+con <-  dbConnect( 
+  RMySQL::MySQL(), 
+  username = "user", 
+  password = "password", 
+  host = "IP address", 
+  port = 3306, 
+  dbname = "test" 
+)
 
 # fetch data as data.frame type
 getMySQLData <- dbGetQuery(con, "SELECT * FROM cityData")
@@ -246,7 +278,13 @@ newXMLNode("country", "USA", parent = detail)
 
 savXMLData   # end the XML
 
-saveXML(savXMLData, file="output.xml", compression=0, indent=TRUE, prefix = '<?xml version="1.0"?>\n', doctype = NULL)
+saveXML(
+  savXMLData, 
+  file="output.xml", 
+  compression=0, 
+  indent=TRUE, 
+  prefix = '<?xml version="1.0"?>\n', doctype = NULL
+)
 # ----------
 ```
 
