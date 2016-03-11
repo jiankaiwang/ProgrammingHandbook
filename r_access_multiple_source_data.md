@@ -83,7 +83,8 @@ sqlSave(conn, savData, tablename="cityData", rownames=FALSE, append=TRUE, addPK=
 upData <- matrix(c("4","Tokyo"),nrow=1)
 colnames(upData) <- c("id","name")
 upData <- as.data.frame(upData)
-sqlUpdate(conn, upData, tablename="cityData", index="id")   # index means the column for being updated
+# index means the column for being updated
+sqlUpdate(conn, upData, tablename="cityData", index="id")   
 
 close(conn) # close the connection to the file
 # ----------
