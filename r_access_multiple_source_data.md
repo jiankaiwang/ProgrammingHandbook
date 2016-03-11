@@ -95,14 +95,17 @@ install.packages("RODBC")
 library(RODBC)
 
 # method.1
-sqlHost <- "IP Address\\SQLEXPRESS,1433"   # IP-address\SQLEXPRESS,Port is the format used to link the SQL Express
+# IP-address\SQLEXPRESS,Port is the format used to link the SQL Express
+sqlHost <- "IP Address\\SQLEXPRESS,1433"   
 sqlDatabase <- "2015_city_online"
 
 # connection string.1 : using different web domains might go error
 #dsnString <- "driver={SQL Server};server=%s;database=%s;trusted_connection=true;uid=test;pwd=test1234"
 
-# connection string.2 : use "Initial Catalog=cityData;Persist Security Info=True;" to replace "trusted_connection=true;"
-dsnString <- "driver={SQL Server};server=%s;database=%s;Initial Catalog=cityData;Persist Security Info=True;uid=uid;pwd=pwd"
+# connection string.2 : use 
+# "Initial Catalog=cityData;Persist Security Info=True;" 
+# to replace "trusted_connection=true;"
+dsnString <- "driver={SQL Server};server=%s;database=%s;Initial Catalog=%s;Persist Security Info=True;uid=uid;pwd=pwd"
 
 dsn <- sprintf(dsnString, sqlHost, sqlDatabase)
 dbHandle <- odbcDriverConnect(dsn)
@@ -142,8 +145,13 @@ conXlsx <- read.xlsx("xxx.xlsx", sheetIndex = 1)
 savData <- cbind(conXls[,1],conXls[,2],conXls[,3])
 colnames(savData) <- colnames(conXls)[1:3]
 getWriteStatus <- write.xlsx(
-                     savData, "ooo.xlsx", sheetName="weather", col.names=TRUE, 
-                     row.names=FALSE, append=FALSE, showNA=TRUE
+                     savData, 
+                     "ooo.xlsx", 
+                     sheetName="weather", 
+                     col.names=TRUE, 
+                     row.names=FALSE, 
+                     append=FALSE, 
+                     showNA=TRUE
                    )
 # ----------
 
@@ -169,7 +177,8 @@ sink()
 # READ & WRITE MySQL Database by DBI
 # remember must open port in Linux
 # set all host are accepted by following commands
-# mysql> GRANT ALL PRIVILEGES ON *.* TO 'root'@'%'WITH GRANT OPTION;   # % means all hosts are accepted
+# mysql> GRANT ALL PRIVILEGES ON *.* TO 'root'@'%'WITH GRANT OPTION;   
+# % means all hosts are accepted
 # mysql> FLUSH PRIVILEGES;   # refresh memory
 install.packages("DBI")
 install.packages("RMySQL")
