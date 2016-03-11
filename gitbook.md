@@ -1,6 +1,6 @@
 # GitBook
 
-### Gitbook Codeblock highlighting:
+### Gitbook Codeblock highlighting
 #### Install
 1. Create a 「book.json」 in the directory (or In Editor, 「Book」> 「Edit Configuration」)
 2. Add the following content in it
@@ -9,6 +9,7 @@
     "plugins" : [ "include-highlight" ],
 }
 ```
+
 #### Configuration
 You can map file extensions that don't match syntax used in contents by adding a mapping in your book.json plugin configuration section。
 ```Javascript
@@ -25,6 +26,7 @@ You can map file extensions that don't match syntax used in contents by adding a
     }
 }
 ```
+
 #### Usage
 1. Click the Code button 。
 2. It shows \`\`\` (here is the code) \`\`\` 
