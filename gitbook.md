@@ -40,6 +40,7 @@ You can map file extensions that don't match syntax used in contents by adding a
 ##### Just remember the 「Language Name」 above must be one of the 「Language names and aliases」
 
 
- 
+ ### GitBook Cover Image
+ ##### Simply add a image named 「cover.jpg」 (notice: only this file name with .jpg extension is accepted) in the file directory.
 
 
