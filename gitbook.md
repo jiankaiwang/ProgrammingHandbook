@@ -29,11 +29,13 @@ You can map file extensions that don't match syntax used in contents by adding a
 1. Click the Code button 。
 2. It shows \`\`\` (here is the code) \`\`\` 
 3. Add the 「Language Name」 just after the first \`\`\`
-4. for example,
-\`\`\`「Python」
-(python code here)
-\`\`\`
+4. for example,<br><br>
+\`\`\`Python<br>
+(python code here)<br>
+\`\`\`<br><br>
 
+#### [CSS Styleable reference](http://highlightjs.readthedocs.org/en/latest/css-classes-reference.html)
+##### Just remember the 「Language Name」 above must be one of the 「Language names and aliases」
 
 
  
