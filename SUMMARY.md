@@ -6,5 +6,5 @@
    * [Syntax Compare](12_syntax_compare.md)
 * [Scientific](scientific.md)
    * [Resource](scientific-resource.md)
-   * [Data accessed by R](r_access_multiple_source_data.md)
+   * [Data accessed by R.r](r_access_multiple_source_data.md)
 
