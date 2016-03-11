@@ -3,7 +3,12 @@
   "pluginsConfig": {
     "include-highlight": {
       "extensionToLanguage": {
-        "R": "r"
+        "R": "r",
+        "Javascript": "js",
+        "C++": "cpp",
+        "Java": "java",
+        "Python": "py",
+        "SQL": "sql"
       }
     }
   }
