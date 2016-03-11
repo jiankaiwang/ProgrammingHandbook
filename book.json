@@ -1,10 +1,10 @@
 {
   "plugins" : [ "include-highlight" ],
   "pluginsConfig": {
-  "include-highlight": {
-    "extensionToLanguage": {
-      "ps1": "powershell"
+    "include-highlight": {
+      "extensionToLanguage": {
+        "ps1": "powershell"
+      }
     }
   }
-}
 }
