@@ -13,16 +13,16 @@
 You can map file extensions that don't match syntax used in contents by adding a mapping in your book.json plugin configuration section。
 ```Javascript
 "pluginsConfig": {
-  "include-highlight": {
-    "extensionToLanguage": {
-      "R": "r",
-      "Javascript": "js",
-      "C++": "cpp",
-      "Java": "java",
-      "Python": "py",
-      "SQL": "sql"
+    "include-highlight": {
+        "extensionToLanguage": {
+          "R": "r",
+          "Javascript": "js",
+          "C++": "cpp",
+          "Java": "java",
+          "Python": "py",
+          "SQL": "sql"
+        }
     }
-  }
 }
 ```
 #### Usage
