@@ -44,6 +44,6 @@ You can map file extensions that don't match syntax used in contents by adding a
  ##### Simply add a image named 「cover.jpg」 (notice: only this file name with .jpg extension is accepted) in the file directory.
 
 ### Programming Languages Supported
-* Jinja2 in Ckan: the block tag combined with { and % would cause gitbook parsing errors.
+* Jinja2 in Ckan: the block tag, {, would cause gitbook parsing errors.
 
 
