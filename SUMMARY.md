@@ -6,7 +6,7 @@
    * [Syntax Compare](12_syntax_compare.md)
    * [GitBook](gitbook.md)
    * [Web API](web_api.md)
-       * OData
+       * [OData](odata.md)
 * [Scientific](scientific.md)
    * [Resource](scientific-resource.md)
    * [Data accessed by R](r_access_multiple_source_data.md)
