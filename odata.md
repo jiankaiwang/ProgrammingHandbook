@@ -35,4 +35,5 @@
   * Empty (至少需勾選 Web API 核心參考)
 ![](webapi_mvc.png)
 
-###安裝 OData Package
+###安裝所需 Packages
+
