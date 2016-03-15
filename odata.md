@@ -178,7 +178,13 @@ route 路由器告訴 Web API 如何導引 HTTP 請求 (request) 到各自的 En
 ![](webapi-odatav3.png)
 因本次範例使用 Entity Framework，且目前最新 OData v3 使用 Add Controller scaffolding (尚無 scaffolding for OData v4)。
 
-* 模型類別 > 選擇剛已建置的資料模型「Product (WebAPIOData.Models)」，其中 WebAPIOData 為本專案名稱 > 資料內容類別 > 選擇
+* 模型類別 > 選擇剛已建置的資料模型「Product (WebAPIOData.Models)」，其中 WebAPIOData 為本專案名稱 > 資料內容類別 > 選擇剛已建立的類別「ProductsContext (WebAPIOData.Models)」
+
+* 勾選使用非同步控制器動作 (不需每次運作都要去重取完整 Data Model，尤其背後若有大型資料庫更是如此)
+
+* 
+
+
 
 
 
