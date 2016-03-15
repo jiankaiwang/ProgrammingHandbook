@@ -28,3 +28,11 @@
 |  | eq : =, 等於 | $filter=ProductID eq 10 |
 |  | ne : <>, 不等於 | $filter=ProductID ne 10 |
 
+###開始一個 VS 專案
+* 檔案 > 新增 > 專案 > 範本 > Visual C# > Web > ASP.NET Web 應用程式
+* 可以選擇是否採用 MVC 架構 : 本次採用 Web API 範本
+  * Web API (已加入 MVC 及 Web API 核心參考) > 變更驗證 > 無驗證
+  * Empty (至少需勾選 Web API 核心參考)
+![](webapi_mvc.png)
+
+###安裝 OData Package
