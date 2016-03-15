@@ -39,9 +39,24 @@
 ###安裝所需 Packages
 ---
 * 路徑 : 工具 > NuGet 封裝管理員 > 套件管理器主控台
-* OData Packages : 
+* 使用 OData Packages : 
 ```Bash
 Install-Package Microsoft.AspNet.Odata
+```
+
+* 使用 Web.Odata
+```Bash
+Install-Package Patches.System.Web.OData -Pre
+```
+
+* 使用 OData.Edm
+```Bash
+Install-Package Microsoft.OData.Edm -Version 6.14.0
+```
+
+* 使用 Entity Framework : 
+```Bash
+Install-Package EntityFramework
 ```
 
 
