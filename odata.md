@@ -14,3 +14,15 @@
 
 ###常用指令
 ---
+| 指令 | 說明 | 範例 |
+| -- | -- | -- |
+| top | 挑出最前面的幾筆 | 	?$top=3 |
+| skip |略過幾筆。可用於分頁顯示 | ?$skip=10 |
+| orderby | 排序 | ?$orderby=SupplierID,ProductID |
+| filter | 篩選 |  |
+|  | gt : > , 大於 | $filter=ProductID gt 10 |
+|  | lt : < , 小於 | $filter=ProductID lt 10 |
+|  | ge : >=, 大於等於 | $filter=ProductID ge 10 |
+|  | le : <=, 小於等於 | $filter=ProductID le 10 |
+|  | eq : =, 等於 | $filter=ProductID eq 10 |
+|  | ne : <>, 不等於 | $filter=ProductID ne 10 |
