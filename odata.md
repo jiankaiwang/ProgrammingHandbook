@@ -133,7 +133,7 @@ namespace ProductService.Models
     }
 }
 ```
-其中建構子 ProductsContext() 中定義 base 的 "name=ProductsContext" 需指向 ConnectionString。
+其中建構子 ProductsContext() 中定義 base 的 "name=ProductsContext" 需指向 connectionStrings。
 
 
 
