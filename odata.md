@@ -210,7 +210,8 @@ namespace ProductService.Controllers
     }
 }
 ```
-
+此控制器 ProductsController 使用 ProductsContext 類別來存取使用 EF 框架的資料庫。注意此控制器 overrides 其中的 Dispose method 來處理 ProductsContext。<br>
+而這是此控制器的起始點，下一步便會增加 CRUD 的操作模式。
 
 
 
