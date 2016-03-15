@@ -161,6 +161,11 @@ public static class WebApiConfig
 }
 ```
 
+* 此 Code 作了下列兩件事
+  * 創造出 Entity Data Model (EDM)
+  * 加入一個路由器 (可以給瀏覽器或是其他連結此網路資源的介面使用)
+
+
 
 
 
