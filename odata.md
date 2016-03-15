@@ -67,6 +67,11 @@ Install-Package EntityFramework
 ---
 微軟官網上定義 「A model is an object that represents a data entity in your application.」，指出 model 就是與資料處理個體有關。<br>
 * 右鍵點擊 Models 資料夾 > 加入 > 類別 (C# Class) > 取名為 Product (Product.cs)
+
+| 註解 |
+| -- |
+| 一般而言，處理資料模型會將 class 放置在 Models folder，但並不強制如此作法。 |
+
 * 加入下方類別成員定義
 ```C#
 namespace ProductService.Models
