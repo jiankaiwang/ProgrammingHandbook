@@ -96,6 +96,32 @@ namespace ProductService.Models
 | -- |
 | Web API Odata 可以不需要 EF，而是可以使用任何能轉換資料庫成資料模型 (models) 的資料鍵階層 (data-access layer) 皆能做為 OData 使用的 entity。 |
 
+* 若是使用 Entity Framework，需要確認已安裝所需 Package (如上述步驟安裝 Entity Framework)
+```Bash
+Install-Package EntityFramework
+```
+
+* 開啟 Web.config 檔案，將下列連接字串加入 Configuration 元素中，在 configSections 元素之後加入。
+```Xml
+<configuration>
+  <configSections>
+    <!-- ... -->
+  </configSections>
+
+  <!-- Add this: -->
+  <connectionStrings>
+    <add name="ProductsContext" connectionString="Data Source=(localdb)\v11.0; 
+        Initial Catalog=ProductsContext; Integrated Security=True; MultipleActiveResultSets=True; 
+        AttachDbFilename=|DataDirectory|ProductsContext.mdf"
+      providerName="System.Data.SqlClient" />
+  </connectionStrings>
+```
+
+
+
+
+
+
 
 
 
