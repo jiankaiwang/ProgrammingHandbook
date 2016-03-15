@@ -46,7 +46,10 @@ You can map file extensions that don't match syntax used in contents by adding a
  * Simply add a image named 「cover.jpg」 (notice: only this file name with .jpg extension is accepted) in the file directory.
  * Use plugin named autocover:
    * append "autocover" to the "plugins" list in the "book.json" file
-   * 
+   * the configuration would be customized as the following setting
+```Javascript
+
+```
 
 
 ### Programming Languages Supported
