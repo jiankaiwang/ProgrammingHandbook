@@ -229,6 +229,10 @@ public SingleResult<Product> Get([FromODataUri] int key)
     return SingleResult.Create(result);
 }
 ```
+  * 沒有參數版本的 Get Method 回傳完整的 Products 物件集合。<br>
+而含有一個 key 參數的 Get Method 則透過此 Key 查詢 Product 物件，此例子是利用 Id 特性 (property)。
+  * 屬性 [EnableQuery] 允許 CLients 來修正搜尋，透過搜尋選項如 $filter, $sort, 及 $page 等。若要搜尋更多的資訊，可以參考 [Supporting OData Query Options](http://www.asp.net/web-api/overview/odata-support-in-aspnet-web-api/supporting-odata-query-options)。
+
 
 
 
