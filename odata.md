@@ -213,6 +213,23 @@ namespace ProductService.Controllers
 此控制器 ProductsController 使用 ProductsContext 類別來存取使用 EF 框架的資料庫。注意此控制器 overrides 其中的 Dispose method 來處理 ProductsContext。<br>
 而這是此控制器的起始點，下一步便會增加 CRUD 的操作模式。
 
+###查詢 Entity Set
+---
+* 加入下方的類別方法入 ProductsController (ProductsController.cs) 中
+```csharp
+[EnableQuery]
+public IQueryable<Product> Get()
+{
+    return db.Products;
+}
+[EnableQuery]
+public SingleResult<Product> Get([FromODataUri] int key)
+{
+    IQueryable<Product> result = db.Products.Where(p => p.Id == key);
+    return SingleResult.Create(result);
+}
+```
+
 
 
 
