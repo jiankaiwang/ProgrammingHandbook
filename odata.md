@@ -60,7 +60,7 @@ Install-Package EntityFramework
 ```
 
 ###加入 Model
-
+A model is an object that represents a data entity in your application.
 
 
 
