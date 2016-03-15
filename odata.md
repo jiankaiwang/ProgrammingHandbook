@@ -169,7 +169,10 @@ EDM 是資料模型的摘要 (abstract model of the data)，被用來產生此�
 route 路由器告訴 Web API 如何導引 HTTP 請求 (request) 到各自的 Endpoint。若是要在 OData v4.0 下創立一個路由，可以呼叫 MapODataServiceRoute 延伸方法來達成。<br>
 此外，若是一個 Web API 有多個 OData endpoint，則可以透過給不同的路由器名稱 (routeName) 及路徑前綴 (routePrefix) 來設定路由器以便對應不同的 API。
 
-
+###加入一個 OData 控制器 (Controller)
+---
+微軟官網上說明「A controller is a class that handles HTTP requests.」，Controller 便是一個資料處理者。一個 OData 服務可以透過不同的 Controller 來處理不同的 Data Entity Set。<br>
+本次的範例中，可以創造一個 Controller 來處理 Product entity set。
 
 
 
