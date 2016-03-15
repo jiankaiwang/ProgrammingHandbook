@@ -324,6 +324,20 @@ public async Task<IHttpActionResult> Put([FromODataUri] int key, Product update)
 
 ###刪除一個資料 (Deleting an Entity)
 ---
+* 若要使用者能夠從資料庫中刪除一筆資料 (delete a product from the database)，可以加入底下方法入 ProductsController (ProductsController.cs) 中
+```csharp
+public async Task<IHttpActionResult> Delete([FromODataUri] int key)
+{
+    var product = await db.Products.FindAsync(key);
+    if (product == null)
+    {
+        return NotFound();
+    }
+    db.Products.Remove(product);
+    await db.SaveChangesAsync();
+    return StatusCode(HttpStatusCode.NoContent);
+}
+```
 
 
 
