@@ -83,7 +83,13 @@ namespace ProductService.Models
 
   * 其中成員 Id 是搜尋物件的 Key，Clients 可以透過此 Key 進行 Query。舉例而言，要找到物件 Product 中 Id 為 5 的搜尋方式，可以透過 URI 為 /Products(5) 來達成，而 Id 亦是後端資料庫的主要 Key (Primary Key)。
 
+###開啟 Entity Framework
+---
+本次的範例將會使用 Entity Framework (EF) Code 來產生後端資料庫
 
+| 註解 |
+| -- |
+| Web API Odata 可以不需要 EF，而是可以使用任何能轉換資料庫成資料模型 (models) 的資料鍵階層 (data-access layer) 皆能做為 OData 使用的 entity。 |
 
 
 
