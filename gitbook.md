@@ -48,7 +48,28 @@ You can map file extensions that don't match syntax used in contents by adding a
    * append "autocover" to the "plugins" list in the "book.json" file
    * the configuration would be customized as the following setting
 ```Javascript
-
+"pluginsConfig": {
+    "autocover": {
+        "title": "My Book",
+        "author": "Author",
+        "pluginsConfig": {
+            "autocover": {
+                "font": {
+                    "size": null,
+                    "family": "Impact",
+                    "color": "#FFF"
+                },
+                "size": {
+                    "w": 1800,
+                    "h": 2360
+                },
+                "background": {
+                    "color": "#09F"
+                }
+            }
+        }
+    }
+}
 ```
 
 
