@@ -73,7 +73,7 @@ Install-Package EntityFramework
 | 一般而言，處理資料模型會將 class 放置在 Models folder，但並不強制如此作法。 |
 
 * 加入下方類別成員定義
-```C#
+```csharp
 namespace ProductService.Models
 {
     public class Product
@@ -115,6 +115,23 @@ Install-Package EntityFramework
         AttachDbFilename=|DataDirectory|ProductsContext.mdf"
       providerName="System.Data.SqlClient" />
   </connectionStrings>
+```
+
+* 這項設定透過一連接字串指示要連入本機端 DB (LocalDB)。這資料庫在運行本機 APP 時會被用到。
+
+* 下一步，加入名為 ProductsContext (ProductsContext.cs) 類別入 Models 資料夾中，並加入下方類別定義。
+```csharp
+using System.Data.Entity;
+namespace ProductService.Models
+{
+    public class ProductsContext : DbContext
+    {
+        public ProductsContext() : base("name=ProductsContext")
+        {
+        }
+        public DbSet<Product> Products { get; set; }
+    }
+}
 ```
 
 
