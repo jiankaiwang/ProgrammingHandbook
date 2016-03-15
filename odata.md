@@ -174,6 +174,8 @@ route 路由器告訴 Web API 如何導引 HTTP 請求 (request) 到各自的 En
 微軟官網上說明「A controller is a class that handles HTTP requests.」，Controller 便是一個資料處理者。一個 OData 服務可以透過不同的 Controller 來處理不同的 Data Entity Set。<br>
 本次的範例中，可以創造一個 Controller 來處理 Product entity set。
 
+* 右鍵點擊 Controllers 資料夾 > 加入 > 類別 >
+
 
 
 
