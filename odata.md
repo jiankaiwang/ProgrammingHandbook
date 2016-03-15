@@ -67,7 +67,7 @@ Install-Package EntityFramework
 ---
 微軟官網上定義 「A model is an object that represents a data entity in your application.」，指出 model 就是與資料處理個體有關。<br>
 * 右鍵點擊 Models 資料夾 > 加入 > 類別 (C# Class) > 取名為 Product (Product.cs)
-* 加入下方物件成員定義
+* 加入下方類別成員定義
 ```C#
 namespace ProductService.Models
 {
@@ -81,6 +81,7 @@ namespace ProductService.Models
 }
 ```
 
+  * 其中成員 Id 是搜尋物件的 Key，Clients 可以透過此 Key 進行 Query。舉例而言，要找到物件 Product 中 Id 為 5 的搜尋方式，可以透過 URI 為 /Products(5) 來達成，而 Id 亦是後端資料庫的主要 Key (Primary Key)。
 
 
 
