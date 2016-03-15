@@ -5,7 +5,7 @@
    * [Useful Resource](11_useful_resource.md)
    * [Syntax Compare](12_syntax_compare.md)
    * [GitBook](gitbook.md)
-   * Web API
+   * [Web API](web_api.md)
        * OData
 * [Scientific](scientific.md)
    * [Resource](scientific-resource.md)
