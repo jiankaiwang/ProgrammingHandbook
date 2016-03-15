@@ -135,6 +135,14 @@ namespace ProductService.Models
 ```
 其中建構子 ProductsContext() 中定義 base 的 "name=ProductsContext" 需指向 connectionStrings。
 
+###OData Endpoint 的組態設定
+---
+* 開啟檔案 App_Start/WebApiConfig.cs，加入下方使用的函式庫的程式碼
+```csharp
+using ProductService.Models;
+using System.Web.OData.Builder;
+using System.Web.OData.Extensions;
+```
 
 
 
