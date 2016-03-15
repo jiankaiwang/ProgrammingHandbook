@@ -322,6 +322,8 @@ public async Task<IHttpActionResult> Put([FromODataUri] int key, Product update)
 ```
 在 PATCH 方法中，控制器使用 Delta<T> 方法來追蹤改變的值。
 
+###刪除一個資料 (Deleting an Entity)
+---
 
 
 
