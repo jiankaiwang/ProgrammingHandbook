@@ -29,6 +29,7 @@
 |  | ne : <>, 不等於 | $filter=ProductID ne 10 |
 
 ###開始一個 VS 專案
+---
 * 檔案 > 新增 > 專案 > 範本 > Visual C# > Web > ASP.NET Web 應用程式
 * 可以選擇是否採用 MVC 架構 : 本次採用 Web API 範本
   * Web API (已加入 MVC 及 Web API 核心參考) > 變更驗證 > 無驗證
@@ -36,4 +37,16 @@
 ![](webapi_mvc.png)
 
 ###安裝所需 Packages
+---
+* 路徑 : 工具 > NuGet 封裝管理員 > 套件管理器主控台
+* OData Packages : 
+```Bash
+Install-Package Microsoft.AspNet.Odata
+```
+
+
+
+
+
+
 
