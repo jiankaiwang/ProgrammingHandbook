@@ -3,6 +3,7 @@
 ---
 * C#
 * ASP.NET 4.5.2
+* Web API 2.2
 * MVC 5
 * OData v4.0
 * Web.Odata
@@ -26,3 +27,4 @@
 |  | le : <=, 小於等於 | $filter=ProductID le 10 |
 |  | eq : =, 等於 | $filter=ProductID eq 10 |
 |  | ne : <>, 不等於 | $filter=ProductID ne 10 |
+
