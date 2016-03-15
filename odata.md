@@ -183,6 +183,8 @@ route 路由器告訴 Web API 如何導引 HTTP 請求 (request) 到各自的 En
 * 勾選使用非同步控制器動作 (不需每次運作都要去重取完整 Data Model，尤其背後若有大型資料庫更是如此) > 控制器名稱 > 建議使用預設 (否則需符合 [自命名]Controller 的格式)
 ![](product-controller.png)
 
+* 若是 Visual Studio 提示錯誤，需要 rebuild 專案，則可以點擊 「建置」 > 「重建方案」，讓開發環境重新取得先前 Model 的設置。
+
 * 將下列程式模板加入此 ProductsController.cs 中
 ```csharp
 using ProductService.Models;
