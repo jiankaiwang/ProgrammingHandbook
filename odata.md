@@ -28,6 +28,10 @@
 |  | eq : =, 等於 | $filter=ProductID eq 10 |
 |  | ne : <>, 不等於 | $filter=ProductID ne 10 |
 
+###實作範例
+---
+#####透過 Web API MVC 連結資料庫並實作出 OData RESTful 介面。
+
 ###開始一個 VS 專案
 ---
 * 檔案 > 新增 > 專案 > 範本 > Visual C# > Web > ASP.NET Web 應用程式
@@ -60,7 +64,9 @@ Install-Package EntityFramework
 ```
 
 ###加入 Model
-A model is an object that represents a data entity in your application.
+微軟官網上定義 「A model is an object that represents a data entity in your application.」，指出 model 就是與資料處理個體有關。<br>
+* 右鍵點擊 Models 資料夾 > 加入 > 類別 (C# Class)
+
 
 
 
