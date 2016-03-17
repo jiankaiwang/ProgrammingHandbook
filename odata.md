@@ -324,7 +324,7 @@ http://localhost:port/ODataPrefix/{controller name}/{OData operations}
 
 * 右鍵點擊 Controllers 資料夾 > 加入 > 控制器 > Web API 2 OData v3 Controller with action, using Entity Framework
 ![](webapi-odatav3.png)
-因本次範例使用 Entity Framework，且目前最新 OData v3 使用 Add Controller scaffolding (尚無 scaffolding for OData v4)。
+因本次範例使用 Entity Framework，且目前最新 OData v3 使用 Add Controller scaffolding (尚無 scaffolding for OData v4)。但這會與 OData v4 版本衝突，需要調整路由器的註冊選單 (App_Start/WebApiConfig.cs)。
 
 * 模型類別 > 選擇剛已建置的資料模型「Product (WebAPIOData.Models)」，其中 WebAPIOData 為本專案名稱 > 資料內容類別 > 選擇剛已建立的類別「ProductsContext (WebAPIOData.Models)」
 
