@@ -172,10 +172,7 @@ Install-Package EntityFramework
 
   <!-- Add this: -->
   <connectionStrings>
-    <add name="ProductsContext" connectionString="Data Source=(localdb)\v11.0; 
-        Initial Catalog=ProductsContext; Integrated Security=True; MultipleActiveResultSets=True; 
-        AttachDbFilename=|DataDirectory|ProductsContext.mdf"
-      providerName="System.Data.SqlClient" />
+    <add name="ProductsContext" connectionString="Data Source=.\SQLEXPRESS;Initial Catalog=Product;Persist Security Info=True;User ID=odata;Password=odata" providerName="System.Data.SqlClient" />
   </connectionStrings>
 ```
 
