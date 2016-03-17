@@ -329,6 +329,11 @@ http://localhost:port/ODataPrefix/{controller name}/{OData operations}
 * 模型類別 > 選擇剛已建置的資料模型「Product (WebAPIOData.Models)」，其中 WebAPIOData 為本專案名稱 > 資料內容類別 > 選擇剛已建立的類別「ProductsContext (WebAPIOData.Models)」
 
 * 勾選使用非同步控制器動作 (不需每次運作都要去重取完整 Data Model，尤其背後若有大型資料庫更是如此) > 控制器名稱 > 建議使用預設 (否則需符合 [自命名]Controller 的格式)
+
+* 控制器的命名需和路由器註冊的設定名稱相同
+```csharp
+builder.EntitySet<ODATA>("OData1");
+```
 ![](OData1.png)
 
 * 若是 Visual Studio 提示錯誤，需要 rebuild 專案，則可以點擊 「建置」 > 「重建方案」，讓開發環境重新取得先前 Model 的設置。
@@ -382,12 +387,12 @@ namespace webAPIODataModel.Controllers
     }
 }
 ```
-此控制器 ProductsController 使用 ProductsContext 類別來存取使用 EF 框架的資料庫。注意此控制器 overrides 其中的 Dispose method 來處理 ProductsContext。<br>
+此控制器 OData1Controller 使用 ODATACONTENT 類別來存取使用 EF 框架的資料庫。注意此控制器 overrides 其中的 Dispose method 來處理 ODATACONTENT。<br>
 而這是此控制器的起始點，下一步便會增加 CRUD 的操作模式。
 
 ###查詢 Entity Set (Querying the Entity Set)
 ---
-* 加入下方的類別方法入 ProductsController (ProductsController.cs) 中
+* 加入下方的類別方法入 OData1Controller (OData1Controller.cs) 中
 ```csharp
 [EnableQuery]
 public IQueryable<Product> Get()
