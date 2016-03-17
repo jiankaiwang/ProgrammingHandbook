@@ -114,7 +114,7 @@ CREATE TABLE [dbo].[ODatas] (
 * 加入下方類別成員定義
   * 此類別的定義主要由 C# 使用
   * 而被定義成員需與資料庫中要使用的 table 相同
-  * 其中 [Table("OData")] 用來標示要讀取資料庫中哪一張表，需與下方 SetInitializer 共同使用
+  * 其中 [Table("OData")] 用來標示要讀取資料庫中哪一張表，需與繼承 DbContext 的類別中 SetInitializer 共同使用
   * 
 
 ```csharp
