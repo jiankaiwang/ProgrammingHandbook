@@ -63,6 +63,12 @@ Install-Package Microsoft.OData.Edm -Version 6.14.0
 Install-Package EntityFramework
 ```
 
+###使用的 Database 與 Table
+---
+![](webapiodatadbcontent.png)
+* 資料庫名為 ProductsContext，包含 two tables，OData 及 ODatas。
+
+
 ###加入 Model
 ---
 微軟官網上定義 「A model is an object that represents a data entity in your application.」，指出 model 就是與資料處理個體有關。<br>
