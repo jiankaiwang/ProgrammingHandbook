@@ -132,14 +132,13 @@ public class ODATA
   * 而被定義成員需與資料庫中要使用的 table 的 column 名字相同
   * 其中 [Table("OData")] 用來標示要讀取資料庫中哪一張表，需與繼承 DbContext 的類別中 SetInitializer 共同使用
   *  若是該資料庫中沒有此張表，則不需加上 [Table("OData")]，則 DBSet 會在第一次被要求存取時自動產生一張表，而之後便會利用此張表當作 API 存取對象
+  *  其中成員 Id 是搜尋物件的 Key，Clients 可以透過此 Key 進行 Query。舉例而言，要找到物件 Product 中 Id 為 5 的搜尋方式，可以透過 URI 為 /Products(5) 來達成，而 Id 亦是後端資料庫的主要 Key (Primary Key)。 
   *  若是利用 DBSet 於第一次進行表格的創建，則亦可以透過 Seed 方式，先將一部分資料先行存入
 ```csharp
-protected override void Seed(SchoolDBContext context) { 
+protected override void Seed(DBContextClass context) { 
     ... 
 }
 ```
-
-  * 其中成員 Id 是搜尋物件的 Key，Clients 可以透過此 Key 進行 Query。舉例而言，要找到物件 Product 中 Id 為 5 的搜尋方式，可以透過 URI 為 /Products(5) 來達成，而 Id 亦是後端資料庫的主要 Key (Primary Key)。
 
 ###開啟 Entity Framework
 ---
