@@ -118,12 +118,22 @@ CREATE TABLE [dbo].[ODatas] (
 // the member must be the same with columns of the table in database
 // [Table("OData")] is used to specify the table already existing
 // the name must be the same with table in the database
-[Table("OData")]
-public class ODATA
-{
-    // id is the key
-    public int id { get; set; }
-    public string name { set; get; }
+using System;
+using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations.Schema;
+using System.Data.Entity;
+using System.Data.SqlClient;
+using System.Linq;
+using System.Web;
+
+namespace webAPIODataModel.Models {
+    [Table("OData")]
+    public class ODATA
+    {
+        // id is the key
+        public int id { get; set; }
+        public string name { set; get; }
+    }
 }
 ```
 
