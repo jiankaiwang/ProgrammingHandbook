@@ -315,11 +315,12 @@ builder.EntitySet<資料表類別，本例為 ODATA>("控制器名稱，本例�
 http://localhost:port/ODataPrefix/{controller name}/{OData operations}
 ```
 
-
 ###加入一個 OData 控制器 (Controller)
 ---
 微軟官網上說明「A controller is a class that handles HTTP requests.」，Controller 便是一個資料處理者。一個 OData 服務可以透過不同的 Controller 來處理不同的 Data Entity Set。<br>
 本次的範例中，可以創造一個 Controller 來處理 Product entity set。
+
+* 建議於加入 controller 時，先 rebuild 專案以取得先前 Model 的設置，則可以點擊 「建置」 > 「重建方案」來達成。
 
 * 右鍵點擊 Controllers 資料夾 > 加入 > 控制器 > Web API 2 OData v3 Controller with action, using Entity Framework
 ![](webapi-odatav3.png)
