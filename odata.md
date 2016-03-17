@@ -30,7 +30,7 @@
 
 ###實作範例
 ---
-#####透過 Web API MVC 連結資料庫並實作出 OData RESTful 介面。
+#####透過 Web API MVC 連結資料庫中的資料表並實作出 OData RESTful 介面。
 
 ###開始一個 VS 專案
 ---
@@ -105,23 +105,27 @@ CREATE TABLE [dbo].[ODatas] (
 ###加入 Model
 ---
 微軟官網上定義 「A model is an object that represents a data entity in your application.」，指出 model 就是與資料處理個體有關。<br>
-* 右鍵點擊 Models 資料夾 > 加入 > 類別 (C# Class) > 取名為 Product (Product.cs)
+* 右鍵點擊 Models 資料夾 > 加入 > 類別 (C# Class) > 取名為 ODATA (ODATA.cs)
 
 | 註解 |
 | -- |
 | 一般而言，處理資料模型會將 class 放置在 Models folder，但並不強制如此作法。 |
 
 * 加入下方類別成員定義
+  * 此類別的定義主要由 C# 使用
+  * 而被定義成員需與資料庫中要使用的 table 相同
+
 ```csharp
-namespace ProductService.Models
+// ODATA is the class used by C#, 
+// the member must be the same with columns of the table in database
+// [Table("OData")] is used to specify the table already existing
+// the name must be the same with table in the database
+[Table("OData")]
+public class ODATA
 {
-    public class Product
-    {
-        public int Id { get; set; }
-        public string Name { get; set; }
-        public decimal Price { get; set; }
-        public string Category { get; set; }
-    }
+    // id is the key
+    public int id { get; set; }
+    public string name { set; get; }
 }
 ```
 
