@@ -244,27 +244,57 @@ Database.SetInitializer(new DropCreateDatabaseIfModelChanges<ODATACONTENT>());
 ###OData Endpoint 的組態設定
 ---
 * 開啟檔案 App_Start/WebApiConfig.cs，加入下方使用的函式庫的程式碼
+
 ```csharp
-using ProductService.Models;
-using System.Web.OData.Builder;
-using System.Web.OData.Extensions;
+//較不建議使用，因 OData 4.0 版本與現行 OData MVC 3.0 版本有衝突，可能造成  error 406 問題
+//using System.Web.OData.Builder;
+//using System.Web.OData.Extensions;
+
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Web.Http;
+using System.Web.Http.OData.Builder;
+using webAPIODataModel.Models;
 ```
 
 * 加入下方程式碼入 Register method 來註冊路由器
 ```csharp
 public static class WebApiConfig
-{
-    public static void Register(HttpConfiguration config)
     {
-        // New code:
-        ODataModelBuilder builder = new ODataConventionModelBuilder();
-        builder.EntitySet<Product>("Products");
-        config.MapODataServiceRoute(
-            routeName: "ODataRoute",
-            routePrefix: null,
-            model: builder.GetEdmModel());
+        public static void Register(HttpConfiguration config)
+        {
+            // Web API 設定和服務
+
+            // Web API 路由
+            config.MapHttpAttributeRoutes();
+
+            // OData setting
+            // use ODataConventionModelBuilder to set the entity and model
+            ODataConventionModelBuilder builder = new ODataConventionModelBuilder();
+
+            // builder.EntitySet must be the same with data model definition
+            // <ODATA> is the class defined by C# to map tables in database
+            // "OData" is the Table in database
+            // EntitySet<ODATA>("OData1"), OData1 means the execution body and must be the same with controller's name
+            // EntitySet loads the OData into ODATA Class
+            // Because OData v3 (Controller) is not compatible with OData v4 (Web API)
+            // config.MapODataServiceRoute might cause 406 (Not Acceptable), so config.Routes.MapODataRoute might be better
+            builder.EntitySet<ODATA>("OData1");
+            config.Routes.MapODataRoute(
+                routeName: "ODataRoute",
+                routePrefix: "ODataPrefix",
+                model: builder.GetEdmModel()
+            );
+
+            // general routing
+            config.Routes.MapHttpRoute(
+                name: "DefaultApi",
+                routeTemplate: "api/{controller}/{id}",
+                defaults: new { id = RouteParameter.Optional }
+            );
+        }
     }
-}
 ```
 
 * 此 Code 作了下列兩件事
@@ -272,8 +302,11 @@ public static class WebApiConfig
 EDM 是資料模型的摘要 (abstract model of the data)，被用來產生此服務的中介資料內容 (metadata document)。類別 ODataConventionModelBuilder 可以透過預設命名轉換創造出一個 EDM。此方法可以省略很多步驟，程式碼相對少很多。而若是希望能對 EDM 有更多的控制，則可以使用 ODataModelBuilder 類別來達成，其可以透過加入特性 (properties)、索引 (Keys) 及導覽開放成員特性 (navigation properties explicitly) 等。
   
   * 加入一個路由器 (可以給瀏覽器或是其他連結此網路資源的介面使用) :
-route 路由器告訴 Web API 如何導引 HTTP 請求 (request) 到各自的 Endpoint。若是要在 OData v4.0 下創立一個路由，可以呼叫 MapODataServiceRoute 延伸方法來達成。<br>
+route 路由器告訴 Web API 如何導引 HTTP 請求 (request) 到各自的 Endpoint。若是要在 OData v4.0 下創立一個路由，可以呼叫 config.Routes.MapODataRoute 延伸方法來達成。<br>
 此外，若是一個 Web API 有多個 OData endpoint，則可以透過給不同的路由器名稱 (routeName) 及路徑前綴 (routePrefix) 來設定路由器以便對應不同的 API。
+
+  * 
+
 
 ###加入一個 OData 控制器 (Controller)
 ---
