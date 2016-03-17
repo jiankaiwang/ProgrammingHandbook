@@ -238,6 +238,8 @@ Database.SetInitializer<ODATACONTENT>(null);
 Database.SetInitializer(new DropCreateDatabaseIfModelChanges<ODATACONTENT>());
 ```
 
+  * DBSet 目地為在入資料庫中的表，並作為 CRUD 的操作介面，其中 &lt;ODATA&gt; 是 C# 中被定義來對應資料表各欄位名稱(包含其資料型態)，而 OData 則是 C# 中表示  DBSet 物件的變數名稱，此可以變動。
+
 
 ###OData Endpoint 的組態設定
 ---
