@@ -310,8 +310,6 @@ route 路由器告訴 Web API 如何導引 HTTP 請求 (request) 到各自的 En
 builder.EntitySet<資料表類別，本例為 ODATA>("控制器名稱，本例為 OData1")
 ```
 
-  
-
 ###加入一個 OData 控制器 (Controller)
 ---
 微軟官網上說明「A controller is a class that handles HTTP requests.」，Controller 便是一個資料處理者。一個 OData 服務可以透過不同的 Controller 來處理不同的 Data Entity Set。<br>
