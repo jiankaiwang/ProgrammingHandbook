@@ -68,7 +68,39 @@ Install-Package EntityFramework
 ![](webapiodatadbcontent.png)
 
 * 資料庫名為 ProductsContext，包含 two tables，OData 及 ODatas。
+* 資料庫為放置在 .\SQLEXPRESS 底下的資料庫，非 App_Data
+* OData 內容如下
 
+```Sql
+CREATE TABLE [dbo].[OData] (
+    [id]   INT           NOT NULL,
+    [name] NVARCHAR (50) NOT NULL,
+    CONSTRAINT [PK_OData] PRIMARY KEY CLUSTERED ([id] ASC)
+);
+```
+
+| id | name |
+| -- | -- |
+| 1 | a |
+| 2 | b |
+| 3 | c |
+
+* ODatas : 為 SetInitializer 自動產生，內容可以參考下述。
+
+```Sql
+CREATE TABLE [dbo].[ODatas] (
+    [Id]   INT           NOT NULL,
+    [name] NVARCHAR (50) NULL,
+    PRIMARY KEY CLUSTERED ([Id] ASC)
+);
+```
+
+| Id | name |
+| -- | -- |
+| 1 | a |
+| 2 | f |
+| 3 | e |
+| 4 | 11 |
 
 ###加入 Model
 ---
