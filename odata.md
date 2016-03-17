@@ -204,12 +204,12 @@ namespace webAPIODataModel.Models {
         // the object directly links the database though connectionString defined in Web.config
         // the format "name=(connection string name)"
         public ODATACONTENT() : base("name=ProductsContext") {
-            // method.1
+            // condition.1 : existing table
             // if the table already existing in the database, it is not necessary to create a new table in it
             // the SetInitializer load the DbContext and set null to initialization
             Database.SetInitializer<ODATACONTENT>(null);
 
-            // method.2
+            // condition.2 : no table
             // But if you created the database yourself, no table in it
             // then you need to specify an initialization strategy otherwise no tables will be added to the database
             // in the most case, the VS might do the thing automatically, the following code would be no need
