@@ -204,10 +204,12 @@ namespace webAPIODataModel.Models {
         // the object directly links the database though connectionString defined in Web.config
         // the format "name=(connection string name)"
         public ODATACONTENT() : base("name=ProductsContext") {
+            // method.1
             // if the table already existing in the database, it is not necessary to create a new table in it
             // the SetInitializer load the DbContext and set null to initialization
             Database.SetInitializer<ODATACONTENT>(null);
 
+            // method.2
             // But if you created the database yourself, no table in it
             // then you need to specify an initialization strategy otherwise no tables will be added to the database
             // in the most case, the VS might do the thing automatically, the following code would be no need
@@ -221,7 +223,12 @@ namespace webAPIODataModel.Models {
     }
 }
 ```
-其中建構子 ProductsContext() 中定義 base 的 "name=ProductsContext" 需指向 connectionStrings。
+
+* 類別定義說明
+  * 其中建構子 ProductsContext() 中定義 base 的 "name=ProductsContext" 需指向 connectionStrings。
+  * 繼承 DbContext 目地為載入整個資料庫或者是載入含有多張表的資料集
+  * 於物件被產生時，便會直接透過 Web.config 定義的 connectionString 連接至資料庫；而 base("name=ProductsContext") 便是找出在 web.config 中定義名為 ProductsContext 的 connectionString，此 base("name=[連接字串名稱]") 為規定寫法。
+  * 
 
 ###OData Endpoint 的組態設定
 ---
