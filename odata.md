@@ -25,7 +25,7 @@
 |  | lt : < , 小於 | $filter=ProductID lt 10 |
 |  | ge : >=, 大於等於 | $filter=ProductID ge 10 |
 |  | le : <=, 小於等於 | $filter=ProductID le 10 |
-|  | eq : =, 等於 | $filter=ProductID eq 10 |
+|  | eq : =, 等於 | $filter=ProductID eq 10<br>$filter=name eq 'f' |
 |  | ne : <>, 不等於 | $filter=ProductID ne 10 |
 
 ###實作範例
