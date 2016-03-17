@@ -112,11 +112,6 @@ CREATE TABLE [dbo].[ODatas] (
 | 一般而言，處理資料模型會將 class 放置在 Models folder，但並不強制如此作法。 |
 
 * 加入下方類別成員定義
-  * 此類別的定義主要由 C# 使用
-  * 而被定義成員需與資料庫中要使用的 table 的 column 名字相同
-  * 其中 [Table("OData")] 用來標示要讀取資料庫中哪一張表，需與繼承 DbContext 的類別中 SetInitializer 共同使用
-  *  若是該資料庫中沒有此張表，則不需加上 [Table("OData")]，則 DBSet 會在第一次被要求存取時自動產生一張表，而之後便會利用此張表當作 API 存取對象
-  *  若是利用 DBSet 於第一次進行表格的創建，則亦可以透過 Seed 方式，先將一部分資料先行存入
 
 ```csharp
 // ODATA is the class used by C#, 
@@ -129,6 +124,18 @@ public class ODATA
     // id is the key
     public int id { get; set; }
     public string name { set; get; }
+}
+```
+
+* 類別定義說明
+  * 此類別的定義主要由 C# 使用
+  * 而被定義成員需與資料庫中要使用的 table 的 column 名字相同
+  * 其中 [Table("OData")] 用來標示要讀取資料庫中哪一張表，需與繼承 DbContext 的類別中 SetInitializer 共同使用
+  *  若是該資料庫中沒有此張表，則不需加上 [Table("OData")]，則 DBSet 會在第一次被要求存取時自動產生一張表，而之後便會利用此張表當作 API 存取對象
+  *  若是利用 DBSet 於第一次進行表格的創建，則亦可以透過 Seed 方式，先將一部分資料先行存入
+```csharp
+protected override void Seed(SchoolDBContext context) { 
+    ... 
 }
 ```
 
