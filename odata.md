@@ -329,33 +329,55 @@ http://localhost:port/ODataPrefix/{controller name}/{OData operations}
 * 模型類別 > 選擇剛已建置的資料模型「Product (WebAPIOData.Models)」，其中 WebAPIOData 為本專案名稱 > 資料內容類別 > 選擇剛已建立的類別「ProductsContext (WebAPIOData.Models)」
 
 * 勾選使用非同步控制器動作 (不需每次運作都要去重取完整 Data Model，尤其背後若有大型資料庫更是如此) > 控制器名稱 > 建議使用預設 (否則需符合 [自命名]Controller 的格式)
-![](product-controller.png)
+![](OData1.png)
 
 * 若是 Visual Studio 提示錯誤，需要 rebuild 專案，則可以點擊 「建置」 > 「重建方案」，讓開發環境重新取得先前 Model 的設置。
 
-* 將下列程式模板加入此 ProductsController.cs 中
+* 將下列程式模板加入此 OData1Controller.cs 中
+
 ```csharp
-using ProductService.Models;
+using System.Data;
 using System.Data.Entity;
 using System.Data.Entity.Infrastructure;
+using System.Data.SqlClient;
 using System.Linq;
 using System.Net;
+using System.Net.Http;
 using System.Threading.Tasks;
 using System.Web.Http;
-using System.Web.OData;
-namespace ProductService.Controllers
+using System.Web.Http.ModelBinding;
+using System.Web.Http.OData;
+using System.Web.Http.OData.Routing;
+using webAPIODataModel.Models;
+
+namespace webAPIODataModel.Controllers
 {
-    public class ProductsController : ODataController
+    /*
+    WebApiConfig 類別可能需要其他變更以新增此控制器的路由，請將這些陳述式合併到 WebApiConfig 類別的 Register 方法。注意 OData URL 有區分大小寫。
+    預設即有部分程式碼供導引如下;
+    using System.Web.Http.OData.Builder;
+    using System.Web.Http.OData.Extensions;
+    using webAPIODataModel.Models;
+    ODataConventionModelBuilder builder = new ODataConventionModelBuilder();
+    builder.EntitySet<ODATA>("ODATAs");
+    config.Routes.MapODataServiceRoute("odata", "odata", builder.GetEdmModel());
+    */
+    public class OData1Controller : System.Web.Http.OData.ODataController
     {
-        ProductsContext db = new ProductsContext();
-        private bool ProductExists(int key)
-        {
-            return db.Products.Any(p => p.Id == key);
-        } 
+        private ODATACONTENT db = new ODATACONTENT();
+        
         protected override void Dispose(bool disposing)
         {
-            db.Dispose();
+            if (disposing)
+            {
+                db.Dispose();
+            }
             base.Dispose(disposing);
+        }
+
+        private bool ODATAExists(int key)
+        {
+            return db.OData.Count(e => e.id == key) > 0;
         }
     }
 }
