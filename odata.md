@@ -181,17 +181,43 @@ Install-Package EntityFramework
 
 * 這項設定透過一連接字串指示要連入本機端 DB (LocalDB)。這資料庫在運行本機 APP 時會被用到。
 
-* 下一步，加入名為 ProductsContext (ProductsContext.cs) 類別入 Models 資料夾中，並加入下方類別定義。
+* 下一步，加入名為 ODATACONTENT 類別，並加入下方類別定義。此類別繼承 DbContext，並於物件創造時便會連接資料庫。 
+
+| 註解 |
+| -- |
+| 此 ODATACONTENT 類別可以獨立於 Model 資料夾成為 ODATACONTENT.cs，尤其當連接的表格很多時，可獨立成連接資料庫中不同的 Table 的類別，但並不強迫；亦可以直接將連接資料庫的此類別直接寫入與 ODATA class 相同的 namespace 中。  |
+
 ```csharp
+using System;
+using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations.Schema;
 using System.Data.Entity;
-namespace ProductService.Models
-{
-    public class ProductsContext : DbContext
-    {
-        public ProductsContext() : base("name=ProductsContext")
-        {
+using System.Data.SqlClient;
+using System.Linq;
+using System.Web;
+
+namespace webAPIODataModel.Models {
+    // Use DbContext to load the whole database
+    // or load the collection of multiple tables
+    public class ODATACONTENT : DbContext {
+        // after initializing the object
+        // the object directly links the database though connectionString defined in Web.config
+        // the format "name=(connection string name)"
+        public ODATACONTENT() : base("name=ProductsContext") {
+            // if the table already existing in the database, it is not necessary to create a new table in it
+            // the SetInitializer load the DbContext and set null to initialization
+            Database.SetInitializer<ODATACONTENT>(null);
+
+            // But if you created the database yourself, no table in it
+            // then you need to specify an initialization strategy otherwise no tables will be added to the database
+            // in the most case, the VS might do the thing automatically, the following code would be no need
+            //Database.SetInitializer(new DropCreateDatabaseIfModelChanges<ODATACONTENT>());
         }
-        public DbSet<Product> Products { get; set; }
+
+        // DbSet loads tables in the database and also is the interface to execute CRUD operations
+        // <ODATA> is the class defined in C# to map the datatype to the table in the database
+        // OData is the "table name" in the database
+        public DbSet<ODATA> OData { get; set; }
     }
 }
 ```
