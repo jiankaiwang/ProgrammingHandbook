@@ -66,6 +66,7 @@ Install-Package EntityFramework
 ###使用的 Database 與 Table
 ---
 ![](webapiodatadbcontent.png)
+
 * 資料庫名為 ProductsContext，包含 two tables，OData 及 ODatas。
 
 
