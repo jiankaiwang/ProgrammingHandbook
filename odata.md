@@ -275,7 +275,6 @@ public static class WebApiConfig
 
             // builder.EntitySet must be the same with data model definition
             // <ODATA> is the class defined by C# to map tables in database
-            // "OData" is the Table in database
             // EntitySet<ODATA>("OData1"), OData1 means the execution body and must be the same with controller's name
             // EntitySet loads the OData into ODATA Class
             // Because OData v3 (Controller) is not compatible with OData v4 (Web API)
@@ -306,7 +305,12 @@ route 路由器告訴 Web API 如何導引 HTTP 請求 (request) 到各自的 En
 此外，若是一個 Web API 有多個 OData endpoint，則可以透過給不同的路由器名稱 (routeName) 及路徑前綴 (routePrefix) 來設定路由器以便對應不同的 API。
 
 * 路由器定義
-  * 
+  * builder.EntitySet 中使用的類別定義需與 Models 定義之類別名稱相同，而控制器名稱需與控制器前綴名稱 ([控制器名稱]Controller.cs) 相同 
+```csharp
+builder.EntitySet<資料表類別，本例為 ODATA>("控制器名稱，本例為 OData1")
+```
+
+  
 
 ###加入一個 OData 控制器 (Controller)
 ---
