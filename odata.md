@@ -30,7 +30,7 @@
 
 ###實作範例
 ---
-#####透過 Web API MVC 連結資料庫中的資料表並實作出 OData RESTful 介面。
+#####透過 Web API MVC 連結資料庫中的資料表並實作出 OData RESTful Json 格式介面。
 
 ###開始一個 VS 專案
 ---
