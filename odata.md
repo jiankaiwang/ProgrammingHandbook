@@ -165,7 +165,7 @@ Install-Package EntityFramework
 
 * 開啟 Web.config 檔案，將下列連接字串加入 Configuration 元素中，在 configSections 元素之後加入。
 * 其中 ProductsContext 將在之後被繼承 DbContext 的類別所引用
-* .\SQLEXPRESS 為本機使用之 Database
+* .\SQLEXPRESS 為本機使用之 Database server
 
 ```Xml
 <configuration>
