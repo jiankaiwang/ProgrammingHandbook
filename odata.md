@@ -228,7 +228,7 @@ namespace webAPIODataModel.Models {
   * 其中建構子 ProductsContext() 中定義 base 的 "name=ProductsContext" 需指向 connectionStrings。
   * 繼承 DbContext 目地為載入整個資料庫或者是載入含有多張表的資料集
   * 於物件被產生時，便會直接透過 Web.config 定義的 connectionString 連接至資料庫；而 base("name=ProductsContext") 便是找出在 web.config 中定義名為 ProductsContext 的 connectionString，此 base("name=[連接字串名稱]") 為規定寫法。
-  * 
+  * 若是資料庫中已有需要引用的表，則並不需要再創建一張表，因此 SetInitializer 為 null，即 Database.SetInitializer<ODATACONTENT>(null);
 
 ###OData Endpoint 的組態設定
 ---
