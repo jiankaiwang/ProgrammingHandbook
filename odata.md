@@ -393,26 +393,28 @@ namespace webAPIODataModel.Controllers
 ###查詢 Entity Set (Querying the Entity Set)
 ---
 * 加入下方的類別方法入 OData1Controller (OData1Controller.cs) 中
+
 ```csharp
 [EnableQuery]
-public IQueryable<Product> Get()
+public IQueryable<ODATA> Get()
 {
-    return db.Products;
+    return db.OData;
 }
+
 [EnableQuery]
-public SingleResult<Product> Get([FromODataUri] int key)
+public SingleResult<ODATA> Get([FromODataUri] int key)
 {
-    IQueryable<Product> result = db.Products.Where(p => p.Id == key);
-    return SingleResult.Create(result);
+    return SingleResult.Create(db.OData.Where(oDATA => oDATA.id == key));
 }
 ```
+
   * 沒有參數版本的 Get Method 回傳完整的 Products 物件集合。<br>
 而含有一個 key 參數的 Get Method 則透過此 Key 查詢 Product 物件，此例子是利用 Id 特性 (property)。
   * 屬性 [EnableQuery] 允許 CLients 來修正搜尋，透過搜尋選項如 $filter, $sort, 及 $page 等。若要搜尋更多的資訊，可以參考 [Supporting OData Query Options](http://www.asp.net/web-api/overview/odata-support-in-aspnet-web-api/supporting-odata-query-options)。
 
 ###加入一項資料體入資料體 (Adding an Entity to the Entity Set)
 ---
-* 若要能允許使用者將一個新物件 Product 加入資料庫中，可以加入底下方法入 ProductsController (ProductsController.cs) 中
+* 若要能允許使用者將一個新物件 Product 加入資料庫中，可以加入底下方法入 OData1Controller (OData1Controller.cs) 中
 ```csharp
 public async Task<IHttpActionResult> Post(Product product)
 {
@@ -429,6 +431,7 @@ public async Task<IHttpActionResult> Post(Product product)
 ###更新資料體 (Updating an Entity)
 ---
 * OData 支援兩種不同的語法來更新資料體，即 PATCH 與 PUT。
+
   * PATCH 執行 partial update，使用者透過標示特性的方式來針對資料進行更新。(The client specifies just the properties to update.)
   
   * PUT 則是更新整個資料體。PUT 缺點為使用者必須傳送資料體中所有的特性，包含沒有要更新的值。因此 OData 規則中比較建議使用 PATCH。
