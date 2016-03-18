@@ -566,7 +566,14 @@ http://localhost:1495/ODataPrefix/OData1/?$filter=name eq 'f'
 | -- |
 | 需要注意 IIS 需要先開啟 ASP, ASP.NET 功能。若沒有開啟，可以從控制台 > 開啟或關閉 Windows 功能 > Internet Information Services > World Wide Web 服務 > 應用程式開發功能，點擊 .NET 擴充性, ASP, ASP.NET，然後點選確定來開啟。 |
 
+  * 右鍵點擊「站台」 > 「新增網站」 > 寫入「站台名稱」 > 指定「實體路徑」 > 繫結 > 連接埠 「8100」 (此可以自行調整)
+
+![](webapi-new-website.png)
+
+  * 因為此資料夾在網路上為一階層，因此需要開啟「瀏覽目錄」的功能，在點擊此新網站後，選擇 IIS > 雙點擊「瀏覽目錄」 > 於右側的「動作」中 > 「開啟」即可。
+
   * 
+
 
 
 
