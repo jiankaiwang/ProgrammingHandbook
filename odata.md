@@ -571,14 +571,14 @@ http://192.168.1.24:8100/ODataPrefix/$metadata    <!--IIS 下-->
 ```html
 http://localhost:1495/ODataPrefix/OData1(3)    <!--測試機-->
 http://localhost:1495/ODataPrefix/OData1/?$top=3    <!--測試機-->
-http://192.168.1.24:8100/ODataPrefix/OData1(3)    <!--測試機-->
-http://192.168.1.24:8100/ODataPrefix/OData1/?$top=3    <!--測試機-->
+http://192.168.1.24:8100/ODataPrefix/OData1(3)    <!--IIS 下-->
+http://192.168.1.24:8100/ODataPrefix/OData1/?$top=3    <!--IIS 下-->
 ```
 
   * 取出 name 為 f 的該筆資料
 ```html
 http://localhost:1495/ODataPrefix/OData1/?$filter=name eq 'f'    <!--測試機-->
-http://192.168.1.24:8100/ODataPrefix/OData1/?$filter=name eq 'f'    <!--測試機-->
+http://192.168.1.24:8100/ODataPrefix/OData1/?$filter=name eq 'f'    <!--IIS 下-->
 ```
 
 
