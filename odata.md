@@ -543,8 +543,8 @@ http://localhost:1495/ODataPrefix/OData1/?$top=3
 http://localhost:1495/ODataPrefix/OData1/?$filter=name eq 'f'
 ```
 
-
-
+###佈署至 IIS Server (7.5 為例)
+---
 
 
 
