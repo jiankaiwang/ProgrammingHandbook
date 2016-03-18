@@ -519,30 +519,6 @@ public async Task<IHttpActionResult> Delete([FromODataUri] int key)
 }
 ```
 
-###使用方式
----
-* 來自 HTTP 的 Request
-  * OData Web API
-```html
-http://localhost:1495/ODataPrefix/
-```
-
-  * 取得 metadata
-```html
-http://localhost:1495/ODataPrefix/$metadata
-```
-
-  * 取出前 3 例
-```html
-http://localhost:1495/ODataPrefix/OData1(3)
-http://localhost:1495/ODataPrefix/OData1/?$top=3
-```
-
-  * 取出 name 為 f 的該筆資料
-```html
-http://localhost:1495/ODataPrefix/OData1/?$filter=name eq 'f'
-```
-
 ###佈署至 IIS Server (7.5 為例)
 ---
 * 以發行方式進行將 Web API 匯出
@@ -576,7 +552,29 @@ http://localhost:1495/ODataPrefix/OData1/?$filter=name eq 'f'
 
 ![](web-api-app-pool.png)
 
+###使用方式
+---
+* 來自 HTTP 的 Request
+  * OData Web API
+```html
+http://localhost:1495/ODataPrefix/
+```
 
+  * 取得 metadata
+```html
+http://localhost:1495/ODataPrefix/$metadata
+```
+
+  * 取出前 3 例
+```html
+http://localhost:1495/ODataPrefix/OData1(3)
+http://localhost:1495/ODataPrefix/OData1/?$top=3
+```
+
+  * 取出 name 為 f 的該筆資料
+```html
+http://localhost:1495/ODataPrefix/OData1/?$filter=name eq 'f'
+```
 
 
 
