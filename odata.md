@@ -556,7 +556,17 @@ http://localhost:1495/ODataPrefix/OData1/?$filter=name eq 'f'
 
   * 設定 > 組態「Release」> "下一步" > "發行"
 
-  * 剛
+  * 因為 Web API 發行檔多為開放於網路空間，但發行後的 Web API 內容預設並非給公開使用，因此需先增加一個使用權限，便能透過 IIS 進行架設。對資料夾點擊右鍵 > 「內容」 > 「安全性」 > 「編輯」 > 「新增」 > 輸入物件名稱來選取 「Users」 > 「確定」 > SYSTEM 的權限 (此部分需視此 API 的用途，是否具被寫入等功能) 來決定 > 「確定」 > 即可。
+
+  * 剛發行完的版本放置於一個資料夾下，先開啟 IIS
+
+| 註解 |
+| -- |
+| 需要注意 IIS 需要先開啟 ASP, ASP.NET 功能。若沒有開啟，可以從控制台 > 開啟或關閉 Windows 功能 > Internet Information Services > World Wide Web 服務 > 應用程式開發功能，點擊 .NET 擴充性, ASP, ASP.NET，然後點選確定來開啟。 |
+
+  * 
+
+
 
 
 
