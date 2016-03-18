@@ -572,7 +572,9 @@ http://localhost:1495/ODataPrefix/OData1/?$filter=name eq 'f'
 
   * 因為此資料夾在網路上為一階層，因此需要開啟「瀏覽目錄」的功能，在點擊此新網站後，選擇 IIS > 雙點擊「瀏覽目錄」 > 於右側的「動作」中 > 「開啟」即可。
 
-  * 
+  * 最後因為本 Web API 已經使用 .NET Framework 4.0 版本，故於「應用程式集區」下，選擇 「webAPIODataModelIIS」，並在 .NET Framework 版本選擇「.NET Framework v4.0.30319」。
+
+![](web-api-app-pool.png)
 
 
 
