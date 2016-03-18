@@ -553,6 +553,7 @@ public async Task<IHttpActionResult> Delete([FromODataUri] int key)
 ![](web-api-app-pool.png)
 
 ###使用方式
+#####假設以 192.681.1.24 作 IP address 為例
 ---
 * 來自 HTTP 的 Request
   * OData Web API
