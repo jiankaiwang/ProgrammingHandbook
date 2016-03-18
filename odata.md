@@ -557,23 +557,28 @@ public async Task<IHttpActionResult> Delete([FromODataUri] int key)
 * 來自 HTTP 的 Request
   * OData Web API
 ```html
-http://localhost:1495/ODataPrefix/
+http://localhost:1495/ODataPrefix/    <!--測試機-->
+http://192.168.1.24:8100/ODataPrefix/    <!--IIS 下-->
 ```
 
   * 取得 metadata
 ```html
-http://localhost:1495/ODataPrefix/$metadata
+http://localhost:1495/ODataPrefix/$metadata    <!--測試機-->
+http://192.168.1.24:8100/ODataPrefix/$metadata    <!--IIS 下-->
 ```
 
   * 取出前 3 例
 ```html
-http://localhost:1495/ODataPrefix/OData1(3)
-http://localhost:1495/ODataPrefix/OData1/?$top=3
+http://localhost:1495/ODataPrefix/OData1(3)    <!--測試機-->
+http://localhost:1495/ODataPrefix/OData1/?$top=3    <!--測試機-->
+http://192.168.1.24:8100/ODataPrefix/OData1(3)    <!--測試機-->
+http://192.168.1.24:8100/ODataPrefix/OData1/?$top=3    <!--測試機-->
 ```
 
   * 取出 name 為 f 的該筆資料
 ```html
-http://localhost:1495/ODataPrefix/OData1/?$filter=name eq 'f'
+http://localhost:1495/ODataPrefix/OData1/?$filter=name eq 'f'    <!--測試機-->
+http://192.168.1.24:8100/ODataPrefix/OData1/?$filter=name eq 'f'    <!--測試機-->
 ```
 
 
