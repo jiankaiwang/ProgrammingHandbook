@@ -545,6 +545,18 @@ http://localhost:1495/ODataPrefix/OData1/?$filter=name eq 'f'
 
 ###佈署至 IIS Server (7.5 為例)
 ---
+* 以發行方式進行將 Web API 匯出
+  * 「方案總管」 > 對專案點右鍵 (WebAPIODataModel) > 發行
+
+![](webapi-iis-publish.png)
+
+  * 設定檔 「自訂」 > 輸入一個設定檔名稱 > "下一步" > iis 的發行方法 > 「檔案系統」 > 目標位置 「(選擇要放置的路徑，此路徑之後會給 IIS 建立網站使用，舉放置在桌面的 webAPIODataModelIIS 資料夾為例)」> "下一步"
+
+![](webapi-physical-path.png)
+
+  * 設定 > 組態「Release」> "下一步" > "發行"
+
+  * 剛
 
 
 
