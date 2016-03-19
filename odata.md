@@ -672,6 +672,33 @@ $("#post").click(function () {
 });
 ```
 
+  * 'PATCH' or 'Update' : 更新 DB 中某一筆資料，此例用 PATCH 作為範例。需要注意 PATCH Url 需有指定 ID
+    * html code :
+
+```html
+<button id="patch">Send an HTTP PATCH (partially update) request to partially update DB.</button>
+```
+
+    * Javascript code :
+
+```javascript
+// function patch
+var patchObj = { "name" : "update2" };
+$("#patch").click(function () {
+    $.ajax({
+        // 必須指定要更新哪一筆資料，透過指定 id 的方式進行
+        url: 'ODataPrefix/OData1(2)',
+        type: 'PATCH',
+        data: JSON.stringify(patchObj),
+        dataType: 'json',
+        contentType: 'application/json',
+        success: function (data) {
+            alert("PATCH OK");
+        }
+    });
+});
+```
+
 
 
 
