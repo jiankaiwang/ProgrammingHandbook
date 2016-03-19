@@ -442,25 +442,32 @@ public async Task<IHttpActionResult> Post(ODATA oDATA)
 
 * 底下為 async 的 PATCH 實作方式
 ```csharp
-public async Task<IHttpActionResult> Patch([FromODataUri] int key, Delta<Product> product)
+// PATCH: odata/ODATAs(5)
+[AcceptVerbs("PATCH", "MERGE")]
+public async Task<IHttpActionResult> Patch([FromODataUri] int key, Delta<ODATA> patch)
 {
+    Validate(patch.GetEntity());
+
     if (!ModelState.IsValid)
     {
         return BadRequest(ModelState);
     }
-    var entity = await db.Products.FindAsync(key);
-    if (entity == null)
+
+    ODATA oDATA = await db.OData.FindAsync(key);
+    if (oDATA == null)
     {
         return NotFound();
     }
-    product.Patch(entity);
+
+    patch.Patch(oDATA);
+
     try
     {
         await db.SaveChangesAsync();
     }
     catch (DbUpdateConcurrencyException)
     {
-        if (!ProductExists(key))
+        if (!ODATAExists(key))
         {
             return NotFound();
         }
@@ -469,7 +476,8 @@ public async Task<IHttpActionResult> Patch([FromODataUri] int key, Delta<Product
             throw;
         }
     }
-    return Updated(entity);
+
+    return Updated(oDATA);
 }
 ```
 
