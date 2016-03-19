@@ -699,6 +699,29 @@ $("#patch").click(function () {
 });
 ```
 
+  * 'DELETE' or 'Delete' : 從 DB 中刪除一筆資料。和 PATCH 操作相同，需要指定 ID。
+    * html code :
+
+```html
+<button id="delete">Send an DELETE POST request to delete a piece of data from the DB.</button>
+```
+
+    * Javascript code : 
+
+```javascript
+// function delete
+$("#delete").click(function () {
+   $.ajax({
+        // 必須指定要刪除哪一筆資料，透過指定 id 的方式進行
+        url: "ODataPrefix/OData1(5)",
+        type: 'DELETE',
+        success: function (data) {
+            alert("DELETE OK");
+        }
+   });
+});
+```
+
 
 
 
