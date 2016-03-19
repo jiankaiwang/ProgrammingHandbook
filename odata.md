@@ -525,15 +525,18 @@ public async Task<IHttpActionResult> Put([FromODataUri] int key, Delta<ODATA> pa
 ---
 * 若要使用者能夠從資料庫中刪除一筆資料 (delete a product from the database)，可以加入底下方法入 ProductsController (ProductsController.cs) 中
 ```csharp
+// DELETE: odata/ODATAs(5), use the id as key (identifier)
 public async Task<IHttpActionResult> Delete([FromODataUri] int key)
 {
-    var product = await db.Products.FindAsync(key);
-    if (product == null)
+    ODATA oDATA = await db.OData.FindAsync(key);
+    if (oDATA == null)
     {
         return NotFound();
     }
-    db.Products.Remove(product);
+
+    db.OData.Remove(oDATA);
     await db.SaveChangesAsync();
+
     return StatusCode(HttpStatusCode.NoContent);
 }
 ```
