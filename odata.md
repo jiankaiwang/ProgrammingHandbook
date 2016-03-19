@@ -605,9 +605,25 @@ http://192.168.1.24:8100/ODataPrefix/OData1/?$filter=name eq 'f'    <!--IIS 下-
 ```
 
 * Client 透過 ajax 方式進行 CRUD 操作
-  * 'GET' : <br>
-當使用者按下按鈕後，取得 DB 中第一筆資料中 name 屬性的值。
+  * OData 於 RESTful 的內容：
 
+```javascript
+{
+ "odata.metadata":"http://192.168.2.8:8100/ODataPrefix/$metadata#OData1","value":[
+    {
+      "id":1,"name":"a"
+    },{
+      "id":2,"name":"update2"
+    },{
+      "id":3,"name":"c"
+    },{
+      "id":6,"name":"new5"
+    }
+  ]
+}
+```
+
+  * 'GET' or 'Read' : 當使用者按下按鈕後，取得 DB 中第一筆資料中 name 屬性的值。
     * html code :
 
 ```html
@@ -629,6 +645,33 @@ $("#get").click(function () {
     });
 });
 ```
+
+  * 'POST' or 'Create' : 創造一筆資料入資料庫中，需要注意資料庫綱目設定中需有 id (identifier)，且此 id 不能由使用者加入，需為 auto increment
+    * html code :
+
+```html
+<button id="post">Send an HTTP POST (create) request to add a piece of data into the DB.</button>
+```
+
+    * Javascript code :
+
+```javascript
+// function post, add values without id
+var postObj = { "name" : 'new5' };
+$("#post").click(function () {
+    $.ajax({
+        url: 'ODataPrefix/OData1',
+        type: 'POST',
+        data: JSON.stringify(postObj),
+        dataType: 'json',
+        contentType: 'application/json; charset=utf-8',
+        success: function (data) {
+            alert("POST OK");
+        }
+    });
+});
+```
+
 
 
 
