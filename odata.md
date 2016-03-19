@@ -483,24 +483,30 @@ public async Task<IHttpActionResult> Patch([FromODataUri] int key, Delta<ODATA> 
 
 * 底下為 async 的 PUT 實作方法
 ```csharp
-public async Task<IHttpActionResult> Put([FromODataUri] int key, Product update)
+public async Task<IHttpActionResult> Put([FromODataUri] int key, Delta<ODATA> patch)
 {
+    Validate(patch.GetEntity());
+
     if (!ModelState.IsValid)
     {
         return BadRequest(ModelState);
     }
-    if (key != update.Id)
+
+    ODATA oDATA = await db.OData.FindAsync(key);
+    if (oDATA == null)
     {
-        return BadRequest();
+        return NotFound();
     }
-    db.Entry(update).State = EntityState.Modified;
+
+    patch.Put(oDATA);
+
     try
     {
         await db.SaveChangesAsync();
     }
     catch (DbUpdateConcurrencyException)
     {
-        if (!ProductExists(key))
+        if (!ODATAExists(key))
         {
             return NotFound();
         }
@@ -509,7 +515,8 @@ public async Task<IHttpActionResult> Put([FromODataUri] int key, Product update)
             throw;
         }
     }
-    return Updated(update);
+
+    return Updated(oDATA);
 }
 ```
 在 PATCH 方法中，控制器使用 Delta<T> 方法來追蹤改變的值。
