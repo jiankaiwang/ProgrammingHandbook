@@ -624,13 +624,11 @@ http://192.168.1.24:8100/ODataPrefix/OData1/?$filter=name eq 'f'    <!--IIS 下-
 ```
 
   * 'GET' or 'Read' : 當使用者按下按鈕後，取得 DB 中第一筆資料中 name 屬性的值。
-    * html code :
+    * html 及 Javascript code :
 
 ```html
 <button id="get">Send an HTTP GET request to fetch the name(attribute) of the first data(entity) from DB.</button>
 ```
-
-    * Javascript code :
 
 ```javascript
 // function get
@@ -647,13 +645,11 @@ $("#get").click(function () {
 ```
 
   * 'POST' or 'Create' : 創造一筆資料入資料庫中，需要注意資料庫綱目設定中需有 id (identifier)，且此 id 不能由使用者加入，需為 auto increment
-    * html code :
+    * html 及 Javascript code :
 
 ```html
 <button id="post">Send an HTTP POST (create) request to add a piece of data into the DB.</button>
 ```
-
-    * Javascript code :
 
 ```javascript
 // function post, add values without id
@@ -673,13 +669,11 @@ $("#post").click(function () {
 ```
 
   * 'PATCH' or 'Update' : 更新 DB 中某一筆資料，此例用 PATCH 作為範例。需要注意 PATCH Url 需有指定 ID
-    * html code :
+    * html 及 Javascript code :
 
 ```html
 <button id="patch">Send an HTTP PATCH (partially update) request to partially update DB.</button>
 ```
-
-    * Javascript code :
 
 ```javascript
 // function patch
@@ -700,13 +694,11 @@ $("#patch").click(function () {
 ```
 
   * 'DELETE' or 'Delete' : 從 DB 中刪除一筆資料。和 PATCH 操作相同，需要指定 ID。
-    * html code :
+    * html 及 Javascript code :
 
 ```html
 <button id="delete">Send an DELETE POST request to delete a piece of data from the DB.</button>
 ```
-
-    * Javascript code : 
 
 ```javascript
 // function delete
