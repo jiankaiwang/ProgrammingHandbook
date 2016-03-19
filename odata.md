@@ -604,6 +604,10 @@ http://localhost:1495/ODataPrefix/OData1/?$filter=name eq 'f'    <!--測試機--
 http://192.168.1.24:8100/ODataPrefix/OData1/?$filter=name eq 'f'    <!--IIS 下-->
 ```
 
+* Client 透過 ajax 方式進行 CRUD 操作
+
+
+
 
 
 
