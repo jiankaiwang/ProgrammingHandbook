@@ -69,11 +69,12 @@ Install-Package EntityFramework
 
 * 資料庫名為 ProductsContext，包含 two tables，OData 及 ODatas。
 * 資料庫為放置在 .\SQLEXPRESS 底下的資料庫，非 App_Data
+* 需注意若是此 Web API 需具備 POST 功能 (Created)，對於 id 此辨識 key 要採取自動遞增的設定，否則會出現 500 Interal error，於 T-SQL 指令中，在 [id] 欄位下加入 IDENTITY(1,1)，表示每次遞增 + 1。
 * OData 內容如下
 
 ```Sql
 CREATE TABLE [dbo].[OData] (
-    [id]   INT           NOT NULL,
+    [id]   INT           IDENTITY(1,1) NOT NULL,
     [name] NVARCHAR (50) NOT NULL,
     CONSTRAINT [PK_OData] PRIMARY KEY CLUSTERED ([id] ASC)
 );
