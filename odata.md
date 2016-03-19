@@ -605,6 +605,14 @@ http://192.168.1.24:8100/ODataPrefix/OData1/?$filter=name eq 'f'    <!--IIS 下-
 ```
 
 * Client 透過 ajax 方式進行 CRUD 操作
+  * 'GET' : <br>
+當使用者按下按鈕後，取得 DB 中第一筆資料中 name 屬性的值。
+
+    * html code :
+```html
+<button id="get">Send an HTTP GET request to fetch the name(attribute) of the first data(entity) from DB.</button>
+```
+
 
 
 
