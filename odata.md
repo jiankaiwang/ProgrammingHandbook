@@ -417,15 +417,18 @@ public SingleResult<ODATA> Get([FromODataUri] int key)
 ---
 * 若要能允許使用者將一個新物件 Product 加入資料庫中，可以加入底下方法入 OData1Controller (OData1Controller.cs) 中
 ```csharp
-public async Task<IHttpActionResult> Post(Product product)
+// POST: odata/ODATAs
+public async Task<IHttpActionResult> Post(ODATA oDATA)
 {
     if (!ModelState.IsValid)
     {
         return BadRequest(ModelState);
     }
-    db.Products.Add(product);
+
+    db.OData.Add(oDATA);
     await db.SaveChangesAsync();
-    return Created(product);
+
+    return Created(oDATA);
 }
 ```
 
