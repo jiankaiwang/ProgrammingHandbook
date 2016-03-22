@@ -39,7 +39,7 @@
 
 * Angular 表示式：呈現類似 Javascript，但不全然是 Javascript，透過 \{\{ 及 \}\} 包起來表示式。
 
-  * 數字與字串表示式
+  * 數字與字串表示式 : 加入下方內容於 &lt;body&gt; 中
 
 ```Javascript
 {{ 99 }}
@@ -51,6 +51,7 @@
 {{ 'Hello world ! AngularJS !' }}
 ```
 
+  * Filter 特性
 
 
 
