@@ -45,7 +45,7 @@
 ---
 * AngularJS modules 定義了 AngularJS 的應用程式內容
 * AngularJS controllers 則是控制此 AngularJS 應用程式流程
-* ng-app 宣告式定義了此應用程式作用範圍，ng-controller 宣告了此應用程式所使用的流程處理為和
+* ng-app 宣告式定義了此應用程式作用範圍與使用的模組為何，ng-controller 宣告了此應用程式所使用的流程處理為何
 
 ```html
 <!DOCTYPE html>
@@ -72,6 +72,5 @@ app.controller('myCtrl', function($scope) {
 
 </body>
 </html>
-
 ```
 
