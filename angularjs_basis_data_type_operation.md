@@ -41,4 +41,26 @@
 </div>  
 ```
 
+###AngularJS 應用程式
+---
+* AngularJS modules 定義了 AngularJS 的應用程式內容
+* AngularJS controllers 則是控制此 AngularJS 應用程式流程
+* ng-app 宣告式定義了此應用程式作用範圍，ng-controller 宣告了此應用程式所使用的流程處理為和
+
+```html
+<div ng-app="myApp" ng-controller="myCtrl">
+  First Name: <input type="text" ng-model="firstName"><br>
+  Last Name: <input type="text" ng-model="lastName"><br>
+  <br>
+  Full Name: {{firstName + " " + lastName}}
+</div>
+
+<script>
+var app = angular.module('myApp', []);
+app.controller('myCtrl', function($scope) {
+    $scope.firstName= "John";
+    $scope.lastName= "Doe";
+});
+</script>
+```
 
