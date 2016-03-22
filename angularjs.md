@@ -51,7 +51,54 @@
 {{ 'Hello world ! AngularJS !' }}
 ```
 
-  * Filter 特性
+  * Filter 特性 : 加入下方內容於 &lt;body&gt; 中
+
+```Javascript
+{{ 99 }}
+<br>
+{{ 99 + 1 | number : 2 }}
+<br>
+{{ 99 * 2 | currency }}
+<br>
+{{ 'Hello world ! AngularJS !' | uppercase }}
+```
+
+  * 資料繫結 : 加入下方內容於 &lt;body&gt; 中，並進行簡易操作。
+
+```html
+<input type="number" ng-model="quantity" ng-init="quantity = 10">
+ <br>
+<input type="number" ng-model="price" ng-init="price = 950">
+ <br>
+總價 : {{ quantity * price }}
+```
+透過 ng-model 標籤宣告成 Model，此 ng-model 屬性的內容則為變數的名稱。type 屬性定義此為數字。若是此時我們透過 jQuery 方式進行 DOM 操作更改此 input 標籤內的值，如下方程式碼
+
+```html
+<!DOCTYPE html>
+<html ng-app>
+<head>
+  <script src="https://code.jquery.com/jquery-2.1.4.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.0/angular.min.js"></script>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+</head>
+
+<body>
+  <input type="number" ng-model="quantity" ng-init="quantity = 10" id="jqu">
+   <br>
+  <input type="number" ng-model="price" ng-init="price = 950">
+   <br>
+  總價 : {{ quantity * price }}
+
+  <script type="text/javascript">
+  $("#jqu").val("100");
+  </script>
+</body>
+</html>
+```
+則 id 為 jqu 的 input 欄位不會有所反應，因目前這個欄位受到 Angular 的控制。
+
 
 
 
