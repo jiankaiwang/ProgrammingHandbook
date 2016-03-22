@@ -16,6 +16,7 @@
   * [OData Version 3.0 Core Protocol](http://www.odata.org/documentation/odata-version-3-0/odata-version-3-0-core-protocol/) : 包含多種 filter 方式
 * AngularJS
   * [jqLite](https://docs.angularjs.org/api/ng/function/angular.element) : support DOM operations
+  * [Filters](http://docs.angularjs.org/guide/dev_guide.templates.filters) : 修飾或過濾數值與文字等 AngularJS 表達式結果
 * [JSBin](http://jsbin.com/?html,output) : 一套線上 HTML/CSS/Javascript 的開發環境
 
 
