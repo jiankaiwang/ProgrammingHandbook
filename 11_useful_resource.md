@@ -9,4 +9,7 @@
   * [w3school 版本](http://www.w3schools.com/aspnet/webpages_ref_classes.asp)
 * ASP.NET MVC Odata
   * [技術支援](http://www.asp.net/web-api/overview/odata-support-in-aspnet-web-api/odata-v4/create-an-odata-v4-endpoint) : OData v4 EndPoint using ASP.NET Web API 2.2
+* OData
+  * [MSDN](https://msdn.microsoft.com/library/azure/gg312156.aspx) : 支援的 OData 查詢選項
+  * [OData Version 3.0 Core Protocol](http://www.odata.org/documentation/odata-version-3-0/odata-version-3-0-core-protocol/) : 包含多種 filter 方式
 
