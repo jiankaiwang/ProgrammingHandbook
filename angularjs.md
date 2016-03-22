@@ -72,7 +72,7 @@
  <br>
 總價 : {{ quantity * price }}
 ```
-透過 ng-model 標籤宣告成 Model，此 ng-model 屬性的內容則為變數的名稱。type 屬性定義此為數字。若是此時我們透過 jQuery 方式進行 DOM 操作更改此 input 標籤內的值，如下方程式碼
+透過 ng-model 標籤宣告成 Model，此 ng-model 屬性的內容則為變數的名稱。type 屬性定義此為數字。ng-init 則為初始這個 Model 的值。若是此時我們透過 jQuery 方式進行 DOM 操作更改此 input 標籤內的值，如下方程式碼
 
 ```html
 <!DOCTYPE html>
@@ -97,7 +97,7 @@
 </body>
 </html>
 ```
-則 id 為 jqu 的 input 欄位不會有所反應，因目前這個欄位受到 Angular 的控制。
+則 id 為 jqu 的 input 欄位不會有所反應，因目前這個欄位受到 Angular 的控制。所以當 quantity 或 price 兩個欄位任一沒有預設值，因為雙向繫結的關係，總價欄位不會出現任何資料，因此需要注意要透過 ng-init 來指定 Model 的預設值。
 
 
 
