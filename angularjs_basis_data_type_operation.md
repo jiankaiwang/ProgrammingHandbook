@@ -74,5 +74,8 @@ app.controller('myCtrl', function($scope) {
 </html>
 ```
 
+上列程式的細部解說如下：
+  * 由 AngularJS 
+
 
 
