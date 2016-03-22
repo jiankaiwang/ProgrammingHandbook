@@ -7,6 +7,7 @@
    * [GitBook](gitbook.md)
    * [Web API](web_api.md)
        * [OData](odata.md)
+       * AngularJS
 * [Scientific](scientific.md)
    * [Resource](scientific-resource.md)
    * [Data accessed by R](r_access_multiple_source_data.md)
