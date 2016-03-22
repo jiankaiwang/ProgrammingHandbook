@@ -14,6 +14,8 @@
 * OData
   * [MSDN](https://msdn.microsoft.com/library/azure/gg312156.aspx) : 支援的 OData 查詢選項
   * [OData Version 3.0 Core Protocol](http://www.odata.org/documentation/odata-version-3-0/odata-version-3-0-core-protocol/) : 包含多種 filter 方式
+* AngularJS
+  * [jqLite](https://docs.angularjs.org/api/ng/function/angular.element) : support DOM operations
 
 ###Scientific
 ---
