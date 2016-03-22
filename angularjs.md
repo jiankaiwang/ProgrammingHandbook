@@ -13,4 +13,26 @@
 
 而 AngularJS 創造的目的為 CRUD 的操作，其對於 jQuery 的支援，如 DOM 操作便不是重點，儘管 AngularJS 中內建 [jqLite](http://docs.angularjs.org/api/angular.element)，但仍非主要操作模式。
 
-###
+###AngularJS 特性範例
+---
+* 先加入 AngualrJS 的函式庫
+
+```Javascript
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.0/angular.min.js"></script>
+```
+
+* 加入宣告式語法 (Directives)，說明此份 html context 皆使用 AngularJS 的操作模式，加入 ng-app 入 html tag
+
+```html
+<!DOCTYPE html>
+<html ng-app>
+  <head>
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.0/angular.min.js"></script>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <title></title>
+  </head>
+  <body>
+  </body>
+</html>
+```
