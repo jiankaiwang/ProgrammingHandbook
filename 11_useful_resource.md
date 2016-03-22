@@ -15,6 +15,7 @@
   * [MSDN](https://msdn.microsoft.com/library/azure/gg312156.aspx) : 支援的 OData 查詢選項
   * [OData Version 3.0 Core Protocol](http://www.odata.org/documentation/odata-version-3-0/odata-version-3-0-core-protocol/) : 包含多種 filter 方式
 * AngularJS
+  * [w3school 教學](http://www.w3schools.com/angular/angular_intro.asp)
   * [jqLite](https://docs.angularjs.org/api/ng/function/angular.element) : support DOM operations
   * [Filters](http://docs.angularjs.org/guide/dev_guide.templates.filters) : 修飾或過濾數值與文字等 AngularJS 表達式結果
 * [JSBin](http://jsbin.com/?html,output) : 一套線上 HTML/CSS/Javascript 的開發環境
