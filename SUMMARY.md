@@ -5,6 +5,7 @@
 * [Webpage](chapter1.md)
    * [Syntax Compare](12_syntax_compare.md)
    * [GitBook](gitbook.md)
+   * [AngularJS](angularjs.md)
    * [Web API](web_api.md)
        * [OData](odata.md)
        * [AngularJS](angularjs.md)
