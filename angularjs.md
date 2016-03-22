@@ -37,5 +37,5 @@
 </html>
 ```
 
-* Angular 表示式：呈現類似 Javascript，但不全然是 Javascript，透過 {{ 及 }} 包起來表示式。
+* Angular 表示式：呈現類似 Javascript，但不全然是 Javascript，透過 \{\{ 及 \}\} 包起來表示式。
 
