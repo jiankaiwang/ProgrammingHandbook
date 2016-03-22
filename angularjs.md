@@ -37,6 +37,10 @@
 </html>
 ```
 
+| 註解 |
+| -- |
+| ng-app 當然不一定只有放在 html 屬性來控制整個 context，也可以置於 div 等；此外，亦可以指定是哪一個 ng-app 變數，如 ng-app="example" 等。 |
+
 * Angular 表示式：呈現類似 Javascript，但不全然是 Javascript，透過 \{\{ 及 \}\} 包起來表示式。
 
   * 數字與字串表示式 : 加入下方內容於 &lt;body&gt; 中
