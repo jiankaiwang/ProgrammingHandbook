@@ -39,3 +39,21 @@
 
 * Angular 表示式：呈現類似 Javascript，但不全然是 Javascript，透過 \{\{ 及 \}\} 包起來表示式。
 
+  * 數字與字串表示式
+
+```Javascript
+{{ 99 }}
+<br>
+{{ 99 + 1 }}
+<br>
+{{ 99 * 2 }}
+<br>
+{{ 'Hello world ! AngularJS !' }}
+```
+
+
+
+
+
+
+
