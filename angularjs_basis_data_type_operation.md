@@ -75,7 +75,31 @@ app.controller('myCtrl', function($scope) {
 ```
 
 上列程式的細部解說如下：
-  * 由 AngularJS 
+  
+  * 由 AngularJS 控制的 context 是 div ，而此 div 的 angular module 名稱為 myApp，是透過 myCtrl 的控制器來處理
+  
+  * 底下則是定義模組的方法
+
+```Javascript
+// 其中 [] 是指建構此模組所需要使用到的其他模組，即 dependent modules
+var app = angular.module('myApp', []);
+```
+
+  * 底下則是定義控制器
+
+```Javascript
+// 控制器名稱為 myCtrl
+// AngularJS 透過 $scope 去取得此 ng-app 模組所有 AngularJS 定義的物件
+// 以此例而言，取得型態為 model 的 firstName 與 lastName 兩個 input
+app.controller('myCtrl', function($scope) {
+    // 透過物件成員方式，如 $scope.firstName 方式
+    // 指出 $scope 底下的 firstName model，並進行資料繫結
+    $scope.firstName= "John";
+    $scope.lastName= "Doe";
+});
+```
+
+
 
 
 
