@@ -1,3 +1,12 @@
 # SQL Server (T-SQL)
 
-由微軟提出最初解決輕量或是中小型企業的資料庫管理解決方案，至今也有數十年的歷史。
+###更新資料表
+---
+
+```Sql
+/* format */
+update [table] set [column=value] where [conditions];
+
+/* eample */
+update dbo.list set enable=0 where msgType = 'Alert';
+```
