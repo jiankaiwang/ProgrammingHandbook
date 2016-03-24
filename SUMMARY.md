@@ -11,6 +11,7 @@
        * [OData](odata.md)
 * [Database](database.md)
    * [SQL Server (T-SQL)](sql_server_t-sql.md)
+   * MySQL
 * [Scientific](scientific.md)
    * [Data accessed by R](r_access_multiple_source_data.md)
 
