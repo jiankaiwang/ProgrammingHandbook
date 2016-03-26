@@ -1,5 +1,19 @@
 # MySQL
 
+###創造資料庫
+---
+
+```Sql
+/* basic syntax */
+create database (database_name);
+
+/* 同時定義編碼 
+* utf8 同時亦需定義 collate, 若是為 utf8，則 COLLATE 為 utf8_unicode_ci
+*/
+create database scudb CHARACTER SET utf8 COLLATE utf8_unicode_ci;
+```
+
+
 ###查詢資料內容
 ---
 
