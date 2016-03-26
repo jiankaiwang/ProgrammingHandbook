@@ -53,6 +53,16 @@ SHOW FULL COLUMNS FROM (TABLE_NAME);
 
 ###修改編碼定義
 ---
+修改整個資料庫定義
+
+```Sql
+/* syntax */
+ALTER DATABASE (DATABASE_NAME) CONVERT TO CHARACTER SET (ENCODING) COLLATE (ENCODING-COLLATE);
+
+/* 修改成 utf8 */
+ALTER DATABASE PERSON CONVERT TO CHARACTER SET utf8 COLLATE utf8_unicode_ci;
+```
+
 修改表格欄位編碼定義
 
 ```Sql
