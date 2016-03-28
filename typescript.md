@@ -167,8 +167,19 @@ var user = new Student("Jane", "M.", "User");
 // ...
 ```
 
-###使用 Typescript 所創建的 javascript
+###使用 Typescript 所創建的 Javascript
 ---
+開啟一個檔案，輸入下列 html code，並存成 .html 檔案。
+
+```html
+<!DOCTYPE html>
+<html>
+    <head><title>TypeScript Greeter</title></head>
+    <body>
+        <script src="example.js"></script>
+    </body>
+</html>
+```
 
 
 
