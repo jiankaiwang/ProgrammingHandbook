@@ -87,3 +87,43 @@ mysqli_free_result($result);
 mysqli_close($con);
 ?>
 ```
+
+* Insert
+
+```Php
+<?php
+# connect to mysql
+$dbhost = 'localhost';
+$dbuser = 'dbuser';
+$dbpass = 'dbpass';
+$dbname = 'dbname';
+$tbname = 'tbname';
+
+# use mysqli, set charset and db
+$connCheck = mysqli_connect($dbhost, $dbuser, $dbpass) or die('Error with MySQL connection');
+mysqli_set_charset($connCheck,'utf8');
+mysqli_select_db($connCheck,$dbname);
+
+# parameter-based method to prevent SQL injection
+# table contain 6 columns (id, name, email, phone, school, field), id is auto increment
+# get data from $_POST (stdName, stdEmail, stdPhone, stdSchool, stdField)
+$newSql = mysqli_prepare($connCheck, 'insert into '.$tbname.'(name, email, phone, school, field) values(?,?,?,?,?);');
+
+# s: string, i: int, d: double, b: blob sent in packets
+mysqli_stmt_bind_param($newSql,'sssss',$_POST["stdName"],$_POST["stdEmail"],$_POST["stdPhone"],$_POST["stdSchool"],$_POST["stdField"]);
+
+# start to insert data
+$executeBody = mysqli_stmt_execute($newSql);
+
+# the statsu of inserting data
+if($executeBody === TRUE) { echo 'OK'; }
+else { echo 'No'; }
+
+# close statment and free the execute
+mysqli_stmt_close($newSql);
+mysqli_free_result($executeBody);
+
+# close the mysql connection
+mysqli_close($connCheck);
+?>
+```
