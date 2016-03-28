@@ -144,6 +144,23 @@ var user = new Student("Jane", "M.", "User");
 document.body.innerHTML = greeter(user);
 ```
 
+上面 Student 類別中程式碼說明；
+* 類別 Student 中含有名為 fullname 的 **公開** 成員，即此成員可以直接存取
+* constructor 則為此類別的建構子，包含 3 個傳入參數，此種寫法為快速的寫法。
+* public 指類別中新創出的 **公開** 成員，在此物件被產生時即產生 3 個公開成員，其效果相同下方程式碼；
+
+```Javascript
+class Student {
+    fullName: string;
+    firstName: string;
+    middleInitial: string;
+    lastName: string;
+    constructor(public firstName, public middleInitial, public lastName) {
+        this.fullName = firstName + " " + middleInitial + " " + lastName;
+    }
+}
+```
+
 
 
 
