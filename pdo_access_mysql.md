@@ -57,6 +57,16 @@ for($i = 0 ;$i < count($getRes); $i++) {
 | -- |
 | 注意若無指示透過 PDO::FETCH_ASSOC 方式來取得資料，則同時也會回傳以數字為 key 的資料，如下<br> Array (<br> [0] => Array ( <br>[id] => 1 [0] => 1 <br>[account] => account <br>[1] => account <br>[name] => name <br>[2] => name <br>[password] => password <br>[3] => password <br>[enable] => 1 <br>[4] => 1 <br>[type] => 1 <br>[5] => 1 <br>) ) |
 
+* 亦可以透過 fetch() 方式來一次取得一筆資料
+
+```Php
+while($getRes = $sth->fetch(PDO::FETCH_ASSOC))
+{
+       foreach($getRes as $key => $value) {
+               echo $key."->".$value."<br>";
+       }  
+}
+```
 
 
 
