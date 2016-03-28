@@ -19,7 +19,8 @@
   * [jqLite](https://docs.angularjs.org/api/ng/function/angular.element) : support DOM operations
   * [Filters](http://docs.angularjs.org/guide/dev_guide.templates.filters) : 修飾或過濾數值與文字等 AngularJS 表達式結果
 * [JSBin](http://jsbin.com/?html,output) : 一套線上 HTML/CSS/Javascript 的開發環境
-
+* TypeScript :
+  * [下載與安裝 (連結)](http://www.typescriptlang.org/)
 
 ###Scientific
 ---
