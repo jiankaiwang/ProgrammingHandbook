@@ -6,3 +6,8 @@
 ###安裝 TypeScript
 ---
 [官方網站(連結)](http://www.typescriptlang.org/)說明數種下載與安裝方式；
+* 透過 node.js 安裝 : 啟動 「node.js command prompt」，並輸入下列指令；
+
+```node.js
+$ npm install -g typescript
+```
