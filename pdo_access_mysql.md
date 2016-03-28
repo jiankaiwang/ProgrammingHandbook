@@ -43,8 +43,19 @@ $sth->execute(array(':acc' => $_GET['u'], ':typ' => $_GET['t']));
 * 透過 fetchAll() 將所有資料列取出
 
 ```Php
+# PDO::FETCH_ASSOC 表示透過關聯性方式將資料取出，即 key 為欄位名稱，而 value 為該欄位的值
+$getRes = $sth->fetchAll(PDO::FETCH_ASSOC);
 
+for($i = 0 ;$i < count($getRes); $i++) {
+	foreach($getRes[$i] as $key => $value) {
+		echo $key."->".$value."<br>";
+	}
+}
 ```
+
+| 註解 |
+| -- |
+| 注意若無指示透過 PDO::FETCH_ASSOC 方式來取得資料，則同時也會回傳以數字為 key 的資料，如下<br> Array (<br> [0] => Array ( <br>[id] => 1 [0] => 1 <br>[account] => account <br>[1] => account <br>[name] => name <br>[2] => name <br>[password] => password <br>[3] => password <br>[enable] => 1 <br>[4] => 1 <br>[type] => 1 <br>[5] => 1 <br>) ) |
 
 
 
