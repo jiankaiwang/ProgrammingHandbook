@@ -120,6 +120,33 @@ document.body.innerHTML = greeter(user);
 
 ###定義類別 (Class)
 ---
+此定義方式將原本 Javascript 中雜亂的結構化資料型態進行處理。如下方的 Student 類別；
+
+```Typescript
+class Student {
+    fullName: string;
+    constructor(public firstName, public middleInitial, public lastName) {
+        this.fullName = firstName + " " + middleInitial + " " + lastName;
+    }
+}
+
+interface Person {
+    firstName: string;
+    lastName: string;
+}
+
+function greeter(person : Person) {
+    return "Hello, " + person.firstName + " " + person.lastName;
+}
+
+var user = new Student("Jane", "M.", "User");
+
+document.body.innerHTML = greeter(user);
+```
+
+
+
+
 
 
 
