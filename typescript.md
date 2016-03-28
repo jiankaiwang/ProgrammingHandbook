@@ -51,7 +51,7 @@ document.body.innerHTML = greeter(user);
 ```
 
 上述程式碼說明如下：
-* TypeScript 中定義資料型別方式為 (變數名稱):(資料型態，可為自定義類別)
+* TypeScript 中定義資料型別方式為 **(變數名稱):(資料型態，可為自定義類別)**
 * 其中 Person 定義靜態資料型別，內包含兩個成員，firstname 與 lastname。
 * greeter 定義一個函式，將剛已定義 person 資料型別作為參數帶入，此函式將 person 物件中的 firstname 與 lastname 進行串接並回傳一個字串。
 * var user 則是創建一個以 Person 資料類別作為模版的物件，並初始化該成員變數。
