@@ -75,7 +75,8 @@ var user = { firstname: "Jane", lastname: "User" };
 document.body.innerHTML = greeter(user);
 ```
 
-
+###資料型態的註解
+---
 
 
 
