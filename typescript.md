@@ -169,7 +169,7 @@ var user = new Student("Jane", "M.", "User");
 
 ###使用 Typescript 所創建的 Javascript
 ---
-開啟一個檔案，輸入下列 html code，並存成 .html 檔案。
+開啟一個檔案，輸入下列 html code，並存成 .html 檔案。而使用的方式與一般使用 javascript 函式庫的方式相同。
 
 ```html
 <!DOCTYPE html>
