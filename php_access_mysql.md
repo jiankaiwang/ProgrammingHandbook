@@ -8,6 +8,7 @@
 * Query : fetch several columns
 
 ```Php
+<?php
 # connect to mysql
 $dbhost = 'localhost';
 $dbuser = 'dbuser';
@@ -48,4 +49,41 @@ mysqli_free_result($executeBody);
 
 # close the mysql connection
 mysqli_close($connCheck);
+?>
+```
+
+* Query : fetch all columns<br>
+很多時候當欄位數很多時，若一個一個取出欄位實在不太可取，且容易有問題，因此透過 mysqli_fetch_assoc 進行關連性連結 (直接將欄位名稱當作 key，內容當作 value) 資料。
+
+```Php
+<?php
+$dbhost = 'localhost';
+$dbuser = 'dbuser';
+$dbpass = 'dbpass';
+$dbname = 'dbname';
+$tbname = 'tbname';
+
+# set the connection to the database
+$con = mysqli_connect($dbhost,$dbuser,$dbpass,$dbname);
+mysqli_set_charset($con,'utf8');
+
+# Check connection
+if (mysqli_connect_errno()) {
+  echo "Failed to connect to MySQL: " . mysqli_connect_error();
+}
+
+# set the sql command
+$sql = "SELECT * FROM ".$tbname." WHERE account = 'account' and type = 1;";
+
+# start to query the result
+$result = mysqli_query($con,$sql);
+
+# Associative array
+$row = mysqli_fetch_assoc($result);
+printf ("%s (%s)\n",$row["name"],$row["enable"]);
+
+# Free result set
+mysqli_free_result($result);
+mysqli_close($con);
+?>
 ```
