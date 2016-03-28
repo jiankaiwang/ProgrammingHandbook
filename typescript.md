@@ -35,12 +35,13 @@ document.body.innerHTML = greeter(user);
 * 先開啟文件並儲存下列程式碼，附檔名為 **.ts**。
 
 ```Typescript
+// Person 為自定義資料型態 (以結構方式，類似 C 或 C++ 中的 struct)
 interface Person {
     firstname: string;
     lastname: string;
 }
 
-// person 為變數，而 Person 為自定義資料型態 (以物件方式)
+// person 為變數，而其資料型態為 Person
 function greeter(person : Person) {
     return "Hello, " + person.firstname + " " + person.lastname;
 }
@@ -51,10 +52,11 @@ document.body.innerHTML = greeter(user);
 ```
 
 上述程式碼說明如下：
-* TypeScript 中定義資料型別方式為 **(變數名稱):(資料型態，可為自定義類別)**
-* 其中 Person 定義靜態資料型別，內包含兩個成員，firstname 與 lastname。
-* greeter 定義一個函式，將剛已定義 person 資料型別作為參數帶入，此函式將 person 物件中的 firstname 與 lastname 進行串接並回傳一個字串。
-* var user 則是創建一個以 Person 資料類別作為模版的物件，並初始化該成員變數。
+* TypeScript 中定義變數的資料型態方式為 **(變數名稱):(資料型態，可為自定義類別)**
+* 其中 Person 定義靜態資料型別，內包含兩個變數，firstname 與 lastname，且資料型態皆為 string
+* TypeScript 中透過 **interface** 來描述(定義)一個結構
+* greeter 定義一個函式，將剛已定義 person 資料型別作為參數帶入，此函式將 person 結構中的 firstname 與 lastname 進行串接並回傳一個字串。
+* var user 則是創建一個以 Person 資料結構作為模版的物件，並初始化此結構中的變數。
 * document.body.innerHTML 則是顯示出函式 greeter 的結果。
 
 * 將上列程式碼儲存後，儲存成 「example.ts」 放置於桌面 (舉例路徑：C:\Users\JianKaiWang\Desktop\example.ts)
