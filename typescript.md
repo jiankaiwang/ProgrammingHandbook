@@ -167,6 +167,8 @@ var user = new Student("Jane", "M.", "User");
 // ...
 ```
 
+###使用 Typescript 所創建的 javascript
+---
 
 
 
