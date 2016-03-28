@@ -27,7 +27,13 @@ $sth->bindParam(':acc', $_GET['u'], PDO::PARAM_STR);
 $sth->bindParam(':typ', $_GET['t'], PDO::PARAM_INT);
 
 # start to execute sql command
-$sth->execute();
+if($sth->execute()) {
+  # when executing sql command is correct, do the operation
+  // ...
+} else {
+  # executing sql command is error
+  // ...
+}
 ```
 
 上列方法同時指定了參數的資料型態，亦可透過底下方法透過 array 方式鍵結參數
