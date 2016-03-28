@@ -152,13 +152,18 @@ document.body.innerHTML = greeter(user);
 ```Javascript
 class Student {
     fullName: string;
+    
+    // 其中 firstName, middleInitial 與 lastName 定義為 string，是因為傳入建構子的變數為字串所致
     firstName: string;
     middleInitial: string;
     lastName: string;
-    constructor(public firstName, public middleInitial, public lastName) {
-        this.fullName = firstName + " " + middleInitial + " " + lastName;
-    }
+    
+    // ...
 }
+    
+var user = new Student("Jane", "M.", "User");
+
+// ...
 ```
 
 
