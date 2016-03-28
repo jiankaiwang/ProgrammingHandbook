@@ -31,7 +31,7 @@ $executeBody = mysqli_stmt_execute($sql);
 # bind results, the same with the sql command and have to list all variables output
 mysqli_stmt_bind_result($sql, $name, $password, $enable);
 
-# continue fetching the result
+# continue fetching the result and save as eachCol dictionary into eachData list
 $eachData = array();
 while(mysqli_stmt_fetch($sql)) {
     $eachCol = array();
