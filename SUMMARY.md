@@ -9,6 +9,7 @@
        * [不同資料型態的操作](angularjs_basis_data_type_operation.md)
    * [Web API](web_api.md)
        * [OData](odata.md)
+   * TypeScript
 * [Database](database.md)
    * [SQL Server (T-SQL)](sql_server_t-sql.md)
    * [MySQL](mysql.md)
