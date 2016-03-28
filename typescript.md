@@ -98,8 +98,28 @@ document.body.innerHTML = greeter(user);
 greeter.ts(7,26): Supplied parameters do not match any signature of call target
 ```
 
+###定義介面(Interface, 結構)
+---
+TypeScript 中透過 interface 來定義一個結構，此結構內包含數個不同型態的變數，此類似於 C 或 C++ 中定義 struct 的方式。<br>
+此外，可以經由一個 dictionary 變數來初始化透過此結構產生的變數，如上述範例；
 
+```Typescript
+interface Person {
+    firstName: string;
+    lastName: string;
+}
 
+function greeter(person: Person) {
+    return "Hello, " + person.firstName + " " + person.lastName;
+}
+
+var user = { firstName: "Jane", lastName: "User" };
+
+document.body.innerHTML = greeter(user);
+```
+
+###定義類別 (Class)
+---
 
 
 
