@@ -16,4 +16,23 @@ $ npm install -g typescript
 
 ###前言：可以支援原生 Javascript
 ---
+因 Typescript 可以完全支援 Javascript，可以不用修改任何 .js code 或是 Javascript-based Coding 方式，如下；
+
+```Javascript
+
+```
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
