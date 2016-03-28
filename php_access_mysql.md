@@ -34,9 +34,11 @@ mysqli_stmt_bind_result($sql, $name, $password, $enable);
 # continue fetching the result
 $eachData = array();
 while(mysqli_stmt_fetch($sql)) {
-    $eachData["name"] = $eachData;
-    $eachData["password"] = $password;
-    $eachData["enable"] = $enable;
+    $eachCol = array();
+    $eachCol["name"] = $eachData;
+    $eachCol["password"] = $password;
+    $eachCol["enable"] = $enable;
+    array_push($eachData,$eachCol);
 	echo $name.",".$password.",".$enable."<br>";
 }
 
