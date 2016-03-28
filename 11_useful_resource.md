@@ -21,6 +21,9 @@
 * [JSBin](http://jsbin.com/?html,output) : 一套線上 HTML/CSS/Javascript 的開發環境
 * TypeScript :
   * [下載與安裝 (連結)](http://www.typescriptlang.org/)
+* Business Intelligence :
+  * [Power BI 開發介紹 (連結)](https://www.youtube.com/watch?v=Aa2YLRW5CKo)
+* D3.js
 
 ###Scientific
 ---
