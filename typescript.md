@@ -75,10 +75,26 @@ var user = { firstname: "Jane", lastname: "User" };
 document.body.innerHTML = greeter(user);
 ```
 
-###資料型態的註解
+###資料型態的註解 (Type annotation)
 ---
+在 TypeScript 中可以透過 **(變數名稱):(資料型態)** 方式來對使用的變數進行資料型態的繫結，也因此在進行 TypeScript Compile 中，會針對資料型態進行檢查，如下範例；
 
+```Typescript
+function greeter(person: string) {
+    return "Hello, " + person;
+}
 
+var user = [0, 1, 2];
+
+// 在 typescript 進行 compile 時會出現錯誤
+document.body.innerHTML = greeter(user); 
+```
+
+當使用 greeter 函式時，會將資料型態為 list 的變數傳入只能接受來自 string 的 greeter 函式，此時 compiler 會發覺資料型態上的錯誤而出現 error，如下，
+
+```Bash
+greeter.ts(7,26): Supplied parameters do not match any signature of call target
+```
 
 
 
