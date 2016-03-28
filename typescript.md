@@ -11,3 +11,9 @@
 ```node.js
 $ npm install -g typescript
 ```
+
+* 直接下載可以安裝於 Microsoft Visual Studio 的版本
+
+###前言：可以支援原生 Javascript
+---
+
