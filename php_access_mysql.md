@@ -88,7 +88,7 @@ mysqli_close($con);
 ?>
 ```
 
-* Insert
+* Insert : 加一筆資料入資料庫中
 
 ```Php
 <?php
