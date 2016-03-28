@@ -53,7 +53,7 @@ mysqli_close($connCheck);
 ```
 
 * Query : fetch all columns<br>
-很多時候當欄位數很多時，若一個一個取出欄位實在不太可取，且容易有問題，因此透過 mysqli_fetch_assoc 進行關連性連結 (直接將欄位名稱當作 key，內容當作 value) 資料。
+很多時候當欄位數很多時，若一個一個取出欄位實在不太可取，且容易有問題，因此透過 mysqli_fetch_assoc 進行關連性連結 (直接將欄位名稱當作 key，內容當作 value) 資料，可以取得含有完整資料的物件。
 
 ```Php
 <?php
