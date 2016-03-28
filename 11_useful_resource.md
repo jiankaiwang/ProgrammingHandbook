@@ -23,7 +23,8 @@
   * [下載與安裝 (連結)](http://www.typescriptlang.org/)
 * Business Intelligence :
   * [Power BI 開發介紹 (連結)](https://www.youtube.com/watch?v=Aa2YLRW5CKo)
-* D3.js
+* [D3.js (連結)](https://d3js.org/)
+
 
 ###Scientific
 ---
