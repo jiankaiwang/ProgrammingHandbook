@@ -72,6 +72,17 @@ d3.selectAll("p").style("color", function(d, i) {
 });
 ```
 
+在 D3.js 中也提供 binding data 的功能，可以預先將資料準備，並透過傳入相同類型但不同物建序列的方式，依序將先前 binding 的資料帶入而達成動態特性，如下列程式碼；
+
+```Javascript
+d3.selectAll("p")
+    .data([4, 8, 15, 16, 23, 42])
+    .style("font-size", function(d) { return d + "px"; });
+```
+
+上述程式碼說明如下；
+* 取得所有 tag 為 p 類型的物件，以 List 方式儲存
+* 
 
 
 
