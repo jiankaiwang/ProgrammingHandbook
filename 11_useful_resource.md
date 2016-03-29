@@ -1,4 +1,10 @@
 #Useful Resource
+
+###License
+---
+* Open Source Initiative
+  * [License Summary](https://opensource.org/licenses/alphabetical)
+
 ###Webpage
 ---
 * HTML5:
