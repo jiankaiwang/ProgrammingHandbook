@@ -86,7 +86,8 @@ d3.selectAll("p")
 
 ###Enter & Exit
 ---
-D3 的最大特性之一即為 selection 的功能，D3 提供了兩個函式 enter 與 exit 來處理物件的新增與移除。函式 Enter 
+D3 的最大特性之一即為 selection 的功能，D3 提供了兩個函式 enter 與 exit 來處理物件的新增與移除。函式 Enter 可以用來創造新的 node 來繫結剛接進來的資料，而函式 exit 則可以移除不在需要使用的 node，類似資源回收。<br>
+**相較起其他提供資料繫結的函式庫，如 angularJS 等。D3 則是提出「配對」資料與 node 的解決方法，當一資料集繫結於一 selection 時，在資料集中每筆資料會依序配對此選擇條件下的 node，若是 node 數目小於資料筆數，**
 
 
 
