@@ -41,7 +41,10 @@ for(var i = 0 ; i < $("p").length ; i++) {
 }
 ```
 
+在 D3 中，選取 html 文件中的物件 (node 或是 elements) 可以透過很多種方式來達成，如 containment, attribute values, class 或是 ID 等。
 
+###Dynamic Properties
+---
 
 
 
