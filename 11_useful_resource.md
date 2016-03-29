@@ -9,11 +9,10 @@
   * [w3school 版本](http://www.w3schools.com/aspnet/webpages_ref_classes.asp)
 * ASP.NET MVC Odata
   * [技術支援](http://www.asp.net/web-api/overview/odata-support-in-aspnet-web-api/odata-v4/create-an-odata-v4-endpoint) : OData v4 EndPoint using ASP.NET Web API 2.2
+  * [MSDN](https://msdn.microsoft.com/library/azure/gg312156.aspx) : 支援的 OData 查詢選項
+  * [OData Version 3.0 Core Protocol](http://www.odata.org/documentation/odata-version-3-0/odata-version-3-0-core-protocol/) : 包含多種 filter 方式 
 * GitBook
   * [CSS Styleable reference](http://highlightjs.readthedocs.org/en/latest/css-classes-reference.html)
-* OData
-  * [MSDN](https://msdn.microsoft.com/library/azure/gg312156.aspx) : 支援的 OData 查詢選項
-  * [OData Version 3.0 Core Protocol](http://www.odata.org/documentation/odata-version-3-0/odata-version-3-0-core-protocol/) : 包含多種 filter 方式
 * AngularJS
   * [w3school 教學](http://www.w3schools.com/angular/angular_intro.asp)
   * [jqLite](https://docs.angularjs.org/api/ng/function/angular.element) : support DOM operations
@@ -23,7 +22,8 @@
   * [下載與安裝 (連結)](http://www.typescriptlang.org/)
 * Business Intelligence :
   * [Power BI 開發介紹 (連結)](https://www.youtube.com/watch?v=Aa2YLRW5CKo)
-* [D3.js (連結)](https://d3js.org/)
+* [D3.js (官方網站連結)](https://d3js.org/)
+  * [D3 教學連結](https://github.com/mbostock/d3/wiki/Tutorials)
 * W3C :
   * [DOM Technical Report (連結)](https://www.w3.org/DOM/DOMTR)
 
