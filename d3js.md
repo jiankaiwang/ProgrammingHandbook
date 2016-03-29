@@ -15,7 +15,34 @@ D3 (Data-Driven Documents) 是一套 Javascript 函式庫能夠依照資料本�
 
 ###Selection
 ---
-D3 透過宣告式語法，改良原本透過 W3C DOM API 操作 HTML 文件中物件的方法，可以透過 (1) 組合式 或是 (2) 階層式 等方式來操作 HTML 文件中的物件 (或稱為 node)。
+D3 透過宣告式語法，改良原本透過 W3C DOM API 操作 HTML 文件中物件的方法，可以透過 (1) 組合式，或是 (2) 階層式 等方式來操作 HTML 文件中的物件 (或稱為 node)。
+
+* 直接透過 W3C DOM API 方式來操作 HTML 文件中的物件方法，如下例將 HTML 文件所有 tag 為 p 的物件中的文字顏色改為藍色。
+
+```Javascript
+var paragraphs = document.getElementsByTagName("p");
+for (var i = 0; i < paragraphs.length; i++) {
+  var paragraph = paragraphs.item(i);
+  paragraph.style.setProperty("color", "blue", null);
+}
+```
+
+* 改用 D3 方式來完成將 HTML 文件所有 tag 為 p 的物件中文字顏色改為藍色，如下；
+
+```Javascript
+d3.selectAll("p").style("color", "white");
+```
+
+此作法與透過 jQuery 取得全部 &lt;p&gt; 物件後，再進行顏色設置的結果相同，如下；
+
+```Javascript
+for(var i = 0 ; i < $("p").length ; i++) { 
+  $($("p")[i]).css({ "color":"green" }); 
+}
+```
+
+
+
 
 
 
