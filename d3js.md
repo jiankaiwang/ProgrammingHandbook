@@ -45,7 +45,7 @@ for(var i = 0 ; i < $("p").length ; i++) {
 
 ###Dynamic Properties
 ---
-
+D3 與 jQuery 在物件操作上相當類似，能夠在某些條件成立下給與物件不一樣的樣式 (如 CSS Style)、物件屬性 (Attribute) 或其他特性 (Property) 等。
 
 
 
