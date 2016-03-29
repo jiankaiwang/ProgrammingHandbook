@@ -45,7 +45,20 @@ for(var i = 0 ; i < $("p").length ; i++) {
 
 ###Dynamic Properties
 ---
-D3 與 jQuery 在物件操作上相當類似，能夠在某些條件成立下給與物件不一樣的樣式 (如 CSS Style)、物件屬性 (Attribute) 或其他特性 (Property) 等。
+D3 與 jQuery 在物件操作上相當類似，能夠在某些條件成立下給與物件不一樣的樣式 (如 CSS Style)、物件屬性 (Attribute) 或其他特性 (Property) 等。意即可以透過函式 (function) 來動態改變物件樣式或特性，而非使用純粹的常數 (constant)，如透過下列程式碼將 html 文件中 p 物件的文字顏色隨機指定；
+
+```Javascript
+d3.selectAll("p").style("color", function() {
+  return "hsl(" + Math.random() * 360 + ",100%,50%)";
+});
+```
+
+而上列程式碼可以大大改善 W3C DOM API 對物件的操作，此類似直接透過 jQuery 來進行物件操作，如下；
+
+```Javascript
+
+```
+
 
 
 
