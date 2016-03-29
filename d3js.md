@@ -108,6 +108,9 @@ d3.select("body").selectAll("p")
     .text(function(d) { return "I’m number " + d + "!"; });
 ```
 
+上述程式碼說明；
+
+
 **2. **
 
 
