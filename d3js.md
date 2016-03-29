@@ -101,11 +101,13 @@ D3 的最大特性之一即為 selection 的功能，D3 提供了兩個函式 en
 ```
 
 ```Javascript
+<script type="text/javascript">
 // 資料集中有 6 筆資料，此資料筆數大於 html tag node 的數目
 d3.select("body").selectAll("p")
     .data([4, 8, 15, 16, 23, 42])
     .enter().append("p")
     .text(function(d) { return "I’m number " + d + "!"; });
+</script>
 ```
 
 上述程式碼說明；
