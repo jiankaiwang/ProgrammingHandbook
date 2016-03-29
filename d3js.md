@@ -116,7 +116,7 @@ d3.select("body").selectAll("p")
 * 之後可以透過 append() 函式「新增」一個 tag p 的 node 於 body (應是接在 body 最後一個 tag node 之後)
 * 之後直接指定此 tag p 物件的文字為何 (此例透過前述的 dynamic property 來達成)
 
-**2. D3.js 操作中，一般而言會包含 3 種模式來操作 html 文件上的物件 (即 node)，<br> (1) 更新 node (透過 data 來達成)，<br>(2) 新增 node (透過 enter 及 append 來達成)，<br>(3) 移除 node (透過 exit 及 remove)**，<br>相關範例如下，
+2. D3.js 操作中，一般而言會包含 3 種模式來操作 html 文件上的物件 (即 node)，<br>** (1) 更新 node (透過 data 來達成)，<br>(2) 新增 node (透過 enter 及 append 來達成)，<br>(3) 移除 node (透過 exit 及 remove)**，<br>相關範例如下，
 
 ```Javascript
 // 更新 node
