@@ -24,6 +24,8 @@
   * [Power BI 開發介紹 (連結)](https://www.youtube.com/watch?v=Aa2YLRW5CKo)
 * [D3.js (官方網站連結)](https://d3js.org/)
   * [D3 教學連結](https://github.com/mbostock/d3/wiki/Tutorials)
+  * [D3 API Reference link (English version)](https://github.com/mbostock/d3/wiki/API-Reference)
+  * [D3 API 中文手冊連結](https://github.com/mbostock/d3/wiki/API--%E4%B8%AD%E6%96%87%E6%89%8B%E5%86%8C)
 * W3C :
   * [DOM Technical Report (連結)](https://www.w3.org/DOM/DOMTR)
 
