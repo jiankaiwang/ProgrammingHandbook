@@ -135,9 +135,28 @@ p.exit().remove();
 
 可以分開或在不同情況下使用這 3 種操作，但需注意要很精確地使用在要轉型的 node 上。D3 允許使用者能轉型 html 文件上的 node，依照使用者的操作，或隨著時間的變化，甚至可以與其他第三方函式庫進行非同步性的轉型，此類混合式的操作方法在 D3 中都可被支援。
 
+###轉型 (Transformation)，而非重新呈現 (Re-presentation)
+---
+D3 並非透過一種新的視覺化技術來達成圖學效果，而是直接建立在網頁標準之上，HTML, SVG, CSS 等，舉例而言，可以透過 D3 創造 SVG 圖元素並透過 Stylesheets (如 CSS) 進行圖層修飾。
 
+###過渡 (Transitions)
+---
+D3 另一項特色為「**node 的轉型 (Transformation) 可以依照資料內容，透過動態性過渡轉換 (animated transition) 達成**」，而「**node 過渡的視覺化效果實際上是階層性方式呈現，透過時間軸上改變 node 的樣式或屬性**」，如圓圈的大小與顏色可以隨著時間間格 (如數秒) 或資料來調整等。<br>
+如前幾點所述，D3 支援使用 dynamic property 或是結合數值等方式將 node 進行階層性轉型，如下範例將 html 背景在 2 秒內轉變為黑色；
 
+```Javascript
+d3.select("body").transition().duration(2000)
+    .style("background-color", "black");
+```
 
+D3 支援使用「**序列性事件**」來控制 node 視覺化的轉型，如下範例延遲一段時間後在 0.75 秒內改變園圈大小(透過修改其半徑方式)，
+
+```Javascript
+d3.selectAll("circle").transition()
+    .duration(750)
+    .delay(function(d, i) { return i * 10; })
+    .attr("r", function(d) { return Math.sqrt(d * scale); });
+```
 
 
 
