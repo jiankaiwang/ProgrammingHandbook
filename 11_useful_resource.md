@@ -24,7 +24,8 @@
 * Business Intelligence :
   * [Power BI 開發介紹 (連結)](https://www.youtube.com/watch?v=Aa2YLRW5CKo)
 * [D3.js (連結)](https://d3js.org/)
-
+* W3C :
+  * [DOM Technical Report (連結)](https://www.w3.org/DOM/DOMTR)
 
 ###Scientific
 ---
