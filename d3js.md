@@ -87,8 +87,28 @@ d3.selectAll("p")
 ###Enter & Exit
 ---
 D3 的最大特性之一即為 selection 的功能，D3 提供了兩個函式 enter 與 exit 來處理物件的新增與移除。函式 Enter 可以用來創造新的 node 來繫結剛接進來的資料，而函式 exit 則可以移除不在需要使用的 node，類似資源回收。<br>
-**相較起其他提供資料繫結的函式庫，如 angularJS 等。D3 則是提出「配對」資料與 node 的解決方法，當一資料集繫結於一 selection 時，在資料集中每筆資料會依序配對此選擇條件下的 node。**<br><br>
-**1. 若是 node 數目小於資料筆數，**
+**相較起其他提供資料繫結的函式庫，如 angularJS 等。D3 則是提出「配對」資料與 node 的解決方法，當一資料集繫結於一 selection 時，在資料集中每筆資料會依序配對此選擇條件下的 node。**<br>
+
+**1. 若是 node 數目小於資料筆數，則多餘的資料 (無法與 node 配對的多筆資料) 會由 D3 形成 enter 的篩選函式，可以透過加入 (append) 函式於 enter 函式之後來處理多餘的資料。**
+
+```Html
+<!-- html 文件中假設僅有 3 個 p tag 物件 -->
+<body>
+  <p></p>
+  <p></p>
+  <p></p>
+</body>
+```
+
+```Javascript
+// 資料集中有 6 筆資料，此資料筆數大於 html tag node 的數目
+d3.select("body").selectAll("p")
+    .data([4, 8, 15, 16, 23, 42])
+  .enter().append("p")
+    .text(function(d) { return "I’m number " + d + "!"; });
+```
+
+**2. **
 
 
 
