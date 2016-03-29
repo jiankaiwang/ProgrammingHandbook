@@ -82,7 +82,7 @@ d3.selectAll("p")
 
 上述程式碼說明如下；
 * 取得所有 tag 為 p 類型的物件，以 List 方式儲存
-* 
+* 將先前 binding data 依序帶入物件中， data 一樣為 List 型態
 
 
 
