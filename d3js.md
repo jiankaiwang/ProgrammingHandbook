@@ -30,14 +30,14 @@ for (var i = 0; i < paragraphs.length; i++) {
 * 改用 D3 方式來完成將 HTML 文件所有 tag 為 p 的物件中文字顏色改為藍色，如下；
 
 ```Javascript
-d3.selectAll("p").style("color", "white");
+d3.selectAll("p").style("color", "blue");
 ```
 
 此作法與透過 jQuery 取得全部 &lt;p&gt; 物件後，再進行顏色設置的結果相同，如下；
 
 ```Javascript
 for(var i = 0 ; i < $("p").length ; i++) { 
-  $($("p")[i]).css({ "color":"green" }); 
+  $($("p")[i]).css({ "color": "blue" }); 
 }
 ```
 
