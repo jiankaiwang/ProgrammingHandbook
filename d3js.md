@@ -56,7 +56,9 @@ d3.selectAll("p").style("color", function() {
 而上列程式碼可以大大改善 W3C DOM API 對物件的操作，此類似直接透過 jQuery 來進行物件操作，如下；
 
 ```Javascript
-
+$($("p")[0]).css({ 
+  'color' : function() { return 'red'; } 
+});
 ```
 
 
