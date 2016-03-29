@@ -12,17 +12,16 @@
 *  SAS (統計軟體之一)
 *  HTML (網頁內容)
 
-###程式碼如下
-```R
-# ----------
-# Date: 2015/11/30
-# Version: v.1.a
-# Author: Wang, Jian-Kai (http://jiankaiwang.no-ip.biz/)
-# Environment: Windows 7 64-bit, R-3.0.1 32-bit
-# Description: Use R to read different sources, including EXCEL, SQL SERVER, MySQL, SAS
-# ----------
+###測試環境
+---
+因 R 核心會隨著時間不斷更新，常有 package 無法在現行核心下運作的狀況，因此需要注意 R 的運作核心為何。
+* Windows 7 64-bit
+* R-3.0.1 32-bit
 
-# ----------
+###TEXT File : TXT(Tab) OR CSV(Comma) file
+---
+
+```R
 # READ & WRITE from or to a TXT(Tab) OR CSV(Comma) file
 getTxtData <- read.table("xxx.txt",sep="\t",header = TRUE)
 getCSVData <- read.table("xxx.csv",sep=",",header = TRUE)
@@ -49,11 +48,14 @@ write.table(
   col.names=TRUE,
   row.names=FALSE
 )
-# ----------
+```
 
-# ----------
+###ACCESS : .mdb, .accdb format BY ODBC as Database
+---
+* First is to set ODBC on "control center"; Win 64 bit: C:\Windows\SysWOW64\odbcad32.exe
+
+```R
 # READ & WRITE ACCESS: .mdb, *.accdb format BY ODBC as Database
-# First is to set ODBC on "control center"; Win 64 bit: C:\Windows\SysWOW64\odbcad32.exe
 # fetched data is data.frame and data for inserting into the database must be data.frame
 # even id is auto increment, it is necessary to prepare
 install.packages("RODBC")
@@ -87,9 +89,13 @@ upData <- as.data.frame(upData)
 sqlUpdate(conn, upData, tablename="cityData", index="id")   
 
 close(conn) # close the connection to the file
-# ----------
+```
 
-# ----------
+###SQL Server : RODBC 或是 ConnectionString
+---
+* 若是採用 RODBC，First is to set ODBC on "control center"; Win 64 bit: C:\Windows\SysWOW64\odbcad32.exe
+
+```R
 # READ SQL SERVER by RODBC
 # must establish basic operation in SQL SERVER EXPRESS
 install.packages("RODBC")
@@ -131,9 +137,12 @@ deleteQuery <- "delete from [Table] where Id='19'"
 deleteDF <- sqlQuery(dbHandle, deleteQuery)
 
 odbcClose(dbHandle)
-# ----------
+```
 
-# ----------
+###EXCEL : .xlsx, .xls format by XLS package
+---
+
+```R
 # READ EXCEL: .xlsx, .xls format by XLS package
 # sheetIndex: start from 1
 # data type: data.frame
@@ -154,9 +163,12 @@ getWriteStatus <- write.xlsx(
                      append=FALSE, 
                      showNA=TRUE
                    )
-# ----------
+```
 
-# ----------
+###JSON : rjson package
+---
+
+```R
 # READ JSON by rjson package
 # fetched data is data.frame type
 install.packages(c("jsonlite","curl"))
@@ -172,9 +184,12 @@ savData <- toJSON(transFromJson[,1:3])
 sink("login.json",append=TRUE)
 cat(savData)
 sink()
-# ----------
+```
 
-# ----------
+###MySQL : DBI
+---
+
+```R
 # READ & WRITE MySQL Database by DBI
 # remember must open port in Linux
 # set all host are accepted by following commands
@@ -212,23 +227,32 @@ deleteQuery <- "delete from cityData where id='4'"
 getDeleteQuery <- dbGetQuery(con, deleteQuery)
 
 dbDisconnect(con)
-# ----------
+```
 
-# ----------
+###SPSS : by foreign package
+---
+
+```R
 # READ SPSS File By foreign package
 install.packages("foreign")
 library("foreign")
 getSPSSData <- read.spss("p004.sav", to.data.frame=TRUE)
-# ----------
+```
 
-# ----------
+###SAS : by sas7bdat package
+---
+
+```R
 # READ SAS File by sas7bdat package
 install.packages("sas7bdat")
 library("sas7bdat")
 getSASData <- read.sas7bdat("help.sas7bdat", debug=FALSE)
-# ----------
+```
 
-# ----------
+###HTML : by RCurl, XML Packages
+---
+
+```R
 # READ HTML
 install.packages("RCurl")
 install.packages("XML")
@@ -249,8 +273,11 @@ doc.text = gsub('\\n', ' ', doc.text)
 html <- getURL("http://edition.cnn.com/", followlocation = TRUE)
 doc <- htmlParse(html, asText=TRUE)
 plain.text <- xpathSApply(doc, "//text()[not(ancestor::script)][not(ancestor::style)][not(ancestor::noscript)][not(ancestor::form)]", xmlValue)
-# ----------
+```
 
+###XML : by RCurl, XML Packages
+
+```R
 # ----------
 # READ XML as list (after xmlChildren() function)
 # use index to access different nodes
