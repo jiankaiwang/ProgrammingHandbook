@@ -86,7 +86,7 @@ d3.selectAll("p")
 
 ###Enter & Exit
 ---
-
+D3 的最大特性之一即為 selection 的功能，D3 提供了兩個函式 enter 與 exit 來處理物件的新增與移除。函式 Enter 
 
 
 
