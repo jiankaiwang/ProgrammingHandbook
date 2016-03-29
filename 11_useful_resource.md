@@ -33,7 +33,6 @@
   * [DOM Technical Report (連結)](https://www.w3.org/DOM/DOMTR)
 * [HighCharts.js (official link)](http://www.highcharts.com/)
 
-
 ###Scientific
 ---
 * R
