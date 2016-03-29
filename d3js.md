@@ -111,6 +111,7 @@ d3.select("body").selectAll("p")
 ```
 
 上述程式碼說明；
+* 資料集透過 list 資料型態並藉由 data() 函式載入
 * 透過 enter 函式來取得無法配對的資料筆數
 * 之後可以透過 append() 函式「新增」一個 tag p 的 node 於 body (應是接在 body 最後一個 tag node 之後)
 * 之後直接指定此 tag p 物件的文字為何 (此例透過前述的 dynamic property 來達成)
