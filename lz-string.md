@@ -278,7 +278,59 @@ $.ajax({
 </body>
 ```
 
-當然，也可以透過 python 與 javascript 的結合亦可。在上述的方法中，可以
+當然，也可以透過 python 與 javascript 的結合亦可。在上述 C-sharp 的壓縮方法中，也可以有其他的壓縮函式可以轉換，而在 javascript 中亦使用相對應的函式即可 (但需注意並非所有的函式皆可以交叉使用)，如下範例為 c-sharp 使用 compressToBase64 方式來進行壓縮。
+
+```C#
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+using System.Text.RegularExpressions;
+using lz_string_csharp;
+using System.IO;
+
+namespace lzstring_project
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            string fin = @"dataJson.json";
+            string fout = @"compData_Csharp.json";
+            if (File.Exists(fin))
+            {
+                // method.2: read single line
+                string content = null, getCompData = null;
+                byte[] byteArray = null;
+                LZString lzObj = new LZString();
+                using (FileStream fs = new FileStream(fout, FileMode.OpenOrCreate))
+                {
+                    using (BinaryWriter bw = new BinaryWriter(fs, Encoding.Unicode))
+                    {
+                        using (StreamReader sr = new StreamReader(fin))
+                        {
+                            while (sr.Peek() >= 0)
+                            {
+                                // must read all content
+                                content = content + sr.ReadLine();
+                            }
+                            getCompData = lzObj.compressToBase64(content);
+                            byteArray = System.Text.Encoding.Default.GetBytes(getCompData);
+                            bw.Write(byteArray);
+                        }
+                    }
+                }
+            }
+            else {
+                Console.WriteLine("Error: file not found.");
+            }
+            Console.WriteLine("Complete");
+            Console.ReadLine();
+        }
+    }
+}
+```
 
 
 
