@@ -72,6 +72,9 @@ myWorker.port.onmessage = function(e) {
 
 ###實作範例 1
 ---
+情境如下；
+
+「當其中一個前端頁面傳入參數值給 shared worker 並經過其執行後，會將計算後的値同步傳回給 **所有** 註冊 (透過 port 的形式) 於該 shared worker 的前端頁面。」
 
 內容包含下列頁面，其中 page1.html 與 page2.html 的內容相同；
 
@@ -79,7 +82,7 @@ myWorker.port.onmessage = function(e) {
 2. page2.html : 前端頁面 2
 3. sworker.js : shared worker 主體
 
-而 page1.html 與 page2.html 的內容如下；
+page1.html 與 page2.html 的內容如下；
 
 ```Html
 <form id="form">
@@ -91,6 +94,7 @@ myWorker.port.onmessage = function(e) {
 <div>Messages<div id="listPanel"></div>
 
 <script>
+// shared worker 預設傳入兩個參數，包含 shared worker 的檔案，與該 shared worker 的名稱
 var shared = new SharedWorker('sworker.js', 'math');
 var form = document.getElementById('form');
 form.onsubmit = function(e) {
@@ -103,6 +107,7 @@ form.onsubmit = function(e) {
 	// send the shared worker values
 	shared.port.postMessage([topic,val1,val2]);
 	
+    // 避免 form submit 後的重導頁面
 	return false;
 }
 shared.port.onmessage = function(e) {
@@ -111,6 +116,23 @@ shared.port.onmessage = function(e) {
 </script>
 ```
 
+shared worker 內容如下；
+
+```Javascript
+// save all already existing ports
+var ports = [];
+
+onconnect = function(e) {
+if(e.ports && e.ports.length > 0) {
+	e.ports[0].onmessage = function(e) {
+		for(var m = 0; m < ports.length ; m++) {
+			ports[m].postMessage("Plus two value : " + (parseInt(e.data[1]) + parseInt(e.data[2])) + ", and the text is : " + e.data[0]);
+		}
+	}
+	ports.push(e.ports[0]);
+}
+};
+```
 
 
 
