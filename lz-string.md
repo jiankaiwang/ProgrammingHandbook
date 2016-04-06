@@ -258,7 +258,6 @@ namespace lzstring_project
 	<li>Ori</li>
 </ul>
 <script type="text/javascript">
-
 function getDataBody(getData) {
 	for (var line in getData) {
 		$("#menu").append("<li>" + line + "->" + getData[line] + "</li>");
@@ -270,7 +269,6 @@ function decompressData(getCompressData) {
 	getDataBody(JSON.parse(LZString.decompressFromUTF16(getCompressData)));
 }
 
-var getData;
 $.ajax({
   dataType: "text",
   url: "compData_Csharp.json",
@@ -280,6 +278,7 @@ $.ajax({
 </body>
 ```
 
+當然，也可以透過 python 與 javascript 的結合亦可。在上述的方法中，可以
 
 
 
