@@ -17,3 +17,17 @@ Web Workers 提供一個能夠多執行緒的解決方案，因 javascript 為�
 
 ###Web Workers API
 ---
+* 可以透過 worker 建構子 (如 worker()) 來產生 worker 物件，並於此物件中執行 javascript 內容 (亦包含可以執行 javascript 檔案)。
+
+* Worker 運行的 Javascript 不同於視窗 (window) 下的執行環境，所以在 worker 中存取全域物件應該要透過 self，若是透過 window 便會發生錯誤；意即透過 $(window) 的方式會出錯。
+
+* Dedicated worker 只能被產生它的檔案來存取，DedicatedWorkerGlobalScope 物件代表其執行環境；而 Shared worker 則能夠被不同的檔案存取，SharedWorkerGlobalScope 物件代表其執行環境。
+
+* 一般而言，Worker 能執行任何事情，例如 WebSockets、IndexedDB 等，但大部分直接存取 DOM 或是 window 物件的方法或屬性則是不被允許。
+
+* **主執行緒 (例如 UI) 和 worker 執行緒之間透過 postMessage() 方法發送訊息，然後透過 onmessage 事件接受訊息 (訊息存在 Message 事件的 data 屬性之中)，而被傳誦的資料是透過複製一份的方式，而非共享。**
+
+* worker 亦可以產生新的 worker，只要 worker 的來源 (origin) 和父頁面相同即可。
+
+
+
