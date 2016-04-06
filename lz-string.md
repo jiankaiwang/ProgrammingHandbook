@@ -67,7 +67,63 @@ alert("Sample is: " + string);
 
 ###C-sharp 使用
 ---
+* 先載入必要的 cs library，可以透過 [lz-string Github repository (link)](https://github.com/jawa-the-hutt/lz-string-csharp) 進行下載，再於專案中加入剛下載到的 lzstring.cs；
 
+```
+開啟 Visual studio 的專案 (.sln) > 對專案名稱點擊右鍵 > 加入現有項目 > 選擇剛下載的 「lzstring.cs」
+```
+
+加入外部資源成功並打開，會出現下列部份程式碼；
+
+```C#
+using System;
+using System.Collections.Generic;
+using System.Text;
+using System.Text.RegularExpressions;
+
+namespace lz_string_csharp
+{
+    public class LZString
+    {
+        private class Context_Compress
+        {
+            public Dictionary<string, int> dictionary { get; set; }
+            public Dictionary<string, bool> dictionaryToCreate { get; set; }
+            public string c { get; set; }
+            public string wc { get; set; }
+            public string w { get; set; }
+            public int enlargeIn { get; set; }
+            public int dictSize { get; set; }
+            public int numBits { get; set; }
+            public Context_Compress_Data data { get; set; }
+        }
+        // ...
+```
+
+而因為 lz-string 中的 namespace 為 ** lz_string_csharp **，故於主程式中需要加入下列程式碼來使用此外部函式庫；
+
+```C#
+using lz_string_csharp;
+```
+
+而在 C-sharp 中使用 lz-string 函式的方法如下，舉使用編碼「** ASCII UTF-16 **」為例；
+
+```C#
+// 創建一個 LZString 的物件
+LZString lzObj = new LZString();
+
+// 假設要被進行壓縮的字串如下
+string compressString = "This is a compression string.";
+
+// 進行 ASCII UTF-16 進行壓縮為例
+string getCompStr = lzObj.compressToBase64(compressString);
+Console.WriteLine(getCompStr);
+
+// 將已透過 ASCII UTF-16 壓縮的內容進行解壓縮
+string getDeCompStr = lzObj.decompressFromBase64(getCompStr);
+Console.WriteLine(getDeCompStr);
+Console.ReadLine();
+```
 
 ###Python 使用
 ---
