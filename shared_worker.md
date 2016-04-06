@@ -3,7 +3,10 @@
 <script type="text/javascript" src="gitbook/app.js"></script>
 <script type="text/javascript" src="js/general.js"></script>
 
-shared worker 能夠被多個程式腳本存取，包含 window、iframe 或其他 worker 執行緒，底下範例與 dedicated worker 範例類似，傳入一個含有 2 個數值與 1 筆文字的串列 (list) 傳入 worker，並透過 worker 進行相成與相加，文字則是不作處理，然後在前端頁面顯示出這些結果。
+shared worker 能夠被多個程式腳本存取，包含 window、iframe 或其他 worker 執行緒，底下範例實作兩種狀況；
+1. 當其中一個前端頁面傳入參數值給 shared worker 並經過其執行後，會將計算後的値同步傳回給 **所有** 註冊 (透過 port 的形式) 於該 shared worker 的前端頁面。
+2. 當第一個前端頁面傳入參數值給 shared worker 並經過其執行後，其他前端頁面便可以直接取得已計算的結果，不需重新計算或傳入參數。
+
 
 | 註解 |
 | -- |
