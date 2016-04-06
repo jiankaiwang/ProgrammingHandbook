@@ -38,7 +38,28 @@
 
 ###Javascript 使用
 ---
+* 先載入必要的 js library，可以透過 [lz-string Github repository (link)](https://github.com/pieroxy/lz-string/) 進行下載。
 
+```Html
+<script type="text/javascript" src="lz-string.js" ></script>
+```
+
+* 選擇適當的壓縮編碼，底下範例使用「**valid UTF-16**」來進行壓縮與解壓縮；
+
+```Javascript
+// string 為準備進行壓縮的字串
+var string = "This is the compression test.";
+alert("Size of sample is: " + string.length);
+
+// 將 string 透過 valid UTF-16 進行壓縮
+// 回傳結果為 string 資料型態
+var compressed = LZString.compressToUTF16(string);
+alert("Size of compressed sample is: " + compressed.length);
+
+// 將剛已被壓縮的 string 透過相對應的解壓縮函式進行解壓縮
+string = LZString.decompressFromUTF16(compressed);
+alert("Sample is: " + string);
+```
 
 ###C-sharp 使用
 ---
@@ -46,3 +67,12 @@
 
 ###Python 使用
 ---
+
+
+###Javascript 與 C-sharp 交互使用
+---
+
+
+
+
+
