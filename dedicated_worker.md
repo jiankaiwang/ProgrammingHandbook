@@ -25,3 +25,21 @@ if (window.Worker) {
 var myworker = new Worker('dworker.js');
 ```
 
+###向 dedicated worker 傳送訊息
+---
+
+* 前端頁面 (或稱父頁面) 可以透過 postMessage() 方法向 worker 執行緒傳送訊息 (即必要傳入參數值)。
+* 前端頁面 (或稱父頁面) 則可透過 onmessage() 方法取得來自 worker 執行後的結果 (即取得結果)。
+
+```Javascript
+if(window.Worker) {
+    // send the worker values
+	myworker.postMessage([2,5,"text"]);
+	alert('post message');
+	
+    // get values from the worker
+	myworker.onmessage = function(e) {
+		alert('message from dwork : ' + e.data);
+	}
+}
+```
