@@ -36,6 +36,10 @@
   *  string compressToEncodedURIComponent(string uncompressed)
   *  string decompressFromEncodedURIComponent(string compressed)
 
+| 註解 |
+| -- |
+| 需要注意的底下幾點；<br>(1) 每組壓縮與解壓縮函式為相對應的函式，不能誤用到其他函式<br>(2)** 雖然 lz-string 能提供跨平台的優點，但某些壓縮函式僅管使用相同編碼，在不同的平台間傳輸，仍會有解壓失敗的狀況發生，此需注意 **。 |
+
 ###Javascript 使用
 ---
 * 先載入必要的 js library，可以透過 [lz-string Github repository (link)](https://github.com/pieroxy/lz-string/) 進行下載。
