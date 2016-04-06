@@ -116,7 +116,7 @@ shared.port.onmessage = function(e) {
 </script>
 ```
 
-shared worker 內容如下；
+shared worker 內容如下，將由前端頁面傳入參數的値透過 shared worker 執行後，回傳給所有已註冊的前端頁面；
 
 ```Javascript
 // save all already existing ports
