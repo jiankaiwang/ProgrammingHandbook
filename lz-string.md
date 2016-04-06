@@ -75,7 +75,9 @@ alert("Sample is: " + string);
 
 ###Javascript 與 C-sharp 交互使用
 ---
+範例情境說明如下，
 
+「透過 c-sharp 中 lz-string 函式將一個 JSON 型態的資料進行壓縮並寫出 binary 的檔案，然透放置於 server 中，當使用者透過瀏覽器查看頁面時，便會將此壓縮的檔案進行傳輸 (此步驟會節省時間與傳輸效率)，然後再透過 Javascript 中相對應的 lz-string 解壓函式將此內容進行解壓。」
 
 
 
