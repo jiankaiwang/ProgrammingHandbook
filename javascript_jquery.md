@@ -117,7 +117,8 @@ var ajax = function(url, data, callback, type) {
 };
 
 ajax('data.json',null,function(data){
-	// 需要透過 json.parse 將資料型態為 string 的 json 內容轉換成 json object
+	// 可以透過 json.parse 將資料型態為 string 的 json 內容轉換成 json object
+    // 此 json.parse 需要 jQuery library
 	var jsonData = JSON.parse(data);
     
 	for(var collection in jsonData) {
