@@ -7,3 +7,4 @@ Web Workers 提供一個簡單的方法讓網頁能在背景執行緒 (Thread) �
 
 根據 Worker 的運作模式，可以更細分成 dedicated worker, shared worker 及 embedded worker。Dedicated worker 只能被產生它的檔案存取，shared worker 則能夠被多個程式腳本存取，包含能跨越不同 window、iframe 或 worker 等，而 embedded worker 則可以透過資料區塊將此 worker 嵌入頁面中。
 
+Web Workers 提供一個能夠
