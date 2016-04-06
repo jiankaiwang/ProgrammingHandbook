@@ -168,3 +168,19 @@ shared.port.onmessage = function(e) {
 </script>
 ```
 
+shared worker 的內容如下；
+
+```Javascript
+var getData = "getData information";
+
+onconnect = function(e) {
+if(e.ports && e.ports.length>0) {
+    // 取得現在傳入參數的前端頁面 port
+	var selfPort = e.ports[0];
+    
+	selfPort.onmessage = function() {
+		selfPort.postMessage(getData);
+	}
+}
+};
+```
