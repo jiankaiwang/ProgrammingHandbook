@@ -63,6 +63,7 @@ function(data) {
 
 ```Javascript
 <script type="text/javascript">
+// success 與 error 為 callback function
 $.ajax({
 	type: "GET",
 	dataType: "json",
@@ -84,6 +85,7 @@ $.ajax({
 
 ```Javascript
 <script type="text/javascript">
+// 自定義的 ajax
 var ajax = function(url, data, callback, type) {
 	var data_array, data_string, idx, req, value;
 	if (data == null) {
@@ -113,5 +115,16 @@ var ajax = function(url, data, callback, type) {
 	req.send(data_string);
 	return req;
 };
+
+ajax('data.json',null,function(data){
+	// 需要透過 json.parse 將資料型態為 string 的 json 內容轉換成 json object
+	var jsonData = JSON.parse(data);
+    
+	for(var collection in jsonData) {
+		for(var element in jsonData[collection]) {
+			$("#menu").append("<li>" + collection + "->" + jsonData[collection][element] + "</li>");
+		}
+	}
+},'GET');
 </script>
 ```
