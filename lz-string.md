@@ -125,7 +125,7 @@ Console.WriteLine(getDeCompStr);
 Console.ReadLine();
 ```
 
-###Python 使用 : 需要注意　Python 需為 3.0 版本已上
+###Python 使用 : 需要注意　Python 需為 3.0 版本以上
 ---
 * 先下載必要的 .py script，可以透過 [lz-string Github repository (link)](https://github.com/eduardtomasek/lz-string-python) 進行下載，再置於和主程式相同的路徑底下，可以透過兩種方式來使用此函式庫；
 
@@ -152,6 +152,28 @@ print(compressedData)
 # 解壓縮
 decompressedData = compObj.decompresFromBase64(compressedData)
 print(decompressedData)
+```
+
+另外，因大部分的狀況為將一檔案，如 JSON 檔案進行壓縮後傳輸，可以將資料先行毒入壓縮後寫出，如下；
+
+```Python
+# 定議資料來源與輸出資料位置
+dataSrc = "source.json"
+compSrc = "source_comp.json"
+
+# 以 UTF-8 格式打開檔案
+with open(dataSrc,"r", encoding="utf-8") as fin:
+    compObj = LZString()
+    
+    # 以 binary 方式寫出檔案
+    with open(compSrc,"wb") as fout:
+        allData = ''
+        for line in fin:
+            allData = allData + line
+        compData = compObj.compressToUTF16(allData)
+        
+        # 需要注意 python 3.0 以上需要使用 bytearray 來寫出 binary 資料串流
+        fout.write(bytearray(compData, encoding="utf-16"))
 ```
 
 ###Javascript 與 C-sharp 交互使用
