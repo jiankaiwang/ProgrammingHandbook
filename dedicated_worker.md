@@ -110,3 +110,45 @@ importScripts('lib.js', 'example.js');
 ###完整範例程式碼
 ---
 
+* 前端 javascript (.js)，檔名為 worker.html
+
+```Html
+<script type="text/javascript">
+
+var myworker = new Worker('dworker.js');
+
+if(window.Worker) {
+	myworker.postMessage([2,5,"text"]);
+	alert('post message');
+	
+	myworker.onmessage = function(e) {
+		alert('message from dwork : ' + e.data);
+	}
+}
+//myworker.terminate();
+</script>
+```
+
+* 被 worker 引用的函式庫，檔名為 lib.js
+
+```Javascript
+function mulValue(num1, num2) {
+	return (num1+num2);
+}
+```
+
+* worker 執行緒，檔名為 dworker.js
+
+```Javascript
+importScripts('lib.js');
+
+onmessage = function(e) {
+	console.log('Message from main script');
+	var workerResult = 'Multiply : ' + (e.data[0] * e.data[1]) + ' ; msg is ' + e.data[2] + ' ; Plus : ' + mulValue(e.data[0], e.data[1]);
+	console.log('Post message to main script');
+	postMessage(workerResult);
+}
+```
+
+
+
