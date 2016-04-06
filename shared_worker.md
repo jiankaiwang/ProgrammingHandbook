@@ -44,7 +44,7 @@ myWorker.port.postMessage([value.1, value.2]);
 console.log('Message posted to worker');
 ```
  
-而在 shared worker 方面，則是透過 ** onconnect() ** 進行監聽，然後透過 ** onmessage() ** 接收來自前端的資料，並利用 ** postMessage ** 將資料回傳給前端頁面，如下範例；
+* 而在 shared worker 方面，則是透過 ** onconnect() ** 進行監聽，然後透過 ** onmessage() ** 接收來自前端的資料，並利用 ** postMessage ** 將資料回傳給前端頁面，如下範例；
 
 ```Javascript
 onconnect = function(e) {
@@ -59,6 +59,14 @@ onconnect = function(e) {
     
     // 若是透過 onmessage 方式來傳送資料，則不需要透過 .start() 方式來開啟
 	port.start(); 
+}
+```
+
+* 而最後，在前端頁面，一樣是透過 port 物件中的 onmessage() 方式來取得 shared worker 的回傳結果，範例如下；
+
+```Javascript
+myWorker.port.onmessage = function(e) {
+  console.log('Message received from worker is : ' + e.data);
 }
 ```
 
