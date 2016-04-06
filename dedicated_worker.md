@@ -44,10 +44,35 @@ if(window.Worker) {
 }
 ```
 
+然後我們可以在 worker 執行緒中實作處理來自前端頁面的參數値；
+
+* 透過 onmessage() 接收訊息，並進行處理
+* 執行完後，在透過 postMessage() 傳送訊息回去給前端，並由前端的 onmessage() 取得來自 worker 的資料
+* 當然，此 worker 執行緒亦可以引用不同的 javascript 函式庫，並可以透過 ** importScripts() ** 來引用；底下為被 worker 引用的函式庫的內容 (檔名為 lib.js)；
+
+```Javascript
+// 此內容存放在名為 lib.js 的檔案中
+function mulValue(num1, num2) {
+	return (num1+num2);
+}
+```
+
+```Javascript
+// 引用不同的 javascript 檔案
+importScripts('lib.js');
+
+// worker 執行的結果
+onmessage = function(e) {
+	console.log('Message from main script');
+	var workerResult = 'Multiply : ' + (e.data[0] * e.data[1]) + ' ; msg is ' + e.data[2] + ' ; Plus : ' + mulValue(e.data[0], e.data[1]);
+	console.log('Post message to main script');
+	postMessage(workerResult);
+}
+```
+
 | 註解 |
 | -- |
 | 需要注意的是，不論是 (1) 由前端傳入 worker 的參數值或是 (2) 取得來自 worker 的計算結果，皆是將資料 (包含傳入資料與取得資料) 內容存放在 data 屬性中，且不論傳入或是取得資料，皆是以複製的方式進行，而非分享方式 (即傳值非傳址)。 |
-
 
 
 
