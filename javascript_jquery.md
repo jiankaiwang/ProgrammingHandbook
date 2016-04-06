@@ -62,12 +62,14 @@ function(data) {
 * jQuery : 透過 $.ajax 方式
 
 ```Javascript
+<script type="text/javascript">
 $.ajax({
 	dataType: "json",
 	url: url,
 	data: data,
 	success: success
 });
+</script>
 ```
 
 * 非 jQuery : 透過 XMLHttpRequest 實作出 ajax，此方法能配合 web worker 來多執行緒取得 json data
