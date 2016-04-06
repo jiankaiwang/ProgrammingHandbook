@@ -5,7 +5,7 @@
 
 ###取得 JSON 資料
 ---
-* 透過 $.getJSON 方式
+* jQuery : 透過 $.getJSON 方式
 
 ```Javascript
 $.getJSON( "ajax/test.json", function( data ) {
@@ -16,7 +16,7 @@ $.getJSON( "ajax/test.json", function( data ) {
 });
 ```
 
-* 透過 $.ajax 方式
+* jQuery : 透過 $.ajax 方式
 
 ```Javascript
 $.ajax({
@@ -27,7 +27,7 @@ $.ajax({
 });
 ```
 
-* 透過 XMLHttpRequest 實作出 ajax，此方法能配合 web worker 來多執行緒取得 json data
+* 非 jQuery : 透過 XMLHttpRequest 實作出 ajax，此方法能配合 web worker 來多執行緒取得 json data
 
 ```Javascript
 var ajax = function(url, data, callback, type) {
