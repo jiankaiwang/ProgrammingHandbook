@@ -46,9 +46,9 @@ if(window.Worker) {
 
 然後我們可以在 worker 執行緒中實作處理來自前端頁面的參數値；
 
-* 透過 onmessage() 接收訊息，並進行處理
-* 執行完後，在透過 postMessage() 傳送訊息回去給前端，並由前端的 onmessage() 取得來自 worker 的資料
-* 當然，此 worker 執行緒亦可以引用不同的 javascript 函式庫，並可以透過 ** importScripts() ** 來引用；底下為被 worker 引用的函式庫的內容 (檔名為 lib.js)；
+* **透過 onmessage() 接收訊息，並進行處理**
+* **執行完後，在透過 postMessage() 傳送訊息回去給前端，並由前端的 onmessage() 取得來自 worker 的資料**
+* **當然，此 worker 執行緒亦可以引用不同的 javascript 函式庫，並可以透過 ** importScripts() ** 來引用；底下為被 worker 引用的函式庫的內容 (檔名為 lib.js)；**
 
 ```Javascript
 // 此內容存放在名為 lib.js 的檔案中
@@ -56,6 +56,8 @@ function mulValue(num1, num2) {
 	return (num1+num2);
 }
 ```
+
+底下為實作 worker 內容的方法 (檔名為 dworker.js )；
 
 ```Javascript
 // 引用不同的 javascript 檔案
