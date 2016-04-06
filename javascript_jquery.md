@@ -64,10 +64,18 @@ function(data) {
 ```Javascript
 <script type="text/javascript">
 $.ajax({
+	type: "GET",
 	dataType: "json",
-	url: url,
-	data: data,
-	success: success
+	url: 'data.json',
+	async: false,
+	success: function(data) {
+		for(var collection in data) {
+			for(var element in data[collection]) {
+				$("#menu").append("<li>" + collection + "->" + data[collection][element] + "</li>");
+			}
+		}
+	}
+	//error: callback
 });
 </script>
 ```
@@ -75,6 +83,7 @@ $.ajax({
 * 非 jQuery : 透過 XMLHttpRequest 實作出 ajax，此方法能配合 web worker 來多執行緒取得 json data
 
 ```Javascript
+<script type="text/javascript">
 var ajax = function(url, data, callback, type) {
 	var data_array, data_string, idx, req, value;
 	if (data == null) {
@@ -104,4 +113,5 @@ var ajax = function(url, data, callback, type) {
 	req.send(data_string);
 	return req;
 };
+</script>
 ```
