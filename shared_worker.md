@@ -70,6 +70,47 @@ myWorker.port.onmessage = function(e) {
 }
 ```
 
+###實作範例 1
+---
+
+內容包含下列頁面，其中 page1.html 與 page2.html 的內容相同；
+
+1. page1.html : 前端頁面 1
+2. page2.html : 前端頁面 2
+3. sworker.js : shared worker 主體
+
+而 page1.html 與 page2.html 的內容如下；
+
+```Html
+<form id="form">
+	<input type="text" id="topic" placeholder="word"></input>
+	<input type="text" id="value1" placeholder="numeric"></input>
+	<input type="text" id="value2" placeholder="numeric"></input>
+	<input type="submit" value="submit"></input>
+</form>
+<div>Messages<div id="listPanel"></div>
+
+<script>
+var shared = new SharedWorker('sworker.js', 'math');
+var form = document.getElementById('form');
+form.onsubmit = function(e) {
+	e.preventDefault();
+	
+	var topic = document.getElementById('topic').value;
+	var val1 = document.getElementById('value1').value;
+	var val2 = document.getElementById('value2').value;
+	
+	// send the shared worker values
+	shared.port.postMessage([topic,val1,val2]);
+	
+	return false;
+}
+shared.port.onmessage = function(e) {
+	document.getElementById('listPanel').innerHTML += e.data + '<br>';
+}
+</script>
+```
+
 
 
 
