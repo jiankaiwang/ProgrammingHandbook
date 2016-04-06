@@ -95,4 +95,18 @@ close();
 | -- |
 | 需要注意的是不論 worker 正在執行的運算完成與否，一但呼叫結束指令後，worker 便會終止。 |
 
+###引用程式腳本與函式庫 (library)
+---
+Worker 執行緒能透過 importScripts() 來存取一個全域函數或載入外部資源，如下範例；
+
+```Javascript
+// 引用單一個 js 腳本檔案
+importScripts('example.js');                
+
+// 引用多個 js 腳本檔案
+importScripts('lib.js', 'example.js');      
+```
+
+###完整範例程式碼
+---
 
