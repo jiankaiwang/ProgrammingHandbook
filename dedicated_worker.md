@@ -76,7 +76,23 @@ onmessage = function(e) {
 | -- |
 | 需要注意的是，不論是 (1) 由前端傳入 worker 的參數值或是 (2) 取得來自 worker 的計算結果，皆是將資料 (包含傳入資料與取得資料) 內容存放在 data 屬性中，且不論傳入或是取得資料，皆是以複製的方式進行，而非分享方式 (即傳值非傳址)。 |
 
+###結束 dedicated worker
+---
 
+* 方法一：可以在前端頁面中呼叫 ** terminate() ** 來結束 worker，如下；
 
+```Javascript
+myWorker.terminate();
+```
+
+* 方法二：在 worker 執行緒中，可以自己呼叫 ** close() ** 方法來結束執行緒，如下；
+
+```Javascript
+close();
+```
+
+| 註解 |
+| -- |
+| 需要注意的是不論 worker 正在執行的運算完成與否，一但呼叫結束指令後，worker 便會終止。 |
 
 
