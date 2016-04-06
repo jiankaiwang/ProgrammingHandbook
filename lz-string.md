@@ -125,9 +125,34 @@ Console.WriteLine(getDeCompStr);
 Console.ReadLine();
 ```
 
-###Python 使用
+###Python 使用 : 需要注意　Python 需為 3.0 版本已上
 ---
+* 先下載必要的 .py script，可以透過 [lz-string Github repository (link)](https://github.com/eduardtomasek/lz-string-python) 進行下載，再置於和主程式相同的路徑底下，可以透過兩種方式來使用此函式庫；
 
+1. 直接開啟含有　lz-string 物件的檔案，並直接延伸進行使用
+2. 假設定義 lz-string 類別檔案名稱為 lzString.py，則可以於主程式上方透過下列程式碼將此類別匯入使用
+
+```Python
+import lzString
+```
+
+底下舉第一種使用方法及使用 「** ASCII UTF-16 **」 為例；
+
+```Python
+# 產生一個 LZString 類別的物件
+compObj = LZString()
+
+# 準備要被壓縮的檔案
+data = "This is a compression string."
+
+# 進行壓縮
+compressedData = compObj.compressToBase64(data)
+print(compressedData)
+
+# 解壓縮
+decompressedData = compObj.decompresFromBase64(compressedData)
+print(decompressedData)
+```
 
 ###Javascript 與 C-sharp 交互使用
 ---
