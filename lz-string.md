@@ -182,6 +182,80 @@ with open(dataSrc,"r", encoding="utf-8") as fin:
 
 「透過 c-sharp 中 lz-string 函式將一個 JSON 型態的資料進行壓縮並寫出 binary 的檔案，然透放置於 server 中，當使用者透過瀏覽器查看頁面時，便會將此壓縮的檔案進行傳輸 (此步驟會節省時間與傳輸效率)，然後再透過 Javascript 中相對應的 lz-string 解壓函式將此內容進行解壓。」
 
+* 原 JSON 檔案內容
+
+```Javascript
+{
+	"subject":"math",
+	"score":"100",
+	"term":"final"
+}
+```
+
+* 透過 C-sharp lz-string 中 compressToUTF16 的壓縮
+
+```C#
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+using System.Text.RegularExpressions;
+using lz_string_csharp;
+using System.IO;
+
+namespace lzstring_project
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            // example.1
+            /*LZString lzObj = new LZString();
+            string compressString = "This is a compression string.";
+            string getCompStr = lzObj.compressToBase64(compressString);
+            Console.WriteLine(getCompStr);
+            string getDeCompStr = lzObj.decompressFromBase64(getCompStr);
+            Console.WriteLine(getDeCompStr);
+            Console.ReadLine();*/
+
+            // example.2
+            string fin = @"dataJson.json";
+            string fout = @"compData_Csharp.json";
+            if (File.Exists(fin))
+            {
+                // read single line in each time
+                // use compressToUTF16
+                string content = null, getCompData = null;
+                LZString lzObj = new LZString();
+                using (StreamWriter sw = new StreamWriter(fout))
+                {
+                    using (StreamReader sr = new StreamReader(fin))
+                    {
+                        while (sr.Peek() >= 0)
+                        {
+                            // must read all content
+                            content = content + sr.ReadLine();
+                        }
+                        getCompData = lzObj.compressToUTF16(content);
+                        sw.Write(getCompData);
+                    }
+                }
+            }
+            else {
+                Console.WriteLine("Error: file not found.");
+            }
+            Console.WriteLine("Complete");
+            Console.ReadLine();
+        }
+    }
+}
+```
+
+
+
+
+
 
 
 
