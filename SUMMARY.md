@@ -27,4 +27,5 @@
 * [Scientific](scientific.md)
    * [Data accessed by R](r_access_multiple_source_data.md)
 * [Compression](compression.md)
+   * lz-string
 
