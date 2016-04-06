@@ -17,7 +17,7 @@
    * [Highcharts.js](highchartsjs.md)
    * [Plotly](plotly.md)
    * [Web Workers](web_workers.md)
-       * dedicated worker
+       * [dedicated worker](dedicated_worker.md)
 * [Database](database.md)
    * [SQL Server (T-SQL)](sql_server_t-sql.md)
    * [MySQL](mysql.md)
