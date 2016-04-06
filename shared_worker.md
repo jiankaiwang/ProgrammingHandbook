@@ -139,3 +139,32 @@ if(e.ports && e.ports.length > 0) {
 ![](images/shared-worker-1.png)
 
 當 page1.html 或 page2.html 進行更新時，另一頁面亦會自動更新內容。
+
+###實作範例 2
+---
+情境如下；
+
+「當第一個前端頁面創造一個 shared worker，此 worker 便會自行計算與執行，其他前端頁面便可以直接取得已計算的結果，不需重新計算或傳入參數。」
+
+內容包含下列頁面，其中 page1.html 與 page2.html 的內容相同；
+
+1. page1.html : 前端頁面 1
+2. page2.html : 前端頁面 2
+3. sworker.js : shared worker 主體
+
+page1.html 與 page2.html 的內容如下；
+
+```Html
+<div>Messages<div id="listPanel"></div>
+
+<script>
+var shared = new SharedWorker('sworker.js', 'math');
+
+// 不傳入任何資料給 shared worker
+shared.port.postMessage([]);
+shared.port.onmessage = function(e) {
+	document.getElementById('listPanel').innerHTML += e.data + '<br>';
+}
+</script>
+```
+
