@@ -179,6 +179,7 @@ if(e.ports && e.ports.length>0) {
 	var selfPort = e.ports[0];
     
 	selfPort.onmessage = function() {
+        // 直接回傳已經處理完的結果
 		selfPort.postMessage(getData);
 	}
 }
