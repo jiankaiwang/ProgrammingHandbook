@@ -5,15 +5,58 @@
 
 ###取得 JSON 資料
 ---
-* jQuery : 透過 $.getJSON 方式
+* 假定使用的 JSON 資料內容與 html code
 
 ```Javascript
-$.getJSON( "ajax/test.json", function( data ) {
-	$.each( data, function( key, val ) {
-		items.push( "<li id='" + key + "'>" + val + "</li>" );
-        // ...
-	});
+[
+	{
+		"subject":"math",
+		"score":"100",
+		"term":"final"
+	},
+	{
+		"subject":"physics",
+		"score":"100",
+		"term":"final"
+	}
+]
+```
+
+目的將取得的 JSON 資料加入 menu 中，
+
+```Html
+<ul id="menu">
+	<li>Ori</li>
+</ul>
+```
+
+最後的呈現結果如下；
+
+```Html
+* Ori
+* 0->math
+* 0->100
+* 0->final
+* 1->physics
+* 1->100
+* 1->final
+```
+
+* jQuery : 透過 $.getJSON 方式
+
+底下為使用方法
+
+```Javascript
+<script type="text/javascript">
+$.getJSON('data.json', 
+function(data) {
+	for(var collection in data) {
+		for(var element in data[collection]) {
+			$("#menu").append("<li>" + collection + "->" + data[collection][element] + "</li>");
+		}
+	}
 });
+</script>
 ```
 
 * jQuery : 透過 $.ajax 方式
