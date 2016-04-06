@@ -12,5 +12,56 @@ shared worker 能夠被多個程式腳本存取，包含 window、iframe 或其�
 | -- |
 | 需要注意底下幾點；<br>(1) 範例中含有兩份 HTML 頁面，各自都利用** 同一個 worker **處理運算<br>(2) shared worker 無法在一般瀏覽模式與隱私流覽模式間共享資料。 |
 
-###
+###產生 shared worker 物件
+---
+和 dedicated worker 相同，不同的是透過不同的建構子來達成，如下；
+
+```Javascript
+var myWorker = new SharedWorker("worker.js");
+```
+
+**但 shared worker 的運作模式與 dedicated worker 有很大的不同，與 shared worker 的溝通須透過 port 物件來達成。** 其實 dedicated worker 的運作方式亦雷同，只是自動完成而已。
+而開啟 port 的方法有底下兩種；
+
+1. 可以透過 onmessage 方式在背景自動開啟 port 連線
+2. 主動呼叫 start() 來傳送訊息，但若要主動式傳送訊息，則需在前端頁面與 shared worker 分別啟動 port，如下；
+
+| 於主頁面主動呼叫 start() 來傳送訊息 |
+| -- |
+| ```myWorker.port.start(); // 前端頁面使用``` |
+
+| 於 shared worker 中呼叫 start() 來傳送訊息 |
+| -- |
+| ```port.start(); // shared worker 中使用 (port 為資料型態為 port 的變數名稱)``` |
+
+###和 shared worker 傳送訊息
+---
+
+* 傳送訊息給 shared worker : 和 dedicated worker 相同可以透過 postMessage() 來達成，但在 shared worker 中需要透過 port 物件來達成，如下範例；
+
+```Javascript
+myWorker.port.postMessage([value.1, value.2]);
+console.log('Message posted to worker');
+```
+ 
+而在 shared worker 方面，則是透過 ** onconnect() ** 進行監聽，然後透過 ** onmessage() ** 接收來自前端的資料，並利用 ** postMessage ** 將資料回傳給前端頁面，如下範例；
+
+```Javascript
+onconnect = function(e) {
+    // e.ports[0] 表示現在傳入參數值的前端頁面
+    // 因為傳入 shared worker 的前端頁面可能不只一個，因此傳入的 port 是以 list 方式表示
+	var port = e.ports[0];
+    
+	port.onmessage = function(e) {
+		var workerResult = 'Result: ' + (e.data[0] * e.data[1]);
+		port.postMessage(workerResult);
+	}
+    
+    // 若是透過 onmessage 方式來傳送資料，則不需要透過 .start() 方式來開啟
+	port.start(); 
+}
+```
+
+
+
 
