@@ -15,6 +15,7 @@
    * [D3.js](d3js.md)
    * [Highcharts.js](highchartsjs.md)
    * [Web Workers](web_workers.md)
+   * Plotly
 * [Database](database.md)
    * [SQL Server (T-SQL)](sql_server_t-sql.md)
    * [MySQL](mysql.md)
