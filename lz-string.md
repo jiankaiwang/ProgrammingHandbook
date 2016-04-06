@@ -182,7 +182,7 @@ with open(dataSrc,"r", encoding="utf-8") as fin:
 
 「透過 c-sharp 中 lz-string 函式將一個 JSON 型態的資料進行壓縮並寫出 binary 的檔案，然透放置於 server 中，當使用者透過瀏覽器查看頁面時，便會將此壓縮的檔案進行傳輸 (此步驟會節省時間與傳輸效率)，然後再透過 Javascript 中相對應的 lz-string 解壓函式將此內容進行解壓。」
 
-* 原 JSON 檔案內容
+* 原 JSON 檔案內容，檔名為 dataJson.json
 
 ```Javascript
 {
@@ -192,7 +192,11 @@ with open(dataSrc,"r", encoding="utf-8") as fin:
 }
 ```
 
-* 透過 C-sharp lz-string 中 compressToUTF16 的壓縮
+* 透過 C-sharp lz-string 中 compressToUTF16 的壓縮，作法為透過檔案開啟後一行一行讀入，然後依續壓縮後，以 streamwriter 方式寫出檔案
+
+| 註解 |
+| -- |
+| 需要注意有加入 lz-string 於 visual studio project 中，詳細步驟可以參考上述。 |
 
 ```C#
 using System;
@@ -242,6 +246,39 @@ namespace lzstring_project
 }
 ```
 
+之後便可以將檔案放在 server ，並透過 javascript 存取該壓縮檔案的 uri ，之後於 javascript 端進行解壓縮即可，如下範例；
+
+```Html
+<head>
+	<script src="jquery-1.11.1.min_ori.js" type="text/javascript"></script>
+	<script src="lz-string.js" type="text/javascript"></script>
+</head>
+<body>
+<ul id="menu">
+	<li>Ori</li>
+</ul>
+<script type="text/javascript">
+
+function getDataBody(getData) {
+	for (var line in getData) {
+		$("#menu").append("<li>" + line + "->" + getData[line] + "</li>");
+	}
+}
+
+function decompressData(getCompressData) {
+	// json.parse transform string into json object
+	getDataBody(JSON.parse(LZString.decompressFromBase64(getCompressData)));
+}
+
+var getData;
+$.ajax({
+  dataType: "text",
+  url: "http://localhost/web/jquery/getjson/compData.json",
+  success: function(Jdata) { alert(Jdata); decompressData(Jdata); }
+});
+</script>
+</body>
+```
 
 
 
