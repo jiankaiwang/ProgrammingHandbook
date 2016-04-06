@@ -1,2 +1,2 @@
-# 1.2 Syntax Compare
+# 1.2 語法比較
 
