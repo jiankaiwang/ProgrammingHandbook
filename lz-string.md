@@ -210,16 +210,6 @@ namespace lzstring_project
     {
         static void Main(string[] args)
         {
-            // example.1
-            /*LZString lzObj = new LZString();
-            string compressString = "This is a compression string.";
-            string getCompStr = lzObj.compressToBase64(compressString);
-            Console.WriteLine(getCompStr);
-            string getDeCompStr = lzObj.decompressFromBase64(getCompStr);
-            Console.WriteLine(getDeCompStr);
-            Console.ReadLine();*/
-
-            // example.2
             string fin = @"dataJson.json";
             string fout = @"compData_Csharp.json";
             if (File.Exists(fin))
