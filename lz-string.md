@@ -246,7 +246,7 @@ namespace lzstring_project
 }
 ```
 
-之後便可以將檔案放在 server ，並透過 javascript 存取該壓縮檔案的 uri ，之後於 javascript 端進行解壓縮即可，如下範例；
+之後便可以將檔案放在 server ，並透過 javascript 存取該壓縮檔案的 uri ，之後於 javascript 端進行解壓縮即可，如下範例將取得的資料依序加入 id 為 menu 的 list 中；
 
 ```Html
 <head>
@@ -267,14 +267,14 @@ function getDataBody(getData) {
 
 function decompressData(getCompressData) {
 	// json.parse transform string into json object
-	getDataBody(JSON.parse(LZString.decompressFromBase64(getCompressData)));
+	getDataBody(JSON.parse(LZString.decompressFromUTF16(getCompressData)));
 }
 
 var getData;
 $.ajax({
   dataType: "text",
-  url: "http://localhost/web/jquery/getjson/compData.json",
-  success: function(Jdata) { alert(Jdata); decompressData(Jdata); }
+  url: "compData_Csharp.json",
+  success: function(Jdata) { decompressData(Jdata); }
 });
 </script>
 </body>
