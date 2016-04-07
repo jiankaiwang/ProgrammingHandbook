@@ -41,6 +41,47 @@
 
 其中 textarea 中 id 名稱定義主要被 jquery 使用，而相較於 name ，則是可以搭配 form submit 使用來，而 row 與 column 分別定義 textarea 的編輯區域有多少列與多少欄。若是透過瀏覽器查看該頁面，如下畫面；
 
+![](images/webpage/ckeditor.png)
+
+如此便可視成初步建置完成。
+
+###搭配 form submit 及取得編輯內容的原始碼
+---
+大部分使用此類 jQuery 編輯器，多半是需要提供使用者客製化編輯網頁的能力，因此取得編輯內容是一件很重要的事，而我們可以搭配 form submit 方式來達成取出編輯內容，如下 (以 PHP Script 為例)；
+
+```Html
+<script type="text/javascript" src="jquery-1.12.2.min.js"></script>
+<script type="text/javascript" src="ckeditor/ckeditor.js"></script>
+
+<!-- 透過 form 方式，當使用者 submit 之後，便會將此 textarea 內容以 post 方式傳送 -->
+<form name="getContent" id="getContent" method="post" action="#"> 
+	<div id="editSection">
+	<textarea name="editorZone" id="editorZone" rows="20" cols="80">
+		(Hello world ...)
+	</textarea>
+	</div>
+	<div><input type="submit" value="submit"></input></div>
+</form>
+
+<script type="text/javascript">
+	CKEDITOR.replace( 'editorZone' );
+</script>
+```
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
