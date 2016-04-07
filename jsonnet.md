@@ -9,4 +9,5 @@ Restful API 為目前主流的資料傳輸方式之一，其 JSON 資料格式�
 ---
 * Visual Studio 2015 Community
 * .NET Framework 4.5.2
-* MVC 
+
+
