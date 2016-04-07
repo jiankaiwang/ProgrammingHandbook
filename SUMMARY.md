@@ -21,7 +21,7 @@
        * [dedicated worker](dedicated_worker.md)
        * [shared worker](shared_worker.md)
    * [jQuery Editor](jquery_editor.md)
-       * CKEditor
+       * [CKEditor](ckeditor.md)
 * [Database](database.md)
    * [SQL Server (T-SQL)](sql_server_t-sql.md)
    * [MySQL](mysql.md)
