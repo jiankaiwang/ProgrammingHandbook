@@ -94,7 +94,47 @@ namespace webapiJsonNet
 * ** routeTemplate ** 為路由位址，與取得參數值的方式
 * ** defaults ** 則是定義取得參數的方法或該設定
 
-若是打開 ** Controllers ** 資料夾中
+因此若打開 ** Controllers ** 資料夾中 ** ValuesController.cs ** 便會出現下列各項 CRUD 的操作方式；
+
+```C#
+// ...
+
+namespace webapiJsonNet.Controllers
+{
+    public class ValuesController : ApiController
+    {
+        // GET api/values
+        public IEnumerable<string> Get()
+        {
+            return new string[] { "value1", "value2" };
+        }
+
+        // GET api/values/5
+        public string Get(int id)
+        {
+            return "value";
+        }
+
+        // POST api/values
+        public void Post([FromBody]string value)
+        {
+        }
+
+        // PUT api/values/5
+        public void Put(int id, [FromBody]string value)
+        {
+        }
+
+        // DELETE api/values/5
+        public void Delete(int id)
+        {
+        }
+    }
+}
+```
+
+而 Create, Read, Update 及 Delete 便是相對應為 Post(), GET(), Put() 與 Delete() 函式。**其中函式 GET() 被重載，因此能夠醫不同的參數值而有不同的處理。因為 MVC 架構下，Controller 會直接將結果傳給 View 進行呈現，因此 Controller 直接透過 return 被視為將資料傳送至前端。**
+
 
 
 
