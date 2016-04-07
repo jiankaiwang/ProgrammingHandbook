@@ -8,6 +8,9 @@ Restful API 為目前主流的資料傳輸方式之一，其 JSON 資料格式�
 ###開發環境
 ---
 * Visual Studio 2015 Community
-* .NET Framework 4.5.2
+* ASP.NET 4.5.2
 
+###開始一個 VS 專案
+---
+由「檔案」 > 「新增」 > 「專案」 > 選擇 Visual C-sharp 「Web」 > 「ASP.NET Web 應用程式」 > 選擇 「Web API」 > 右側「變更驗證」 > 「無驗證」
 
