@@ -60,7 +60,7 @@
 		(Hello world ...)
 	</textarea>
 	</div>
-	<div><input type="submit" value="submit"></input></div>
+	<div><input type="submit" value="submit" id="sendInfo"></input></div>
 </form>
 
 <script type="text/javascript">
@@ -68,10 +68,33 @@
 </script>
 ```
 
+但若是透過此方法傳送資料，則傳送的資料會是以 text 方式 (** 即僅有文字內容，不包含編輯的樣式，如顏色、文字大小等 **)，因此需要透過 ckeditor package 內定義的 instance 方式來取得 html code，如透過下方程式碼來取得編輯內容的完整 html code；
 
+```Javascript
+// 需要注意此 instances 需指向要給使用者編輯物件的 id 名稱
+CKEDITOR.instances['editorZone'].getData();
+```
 
+而可能出現的結果如下；
 
+```Bash
+"<p><u><em><span style="font-size:20px"><strong><span style="color:#FF0000">(Hello world ...)</span></strong></span></em></u></p>"
+```
 
+進一步可以在點擊 submit 按鈕後，動態創建一個 textarea 將 value 設定為取出的完整 html code，如此一來便可以隨著 form submit 後便將完整的 html code 以 POST 方式傳送出去，如下；
+
+```Html
+<script type="text/javascript">
+	CKEDITOR.replace( 'editorZone' );
+	
+	$("#sendInfo").click(function() {
+		// control method selected
+		$("#editSection").append('<div><textarea name="editorZoneDetail" id="editorZoneDetail" value="' + CKEDITOR.instances['editorZone'].getData() + '" style="position: absolute; left: -9999px"></textarea></div>');
+	});
+</script>
+```
+
+當點擊 submit 後，便會動態產生一個名與 id 皆為 editorZoneDetail 的 textarea 物件，而其 value 為該編輯器內容的完整 html code ，然後以 post 方式傳送出去。
 
 
 
