@@ -16,7 +16,7 @@ Restful API 為目前主流的資料傳輸方式之一，其 JSON 資料格式�
 
 ![](images/webapi-jsonnet-vs-create.png)
 
-開啟後，可以直接點擊瀏覽器來執行，
+開啟後，可以直接點擊瀏覽器來執行，此時會出現下列畫面
 
 
 
