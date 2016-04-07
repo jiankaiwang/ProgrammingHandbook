@@ -1,5 +1,8 @@
 # PDO access MySQL
 
+<script type="text/javascript" src="gitbook/app.js"></script>
+<script type="text/javascript" src="js/general.js"></script>
+
 PDO (PHP Data Object) 是一套由 PHP 直接原生支援資料庫連結的 package，解決如 mysql, mysqli 等凌亂不堪連結資料庫的方式。底下則為實作方法；
 
 ###Query : 一次取得所有欄位及所有資料列
