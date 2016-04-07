@@ -106,8 +106,28 @@ if(isset($_POST["sendInfo"])) {
 ?>
 ```
 
+而若是有出現 editorZone-&gt;(編輯的內容及其樣式) 的結果便是正確的。
 
+| 註解 |
+| -- |
+| 若是不透過 php 方式檢查，也可以直接利用 alert(CKEDITOR.instances['editorZone'].getData()); 來看文字型態的結果。 |
 
+透過 POST 傳輸的 html code 可以透過 parameter 方式存入資料庫，而當下次要取出來繼續編輯或更新時，可以直接將此 html code 放置於 textarea 中，則原本編輯的樣式便會直接被保留，如下；
+
+```Html
+// ...
+
+<form name="getContent" id="getContent" method="post" action="#">
+	<div id="editSection">
+	<textarea name="editorZone" id="editorZone" rows="20" cols="80">
+			<p><u><em><span style="font-size:20px"><strong><span style="color:#FF0000">(Hello world ...)</span></strong></span></em></u></p>
+	</textarea>
+	</div>
+	<div><input type="submit" value="submit" name="sendInfo" id="sendInfo"></input></div>
+</form>
+
+//...
+```
 
 
 
