@@ -27,7 +27,7 @@
 
 ```Html
 <textarea name="editorZone" id="editorZone" rows="20" cols="80">
-	(內容文字)
+	(Hello world ...)
 </textarea>
 ```
 
@@ -39,4 +39,10 @@
 </script>
 ```
 
-其中 textarea 中 id 名稱定義主要被 jquery 使用，而相較於 name ，則是可以搭配 form submit 使用來，而 row 與 column 分別定義 textarea 的編輯區域有多少列與多少欄。
+其中 textarea 中 id 名稱定義主要被 jquery 使用，而相較於 name ，則是可以搭配 form submit 使用來，而 row 與 column 分別定義 textarea 的編輯區域有多少列與多少欄。若是透過瀏覽器查看該頁面，如下畫面；
+
+
+
+
+
+
