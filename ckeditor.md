@@ -120,7 +120,9 @@ if(isset($_POST["sendInfo"])) {
 <form name="getContent" id="getContent" method="post" action="#">
 	<div id="editSection">
 	<textarea name="editorZone" id="editorZone" rows="20" cols="80">
+            <!-- 直接將資料庫內容輸出即可 -->
 			<p><u><em><span style="font-size:20px"><strong><span style="color:#FF0000">(Hello world ...)</span></strong></span></em></u></p>
+            <!-- -------------------- -->
 	</textarea>
 	</div>
 	<div><input type="submit" value="submit" name="sendInfo" id="sendInfo"></input></div>
