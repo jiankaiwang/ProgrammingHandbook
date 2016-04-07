@@ -36,7 +36,65 @@ This XML file does not appear to have any style information associated with it. 
 ["value1","value2"]
 ```
 
+###初探 Web API
+---
+若是打開方案總管中的 ** Global.aspx **，會看到下方的內容；
 
+```C#
+// ...
+
+namespace webapiJsonNet
+{
+    public class WebApiApplication : System.Web.HttpApplication
+    {
+        protected void Application_Start()
+        {
+            AreaRegistration.RegisterAllAreas();
+            
+            // 註冊 Web API 的路由器內容，名為 WebApiConfig
+            GlobalConfiguration.Configure(WebApiConfig.Register);
+            
+            FilterConfig.RegisterGlobalFilters(GlobalFilters.Filters);
+            RouteConfig.RegisterRoutes(RouteTable.Routes);
+            BundleConfig.RegisterBundles(BundleTable.Bundles);
+        }
+    }
+}
+```
+
+其中一段 GlobalConfiguration 說明了 Web API 路由設定，接著打開 ** App_Start ** 資料夾中的 ** WebApiConfig.cs **，則會出現下列程式碼；
+
+```C#
+// ...
+
+namespace webapiJsonNet
+{
+    public static class WebApiConfig
+    {
+        public static void Register(HttpConfiguration config)
+        {
+            // Web API 設定和服務
+
+            // Web API 路由
+            config.MapHttpAttributeRoutes();
+
+            config.Routes.MapHttpRoute(
+                name: "DefaultApi",
+                routeTemplate: "api/{controller}/{id}",
+                defaults: new { id = RouteParameter.Optional }
+            );
+        }
+    }
+}
+```
+
+* 可以看見位於 App_Start 資料夾中的 WebApiConfig.cs 定義了 Web API 的路由器
+* 其中一函式 **  config.Routes.MapHttpRoute() **說明了路由位址，即網路位址的 URL
+* 其中 ** name ** 為路由器名稱 (不能重複)
+* ** routeTemplate ** 為路由位址，與取得參數值的方式
+* ** defaults ** 則是定義取得參數的方法或該設定
+
+若是打開 ** Controllers ** 資料夾中
 
 
 
