@@ -53,14 +53,13 @@
 <script type="text/javascript" src="jquery-1.12.2.min.js"></script>
 <script type="text/javascript" src="ckeditor/ckeditor.js"></script>
 
-<!-- 透過 form 方式，當使用者 submit 之後，便會將此 textarea 內容以 post 方式傳送 -->
-<form name="getContent" id="getContent" method="post" action="#"> 
-	<div id="editSection">
-	<textarea name="editorZone" id="editorZone" rows="20" cols="80">
-		(Hello world ...)
-	</textarea>
-	</div>
-	<div><input type="submit" value="submit" id="sendInfo"></input></div>
+<form name="getContent" id="getContent" method="post" action="#">
+    <div id="editSection">
+    <textarea name="editorZone" id="editorZone" rows="20" cols="80">
+            (Hello world ...)
+    </textarea>
+    </div>
+    <div><input type="submit" value="submit" name="sendInfo" id="sendInfo"></input></div>
 </form>
 
 <script type="text/javascript">
@@ -85,18 +84,27 @@ CKEDITOR.instances['editorZone'].getData();
 
 ```Html
 <script type="text/javascript">
-	CKEDITOR.replace( 'editorZone' );
-	
-	$("#sendInfo").click(function() {
+CKEDITOR.replace( 'editorZone' );
+
+$("#sendInfo").click(function() {
 		// control method selected
 		$("#editSection").append('<div><textarea name="editorZoneDetail" id="editorZoneDetail" value="' + CKEDITOR.instances['editorZone'].getData() + '" style="position: absolute; left: -9999px"></textarea></div>');
-	});
+});
 </script>
 ```
 
-當點擊 submit 後，便會動態產生一個名與 id 皆為 editorZoneDetail 的 textarea 物件，而其 value 為該編輯器內容的完整 html code ，然後以 post 方式傳送出去。
+當點擊 submit 後，便會動態產生一個名與 id 皆為 editorZoneDetail 的 textarea 物件，而其 value 為該編輯器內容的完整 html code ，然後以 post 方式傳送出去。可以透過 php 方式來確認是否有正確傳輸內容；
 
-
+```Php
+<?php
+# 需要注意 $_POST["sendInfo"] 中的 sendInfo 為 submit 按鈕的 name
+if(isset($_POST["sendInfo"])) {
+    foreach($_POST as $key => $value) {
+        echo $key.'->'.$value.'<br>';
+    }
+}
+?>
+```
 
 
 
