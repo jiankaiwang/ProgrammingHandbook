@@ -220,7 +220,7 @@ var fetchData = null;
 if (window.Worker) {
     var nativePostWorker = new SharedWorker('Scripts/webworker/native-ajax-post.js');
     
-    // send JSON object to the shared worker
+    // send JSON object to the shared worker for "POST"
     nativePostWorker.port.postMessage(['value-1','value-2']);
     
     // get JSON data from shared worker
