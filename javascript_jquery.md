@@ -214,15 +214,21 @@ onmessage = function (e) {
 而在 top (或 parent) 頁面，可以透過下列方式與 shared worker 溝通；
 
 ```Html
+<script type="text/javascript">
 var fetchData = null;
 
 if (window.Worker) {
     var nativePostWorker = new SharedWorker('Scripts/webworker/native-ajax-post.js');
     
+    // send JSON object to the shared worker
+    nativePostWorker.port.postMessage(['value-1','value-2']);
+    
+    // get JSON data from shared worker
     nativePostWorker.port.onmessage = function (e) {
         fetchData = JSON.parse(e.data);
     }
 }
 
 // do something ...
+</script>
 ```
