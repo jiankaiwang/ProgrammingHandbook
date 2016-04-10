@@ -3,7 +3,7 @@
 <script type="text/javascript" src="gitbook/app.js"></script>
 <script type="text/javascript" src="js/general.js"></script>
 
-###取得 JSON 資料
+###取得 JSON 資料 (GET)
 ---
 * 假定使用的 JSON 資料內容與 html code
 
@@ -129,3 +129,53 @@ ajax('data.json',null,function(data){
 },'GET');
 </script>
 ```
+
+###傳送與接收 JSON 資料 (POST)
+---
+
+一般而言，透過 jQuery library 中 $.ajax 能夠簡單的將資料 POST 到 web method 的服務中，然後取得回傳的 JSON 資料，如下；
+
+```Javascript
+$.ajax({
+    type: "POST",
+    url: "webmethod or api url (router)",
+    data: "{key-1: 'value-2', key-2: 'value-2'}",
+    contentType: "application/json; charset=utf-8",
+    dataType: "json",
+    success: function (data) {
+        // get the data after sending data by "POST"
+        dealWith(data);
+    },
+    beforeSend: function () {
+        $('#waiting-logo').show();
+    },
+    complete: function () {
+        $('#waiting-logo').hide();
+    },
+    error: function (xhr, ajaxOptions, thrownError) {
+        alert(xhr.status);
+        alert(thrownError);
+    }
+});
+```
+
+但在一些不支援的環境下，如 worker 執行緒等不支援 window 物件 (即 jQuery 無法使用下)，就必須透過 native 的 XMLHttpRequest() 方式達成這件事，如下；
+
+```Javascript
+// define XMLHttpRequest() function
+function postJsonAjax(url, sentdata, success) {
+    var xhr = new XMLHttpRequest();
+    xhr.open('POST', url);
+    xhr.setRequestHeader('Content-Type', 'application/json; charset=utf-8');
+    xhr.onload = function () {
+        if (xhr.status === 200) {
+            return success(xhr.responseText);
+        }
+    }
+    xhr.send(JSON.stringify(sentdata));
+}
+
+//
+```
+
+
