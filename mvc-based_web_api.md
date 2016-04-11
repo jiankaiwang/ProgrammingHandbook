@@ -233,6 +233,12 @@ GlobalConfiguration.Configuration.Formatters.XmlFormatter.SupportedMediaTypes.Re
 ###透過 URL 及路由器傳入多項參數
 ---
 
+可以透過下列兩個方式來設定路由器，便可以由 URL 取得多項參數，底下以傳入五項
+
+* 透過直接設定 ** Global.asax ** 方式；
+
+
+
 
 
 
