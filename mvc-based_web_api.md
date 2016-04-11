@@ -135,8 +135,12 @@ namespace webapiJsonNet.Controllers
 
 而函式 Create, Read, Update 及 Delete 便是相對應為 Post(), GET(), Put() 與 Delete() 函式，此便是可以透過 $.ajax 與。而因為網頁預設為 GET() 內容，因此當以網頁瀏覽 http://localhost:9000/api/Values 時，會直接呼叫 GET() 函式。**其中函式 GET() 被重載，因此能夠依不同的參數值而有不同的處理。**當以網頁瀏覽 http://localhost:9000/api/Values/1 時，因為有傳入 id (在 WebApiConfig.cs 中被定義為 RouteParameter.Optional)，因此會回傳 Get(int id) 執行後的結果 (即 "value")。**因為 MVC 架構下，Controller 會直接將結果傳給 View 進行呈現，因此 Controller 直接透過 return 被視為將資料傳送至前端。**
 
-而在不傳入
+###Controller 處理回傳給 View 的物件
+---
 
+
+###設定回傳的資料格式
+---
 
 
 
