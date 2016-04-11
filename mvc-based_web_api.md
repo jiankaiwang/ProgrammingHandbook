@@ -94,7 +94,7 @@ namespace webapiJsonNet
 * ** routeTemplate ** 為路由位址，與取得參數值的方式
 * ** defaults ** 則是定義取得參數的方法或該設定
 
-因此若打開 ** Controllers ** 資料夾中 ** ValuesController.cs ** 便會出現下列各項 CRUD 的操作方式；
+因此若打開 ** Controllers ** 資料夾中，會發現有 ** ValuesController.cs ** 的類別，此類別名稱 (Values，即是控制器的名稱)，便是在 ** WebApiConfig.cs ** 中路由器所定義 routeTemplate 的 controller 名稱，因此於網頁中便可以透過 http://localhost:9000/api/Values 來存取 api，而其內容便定義下列各項 CRUD 的操作方式；
 
 ```C#
 // ...
@@ -133,4 +133,11 @@ namespace webapiJsonNet.Controllers
 }
 ```
 
-而 Create, Read, Update 及 Delete 便是相對應為 Post(), GET(), Put() 與 Delete() 函式。**其中函式 GET() 被重載，因此能夠醫不同的參數值而有不同的處理。因為 MVC 架構下，Controller 會直接將結果傳給 View 進行呈現，因此 Controller 直接透過 return 被視為將資料傳送至前端。**
+而函式 Create, Read, Update 及 Delete 便是相對應為 Post(), GET(), Put() 與 Delete() 函式，此便是可以透過 $.ajax 與。而因為網頁預設為 GET() 內容，因此當以網頁瀏覽 http://localhost:9000/api/Values 時，會直接呼叫 GET() 函式。**其中函式 GET() 被重載，因此能夠依不同的參數值而有不同的處理。**當以網頁瀏覽 http://localhost:9000/api/Values/1 時，因為有傳入 id (在 WebApiConfig.cs 中被定義為 RouteParameter.Optional)，因此會回傳 Get(int id) 執行後的結果 (即 "value")。**因為 MVC 架構下，Controller 會直接將結果傳給 View 進行呈現，因此 Controller 直接透過 return 被視為將資料傳送至前端。**
+
+而在不傳入
+
+
+
+
+
