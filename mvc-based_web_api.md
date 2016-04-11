@@ -272,12 +272,24 @@ config.Routes.MapHttpRoute(
 );
 ```
 
-而在準備定義使用此 API 的 controller 中進行下列實作來取得資料；
+使用方法一或方法二皆可在準備定義使用此 API 的 controller 中進行下列實作來取得資料；
 
 ```C#
-
+public Dictionary<string, string> Get(string apikey, string service, string date, string month, string datatype)
+{
+    Dictionary<string, string> dict = new Dictionary<string, string> { };
+    dict.Add("FETCH_apikey", apikey);
+    dict.Add("FETCH_service", service);
+    dict.Add("FETCH_date", date);
+    dict.Add("FETCH_month", month);
+    dict.Add("FETCH_datatype", datatype);
+    return dict;
+}
 ```
 
+| 註解 |
+| -- |
+| 需要注意的是於路由器的定義中， ** routeTemplate ** 的 ** URL 參數位址 (如前後順序)、參數數量等都必須與 controller 中實作的傳入參數相同。此外，在傳入參數的變數名稱，也必須相同，如 apikey 及 service 等。 ** |
 
 
 
