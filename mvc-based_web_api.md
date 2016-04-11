@@ -263,7 +263,11 @@ GlobalConfiguration.Configuration.Routes.MapHttpRoute(
 
 其中，** name **為路由器名稱，不可以重複，** routeTemplate **則為路由器存取路徑
 
+* 方法二：透過 ** App_Start ** 資料夾中 ** WebApiConfig.cs ** 底下的路由器註冊函式** Register(HttpConfiguration config) **來設定；
 
+```C#
+
+```
 
 
 
