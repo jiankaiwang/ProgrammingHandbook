@@ -233,3 +233,10 @@ GlobalConfiguration.Configuration.Formatters.XmlFormatter.SupportedMediaTypes.Re
 ###透過 URL 及路由器傳入多項參數
 ---
 
+
+
+
+
+
+
+
