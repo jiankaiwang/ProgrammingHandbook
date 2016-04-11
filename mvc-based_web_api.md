@@ -272,7 +272,11 @@ config.Routes.MapHttpRoute(
 );
 ```
 
-而
+而在準備定義使用此 API 的 controller 中進行下列實作來取得資料；
+
+```C#
+
+```
 
 
 
