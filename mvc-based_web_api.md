@@ -149,6 +149,32 @@ namespace webapiJsonNet.Controllers
 
 接下來將會透過第一種方式 IEnumerable 來準備不同的回傳資料。
 
+* 回傳 dictionary 型態 (key,value) 的 JSON 資料，期望呈現結果如下；
+ 
+```Javascript
+{
+  "key1":"value1",
+  "key2":"value2",
+  "key3":"value3"
+}
+```
+ 
+則其實作方式如下；
+
+```C#
+public Dictionary<string, string> Get()
+{
+    // 以 dictionary 方式準備資料
+    Dictionary<string, string> dict = new Dictionary<string, string> { };
+    dict.Add("key1", "value1");
+    dict.Add("key2", "value2");
+    dict.Add("key3", "value3");
+    return dict;
+}
+```
+
+* 
+
 
 ###設定回傳的資料格式 : 以 JSON 為主要資料型態
 ---
