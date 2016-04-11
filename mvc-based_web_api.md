@@ -137,11 +137,38 @@ namespace webapiJsonNet.Controllers
 
 ###Controller 處理回傳給 View 的物件
 ---
+在 MVC 架構下，controller 被視成流程管理員，介接在 data module 與 view 中，因此透過 controller 可以將來自 module 的資料進行準備，然後將之回傳給 View。
+
+常用有數種 controller 方法來準備回傳給 View 的資料，如下數種；
+* 透過 IEnumerable 將以 List (即本例) 的字串物件直接回傳給 View，或是透過 dictionary 的字串物件方式。
+* 在 OData 中，透過 SingleResult<ODATA> 的方式回傳給 View。
+* 透過 JSON.NET 中 JsonConvert.SerializeObject(dataTable, Newtonsoft.Json.Formatting.Indented) 方式，並以 StringContent 與 HttpResponseMessage 方式將此字串回傳給 View。
+
+接下來將會透過第一種方式 IEnumerable 來準備不同的回傳資料；
 
 
-###設定回傳的資料格式
+###設定回傳的資料格式 : 以 JSON 為主要資料型態
 ---
+於 ** Global.asax ** 設定檔案之 Application_Start() 中加入下列其中一的方法，便可以在不同瀏覽器皆顯示出 JSON 型態的資料。
 
+* 方法一：移除 XML 格式支援
+
+```C#
+GlobalConfiguration.Configuration.Formatters.XmlFormatter.SupportedMediaTypes.Clear();
+```
+
+* 方法二：於 JSON 格式中加入 header 為 text/html
+
+```C#
+GlobalConfiguration.Configuration.Formatters.JsonFormatter.SupportedMediaTypes.Add(new MediaTypeHeaderValue("text/html"));
+```
+
+* 方法三：保留 XML 設定，但調整 JSON 格式為主要呈現內容
+
+```C#
+var appXmlType = GlobalConfiguration.Configuration.Formatters.XmlFormatter.SupportedMediaTypes.FirstOrDefault(t => t.MediaType == "application/xml");
+GlobalConfiguration.Configuration.Formatters.XmlFormatter.SupportedMediaTypes.Remove(appXmlType);
+```
 
 
 
