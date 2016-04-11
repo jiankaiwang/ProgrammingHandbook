@@ -173,8 +173,39 @@ public Dictionary<string, string> Get()
 }
 ```
 
-* 
+* 回傳 dictionary 的 list 型態資料，期望呈現結果如下 (此亦為最常見的 JSON 傳輸資料方法)；
 
+```Javascript
+[
+    {
+        "key1":"value1",
+        "key2":"value2",
+        "key3":"value3"
+    },
+    {
+        "K1":"V1",
+        "K2":"V2",
+        "K3":"V3"
+    }
+]
+```
+
+則其實作方式如下；
+
+```C#
+public IEnumerable<Dictionary<string, string>> Get()
+{
+    Dictionary<string, string> dict1 = new Dictionary<string, string> { };
+    dict1.Add("key1", "value1");
+    dict1.Add("key2", "value2");
+    dict1.Add("key3", "value3");
+    Dictionary<string, string> dict2 = new Dictionary<string, string> { };
+    dict2.Add("K1", "V1");
+    dict2.Add("K2", "V2");
+    dict2.Add("K3", "V3");
+    return new Dictionary<string, string>[] { dict1, dict2 };
+}
+```
 
 ###設定回傳的資料格式 : 以 JSON 為主要資料型態
 ---
