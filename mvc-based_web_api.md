@@ -235,14 +235,14 @@ GlobalConfiguration.Configuration.Formatters.XmlFormatter.SupportedMediaTypes.Re
 
 可以透過下列兩個方式來設定路由器，便可以由 URL 取得多項參數，底下以傳入五項參數為例;
 
-* 傳入的參數分別為
+傳入的參數分別為
 1. apikey (api 存取金鑰)
 2. service (服務名稱)
 3. date (選擇的日期)
 4. month (日期區間)
 5. datatype (存取格式)
 
-* 使用 Web API GET() 方法的連結範例如下；
+使用 Web API GET() 方法的連結範例如下；
 
 ```Html
 <!-- 路由設計 -->
@@ -266,8 +266,13 @@ GlobalConfiguration.Configuration.Routes.MapHttpRoute(
 * 方法二：透過 ** App_Start ** 資料夾中 ** WebApiConfig.cs ** 底下的路由器註冊函式** Register(HttpConfiguration config) **來設定；
 
 ```C#
-
+config.Routes.MapHttpRoute(
+    name: "multipleparas",
+    routeTemplate: "api/{controller}/{apikey}/{service}/{date}/{month}/{datatype}"
+);
 ```
+
+而
 
 
 
