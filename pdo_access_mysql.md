@@ -77,6 +77,112 @@ while($getRes = $sth->fetch(PDO::FETCH_ASSOC))
 }
 ```
 
+而完整的程式內容如下；
+
+```Php
+<?php
+# connect to mysql
+$dbhost = 'localhost';
+$dbuser = 'dbuser';
+$dbpass = 'dbpass';
+$dbname = 'dbname';
+$tbname = 'tbname';
+
+# set pdo connection and set charset
+$dbh = new PDO('mysql:dbname='.$dbname.';host='.$dbhost,$dbuser,$dbpass,array(PDO::MYSQL_ATTR_INIT_COMMAND => 'SET NAMES \'UTF8\''));
+$sth = $dbh->prepare("SELECT * FROM user WHERE account = :acc or type = :typ ;");
+$sth->bindParam(':acc', $_GET['u'], PDO::PARAM_STR);
+$sth->bindParam(':typ', $_GET['t'], PDO::PARAM_INT);
+
+if($sth->execute()) {
+  # when executing sql command is correct, do the operation
+  $getRes = $sth->fetchAll(PDO::FETCH_ASSOC);
+  
+  for($i = 0 ;$i < count($getRes); $i++) {
+    foreach($getRes[$i] as $key => $value) {
+        echo $key."->".$value."<br>";
+    }
+  }
+  
+} else {
+  # executing sql command is error
+  // ...
+}
+?>
+```
+
+###insert, update 與 delete
+---
+
+透過 PDO 方式連接 MySQL 並透過參數方式綁定 SQL 指令是相當方便的處理方法，而在 insert, update 與 delete 的 SQL 指令亦是相當類似的作法，底下為三種類型的 SQL 指令；
+
+假設使用的 Table 為 usedTb，而此 Table 的 column schema 如下；
+
+```Bash
++------------+--------------+------+-----+---------+----------------+
+| Field      | Type         | Null | Key | Default | Extra          |
++------------+--------------+------+-----+---------+----------------+
+| id         | int(11)      | NO   | PRI | NULL    | auto_increment |
+| account    | varchar(50)  | YES  |     | NULL    |                |
+| author     | varchar(200) | YES  |     | NULL    |                |
+| accyear    | varchar(50)  | YES  |     | NULL    |                |
+| journal    | varchar(150) | YES  |     | NULL    |                |
+| columnName | varchar(150) | YES  |     | NULL    |                |
+| topic      | varchar(300) | YES  |     | NULL    |                |
++------------+--------------+------+-----+---------+----------------+
+7 rows in set (0.00 sec)
+```
+
+```Php
+<?php
+# 使用的 table
+$usedTb = 'usedTb';
+
+# insert command
+$insertSth = $dbh->prepare("insert into ".$usedTb."(account,author,accyear,journal,columnName,topic) values(:account,:author,:accyear,:journal,:columnName,:topic);");
+
+# update command
+$updateSth = $dbh->prepare("update ".$usedTb." set topic = :topic where account = :acc and journal = :jal");
+
+# delete command
+$deleteSth = $dbh->prepare("delete from ".$usedTb." where account = :acc;");
+?>
+```
+
+而完整的執行範例如下，以 insert 為例；
+
+```Php
+<?php
+# connect to mysql
+$dbhost = 'localhost';
+$dbuser = 'dbuser';
+$dbpass = 'dbpass';
+$dbname = 'dbname';
+$tbname = 'tbname';
+
+$usedTb = 'usedTb';
+$dbh = new PDO('mysql:dbname='.$dbname.';host='.$dbhost,$dbuser,$dbpass,array(PDO::MYSQL_ATTR_INIT_COMMAND => 'SET NAMES \'UTF8\''));
+
+# 在 SQL Prepare 中，可以變換 insert, update 或 delete 的 SQL 語法
+$insertSth = $dbh->prepare("insert into ".$usedTb."(account,author,accyear,journal,columnName,topic) values(:account,:author,:accyear,:journal,:columnName,:topic);");
+
+# bind parameters
+$insertSth->bindParam(':account', $usedUserAcc, PDO::PARAM_STR);
+$insertSth->bindParam(':author', $_POST['research-author'], PDO::PARAM_STR);
+$insertSth->bindParam(':accyear', $_POST['research-year'], PDO::PARAM_STR);
+$insertSth->bindParam(':journal', $_POST['research-journal'], PDO::PARAM_STR);
+$insertSth->bindParam(':columnName', $_POST['research-column'], PDO::PARAM_STR);
+$insertSth->bindParam(':topic', $_POST['research-topic'], PDO::PARAM_STR);
+
+# 執行 SQL 指令
+if(!($insertSth->execute())) {
+  // SQL 執行錯誤處理 ...
+}
+?>
+```
+
+
+
 
 
 
