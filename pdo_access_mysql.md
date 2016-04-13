@@ -133,6 +133,8 @@ if($sth->execute()) {
 7 rows in set (0.00 sec)
 ```
 
+而 insert, update 與 delete 的 SQL 語法於 PDO 的準備如下；
+
 ```Php
 <?php
 # 使用的 table
