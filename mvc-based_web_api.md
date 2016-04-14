@@ -40,7 +40,7 @@ This XML file does not appear to have any style information associated with it. 
 ---
 若是打開方案總管中的 ** Global.aspx **，會看到下方的內容；
 
-```C#
+```csharp
 // ...
 
 namespace webapiJsonNet
@@ -64,7 +64,7 @@ namespace webapiJsonNet
 
 其中一段 GlobalConfiguration 說明了 Web API 路由設定，接著打開 ** App_Start ** 資料夾中的 ** WebApiConfig.cs **，則會出現下列程式碼；
 
-```C#
+```csharp
 // ...
 
 namespace webapiJsonNet
