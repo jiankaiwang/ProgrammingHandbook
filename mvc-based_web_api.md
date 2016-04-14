@@ -96,7 +96,7 @@ namespace webapiJsonNet
 
 因此若打開 ** Controllers ** 資料夾中，會發現有 ** ValuesController.cs ** 的類別，此類別名稱 (Values，即是控制器的名稱)，便是在 ** WebApiConfig.cs ** 中路由器所定義 routeTemplate 的 controller 名稱，因此於網頁中便可以透過 http://localhost:9000/api/Values 來存取 api，而其內容便定義下列各項 CRUD 的操作方式；
 
-```C#
+```csharp
 // ...
 
 namespace webapiJsonNet.Controllers
@@ -161,7 +161,7 @@ namespace webapiJsonNet.Controllers
  
 則其實作方式如下；
 
-```C#
+```csharp
 public Dictionary<string, string> Get()
 {
     // 以 dictionary 方式準備資料
@@ -192,7 +192,7 @@ public Dictionary<string, string> Get()
 
 則其實作方式如下；
 
-```C#
+```csharp
 public IEnumerable<Dictionary<string, string>> Get()
 {
     Dictionary<string, string> dict1 = new Dictionary<string, string> { };
@@ -213,19 +213,19 @@ public IEnumerable<Dictionary<string, string>> Get()
 
 * 方法一：移除 XML 格式支援
 
-```C#
+```csharp
 GlobalConfiguration.Configuration.Formatters.XmlFormatter.SupportedMediaTypes.Clear();
 ```
 
 * 方法二：於 JSON 格式中加入 header 為 text/html
 
-```C#
+```csharp
 GlobalConfiguration.Configuration.Formatters.JsonFormatter.SupportedMediaTypes.Add(new MediaTypeHeaderValue("text/html"));
 ```
 
 * 方法三：保留 XML 設定，但調整 JSON 格式為主要呈現內容
 
-```C#
+```csharp
 var appXmlType = GlobalConfiguration.Configuration.Formatters.XmlFormatter.SupportedMediaTypes.FirstOrDefault(t => t.MediaType == "application/xml");
 GlobalConfiguration.Configuration.Formatters.XmlFormatter.SupportedMediaTypes.Remove(appXmlType);
 ```
@@ -254,7 +254,7 @@ http://localhost:9000/api/values/xoqpkhu7/service1/20160411/12/json
 
 * 方法一：透過直接設定 ** Global.asax ** 方式，於** Application_Start() **函式中加入；
 
-```C#
+```csharp
 GlobalConfiguration.Configuration.Routes.MapHttpRoute(
     name: "multipleparas",
     routeTemplate: "api/{controller}/{apikey}/{service}/{date}/{month}/{datatype}"
@@ -265,7 +265,7 @@ GlobalConfiguration.Configuration.Routes.MapHttpRoute(
 
 * 方法二：透過 ** App_Start ** 資料夾中 ** WebApiConfig.cs ** 底下的路由器註冊函式** Register(HttpConfiguration config) **來設定；
 
-```C#
+```csharp
 config.Routes.MapHttpRoute(
     name: "multipleparas",
     routeTemplate: "api/{controller}/{apikey}/{service}/{date}/{month}/{datatype}"
@@ -274,7 +274,7 @@ config.Routes.MapHttpRoute(
 
 使用方法一或方法二皆可在準備定義使用此 API 的 controller 中進行下列實作來取得資料；
 
-```C#
+```csharp
 public Dictionary<string, string> Get(string apikey, string service, string date, string month, string datatype)
 {
     Dictionary<string, string> dict = new Dictionary<string, string> { };
