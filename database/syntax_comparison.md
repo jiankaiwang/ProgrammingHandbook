@@ -7,7 +7,7 @@
 ---
 
 * MySQL
- 
+
 ```Mysql
 show table status from [Table_name];
 ```
