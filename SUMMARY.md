@@ -24,11 +24,11 @@
    * [jQuery Editor](jquery_editor.md)
        * [CKEditor](ckeditor.md)
 * [Database](database.md)
+   * Syntax comparison
    * [SQL Server (T-SQL)](sql_server_t-sql.md)
    * [MySQL](mysql.md)
    * [PHP access MySQL](php_access_mysql.md)
    * [PDO access MySQL](pdo_access_mysql.md)
-   * Syntax comparison
 * [Scientific](scientific.md)
    * [Data accessed by R](r_access_multiple_source_data.md)
 * [Compression](compression.md)
