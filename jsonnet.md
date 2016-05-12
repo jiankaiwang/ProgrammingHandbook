@@ -198,6 +198,19 @@ config.Routes.MapHttpRoute(
 | -- |
 | 需要注意的事為 routeTemplate 內定義的變數名稱需要與 GET() 函式定義的變數數目、順序與名稱皆相同，如 hireDate 與 day。 |
 
+###設定回傳資料型態
+---
+
+雖然使用 JSON.NET 來產生 json data，但部分瀏覽器仍會以 XML 的格式輸出，因此必須將回傳資料格式改成 json，可以於 App_Start 資料夾下 WebApiConfig.cs 進行設定，如下；
+
+```C#
+// force return as json data type
+var appXmlType = GlobalConfiguration.Configuration.Formatters.XmlFormatter.SupportedMediaTypes.FirstOrDefault(t => t.MediaType == "application/xml");
+GlobalConfiguration.Configuration.Formatters.XmlFormatter.SupportedMediaTypes.Remove(appXmlType);
+```
+
+
+
 
 
 
