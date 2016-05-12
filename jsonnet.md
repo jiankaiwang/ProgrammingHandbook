@@ -177,7 +177,7 @@ public HttpResponseMessage Get(String hireDate, int day)
 
 | 註解 |
 | -- |
-| 1. 需要注意 GET 回傳為 HttpResponseMessage 資料型態，因為 JSON.NET 已經為 http 傳輸格式，並非用 String 回傳，若用 String 回傳，則回傳內容中文字會多一組雙引號，如 ** \""status"\":\""this is status."\" ** |
+| 1. 需要注意 GET 回傳為 HttpResponseMessage 資料型態，因為 JSON.NET 已經為 http 傳輸格式，並非用 String 回傳，若用 String 回傳，則回傳內容中文字會多一組雙引號，如 ** "[\r\n  {\r\n    \"emp_no\": 10082,\r\n  ** |
 | 2. 若要將傳輸方式改為下載，可以將 MediaTypeHeaderValue("application/json") 改成 MediaTypeHeaderValue("application/octet-stream") |
 | 3. 因為 GET 為重載函式，若是傳入參數的數目與資料類型皆相同，則 server 會不清楚傳入哪一個公開 GET() 函式，此時可以 (1) 修改其中一個 GET() 的傳入參數資料型態或數目、(2) 將另一個 GET() 進行刪除。 |
 
@@ -201,7 +201,7 @@ config.Routes.MapHttpRoute(
 ###設定回傳資料型態
 ---
 
-雖然使用 JSON.NET 來產生 json data，但部分瀏覽器仍會以 XML 的格式輸出，因此必須將回傳資料格式改成 json，可以於 App_Start 資料夾下 WebApiConfig.cs 進行設定，如下；
+雖然使用 JSON.NET 來產生 json data，但部分瀏覽器仍會以 XML 的格式輸出，因此必須將回傳資料格式強制改成 json，可以於 App_Start 資料夾下 WebApiConfig.cs 進行設定，如下；
 
 ```C#
 // force return as json data type
@@ -209,7 +209,39 @@ var appXmlType = GlobalConfiguration.Configuration.Formatters.XmlFormatter.Suppo
 GlobalConfiguration.Configuration.Formatters.XmlFormatter.SupportedMediaTypes.Remove(appXmlType);
 ```
 
+###使用此 API
+---
 
+開啟瀏覽器後，依照路由器的設定 「** api/{controller}/{hireDate}/{day} **」，可以於輸入 「** http://localhost:3330/api/jsonnet/1990-01-01/2 **」 來取得 json 資料，如下；
+
+```javascript
+[
+  {
+    "emp_no": 10082,
+    "birth_date": "1963-09-09T00:00:00",
+    "first_name": "Parviz",
+    "last_name": "Lortz",
+    "gender": "M",
+    "hire_date": "1990-01-03T00:00:00"
+  },
+  {
+    "emp_no": 11454,
+    "birth_date": "1961-08-07T00:00:00",
+    "first_name": "Yolla",
+    "last_name": "Zedlitz",
+    "gender": "M",
+    "hire_date": "1990-01-02T00:00:00"
+  },
+  {
+    "emp_no": 12645,
+    "birth_date": "1955-04-01T00:00:00",
+    "first_name": "Kyoichi",
+    "last_name": "Decaestecker",
+    "gender": "F",
+    "hire_date": "1990-01-03T00:00:00"
+  }
+]
+```
 
 
 
