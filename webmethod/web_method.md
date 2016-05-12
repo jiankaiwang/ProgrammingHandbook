@@ -7,6 +7,8 @@ Web Method 為 ASMX 技術的其中一種，與 Web API 概念類似，可以透
 
 儘管如此，許多舊有系統是依賴在 web method 技術上開發，底下透過簡單的例子來建立 web method。
 
+範例檔案 : 20160512_WebmethodTemplate.rar
+
 ###新增一個 ASMX 類別
 ---
 
