@@ -23,7 +23,7 @@
        * [shared worker](shared_worker.md)
    * [jQuery Editor](jquery_editor.md)
        * [CKEditor](ckeditor.md)
-   * Web Method
+   * [Web Method](webmethod/web_method.md)
 * [Database](database.md)
    * [Syntax comparison](database/syntax_comparison.md)
    * [SQL Server (T-SQL)](sql_server_t-sql.md)
