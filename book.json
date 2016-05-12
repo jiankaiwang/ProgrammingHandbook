@@ -13,6 +13,6 @@
     }
   },
   "addcssjs": {
-    "js": ["gitbook/app.js","js/general.js"]
+    "js": [ "gitbook/app.js", "js/general.js"]
   }
 }
