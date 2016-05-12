@@ -23,8 +23,9 @@
        * [shared worker](shared_worker.md)
    * [jQuery Editor](jquery_editor.md)
        * [CKEditor](ckeditor.md)
+   * Web Method
 * [Database](database.md)
-   * [Syntax comparison](database\syntax_comparison.md)
+   * [Syntax comparison](database/syntax_comparison.md)
    * [SQL Server (T-SQL)](sql_server_t-sql.md)
    * [MySQL](mysql.md)
    * [PHP access MySQL](php_access_mysql.md)
