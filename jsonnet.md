@@ -60,6 +60,37 @@ namespace WebAPIJsonNETTemplate.Controllers
 }
 ```
 
+###連接資料庫並將資料用 JSON.NET 準備
+---
+
+假設資料庫名稱為 employees，要讀取的資料表為 employees，內容如下；
+
+| id | emp_no | birth_date | first_name | last_name | gender | hire_date |
+| -- | -- | -- | -- | -- | -- | -- |
+| 1 | 10001 | 1953-09-02 | Geo | Fac | M | 1986-06-26 |
+| 2 | 10002 | 1964-06-02 | Bez | Sim | F | 1985-11-21 |
+
+可以簡單透過下列 sql 指令來取得依 emp_no 遞升後的前 10 筆資料；
+
+```Sql
+select top 10 * from dbo.employees order by emp_no asc;
+```
+
+於 jsonnetController.cs 中加入實作連接資料庫、取得資料並將之透過 JSON.NET 轉成 json string 的函式，如下；
+
+```C#
+// must using libraries
+using Newtonsoft.Json;
+using System.Data;
+using System.Data.SqlClient;
+
+
+
+```
+
+
+
+
 
 
 
