@@ -83,10 +83,60 @@ select top 10 * from dbo.employees order by emp_no asc;
 using Newtonsoft.Json;
 using System.Data;
 using System.Data.SqlClient;
-
-
-
 ```
+
+```C#
+private String generateJsonString(int getCount) {
+    // prepare database connection
+    string connectionString = "Data Source=.\\SQLEXPRESS;Initial Catalog=cdcdataapi;Persist Security Info=True;User ID=ExampleUser;Password=ExampleUser";
+
+    // save json String
+    String jsonData = "";
+
+    // connect to the database
+    using (SqlConnection conn = new SqlConnection(connectionString)) {
+
+        // prepare the sql syntax
+        string sqlStr = "select top @topCount * from dbo.employees order by emp_no asc;";
+
+        // prepare sql syntax and bind the sql parameter
+        SqlCommand sqlCmd = new SqlCommand(sqlStr, conn);
+        sqlCmd.Parameters.AddWithValue("topCount", getCount);
+
+        // use sql data adapter to query the database
+        SqlDataAdapter sda = new SqlDataAdapter(sqlCmd);
+
+        try
+        {
+            // start connection
+            conn.Open();
+
+            // query data and load into a data table
+            DataTable dt = new DataTable();
+            sda.Fill(dt);
+
+            conn.Close();
+
+            // try to transfer SQL data to the data table by the JSON.NET
+            jsonData = JsonConvert.SerializeObject(dt, Newtonsoft.Json.Formatting.Indented);
+        }
+        catch
+        {
+            // use a dictionary to save status
+            Dictionary<string, string> statusLog = new Dictionary<string, string>();
+            statusLog.Add("status", "Fetching SQL data is failure.");
+            jsonData = JsonConvert.SerializeObject(statusLog, Newtonsoft.Json.Formatting.Indented);
+        }
+    }
+
+    return jsonData;
+}
+```
+
+###透過回傳 HttpResponseMessage 將 JSON.NET 內容回傳給 View
+---
+
+於繼承 ApiController 類別的 jsonnetController 的類別中，加入新的 Read 方法，如下；
 
 
 
