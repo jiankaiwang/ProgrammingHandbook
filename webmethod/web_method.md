@@ -88,29 +88,29 @@ public String jsonData(String getPara1, Dictionary<String, String> getPara2)
 
 <!-- 使用方式 -->
 <script>
-    var getJSONData;
-    $(function () {
-        $.ajax({
-            type: "POST",
-            url: "json.asmx/jsonData",
-            data: '{ getPara1: "01", getPara2 : { "enable" : "true" } }',
-            contentType: "application/json; charset=utf-8",
-            dataType: "json",
-            success: function (data) {
-                getJSONData = JSON.parse(data["d"]);
-            },
-            beforeSend: function () {
-                console.log("beforesend");
-            },
-            complete: function () {
-                console.log("complete");
-            },
-            error: function (xhr, ajaxOptions, thrownError) {
-                alert(xhr.status);
-                alert(thrownError);
-            }
-        });
+var getJSONData;
+$(function () {
+    $.ajax({
+        type: "POST",
+        url: "json.asmx/jsonData",
+        data: '{ getPara1: "01", getPara2 : { "enable" : "true" } }',
+        contentType: "application/json; charset=utf-8",
+        dataType: "json",
+        success: function (data) {
+            getJSONData = JSON.parse(data["d"]);
+        },
+        beforeSend: function () {
+            console.log("beforesend");
+        },
+        complete: function () {
+            console.log("complete");
+        },
+        error: function (xhr, ajaxOptions, thrownError) {
+            alert(xhr.status);
+            alert(thrownError);
+        }
     });
+});
 </script>
 ```
 
