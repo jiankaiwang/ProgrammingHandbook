@@ -3,6 +3,8 @@
 <script type="text/javascript" src="gitbook/app.js"></script>
 <script type="text/javascript" src="js/general.js"></script>
 
+範例檔案 : 20160411_webAPIODataModel.rar
+
 ###採用架構
 ---
 * C#
