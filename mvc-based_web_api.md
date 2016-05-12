@@ -5,6 +5,8 @@
 
 Restful API 為目前主流的資料傳輸方式之一，其 JSON 資料格式更有許多標準函式庫能直接進行處理。底下透過 MVC 設計方式，創建一個 Web API。
 
+範例檔案 : 20160411_MVCWebApi.rar
+
 ###開發環境
 ---
 * Visual Studio 2015 Community
