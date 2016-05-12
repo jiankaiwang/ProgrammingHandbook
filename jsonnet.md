@@ -21,6 +21,9 @@ Restful API 為目前主流的資料傳輸方式之一，其 JSON 資料格式�
 ![](images/webapi/webapi-jsonnet-vs-create-frontpage.png)
 
 ###創建一個 Controller
+---
+
+於 Controllers 資料夾加入一個新的 Web API 2 的 controller ，此控制器名稱為「jsonnetController」。 可以選擇「具有讀取/寫入動作的 Web API 2 控制器」。
 
 
 
