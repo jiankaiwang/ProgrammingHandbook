@@ -70,11 +70,18 @@ namespace WebAPIJsonNETTemplate.Controllers
 | 1 | 10001 | 1953-09-02 | Geo | Fac | M | 1986-06-26 |
 | 2 | 10002 | 1964-06-02 | Bez | Sim | F | 1985-11-21 |
 
-可以簡單透過下列 sql 指令來取得依 emp_no 遞升後的前 10 筆資料；
+可以簡單透過下列 sql 指令來取得 1990-01-01 後 2 日成為員工的資料；
 
 ```Sql
-select top 10 * from dbo.employees order by emp_no asc;
+select * 
+from employees 
+where 
+  CONVERT(VARCHAR(10),DATEADD(day,2,'1990-01-01'),112) >= CONVERT(VARCHAR(10), hire_date, 112) 
+  and 
+  CONVERT(VARCHAR(10), hire_date, 112) >= CONVERT(VARCHAR(10),'1990-01-01',112);
 ```
+
+因此後續將以 api 路由器設定取得日期 (如 1990-01-01) 與天數 (如 2)，並用 JSON.NET 方式實作出 json data。
 
 於 jsonnetController.cs 中加入實作連接資料庫、取得資料並將之透過 JSON.NET 轉成 json string 的函式，如下；
 
@@ -86,9 +93,9 @@ using System.Data.SqlClient;
 ```
 
 ```C#
-private String generateJsonString(int getCount) {
+private String generateJsonString(String hire_date, int getday) {
     // prepare database connection
-    string connectionString = "Data Source=.\\SQLEXPRESS;Initial Catalog=cdcdataapi;Persist Security Info=True;User ID=ExampleUser;Password=ExampleUser";
+    string connectionString = "Data Source=.\\SQLEXPRESS;Initial Catalog=employees;Persist Security Info=True;User ID=ExampleUser;Password=ExampleUser";
 
     // save json String
     String jsonData = "";
@@ -97,11 +104,12 @@ private String generateJsonString(int getCount) {
     using (SqlConnection conn = new SqlConnection(connectionString)) {
 
         // prepare the sql syntax
-        string sqlStr = "select top @topCount * from dbo.employees order by emp_no asc;";
+        string sqlStr = "select * from employees where CONVERT(VARCHAR(10),DATEADD(day,@dp,@hdate),112) >= CONVERT(VARCHAR(10), hire_date, 112) and CONVERT(VARCHAR(10), hire_date, 112) >= CONVERT(VARCHAR(10),@hdate,112);";
 
         // prepare sql syntax and bind the sql parameter
         SqlCommand sqlCmd = new SqlCommand(sqlStr, conn);
-        sqlCmd.Parameters.AddWithValue("topCount", getCount);
+        sqlCmd.Parameters.AddWithValue("hdate", hire_date);
+        sqlCmd.Parameters.AddWithValue("dp", getday);
 
         // use sql data adapter to query the database
         SqlDataAdapter sda = new SqlDataAdapter(sqlCmd);
@@ -138,9 +146,57 @@ private String generateJsonString(int getCount) {
 
 於繼承 ApiController 類別的 jsonnetController 的類別中，加入新的 Read 方法，如下；
 
+```C#
+// include the library to use the HttpResponseMessage class
+using System.Net.Http.Headers;
+```
 
+新增一個回傳資料型態為 HttpResponseMessage 的公開 GET API 函式，並以呼叫函式的方法取得 json string，如下；
 
+```C#
+// GET: api/jsonnet/1990-01-01/2
+public HttpResponseMessage Get(String hireDate, int day)
+{
+    // asume fetch user-defined rows at the beginning of the data table are fetched
+    // use String Content to get json string
+    StringContent sc = new StringContent(generateJsonString(hireDate, day));
 
+    // set the http header
+    sc.Headers.ContentType = new MediaTypeHeaderValue("application/json");
+
+    // create a new http request to send the data in "plain text" (string)
+    HttpResponseMessage resp = new HttpResponseMessage();
+
+    // set the content is from StringContent
+    resp.Content = sc;
+
+    // return the http response text
+    return resp;
+}
+```
+
+| 註解 |
+| -- |
+| 1. 需要注意 GET 回傳為 HttpResponseMessage 資料型態，因為 JSON.NET 已經為 http 傳輸格式，並非用 String 回傳，若用 String 回傳，則回傳內容中文字會多一組雙引號，如 ** \""status"\":\""this is status."\" ** |
+| 2. 若要將傳輸方式改為下載，可以將 MediaTypeHeaderValue("application/json") 改成 MediaTypeHeaderValue("application/octet-stream") |
+| 3. 因為 GET 為重載函式，若是傳入參數的數目與資料類型皆相同，則 server 會不清楚傳入哪一個公開 GET() 函式，此時可以 (1) 修改其中一個 GET() 的傳入參數資料型態或數目、(2) 將另一個 GET() 進行刪除。 |
+
+###設定路由器
+---
+
+於 App_Start 資料夾下 WebApiConfig.cs 進行設定，將此新增的 GET() 函式進行註冊，如下；
+
+```C#
+// JSON.ENT router
+config.Routes.MapHttpRoute(
+    name: "jsonnet",
+    routeTemplate: "api/{controller}/{hireDate}/{day}"
+);
+```
+
+| 註解 |
+| -- |
+| 需要注意的事為 routeTemplate 內定義的變數名稱需要與 GET() 函式定義的變數數目、順序與名稱皆相同，如 hireDate 與 day。 |
 
 
 
