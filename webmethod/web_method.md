@@ -42,9 +42,19 @@ namespace _20160512_WebmethodTemplate
 ###新增一個 web method 方法
 ---
 
-底下為 web method 實作方式，
+底下為 web method 實作方式，目的接收下列的傳輸資料；
+
+```Javascript
+{ getPara1: "01", getPara2 : { "enable" : "true" } }
+```
+
+而此 web method 透過兩個傳遞參數，getPara1 來取得 "01" 的資料，而 getPara2 取得 "{ "enable" : "true" }" 資料，而此資料可以對應使用 Dictionary 方式來解析。
+
+此 web method 則目地將資料傳近來的資料準備成 「** {Parameter.1: "type.1", Parameter.2: "true"} **」來傳輸，可以透過 Dictionary 來準備要轉換成 json 的物件，之後透過 SerializeObject 方式將之轉成 json 並回傳 string。
 
 ```C#
+using Newtonsoft.Json;
+
 [WebMethod]
 public String jsonData(String getPara1, Dictionary<String, String> getPara2)
 {
@@ -80,7 +90,7 @@ public String jsonData(String getPara1, Dictionary<String, String> getPara2)
 ###於前端的使用方式
 ---
 
-透過 jquery 中 $.ajax 方式來行傳輸並取得 web method 處理後的 json 資料，如下；
+透過 jquery 中 $.ajax 方式來行傳輸並取得 web method 處理後的 json 資料，** 需要注意的是 data 的參數中 getPara1 與 getPara2 的名稱、對應資料型態與順序皆需與 WebMethod 中 jsonData() 方法相同。**，如下；
 
 ```Html
 <!-- 先引用 jQuery 函式庫 -->
@@ -88,7 +98,9 @@ public String jsonData(String getPara1, Dictionary<String, String> getPara2)
 
 <!-- 使用方式 -->
 <script>
+// save the json data
 var getJSONData;
+
 $(function () {
     $.ajax({
         type: "POST",
