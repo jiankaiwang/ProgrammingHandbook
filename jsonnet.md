@@ -5,6 +5,8 @@
 
 Restful API 為目前主流的資料傳輸方式之一，其 JSON 資料格式更有許多標準函式庫能直接進行處理。底下透過 MVC 設計方式，例用 JSON.NET 方式創建一個實作 GET 的 Web API。
 
+範例檔案 : 20160512_WebAPIJsonNETTemplate.rar (http://pan.baidu.com/s/1miEQCUO)
+
 ###開發環境
 ---
 * Visual Studio 2015 Community
@@ -242,7 +244,6 @@ GlobalConfiguration.Configuration.Formatters.XmlFormatter.SupportedMediaTypes.Re
   }
 ]
 ```
-
 
 
 
