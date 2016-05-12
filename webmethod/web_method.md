@@ -42,17 +42,33 @@ namespace _20160512_WebmethodTemplate
 ###新增一個 web method 方法
 ---
 
-底下範例為前端 POST 方式傳入參數後，經過此 web method 處理將傳入的兩個參數改為大寫後，將 json 資料回傳給前端。
+底下為 web method 實作方式，
 
 ```C#
 [WebMethod]
-public String jsonData(String getPara1, String getPara2) {
+public String jsonData(String getPara1, Dictionary<String, String> getPara2)
+{
     // use dictionary to prepare json object
     Dictionary<String, String> jsonData = new Dictionary<String, String> { };
 
     // add parameters
-    jsonData.Add("Parameter.1", getPara1);
-    jsonData.Add("Parameter.2", getPara2);
+    jsonData.Add("Parameter.1", "");
+    jsonData.Add("Parameter.2", getPara2["enable"]);
+
+    switch (getPara1) {
+        case "01":
+            jsonData["Parameter.1"] = "type.1";
+            break;
+        case "02":
+            jsonData["Parameter.1"] = "type.2";
+            break;
+        case "03":
+            jsonData["Parameter.1"] = "type.3";
+            break;
+        default:
+            jsonData["Parameter.1"] = "default";
+            break;
+    }
 
     // prepare json data
     String retJsonData = JsonConvert.SerializeObject(jsonData, Formatting.Indented);
@@ -61,7 +77,42 @@ public String jsonData(String getPara1, String getPara2) {
 }
 ```
 
+###於前端的使用方式
+---
 
+透過 jquery 中 $.ajax 方式來行傳輸並取得 web method 處理後的 json 資料，如下；
+
+```Html
+<!-- 先引用 jQuery 函式庫 -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.2/jquery.min.js"></script>
+
+<!-- 使用方式 -->
+<script>
+    var getJSONData;
+    $(function () {
+        $.ajax({
+            type: "POST",
+            url: "json.asmx/jsonData",
+            data: '{ getPara1: "01", getPara2 : { "enable" : "true" } }',
+            contentType: "application/json; charset=utf-8",
+            dataType: "json",
+            success: function (data) {
+                getJSONData = JSON.parse(data["d"]);
+            },
+            beforeSend: function () {
+                console.log("beforesend");
+            },
+            complete: function () {
+                console.log("complete");
+            },
+            error: function (xhr, ajaxOptions, thrownError) {
+                alert(xhr.status);
+                alert(thrownError);
+            }
+        });
+    });
+</script>
+```
 
 
 
