@@ -3,6 +3,8 @@
 <script type="text/javascript" src="../gitbook/app.js"></script>
 <script type="text/javascript" src="../js/general.js"></script>
 
+範例檔案 : 20160519_FTPinCSharpTemplate.rar
+
 ### Web.config 設定
 
 Web.config 於微軟開發環境中常用來儲存重要的字串內容，如帳號、密碼、資料庫連接與實體路徑等字串。
