@@ -35,5 +35,4 @@
 * [Compression](compression.md)
    * [lz-string](lz-string.md)
 * [Network](network/network.md)
-   * [FTP](network/network/ftp.md)
 
