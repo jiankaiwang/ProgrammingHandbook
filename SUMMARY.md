@@ -35,5 +35,5 @@
 * [Compression](compression.md)
    * [lz-string](lz-string.md)
 * [Network](network/network.md)
-   * FTP in C#
+   * [FTP in C#](network/ftp_in_csharp.md)
 
