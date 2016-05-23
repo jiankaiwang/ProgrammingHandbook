@@ -123,7 +123,7 @@ protected void Page_Load(object sender, EventArgs e)
 {
     // check firewall setting
     // allowedfirewall 如 10.0.2.15/255.255.255.0
-    if (! sameNetwork(System.Web.Configuration.WebConfigurationManager.AppSettings["allowedfirewall"], getCallerIP()))
+    if (! sameNetwork(getCallerIP(), System.Web.Configuration.WebConfigurationManager.AppSettings["allowedfirewall"]))
     {
         Response.Redirect("notAuthorized.aspx");
     }
