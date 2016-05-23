@@ -25,24 +25,24 @@ function string getInterNetwork() {
 
 ```C#
 private static string getCallerIP() {
-            string ip = HttpContext.Current.Request.ServerVariables["HTTP_X_FORWARDED_FOR"];
+    string ip = HttpContext.Current.Request.ServerVariables["HTTP_X_FORWARDED_FOR"];
 
-            if (string.IsNullOrEmpty(ip))
-            {
-                ip = HttpContext.Current.Request.ServerVariables["REMOTE_ADDR"];
-            }
+    if (string.IsNullOrEmpty(ip))
+    {
+        ip = HttpContext.Current.Request.ServerVariables["REMOTE_ADDR"];
+    }
 
-            string[] stringSeparators = new string[] { ":", "," };
-            string[] result = ip.Split(stringSeparators, StringSplitOptions.None);
+    string[] stringSeparators = new string[] { ":", "," };
+    string[] result = ip.Split(stringSeparators, StringSplitOptions.None);
 
-            return (result[0]);
-        }
+    return (result[0]);
+}
 ```
 
 ###驗證是否在同一個網域
 ---
 
-引用外部類別來確認 IP 網域，如下；
+引用外部類別來實作確認是否為相同 IP 網域，如下；
 
 ```C#
 // check the ip address is the same
@@ -97,7 +97,7 @@ public static class IPAddressExtensions
 }
 ```
 
-使用方式如下：
+假設於連入頁面時，便確認是否為相同網域，如以下範例：
 
 ```C#
 private static bool sameNetwork(string network, string callerIP)
@@ -122,7 +122,8 @@ private static bool sameNetwork(string network, string callerIP)
 protected void Page_Load(object sender, EventArgs e)
 {
     // check firewall setting
-    if (! sameNetwork(System.Web.Configuration.WebConfigurationManager.AppSettings["cdcfirewall"], getCallerIP()))
+    // allowedfirewall 如 10.0.2.15/255.255.255.0
+    if (! sameNetwork(System.Web.Configuration.WebConfigurationManager.AppSettings["allowedfirewall"], getCallerIP()))
     {
         Response.Redirect("notAuthorized.aspx");
     }
