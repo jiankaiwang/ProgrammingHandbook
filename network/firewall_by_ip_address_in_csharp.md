@@ -130,7 +130,14 @@ protected void Page_Load(object sender, EventArgs e)
 }
 ```
 
+而 Web.config 內容為
 
+```Xml
+<appSettings>
+<!-- firewall setting -->
+<add key="allowedfirewall" value="10.0.2.15/255.255.255.0"/>
+</appSettings>
+```
 
 
 
