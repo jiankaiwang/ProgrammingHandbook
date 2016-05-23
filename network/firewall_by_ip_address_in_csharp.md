@@ -125,6 +125,7 @@ protected void Page_Load(object sender, EventArgs e)
 {
     // check firewall setting
     // allowedfirewall 如 10.0.2.15/255.255.255.0
+    // usage : sameNetwork(ip1 ,ip2), is ip1 in the ip2 subnetwork ?
     if (sameNetwork(System.Web.Configuration.WebConfigurationManager.AppSettings["allowedfirewall"], getCallerIP()))
     {
         Response.Write("The same network region");
