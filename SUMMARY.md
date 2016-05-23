@@ -36,5 +36,5 @@
    * [lz-string](lz-string.md)
 * [Network](network/network.md)
    * [FTP in C#](network/ftp_in_csharp.md)
-   * Firewall by IP Address in C#
+   * [Firewall by IP Address in C#](network/firewall_by_ip_address_in_csharp.md)
 
