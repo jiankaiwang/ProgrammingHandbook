@@ -123,9 +123,12 @@ protected void Page_Load(object sender, EventArgs e)
 {
     // check firewall setting
     // allowedfirewall 如 10.0.2.15/255.255.255.0
-    if (! sameNetwork(getCallerIP(), System.Web.Configuration.WebConfigurationManager.AppSettings["allowedfirewall"]))
+    if (sameNetwork(System.Web.Configuration.WebConfigurationManager.AppSettings["allowedfirewall"], getCallerIP()))
     {
-        Response.Redirect("notAuthorized.aspx");
+        Response.Write("The same network region");
+    }
+    else {
+        Response.Write("Different network region");
     }
 }
 ```
