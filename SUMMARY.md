@@ -7,7 +7,7 @@
 * [Webpage](chapter1.md)
    * [Syntax Compare](12_syntax_compare.md)
        * [Javascript vs. jQuery](javascript_jquery.md)
-       * 取得 HTML 物件內容與執行函式方法
+       * [取得 HTML 物件內容與執行函式方法](webpage/html_object_value_and_execute_function.md)
    * [GitBook](gitbook.md)
    * [AngularJS](angularjs.md)
        * [不同資料型態的操作](angularjs_basis_data_type_operation.md)
