@@ -30,29 +30,35 @@
 </form>
 ```
 
-而在伺服器端的設計如下，可以直接透過 html object id 來取得此物件的內容，如 account.Value 與 password.Value 等。
+而在伺服器端的設計如下，可以直接透過 html object id 來取得此物件的內容(使用者輸入等)，如 account.Value 與 password.Value 等；也可以透過 InnerText 來將値填入 html object 中，如 showLoginText.InnerText；
 
 ```C#
+// 伺服器端程式執行碼
 protected void validAcc(object sender, EventArgs e)
 {
+    // 驗證帳號、密碼是否正確
     if (checkAccValid(account.Value, password.Value))
     {
-        Session["epiAlertUser"] = true;
-        Session["epiAlertAcc"] = account.Value;
+        // 透過 SESSION 儲存資訊
+        Session["user"] = true;
+        Session["acc"] = account.Value;
         showLoginText.InnerText = "已驗證!";
-        account.Value = "";
-        password.Value = "";
-        Response.Write("<meta http-equiv='refresh' content='1;url=Alert.aspx' />");
+        // 轉導入登入後的首頁
+        Response.Write("<meta http-equiv='refresh' content='0;url=start.aspx' />");
     }
     else {
-        Session["epiAlertUser"] = null;
-        Session["epiAlertAcc"] = null;
+        // 將 SESSION 清除
+        Session["user"] = null;
+        Session["acc"] = null;
+        // 顯示登入失敗的提示
         showLoginText.InnerText = "請確認帳號密碼!";
+        // 重新導回登入畫面
         Response.Write("<meta http-equiv='refresh' content='3;url=login.aspx' />");
     }
 }
 ```
 
+透過上述方法便是 ASPX 取得 html object 値並執行函式的方法。
 
 
 
