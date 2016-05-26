@@ -9,6 +9,8 @@
 
 * 此 ls-string 的授權方式為 WTFPL (Do What The Fuck You Want To Public License)，目前已被自由軟體基金會認證為相容於 GPL 的自由軟體授權條款。
 
+範例檔案 ： 20160127_lzstring_project_1.4.4.rar
+
 ###主要使用函式 : 各平台函式庫皆有支援
 ---
 
