@@ -35,7 +35,6 @@
    * [Data accessed by R](r_access_multiple_source_data.md)
 * [Compression](compression.md)
    * [lz-string](lz-string.md)
-   * gizp
 * [Network](network/network.md)
    * [FTP in C#](network/ftp_in_csharp.md)
    * [Firewall by IP Address in C#](network/firewall_by_ip_address_in_csharp.md)
