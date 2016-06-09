@@ -1,5 +1,5 @@
 {
-  "plugins" : [ "include-highlight" ],
+  "plugins" : [ "include-highlight", "addcssjs" ],
   "pluginsConfig": {
     "include-highlight": {
       "extensionToLanguage": {
@@ -11,5 +11,8 @@
         "SQL": "sql"
       }
     }
+  },
+  "addcssjs": {
+    "js": ["js/general.js"]
   }
 }
