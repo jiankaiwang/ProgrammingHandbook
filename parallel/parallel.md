@@ -1,6 +1,6 @@
 # Parallel
 
-<script type="text/javascript" src="js/general.js"></script>
+<script type="text/javascript" src="../js/general.js"></script>
 
 ###Fine-grained, coarse-grained, and embarrassing parallelism
 ---
