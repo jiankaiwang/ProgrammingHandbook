@@ -33,11 +33,11 @@
    * [PDO access MySQL](pdo_access_mysql.md)
 * [Scientific](scientific.md)
    * [Data accessed by R](r_access_multiple_source_data.md)
+* [Parallel](parallel/parallel.md)
 * [Compression](compression.md)
    * [lz-string](lz-string.md)
    * [gzip in Python](compression/gzip_in_python.md)
 * [Network](network/network.md)
    * [FTP in C#](network/ftp_in_csharp.md)
    * [Firewall by IP Address in C#](network/firewall_by_ip_address_in_csharp.md)
-* [Parallel](parallel/parallel.md)
 
