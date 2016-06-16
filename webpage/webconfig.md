@@ -4,7 +4,7 @@
 
 Web.config 在微軟 Web 系統開發中扮演著硬體、伺服器設定或是關鍵訊息儲存等重要資訊的文件。
 
-###Web.config 設置
+###Web.config 設置內容
 ---
 
 ```XML
