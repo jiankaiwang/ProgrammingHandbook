@@ -13,8 +13,6 @@ Web.config 在微軟 Web 系統開發中扮演著硬體、伺服器設定或是�
 <!--
   如需如何設定 ASP.NET 應用程式的詳細資訊，請造訪
   http://go.microsoft.com/fwlink/?LinkId=169433
-  
-  20160520 epidemic alert account : cdccbs, password : cdc@cdc
   -->
 
 <configuration>
