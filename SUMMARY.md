@@ -26,6 +26,7 @@
        * [CKEditor](ckeditor.md)
    * [Web Method](webmethod/web_method.md)
    * [ASP.NET](webpage/aspnet.md)
+       * Web.config 組態檔
 * [Database](database.md)
    * [Syntax comparison](database/syntax_comparison.md)
    * [SQL Server (T-SQL)](sql_server_t-sql.md)
