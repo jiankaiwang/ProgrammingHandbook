@@ -19,6 +19,8 @@ App.config 為 C# 等微軟環境 console-based 開發語言的組態檔，類�
 </configuration>
 ```
 
+* connectionStrings : 定義資料庫連接字串
+
 ###於 C# 使用 App.config
 ---
 
