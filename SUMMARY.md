@@ -27,7 +27,7 @@
    * [Web Method](webmethod/web_method.md)
    * [ASP.NET](webpage/aspnet.md)
        * [Web.config 組態檔](webpage/webconfig.md)
-       * App.config 組態檔
+       * [App.config 組態檔](webpage/appconfig_zu_tai_dang.md)
 * [Database](database.md)
    * [Syntax comparison](database/syntax_comparison.md)
    * [SQL Server (T-SQL)](sql_server_t-sql.md)
