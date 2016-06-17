@@ -34,7 +34,7 @@ using System.Configuration;
 
 ```C#
 // 使用 connectionStrings
-string connectStr = ConfigurationManager.AppSettings["DbConnectionString"];
+string connectStr = ConfigurationManager.ConnectionStrings["DbConnectionString"].ConnectionString;
 ```
 
 
