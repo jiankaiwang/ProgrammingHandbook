@@ -198,10 +198,122 @@ for (int eachEmployee = 0; eachEmployee < ttlEmts; eachEmployee++) {
 }
 ```
 
+###Fetch SQL data as DataTable and Modify the data table
+---
 
+函式設計如下 : 
 
+```C#
+class TSQLQuery
+{
+  /*
+  * @desc : fetch the sql data into a datatable in dataset, and modified the data into another datatable
+  * @return : a dataset conserving two datatables, one is querying from sql server, second is the modified datatable
+  * @param : getFirstName is the name for ssearching
+  */
+  internal DataSet fetchDBDataByDateAndCal(string getFirstName) {
+      string connectionString = ConfigurationManager.ConnectionStrings["DbConnectionString"].ConnectionString;
 
+      // Return as a complete data entry
+      Dictionary<string, string> objectList = new Dictionary<string, string>{ };
 
+      // save returned data
+      DataSet ret_ds = new DataSet();
+
+      // connect to the database
+      using (SqlConnection conn = new SqlConnection(connectionString))
+      {
+
+          // prepare the sql syntax
+          string sqlStr = "select * from dbo.employees where first_name = @first_name;";
+          SqlCommand sqlCmd = new SqlCommand(sqlStr, conn);
+          sqlCmd.Parameters.AddWithValue("first_name", getFirstName);
+
+          try
+          {
+
+              // start connection
+              conn.Open();
+
+              // query the result and save into the table
+              DataSet ds = new DataSet();
+              SqlDataAdapter da = new SqlDataAdapter(sqlCmd);
+              da.Fill(ds);
+              da.Dispose();
+
+              // pick up the most earilest to the company but the youngest one
+              ds.Tables[0].DefaultView.Sort = "hire_date asc, birth_date desc";
+
+              // create a new table and get the sorting result
+              DataTable newdt = ds.Tables[0].DefaultView.ToTable();
+              newdt.TableName = "sortOrder";
+
+              // add a new column and give a new id
+              newdt.Columns.Add("id", typeof(string));
+              for (int idIndex = 0; idIndex < newdt.Rows.Count; idIndex++) {
+                  newdt.Rows[idIndex]["id"] = String.Format("{0}", idIndex);
+              }
+
+              // copy tables in the origin dataset into the returned dataset
+              for (int dt_index = 0; dt_index < ds.Tables.Count; dt_index++) {
+                  DataTable dt_add = ds.Tables[dt_index].Copy();
+                  ds.Tables.RemoveAt(dt_index);
+
+                  // notice it must be rename to prevent override the table by function add()
+                  dt_add.TableName = string.Format("{0}", dt_index);
+
+                  ret_ds.Tables.Add(dt_add);
+              }
+
+              // sort table must proceed again 
+              ret_ds.Tables["0"].DefaultView.Sort = "hire_date asc, birth_date desc";
+
+              // add the second table
+              ret_ds.Tables.Add(newdt);
+
+              conn.Close();
+          }
+          catch
+          {
+              objectList = null;
+          }
+
+      }
+
+      return ret_ds;
+  }
+}
+```
+
+使用方式為 : 
+
+```C#
+// generate a object
+TSQLQuery tsqlquery = new TSQLQuery();
+
+/*
+* Example.3 : DataSet conserving two data tables, one is origin and the other is modified table
+*/
+// use defaultview to get sorting results
+DataSet ds = tsqlquery.fetchDBDataByDateAndCal("Georgi");
+
+// use the DefaultView to see the sorting result
+for (int i = 0; i < ds.Tables.Count; i++)
+{
+    System.Console.WriteLine(ds.Tables[i].TableName);
+}
+
+for (int eachEmplopee = 0; eachEmplopee < ds.Tables["0"].DefaultView.Count; eachEmplopee++) {
+    if (eachEmplopee > 10) { break; }
+    System.Console.WriteLine(string.Format("Item No. {0}, {1}, {2}.", ds.Tables["0"].DefaultView[eachEmplopee]["emp_no"], ds.Tables["0"].DefaultView[eachEmplopee]["hire_date"], ds.Tables["0"].DefaultView[eachEmplopee]["birth_date"]));
+}
+
+// use modified table, adding a new column, to show the result
+for (int eachEmplopee = 0; eachEmplopee < ds.Tables[1].Rows.Count; eachEmplopee++) {
+    if (eachEmplopee > 10) { break; }
+    System.Console.WriteLine(string.Format("Item No. {0}, {1}, {2}, {3}.", ds.Tables["sortOrder"].Rows[eachEmplopee]["emp_no"], ds.Tables["sortOrder"].Rows[eachEmplopee]["hire_date"], ds.Tables["sortOrder"].Rows[eachEmplopee]["birth_date"], ds.Tables["sortOrder"].Rows[eachEmplopee]["id"]));
+}
+```
 
 
 
