@@ -2,7 +2,7 @@
 
 <script type="text/javascript" src="../js/general.js"></script>
 
-範例檔案 : 
+範例檔案 : 20160619_tsqlquery.rar
 
 C# 與 SQL Server 為微軟開發環境下的傳承 C, C++ 及以 .NET 框架類別庫作為基礎的程式語言與輕量化資料庫伺服器，C# 可以透過 System.Data 函式庫取得 SQL Server 資料庫的資料。
 
