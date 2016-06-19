@@ -50,7 +50,64 @@ emp_no  birth_date  first_name  last_name  gender    hire_date
 ###查詢 SQL Server 並將找出的資料轉成 JSON 格式回傳
 ---
 
+函式設計如下：
 
+```C#
+/*
+* @desc : query database by SqlDataAdapter and DataTable
+* @return : json string by Json.Net (might use NuGet to install)
+* @param : startDate, e.g 1960-06-01
+* @param : endDate, e.g. 1960-06-20
+*/
+internal string fetchDBDataByDateRetJson(string startDate, string endDate)
+{
+    // 取得 App.config 內的連接字串
+    string connectionString = ConfigurationManager.ConnectionStrings["DbConnectionString"].ConnectionString;
+
+    // save json String
+    String jsonData = "";
+
+    // connect to the database
+    using (SqlConnection conn = new SqlConnection(connectionString))
+    {
+
+        // prepare the sql syntax
+        string sqlStr = "select * from dbo.employees where birth_date >= @StartDate and birth_date <= @EndDate;";
+        SqlCommand sqlCmd = new SqlCommand(sqlStr, conn);
+        sqlCmd.Parameters.AddWithValue("StartDate", startDate);
+        sqlCmd.Parameters.AddWithValue("EndDate", endDate);
+
+        // use sql data adapter to query the database
+        SqlDataAdapter sda = new SqlDataAdapter(sqlCmd);
+
+        try
+        {
+            // start connection
+            conn.Open();
+
+            // query data and load into a data table
+            DataTable dt = new DataTable();
+            sda.Fill(dt);
+
+            conn.Close();
+
+            // try to transfer SQL data to the data table by the JSON.NET
+            // it might use Json.Net library
+            jsonData = JsonConvert.SerializeObject(dt, Newtonsoft.Json.Formatting.Indented);
+        }
+        catch
+        {
+            // use a dictionary to save status
+            Dictionary<string, string> statusLog = new Dictionary<string, string>();
+            statusLog.Add("status", "Fetching SQL data is failure.");
+            jsonData = JsonConvert.SerializeObject(statusLog, Newtonsoft.Json.Formatting.Indented);
+        }
+
+    }
+
+    return jsonData;
+}
+```
 
 
 
