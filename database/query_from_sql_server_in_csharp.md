@@ -64,7 +64,7 @@ internal string fetchDBDataByDateRetJson(string startDate, string endDate)
     // 取得 App.config 內的連接字串
     string connectionString = ConfigurationManager.ConnectionStrings["DbConnectionString"].ConnectionString;
 
-    // save json String
+    // save json string prepared as returned one
     String jsonData = "";
 
     // connect to the database
@@ -72,6 +72,7 @@ internal string fetchDBDataByDateRetJson(string startDate, string endDate)
     {
 
         // prepare the sql syntax
+        // use parameter-based syntax to prevent SQL-injection attacks
         string sqlStr = "select * from dbo.employees where birth_date >= @StartDate and birth_date <= @EndDate;";
         SqlCommand sqlCmd = new SqlCommand(sqlStr, conn);
         sqlCmd.Parameters.AddWithValue("StartDate", startDate);
