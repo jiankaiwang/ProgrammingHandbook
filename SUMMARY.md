@@ -34,7 +34,7 @@
    * [MySQL](mysql.md)
    * [PHP access MySQL](php_access_mysql.md)
    * [PDO access MySQL](pdo_access_mysql.md)
-   * Query from SQL Server in C#
+   * [Query from SQL Server in C#](database/query_from_sql_server_in_csharp.md)
 * [Scientific](scientific.md)
    * [Data accessed by R](r_access_multiple_source_data.md)
 * [Parallel](parallel/parallel.md)
