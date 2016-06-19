@@ -125,9 +125,78 @@ TSQLQuery tsqlquery = new TSQLQuery();
 System.Console.WriteLine(tsqlquery.fetchDBDataByDateRetJson("1962-06-01", "1962-06-20"));
 ```
 
+###Fetch Data row by row
+---
 
+函式設計如下：
 
+```C#
+class TSQLQuery
+{
+  /*
+  * @desc : fetch each row of data to find the detail information, this example would save emp_no
+  * @return : a list to employee whose first name is the same with parameter
+  * @param : getFirstName is the name for ssearching
+  */
+  internal List<string> fetchDBDataByNameRetList(string getFirstName) {
+      string connectionString = ConfigurationManager.ConnectionStrings["DbConnectionString"].ConnectionString;
 
+      // Return as enum list
+      List<string> objectList = new List<string> { };
+
+      // connect to the database
+      using (SqlConnection conn = new SqlConnection(connectionString))
+      {
+
+          // prepare the sql syntax
+          string sqlStr = "select * from dbo.employees where first_name = @first_name;";
+          SqlCommand sqlCmd = new SqlCommand(sqlStr, conn);
+          sqlCmd.Parameters.AddWithValue("first_name", getFirstName);
+
+          try
+          {
+              // start connection
+              conn.Open();
+
+              // use sql data reader to fetch data row by row
+              SqlDataReader reader = sqlCmd.ExecuteReader();
+
+              // search all rows
+              while (reader.Read())
+              {
+                  // use index, e.g. reader[0], reader[1], to get corresponding contents
+                  objectList.Add(string.Format("{0}",reader[0]));
+              }
+
+              conn.Close();
+          }
+          catch
+          {
+              objectList = null;
+          }
+
+      }
+
+      return objectList;
+  }
+}
+```
+
+使用方式如下：
+
+```C#
+// generate a object
+TSQLQuery tsqlquery = new TSQLQuery();
+
+/*
+* Example.2 : fetch sql data row by row
+*/
+List<string> ttlObjs = tsqlquery.fetchDBDataByNameRetList("Georgi");
+int ttlEmts = ttlObjs.Count;
+for (int eachEmployee = 0; eachEmployee < ttlEmts; eachEmployee++) {
+    System.Console.WriteLine(string.Format("Item No. {0} is {1}.", eachEmployee, ttlObjs[eachEmployee]));
+}
+```
 
 
 
