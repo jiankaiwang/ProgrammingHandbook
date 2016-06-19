@@ -125,6 +125,29 @@ TSQLQuery tsqlquery = new TSQLQuery();
 System.Console.WriteLine(tsqlquery.fetchDBDataByDateRetJson("1962-06-01", "1962-06-20"));
 ```
 
+預期結果如下 :
+
+```Javascript
+[  
+  {
+    "emp_no": 499708,
+    "birth_date": "1962-06-12T00:00:00",
+    "first_name": "Piyush",
+    "last_name": "Uehara",
+    "gender": "M",
+    "hire_date": "1989-08-12T00:00:00"
+  },
+  {
+    "emp_no": 499857,
+    "birth_date": "1962-06-05T00:00:00",
+    "first_name": "Leszek",
+    "last_name": "Tempesti",
+    "gender": "M",
+    "hire_date": "1995-12-12T00:00:00"
+  }
+]
+```
+
 ###Fetch Data row by row
 ---
 
@@ -198,10 +221,31 @@ for (int eachEmployee = 0; eachEmployee < ttlEmts; eachEmployee++) {
 }
 ```
 
+預期結果如下 :
+
+```text
+...
+Item No. 238 is 487557.
+Item No. 239 is 488563.
+Item No. 240 is 489024.
+Item No. 241 is 490965.
+Item No. 242 is 492725.
+Item No. 243 is 492776.
+Item No. 244 is 493075.
+Item No. 245 is 495162.
+Item No. 246 is 495355.
+Item No. 247 is 495789.
+Item No. 248 is 497046.
+Item No. 249 is 497592.
+Item No. 250 is 497609.
+Item No. 251 is 498809.
+Item No. 252 is 499814.
+```
+
 ###Fetch SQL data as DataTable and Modify the data table
 ---
 
-函式設計如下 : 
+舉對 Table 的數個欄位進行排序，並依排序內容加上新 ID。函式設計如下 : 
 
 ```C#
 class TSQLQuery
@@ -285,6 +329,13 @@ class TSQLQuery
 }
 ```
 
+需要注意如下：
+* ds.Tables[0] 表式取出 dataset 中 index 為 0 的表，即第一張表。
+* 排序 data table 可以透過 ds.Tables[0].DefaultView.Sort 來進行。但此排序並非真實將表內的資料進行排序，而是以 data view 方式呈現，因此若要取得此排序的 view ，需要透過 ds.Tables[0].DefaultView.ToTable() 將此 view 轉成 data table。
+* 因透過 SqlDataAdapter 填入 data set 中的 data table 為唯讀，無法直接將新的 table 直接加入，因此需要透過一新資料及當作中繼儲存原始資料表與修改後資料表的內容，而複製資料表的方式如 for 迴圈所作。
+* 需要注意當創立一個新 dataset 後，若要將"多"張資料表加入此資料集，需要修改資料表名稱，若無修改，則可能造成無法填入狀況，因為資料表名稱預設皆為 "Table"，當加入第二張表以上時會發生已有此表狀況。
+* 複製資料表時，無法將其 DefaultView.Sort 的內容一併複製，需要重新排序。
+
 使用方式為 : 
 
 ```C#
@@ -303,6 +354,7 @@ for (int i = 0; i < ds.Tables.Count; i++)
     System.Console.WriteLine(ds.Tables[i].TableName);
 }
 
+// show DefaultView.Sort result
 for (int eachEmplopee = 0; eachEmplopee < ds.Tables["0"].DefaultView.Count; eachEmplopee++) {
     if (eachEmplopee > 10) { break; }
     System.Console.WriteLine(string.Format("Item No. {0}, {1}, {2}.", ds.Tables["0"].DefaultView[eachEmplopee]["emp_no"], ds.Tables["0"].DefaultView[eachEmplopee]["hire_date"], ds.Tables["0"].DefaultView[eachEmplopee]["birth_date"]));
@@ -315,7 +367,39 @@ for (int eachEmplopee = 0; eachEmplopee < ds.Tables[1].Rows.Count; eachEmplopee+
 }
 ```
 
+有數點需要注意 :
+* 僅管有針對 Table 的 DefaultView 進行排序，但表本身的資料順序並無改變，因此若是直接透過 Rows[0], Rows[1], ... 取値，仍會取得未排序的內容；而若取得排序的的內容，則可以透過 DefaultView[0], DefaultView[1], ... 等方式來取得。
+* 若是當入加入資料集時已有設定 table 名稱，則可以透過 Tables["資料表名稱"] 方式來取得資料表。
 
+預期結果如下 :
+
+```Bash
+// DefaultView.Sort result
+Item No. 233385, 1985/2/9 上午 12:00:00, 1952/3/23 上午 12:00:00.
+Item No. 472197, 1985/3/7 上午 12:00:00, 1959/9/20 上午 12:00:00.
+Item No. 272751, 1985/3/30 上午 12:00:00, 1963/9/30 上午 12:00:00.
+Item No. 235773, 1985/4/18 上午 12:00:00, 1952/7/10 上午 12:00:00.
+Item No. 10909, 1985/4/21 上午 12:00:00, 1954/11/11 上午 12:00:00.
+Item No. 12157, 1985/6/4 上午 12:00:00, 1960/3/30 上午 12:00:00.
+Item No. 201627, 1985/6/18 上午 12:00:00, 1963/7/8 上午 12:00:00.
+Item No. 436486, 1985/7/6 上午 12:00:00, 1963/5/4 上午 12:00:00.
+Item No. 262615, 1985/7/16 上午 12:00:00, 1961/3/22 上午 12:00:00.
+Item No. 214633, 1985/7/17 上午 12:00:00, 1957/1/27 上午 12:00:00.
+Item No. 229259, 1985/7/23 上午 12:00:00, 1954/3/18 上午 12:00:00.
+
+// modified result
+Item No. 233385, 1985/2/9 上午 12:00:00, 1952/3/23 上午 12:00:00, 0.
+Item No. 472197, 1985/3/7 上午 12:00:00, 1959/9/20 上午 12:00:00, 1.
+Item No. 272751, 1985/3/30 上午 12:00:00, 1963/9/30 上午 12:00:00, 2.
+Item No. 235773, 1985/4/18 上午 12:00:00, 1952/7/10 上午 12:00:00, 3.
+Item No. 10909, 1985/4/21 上午 12:00:00, 1954/11/11 上午 12:00:00, 4.
+Item No. 12157, 1985/6/4 上午 12:00:00, 1960/3/30 上午 12:00:00, 5.
+Item No. 201627, 1985/6/18 上午 12:00:00, 1963/7/8 上午 12:00:00, 6.
+Item No. 436486, 1985/7/6 上午 12:00:00, 1963/5/4 上午 12:00:00, 7.
+Item No. 262615, 1985/7/16 上午 12:00:00, 1961/3/22 上午 12:00:00, 8.
+Item No. 214633, 1985/7/17 上午 12:00:00, 1957/1/27 上午 12:00:00, 9.
+Item No. 229259, 1985/7/23 上午 12:00:00, 1954/3/18 上午 12:00:00, 10.
+```
 
 
 
