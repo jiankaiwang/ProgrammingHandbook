@@ -3,6 +3,7 @@
 * [Introduction](README.md)
 * [Useful Resource](11_useful_resource.md)
 * [Software Engineering](software_engineering/software_engineering.md)
+   * rules for declearing variables
 * [License](license.md)
    * [BSD License](bsd_license.md)
 * [Webpage](chapter1.md)
