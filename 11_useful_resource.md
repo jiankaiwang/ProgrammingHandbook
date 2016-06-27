@@ -8,6 +8,10 @@
 * Open Source Initiative
   * [License Summary](https://opensource.org/licenses/alphabetical)
 
+###Software Engineering
+---
+* StyleCop : 分析 C# 語法促使保持一致撰寫格式與規則，利於後續軟體維護。
+
 ###Webpage
 ---
 * HTML5:
