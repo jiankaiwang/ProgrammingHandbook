@@ -2,7 +2,7 @@
 
 * [Introduction](README.md)
 * [Useful Resource](11_useful_resource.md)
-* Software Engineering
+* [Software Engineering](software_engineering/software_engineering.md)
 * [License](license.md)
    * [BSD License](bsd_license.md)
 * [Webpage](chapter1.md)
