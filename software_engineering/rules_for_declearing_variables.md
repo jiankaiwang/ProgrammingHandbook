@@ -52,8 +52,12 @@ strcpy(pstrCpInfo,pcstrTpInfo) or strcpy(CpInfo,TpInfo)
 ###駱駝命名法(Camel-Case notation)
 ---
 
+```text
+變數名稱 = 複合的英文字母數字連串起來，並在分隔處以大寫區隔，其餘用小寫命名。
+```
 
+* 範例 :
 
-
-
-
+| 範例 | 變數宣告 |
+| -- | -- |
+| 一個將挑出來的數字進行平均的全域浮點數 | avgFromSelectedNumber |
