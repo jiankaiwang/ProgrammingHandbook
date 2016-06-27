@@ -1,0 +1,2 @@
+# rules for declearing variables
+
