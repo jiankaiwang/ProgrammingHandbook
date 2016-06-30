@@ -25,7 +25,7 @@ Simian 的授權依照不同的使用狀況而有差異，如下：
 
 * Enterprise and other Licenses : 大型組織使用，允許使用在很多機器的不同專案中。也可以視狀況洽談不同的授權內容。
 
-###啟用 Simian
+###使用 Simian
 ---
 
 * Simian 支援兩種環境，Java 與 .NET 環境。
@@ -33,15 +33,28 @@ Simian 的授權依照不同的使用狀況而有差異，如下：
 ```Bash
 # java 環境下使用
 java -jar simian.jar [options] [files]
-```
 
-```Bash
 # .NET 環境下使用
 simian.exe [options] [files]
 ```
 
-###使用 Simian
----
+* options 如下：
+
+```Bash
+# 儲存成 xml 檔案併命名為 SimianReport.xml  
+-formatter=xml:SimianReport.xml 
+
+# 超過 20 行重複才被找到
+-threshold=20 
+
+# 程式語言為 java
+-language=java
+
+# 排除偵測的檔案類型
+-excludes=**/*config.java
+```
+
+* 範例
 
 ```Bash
 # 比對兩個檔案
@@ -49,6 +62,9 @@ java -jar simian.jar <file1> <file2>
 
 # 比對資料下所有 java 檔案
 java -jar simian.jar <path/*.java>
+
+# 
+java -jar simian.jar -formatter=xml:SimianReport.xml -threshold=20 -language=java -excludes=**/perldoc "D:\code\openshift\welcome\interface\dynamic\*.java"
 ```
 
 
