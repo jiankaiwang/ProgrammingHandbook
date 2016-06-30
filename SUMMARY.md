@@ -4,7 +4,7 @@
 * [Useful Resource](11_useful_resource.md)
 * [Software Engineering](software_engineering/software_engineering.md)
    * [rules for declearing variables](software_engineering/rules_for_declearing_variables.md)
-   * Simian : a similarity analyser
+   * [Simian : a similarity analyser](software_engineering/simian_a_similarity_analyser.md)
 * [License](license.md)
    * [BSD License](bsd_license.md)
 * [Webpage](chapter1.md)
