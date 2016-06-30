@@ -14,6 +14,7 @@
 * FxCop (靜態程式碼分析) : 分析已建置好的 dll ，並檢查程式碼是否符合 Net Framework Design Guidelines
   1. [MSDN 文件](https://msdn.microsoft.com/en-us/library/bb429476.aspx)
   2. [CodePlex download](https://fxcopinstaller.codeplex.com/)
+* [Simian (程式碼相似度分析工具)](http://www.harukizaemon.com/simian/)
 
 ###Webpage
 ---
