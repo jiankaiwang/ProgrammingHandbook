@@ -68,7 +68,7 @@ java -jar simian.jar <path/*.java>
 # 2. 超過 20 行重複的檔案才被挑出來
 # 3. 偵測的語言為 java
 # 4. 排除路徑中名為 perldoc 的資料夾
-# 5. 搜尋路徑為 D:\code\openshift\welcome\interface\dynamic\*.java
+# 5. 搜尋路徑及檔案為 D:\code\openshift\welcome\interface\dynamic\*.java
 java -jar simian.jar -formatter=xml:SimianReport.xml -threshold=20 -language=java -excludes=**/perldoc "D:\code\openshift\welcome\interface\dynamic\*.java"
 ```
 
