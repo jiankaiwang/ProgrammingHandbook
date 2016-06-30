@@ -25,7 +25,7 @@ Simian 的授權依照不同的使用狀況而有差異，如下：
 
 * Enterprise and other Licenses : 大型組織使用，允許使用在很多機器的不同專案中。也可以視狀況洽談不同的授權內容。
 
-###使用 Simian
+###啟用 Simian
 ---
 
 * Simian 支援兩種環境，Java 與 .NET 環境。
@@ -39,3 +39,19 @@ java -jar simian.jar [options] [files]
 # .NET 環境下使用
 simian.exe [options] [files]
 ```
+
+###使用 Simian
+---
+
+```Bash
+# 比對兩個檔案
+java -jar simian.jar <file1> <file2>
+
+# 比對資料下所有 java 檔案
+java -jar simian.jar <path/*.java>
+```
+
+
+
+
+
