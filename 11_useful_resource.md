@@ -51,6 +51,7 @@
 * [HighCharts.js (official link)](http://www.highcharts.com/)
 * jQuery Editor :
   * [CKEditor (link)](http://ckeditor.com/)
+* [LaTex Math Symbols](http://web.ift.uib.no/Teori/KURS/WRK/TeX/symALL.html)
 
 ###Scientific
 ---
