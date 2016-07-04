@@ -80,13 +80,17 @@ genObj <- ClassExample(data=examDT)
 
 # check object
 isS4(genObj)
+# [1] TRUE
 
 # slot names
 slotNames(genObj)
 slotNames("ClassExample")
+# [1] "data"
 
 # slot data type
 getSlots("ClassExample")
+#        data 
+# "data.frame" 
 
 # resign slot data
 slot(genObj,"data") <- examDT
