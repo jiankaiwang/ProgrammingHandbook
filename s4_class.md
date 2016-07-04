@@ -38,6 +38,7 @@ ClassExample <- setClass(
     return(TRUE)
   }
 )
+
 ```
 
 ###創建函式
