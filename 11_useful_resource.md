@@ -15,6 +15,7 @@
   1. [MSDN 文件](https://msdn.microsoft.com/en-us/library/bb429476.aspx)
   2. [CodePlex download](https://fxcopinstaller.codeplex.com/)
 * [Simian (程式碼相似度分析工具)](http://www.harukizaemon.com/simian/)
+* [SourceMonitor (程式碼複雜度分析程式)](http://www.campwoodsw.com/sourcemonitor.html)
 
 ###Webpage
 ---
