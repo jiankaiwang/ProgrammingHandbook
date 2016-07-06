@@ -20,3 +20,18 @@
   2. 選擇要掃描的語言與排除的檔案類型
   3. 輸入專案名稱與專案檔案放置位置
   4. 輸入要掃描檔案的位置 (Select Source Files By Extension)
+  5. 選擇細部掃描設定 : 包含使用複雜的矩陣來紀錄，是否艘苗 header 或 footer 註解內容等。
+  6. 選擇將掃描結果輸出成新的或舊的 SourceMonitor 格式。
+  7. 輸入檢查點名稱 (SourceMonitor 將複合矩陣存入 checkpoint 中紀錄)
+
+###檢視分析結果
+---
+
+* 檢視每次 checkpoint 結果 (可以點擊每一次檢查的結果)
+
+
+
+  1. 其中以 Complexity 與 Depth 為主要觀察數值。
+
+* 檢視該次 chekcpoint 的總結
+
