@@ -29,9 +29,12 @@
 
 * 檢視每次 checkpoint 結果 (可以點擊每一次檢查的結果)
 
-
+![](../images/smList.png)
 
   1. 其中以 Complexity 與 Depth 為主要觀察數值。
 
-* 檢視該次 chekcpoint 的總結
+* 檢視該次 chekcpoint 的總結 (點擊每一個檔案便可以進行歸納)
+
+![](../images/smSummary.png)
+
 
