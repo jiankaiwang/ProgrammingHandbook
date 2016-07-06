@@ -11,4 +11,12 @@
 ###安裝與使用 SourceMonitor
 ---
 
-* 於[官網](http://www.campwoodsw.com/sourcemonitor.html)中下載 .exe 檔案進行安裝
+* 安裝與環境設定
+  1. 於[官網](http://www.campwoodsw.com/sourcemonitor.html)中下載 .exe 檔案進行安裝
+  2. 因大部分的開發環境為 UTF-8 編碼，於 「File」的「Options」中，勾選「Allow parsing of UTF-8 files」。
+
+* 分析流程
+  1. 自「File」的「Project」開始
+  2. 選擇要掃描的語言與排除的檔案類型
+  3. 輸入專案名稱與專案檔案放置位置
+  4. 輸入要掃描檔案的位置 (Select Source Files By Extension)
