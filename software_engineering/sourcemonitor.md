@@ -8,7 +8,7 @@
   1. 支援 C++, C, C#, VB.NET, Java, Delphi, Visual Basic (VB6) or HTML。
   2. 僅支援 Windows 開發環境。
 
-###安裝 SourceMonitor
+###安裝與使用 SourceMonitor
 ---
 
 * 於[官網](http://www.campwoodsw.com/sourcemonitor.html)中下載 .exe 檔案進行安裝
