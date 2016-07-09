@@ -12,6 +12,7 @@
    * [Syntax Compare](12_syntax_compare.md)
        * [Javascript vs. jQuery](javascript_jquery.md)
        * [取得 HTML 物件內容與執行函式方法](webpage/html_object_value_and_execute_function.md)
+   * jQuery
    * [GitBook](gitbook.md)
    * [AngularJS](angularjs.md)
        * [不同資料型態的操作](angularjs_basis_data_type_operation.md)
@@ -33,7 +34,6 @@
        * [Web.config 組態檔](webpage/webconfig.md)
        * [App.config 組態檔](webpage/appconfig_zu_tai_dang.md)
    * [LaTex](webpage/latex.md)
-   * jQuery
 * [Database](database.md)
    * [Syntax comparison](database/syntax_comparison.md)
    * [SQL Server (T-SQL)](sql_server_t-sql.md)
