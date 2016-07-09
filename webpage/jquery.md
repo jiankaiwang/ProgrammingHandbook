@@ -127,6 +127,43 @@ $("#showBody").css({ border: "1px solid green", background: "rgba(255,128,0,0.5)
 style="border: 1px solid green; background: rgba(255,128,0,0.5);";
 ```
 
+* 範例三：表單送出及輸入資料判斷
+
+下列的原始碼，利用 .submit() 及一個新的 function 來進行表單送出資料的判斷
+```html
+<head>
+	<style type="text/css">
+		#tip { display:none; }
+	</style>
+	<script src="jquery-1.11.1.min_ori.js"></script>
+</head>
+<body>
+	<form>
+		請輸入姓名 
+		<input type="text" id="username" name="username">
+		<span id="tip">欄位必填</span>
+	</form>
+	<script type="text/javascript">
+        // event 的 preventDefault 用於避免欄位恢復成一開始的狀態
+        // .val() 用來取出 input 內的資料
+		$("form").submit(function(event) {
+			if($("#username").val() == "") {
+				$("span#tip").show();
+				event.preventDefault();
+			}
+		});
+	</script>
+</body>
+```
+
+
+
+
+
+
+
+
+
 
 
 
