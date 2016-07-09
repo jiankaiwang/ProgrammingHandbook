@@ -24,7 +24,7 @@
 | modify the value of the key | $preparedForDelete["k5"] = "new_v5"; |
 | delete a pair | unset($preparedForDelete["k4"]); |
 | delete the whole Hash | unset($preparedForDelete); |
-| show the whole key |$getAllKey = array_keys($newHashList); |
+| show the whole key | $getAllKey = array_keys($newHashList); |
 
 ###Function declear
 ---
