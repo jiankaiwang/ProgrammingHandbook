@@ -12,7 +12,7 @@
    * [Syntax Compare](12_syntax_compare.md)
        * [Javascript vs. jQuery](javascript_jquery.md)
    * [jQuery](webpage/jquery.md)
-       * JQuery activities
+       * [JQuery activities](webpage/jquery_activities.md)
    * [GitBook](gitbook.md)
    * [AngularJS](angularjs.md)
        * [不同資料型態的操作](angularjs_basis_data_type_operation.md)
