@@ -59,8 +59,8 @@
 * [Scientific](scientific/scientific.md)
    * [Data accessed by R](scientific/r_access_multiple_source_data.md)
    * [S4 Class 使用](scientific/s4_class.md)
-* [Threading in Java](static/threading_in_java.md)
 * [Parallel](parallel/parallel.md)
+   * [Threading in Java](static/threading_in_java.md)
    * test
 * [Compression](compression/compression.md)
    * [lz-string](compression/lz-string.md)
