@@ -2,7 +2,7 @@
 
 * [Introduction](README.md)
 * [Useful Resource](useful_resource.md)
-* [License](license.md)
+* [License](license/license.md)
    * [BSD License](license/bsd_license.md)
 * [Software Engineering](software_engineering/software_engineering.md)
    * [rules for declearing variables](software_engineering/rules_for_declearing_variables.md)
