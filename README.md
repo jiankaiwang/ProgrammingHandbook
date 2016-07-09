@@ -29,6 +29,11 @@ So, let us explore wonderful software world.
 
 * 與網頁開發有關之技術或設計。
 
+###Static
+---
+
+* static 程式語言開發。
+
 ###Database
 ---
 
