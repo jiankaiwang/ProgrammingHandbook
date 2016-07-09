@@ -1,4 +1,4 @@
-# Query from SQL Server in C#
+# Query from SQL Server in CSharp
 
 <script type="text/javascript" src="../js/general.js"></script>
 
