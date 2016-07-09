@@ -33,7 +33,7 @@
    * [Plotly](webpage/plotly.md)
    * [D3.js](webpage/d3js.md)
    * [Highcharts.js](webpage/highchartsjs.md)
-   * [jQuery Editor](jquery_editor.md)
+   * [jQuery Editor](webpage/jquery_editor.md)
        * [CKEditor](webpage/ckeditor.md)
    * [LaTex](webpage/latex.md)
    * [ASP.NET](webpage/aspnet.md)
