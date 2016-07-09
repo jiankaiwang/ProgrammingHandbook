@@ -14,4 +14,6 @@
 
 * List/Array Struct
 * Hash/Dictionary structure
+* Function
+
 
