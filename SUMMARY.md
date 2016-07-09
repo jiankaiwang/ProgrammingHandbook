@@ -10,7 +10,6 @@
    * [SourceMonitor : 程式碼複雜度分析工具](software_engineering/sourcemonitor.md)
 * [GitBook](gitbook.md)
 * [Webpage](chapter1.md)
-   * [Syntax Compare](12_syntax_compare.md)
    * [AngularJS](angularjs.md)
        * [不同資料型態的操作](angularjs_basis_data_type_operation.md)
    * [Web API](web_api.md)
