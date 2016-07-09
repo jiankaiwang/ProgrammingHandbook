@@ -20,11 +20,12 @@
 
 | desc | api |
 | -- | -- |
-| declear a hash | var newHash = {}; |
+| declear a hash | var newHash = { }; |
 | add the pair | newHash["key1"] = "value1"; |
 | delete a pair | newHash.splice("key2",1); |
 | key exists in hash | var boolRes = "key1" in newHash; |
 | modify the value | newHash["key1"] = "new_value1"; |
+| length of dictionary [self] [EnhancedJS.js] | var dictLen = getDictionaryLength(newHash); |
 
 ###Function declear
 ---
