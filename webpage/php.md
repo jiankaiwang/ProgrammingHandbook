@@ -32,7 +32,7 @@
 | desc | api |
 | -- | -- |
 | Match and Test a String | if(preg\_match("/motif\_(\S)\_(\d\*).png/",$getStr)) |
-| Extract from the string | preg\_match("/motif\_(\S)\_(\d\*).png/",$getStr,$matches); |
+| Extract from the string | preg\_match("/motif\_(\S)\_(\d\*).png/",$getStr,$matches\_in\_array); |
 
 ###Function declear
 ---
