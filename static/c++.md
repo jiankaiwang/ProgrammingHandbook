@@ -27,18 +27,18 @@
 | stream_var.fail(); | 搭配 .open() 使用<br>return true 當串流開啟失敗 | fstream / iostream |
 | stream_var.close(); | 關閉串流 | fstream / iostream |
 | \*stream_var.bad(); | stream_var 為 corrupted 時為 true | fstream / iostream |
-| stream_var.eof(); | 用預讀下一個字來判別是否為 stream_var 結束。 | fstream / iostream |
+| stream_var.eof(); | 用預讀下一個字來判別<br>是否為 stream_var 結束。 | fstream / iostream |
 | stream_var.get(char_varable); | 從 stream_var 讀入一個字元<br>存於 char_variable 中 | fstream / iostream |
-| stream_var.getline(string_variable, max_char+1);| 從 stream_var 讀入一行字串，讀入長度為 max_char+1  | fstream / iostream |
+| stream_var.getline(string_variable, max_char+1);| 從 stream_var 讀入一行字串，<br>讀入長度為 max_char+1  | fstream / iostream |
 | stream_var.peek(); <br> //return char | 預先讀一個字，但讀完又放回去，用 get 仍可讀這個字，可用於欲讀判斷  | fstream / iostream |
-| 0:10 | 1:10 | fstream / iostream |
-| 0:11 | 1:11 | fstream / iostream |
-| 0:12 | 1:12 | fstream / iostream |
-| 0:13 | 1:13 | fstream / iostream |
-| 0:14 | 1:14 | fstream / iostream |
-| 0:15 | 1:15 | fstream / iostream |
-| 0:16 | 1:16 | fstream / iostream |
-| 0:17 | 1:17 | fstream / iostream |
+| stream_var.put(char_exp); | 將 char 放入 stream_var 中，<br>可顯示或輸出檔案 | fstream / iostream |
+| stream_var.clear(); | 清除 stream_var 讀取指標 | fstream / iostream |
+| stream_var.seekg(int_pos); | 移動讀取指標到那個位置 <br> 如 0 或 ios::beg 表示初始 | fstream / iostream |
+| stream_var.putback(char_exp); | 改變下一個要讀入的 char 成<br>剛 putback 的 char | fstream / iostream |
+| stream_var.precision(int_exp); <br> //cout.precision(4); <br> //cout << 100.12345 << endl;  | 設定數字輸出的精確度達幾位，<br>含整數(先)與小數(後)。 <br>//輸出  100.1 | fstream / iostream |
+| stream_var.width(int_exp); | 設定用多少寬度來表示輸出 (靠右顯示) | fstream / iostream |
+| stream_var.setf(Flag); | 依旗標來調整輸入輸出格式<br>如 ios::showpoint 小數點<br>ios::fixed 顯示精確位小數點 | fstream / iostream |
+| stream_var.unsetf(Flag); | 將輸入輸出 Flag 設定取消 | fstream / iostream |
 
 
 
