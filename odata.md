@@ -44,7 +44,7 @@
 * 可以選擇是否採用 MVC 架構 : 本次採用 Web API 範本為例
   * Web API (已加入 MVC 及 Web API 核心參考) > 變更驗證 > 無驗證
   * Empty (至少需勾選 Web API 核心參考)
-![](webapi_mvc.png)
+![](../images/webapi_mvc.png)
 
 ###安裝所需 Packages
 ---
@@ -71,7 +71,7 @@ Install-Package EntityFramework
 
 ###使用的 Database 與 Table
 ---
-![](webapiodatadbcontent.png)
+![](../images/webapiodatadbcontent.png)
 
 * 資料庫名為 ProductsContext，包含 two tables，OData 及 ODatas。
 * 資料庫為放置在 .\SQLEXPRESS 底下的資料庫，非 App_Data
@@ -341,7 +341,7 @@ http://localhost:port/ODataPrefix/{controller name}/{OData operations}
 ```csharp
 builder.EntitySet<ODATA>("OData1");
 ```
-![](OData1.png)
+![](../images/OData1.png)
 
 * 若是 Visual Studio 提示錯誤，需要 rebuild 專案，則可以點擊 「建置」 > 「重建方案」，讓開發環境重新取得先前 Model 的設置。
 
@@ -552,17 +552,17 @@ public async Task<IHttpActionResult> Delete([FromODataUri] int key)
 * 以發行方式進行將 Web API 匯出
   * 「方案總管」 > 對專案點右鍵 (WebAPIODataModel) > 發行
 
-![](webapi-iis-publish.png)
+![](../images/webapi-iis-publish.png)
 
   * 設定檔 「自訂」 > 輸入一個設定檔名稱 > "下一步" > iis 的發行方法 > 「檔案系統」 > 目標位置 「(選擇要放置的路徑，此路徑之後會給 IIS 建立網站使用，舉放置在桌面的 webAPIODataModelIIS 資料夾為例)」> "下一步"
 
-![](webapi-physical-path.png)
+![](../images/webapi-physical-path.png)
 
   * 設定 > 組態「Release」> "下一步" > "發行"
 
   * 因為 Web API 發行檔多為開放於網路空間，但發行後的 Web API 內容預設並非給公開使用，因此需先增加一個使用權限，便能透過 IIS 進行架設。對剛發行完版本的資料夾點擊右鍵 > 「內容」 > 「安全性」 > 「編輯」 > 「新增」 > 輸入物件名稱來選取 「Users」 > 「確定」 > SYSTEM 的權限 (此部分需視此 API 的用途，是否具被寫入等功能) 來決定 > 「確定」 > 即可。
 
-![](web-api-iis-add-users.png)
+![](../images/web-api-iis-add-users.png)
 
   * 開啟 IIS
 
@@ -572,13 +572,13 @@ public async Task<IHttpActionResult> Delete([FromODataUri] int key)
 
   * 右鍵點擊「站台」 > 「新增網站」 > 寫入「站台名稱」 > 指定「實體路徑」 > 繫結 > 連接埠 「8100」 (此可以自行調整)
 
-![](webapi-new-website.png)
+![](../images/webapi-new-website.png)
 
   * 因為此資料夾在網路上為一階層，因此需要開啟「瀏覽目錄」的功能，在點擊此新網站後，選擇 IIS > 雙點擊「瀏覽目錄」 > 於右側的「動作」中 > 「開啟」即可。
 
   * 最後因為本 Web API 已經使用 .NET Framework 4.0 版本，故於「應用程式集區」下，選擇 「webAPIODataModelIIS」，並在 .NET Framework 版本選擇「.NET Framework v4.0.30319」。
 
-![](web-api-app-pool.png)
+![](images/web-api-app-pool.png)
 
 ###使用方式
 #####假設以 192.681.1.24 作 IP address 為例
