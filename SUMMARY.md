@@ -11,7 +11,6 @@
 * [Webpage](chapter1.md)
    * [Syntax Compare](12_syntax_compare.md)
        * [Javascript vs. jQuery](javascript_jquery.md)
-       * [取得 HTML 物件內容與執行函式方法](webpage/html_object_value_and_execute_function.md)
    * jQuery
    * [GitBook](gitbook.md)
    * [AngularJS](angularjs.md)
@@ -31,6 +30,7 @@
        * [CKEditor](ckeditor.md)
    * [Web Method](webmethod/web_method.md)
    * [ASP.NET](webpage/aspnet.md)
+       * [取得 HTML 物件內容與執行函式方法](webpage/html_object_value_and_execute_function.md)
        * [Web.config 組態檔](webpage/webconfig.md)
        * [App.config 組態檔](webpage/appconfig_zu_tai_dang.md)
    * [LaTex](webpage/latex.md)
