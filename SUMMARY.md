@@ -27,6 +27,7 @@
        * [JQuery activities](webpage/jquery_activities.md)
    * [TypeScript](typescript.md)
    * [Plotly](webpage/plotly.md)
+   * CSS
    * [D3.js](d3js.md)
    * [Highcharts.js](highchartsjs.md)
    * [jQuery Editor](jquery_editor.md)
@@ -41,7 +42,6 @@
        * [Background processes](webpage/background_processes.md)
    * [Node.js](webpage/nodejs.md)
    * [io.js](webpage/iojs.md)
-   * CSS
 * [Database](database.md)
    * [Syntax comparison](database/syntax_comparison.md)
    * [SQL Server (T-SQL)](sql_server_t-sql.md)
