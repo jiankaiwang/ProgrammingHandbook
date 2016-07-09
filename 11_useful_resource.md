@@ -21,7 +21,6 @@
 ---
 
 * **[W3school.com (link)](http://www.w3schools.com/)** ，包含 HTML 架構、CSS、Javascript 等。
-* [jQuery (link)](http://jquery.com/) ，幾乎可以說是網頁程式發展的重要推手。
 * [PHP reference (link)](http://php.net/manual/en/language.references.php) ，重要網頁語言之一，從 LAMP 就可以知道。
 * ASP.NET 
   * [MSDN 版本](https://msdn.microsoft.com/zh-tw/library/ms178463.aspx)
@@ -30,16 +29,22 @@
   * [OData Version 3.0 Core Protocol](http://www.odata.org/documentation/odata-version-3-0/odata-version-3-0-core-protocol/) : 包含多種 filter 方式 
 * GitBook
   * [CSS Styleable reference](http://highlightjs.readthedocs.org/en/latest/css-classes-reference.html)
-* AngularJS
-  * [jqLite](https://docs.angularjs.org/api/ng/function/angular.element) : support DOM operations
-  * [Filters](http://docs.angularjs.org/guide/dev_guide.templates.filters) : 修飾或過濾數值與文字等 AngularJS 表達式結果
+* General framework
+  * [jQuery (link)](http://jquery.com/) ，幾乎可以說是網頁程式發展的重要推手。
+  * [jQuery EasyUI](http://www.jeasyui.com/demo/main/index.php)
+  * [D3.js (官方網站連結)](https://d3js.org/)
+    * [D3 教學連結](https://github.com/mbostock/d3/wiki/Tutorials)
+    * D3 API Reference link [(English)](https://github.com/mbostock/d3/wiki/API-Reference) [(中文)](https://github.com/mbostock/d3/wiki/API--%E4%B8%AD%E6%96%87%E6%89%8B%E5%86%8C)
+* Run on Server
+  * [Node.js](https://nodejs.org/en/)
+  * [io.js](https://iojs.org/en/)
+* MVC
+  * AngularJS
+    * [jqLite](https://docs.angularjs.org/api/ng/function/angular.element) : support DOM operations
+    * [Filters](http://docs.angularjs.org/guide/dev_guide.templates.filters) : 修飾或過濾數值與文字等 AngularJS 表達式結果
 * [JSBin](http://jsbin.com/?html,output) : 一套線上 HTML/CSS/Javascript 的開發環境
 * TypeScript :
   * [下載與安裝 (連結)](http://www.typescriptlang.org/)
-* [D3.js (官方網站連結)](https://d3js.org/)
-  * [D3 教學連結](https://github.com/mbostock/d3/wiki/Tutorials)
-  * [D3 API Reference link (English version)](https://github.com/mbostock/d3/wiki/API-Reference)
-  * [D3 API 中文手冊連結](https://github.com/mbostock/d3/wiki/API--%E4%B8%AD%E6%96%87%E6%89%8B%E5%86%8C)
 * [HighCharts.js (official link)](http://www.highcharts.com/)
 * jQuery Editor :
   * [CKEditor (link)](http://ckeditor.com/)
@@ -48,9 +53,7 @@
 * [Chart.js](http://www.chartjs.org/) ([中文版](http://www.bootcss.com/p/chart.js/docs/))
 * [Google chart](https://google-developers.appspot.com/chart/interactive/docs/gallery)
 * [Plotly project](https://plot.ly/feed/)
-* [Node.js](https://nodejs.org/en/)
-* [io.js](https://iojs.org/en/)
-* [jQuery EasyUI](http://www.jeasyui.com/demo/main/index.php)
+
 * [Cytoscape.js](http://js.cytoscape.org/)
 * [Ultimate CSS Gradient Generator](http://www.colorzilla.com/gradient-editor/)
 * [Tables Generator](http://www.tablesgenerator.com/html_tables)
