@@ -188,12 +188,190 @@ style="border: 1px solid green; background: rgba(255,128,0,0.5);";
 </body>
 ```
 
+* 範例四：利用 a 來點選選單，但利用 return false 來避免換頁，且能出現隱藏的內容
 
+```html
+<head>
+	<style type="text/css">
+		#menu { display: none; }
+	</style>
+	<script src="jquery-1.11.1.min_ori.js"></script>
+</head>
+<body>
+	<a id="open" href="#">控制面板</a> 
+	<ul id="menu">  
+		<li><a href="#1">控制面板首頁</a></li>  
+		<li><a href="#2">編輯個人資料</a></li>  
+		<li><a href="#3">個人空間管理</a></li>  
+	</ul> 
+	<script type="text/javascript">
+		$("a#open").click(function() {
+			$("#menu").show();
+			return false;
+		});
+	</script>
+</body>
+```
 
+* 範例五：利用 fastdown 來創造出類似下拉選單的效果
 
+```html
+<head>
+	<style type="text/css">
+		#menu { display: none; }
+	</style>
+	<script src="jquery-1.11.1.min_ori.js"></script>
+</head>
+<body>
+	<a id="open" href="#">控制面板</a> 
+	<ul id="menu">  
+		<li><a href="#1">控制面板首頁</a></li>  
+		<li><a href="#2">編輯個人資料</a></li>  
+		<li><a href="#3">個人空間管理</a></li>  
+	</ul> 
+	<script type="text/javascript">
+		$("a#open").click(function() {
+			$("#menu").slideDown("fast");
+			return false;
+		});
+	</script>
+</body>
+```
 
+* 範例六：利用 animate 進行區域的動畫特效
 
+```html
+<head>
+	<script src="../libs/jquery-1.11.1.min_ori.js" type="text/javascript"></script>
+	<style type="text/css">
+		A:link {color: black; text-decoration: none; font-family: Microsoft JhengHei, monospace, serif; font-weight:bold;}
+		A:visited {text-decoration: none; color: black;}
+		A:active {text-decoration: none}
+		A:hover {color: blue;}
+	</style>
+</head>
+<body>
+	<div style="width: 100px; border: 1px solid red">
+		<center><a href="http://www.google.com.tw"><span>Google</span></a></center>
+	</div>
+	<script>
+		$("div").animate({
+			width: '300px',
+			padding: '20px'
+		},'slow');
+	</script>
+</body>
+```
 
+* 範例七：利用 hide 與 $(this) 產生 self callback 的效果
 
+```html
+<head>
+	<script src="../libs/jquery-1.11.1.min_ori.js" type="text/javascript"></script>
+</head>
+<body>
+	<div style="width: 200px; border: 1px solid red">
+		The first section
+	</div>
+	<div style="width: 200px; border: 1px solid red">
+		The second section
+	</div>
+	<script>
+		$("div").hide(1000, function() {
+			$(this).show(1000);
+		});
+	</script>
+</body>
+```
+
+* 範例八：可以利用 load 來取得外部資源，並應用於此文件中
+
+  1. 外部資源可以是 html file 或是 xml 等資源
+  2. 存取的原則是利用階層關係，如 div > h1，即表示為標籤 div 下的 h1 子標籤項目
+
+原 html：準備被加入外部資源的對象
+```html
+<head>
+	<script src="../libs/jquery-1.11.1.min_ori.js" type="text/javascript"></script>
+</head>
+<body>
+	<div id="body"></div>
+	<script>
+		$("div").load("https://dl.dropboxusercontent.com/u/45600165/editJS/p3_insert.xml div > h1");
+	</script>
+</body>
+```
+
+外部資源 xml：內含有需要加入的資源 (檔名為：p3_insert.xml)
+```html
+<div>
+	<h1>1st H1</h1>
+	<h2>1st H2</h2>
+	<h3>1st H3</h3>
+	<h1>2nd H1</h1>
+</div>
+```
+
+此種引用外部資源的方式類似於底下 html code
+```html
+<head>
+	<script src="../libs/jquery-1.11.1.min_ori.js" type="text/javascript"></script>
+</head>
+<body>
+	<div id="body">
+		<h1>1st H1</h1>
+		<h1>2nd H1</h1>
+	</div>
+</body>
+```
+
+* 範例九：可以利用 getJSON() function 來取得 JSON 格式的資源，並應用於此文件中
+
+  1. $.getJSON() 即為 jQuery 定義用來取得 JSON format file 的函式
+
+JSON 檔案 (名稱為：p4_JSON.json)
+```javascript
+[
+	"outer item 1",
+	"outer item 2",
+	"outer item 3"
+]
+```
+
+原始程式碼
+```html
+<head>
+	<script src="../libs/jquery-1.11.1.min_ori.js" type="text/javascript"></script>
+</head>
+<body>
+	<ul id="menu">
+		<li>inner item 1</li>
+	</ul>
+	<script type="text/javascript">
+		//the way to get JSON format file
+		$.getJSON("https://dl.dropboxusercontent.com/u/45600165/editJS/p4_json.json",
+		function(data) {
+			for (var line in data) {
+				$("#menu").append("<li>" +  data[line] + "</li>");
+			}
+		});
+	</script>
+</body>
+```
+
+此外部取用 JSON 格式檔案的方法類似底下的 html code
+```html
+<head>
+	<script src="../libs/jquery-1.11.1.min_ori.js" type="text/javascript"></script>
+</head>
+<body>
+	<ul id="menu">
+		<li>inner item 1</li>
+		<li>outer item 1</li>
+		<li>outer item 2</li>
+		<li>outer item 3</li>
+	</ul>
+</body>
+```
 
 
