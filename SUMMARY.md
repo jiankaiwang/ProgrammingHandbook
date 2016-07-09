@@ -50,7 +50,7 @@
    * [leaflet.js](webpage/leafletjs.md)
 * [Database](database/database.md)
    * [Syntax comparison](database/syntax_comparison.md)
-   * [SQL Server (T-SQL)](database\sql_server_t-sql.md)
+   * [SQL Server (T-SQL)](scientific/sql_server_t-sql.md)
    * [MySQL](database/mysql.md)
    * [PHP access MySQL](database/php_access_mysql.md)
    * [PDO access MySQL](database/pdo_access_mysql.md)
