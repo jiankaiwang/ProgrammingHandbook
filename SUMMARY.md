@@ -22,6 +22,7 @@
        * [dedicated worker](dedicated_worker.md)
        * [shared worker](shared_worker.md)
    * [Web Method](webmethod/web_method.md)
+   * Javascript
    * [jQuery](webpage/jquery.md)
        * [JQuery activities](webpage/jquery_activities.md)
    * [TypeScript](typescript.md)
@@ -37,7 +38,6 @@
        * [App.config 組態檔](webpage/appconfig_zu_tai_dang.md)
    * [PHP](webpage/php.md)
        * [Curl Function](webpage/curl_function.md)
-   * Javascript
 * [Database](database.md)
    * [Syntax comparison](database/syntax_comparison.md)
    * [SQL Server (T-SQL)](sql_server_t-sql.md)
