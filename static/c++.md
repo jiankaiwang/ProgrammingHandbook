@@ -56,4 +56,12 @@
 | int tolower(char); | 回傳小寫的 ascii code number | cctype |
 | int toupper(char); | 回傳大寫的 ascii code number | cctype |
 
+###C-String functions 
+---
+
+
+
+
+
+
 
