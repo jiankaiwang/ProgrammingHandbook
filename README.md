@@ -28,11 +28,13 @@ So, let us explore wonderful software world.
 ---
 
 * 與網頁開發有關之技術或設計。
+* Include HTML5, CSS3, Javascript, PHP, ASP.NET, LaTex, etc. Provide several designs combining many of them.
 
 ###Static
 ---
 
 * static 程式語言開發。
+* Include C, C++, Java, C#, etc. Besides, also note the essential tools used to develop, debug, testing with them.
 
 ###Database
 ---
