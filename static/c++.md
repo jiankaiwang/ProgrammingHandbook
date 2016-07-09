@@ -72,11 +72,23 @@
 | (bool) strncmp(c-string_var, c-string_exp, limit) | c-string_exp 前 limit 個字來跟 c-string_var  比較是否不同 | cstring |
 | (void) strncpy(c-string_var, c-string_exp, limit) | c-string_exp 中取出 limit 個字複製到 c-string_var | cstring |
 | (void\*) strstr(c-string_var, pattern); | pattern 是否在 c-string_var中，回傳 null 為沒有(可用bool 來檢測)，若有回傳pointer，顯示相同字串 | cstring |
-| (void\*) strchr(c-string_var, char); | 檢查 character 在 c-string_var 中的位置，顯示之後字串，回
-傳 null 為沒有(可用 bool 來檢測) | cstring |
+| (void\*) strchr(c-string_var, char); | 檢查 character 在 c-string_var 中的位置，顯示之後字串，回傳 null 為沒有(可用 bool 來檢測) | cstring |
 | (void\*) strrchr(c-string_var, char) | 檢查 character 在 c-string_var 中最後的位置，顯示之後字串，回傳  null 為沒有(可用 bool 來檢測) | cstring |
 | (void) memset(array, initValue, sizeof(array)) | 針對 array 內所有元素進行初始化，其初始值為 initValue  | cstring |
 
+###String function：皆須 header string 
+---
+
+| 類型 | 方法 |
+| -- | -- |
+| 0:2 | 1:2 |
+| 0:3 | 1:3 |
+| 0:4 | 1:4 |
+| 0:5 | 1:5 |
+| 0:6 | 1:6 |
+| 0:7 | 1:7 |
+| 0:8 | 1:8 |
+| 0:9 | 1:9 |
 
 
 
