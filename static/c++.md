@@ -43,5 +43,17 @@
 ###Character Functions 
 ---
 
+| 宣告 | 說明/例子 | 標頭檔 |
+| -- | -- | -- |
+| bool isalnum(char); | isalpha 或 isdigit 成立為 T 其餘為 F | cctype |
+| bool isalpha(char); | 字母(大小寫皆可)為 T，其餘 F | cctype |
+| bool isdigit(char); | 數字為 T，其餘 F | cctype |
+| bool ispunct(char); | 可印出且非 isalnum 且非 whitespace 為 T，其餘 F | cctype |
+| bool isspace(char); | whitespaces 為 T，其餘 F | cctype |
+| bool iscntrl(char); | control character 為 T，其餘 F | cctype |
+| bool islower(char); | 小寫字母為 T，其餘 F | cctype |
+| bool isupper(char); | 大寫字母為 T，其餘為 F | cctype |
+| int tolower(char); | 回傳小寫的 ascii code number | cctype |
+| int toupper(char); | 回傳大寫的 ascii code number | cctype |
 
 
