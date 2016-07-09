@@ -9,15 +9,15 @@ So, let us explore wonderful software world.
 
 * 資通訊的世界都是一點一滴累積而成的結果，也感謝前人的種樹才有後人的乘涼，亦可以說是站巨人的肩膀上。
 
-###Software Enginnering
----
-
-* 軟體開發的心法。
-
 ###License
 ---
 
 * 開放軟體的授權說明。
+
+###Software Enginnering
+---
+
+* 軟體開發的心法。
 
 ###Webpage
 ---
