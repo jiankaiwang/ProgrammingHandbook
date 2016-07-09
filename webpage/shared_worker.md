@@ -136,7 +136,7 @@ if(e.ports && e.ports.length > 0) {
 
 而執行後的結果如下；
 
-![](images/shared-worker-1.png)
+![](../images/shared-worker-1.png)
 
 當 page1.html 或 page2.html 進行更新時，另一頁面亦會自動更新內容。
 
