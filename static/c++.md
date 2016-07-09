@@ -25,20 +25,20 @@
 | -- | -- | -- |
 | stream_var.open(); | 串流輸入輸出的開啟<br>fin.open(); fout.open(); | fstream |
 | stream_var.fail(); | 搭配 .open() 使用<br>return true 當串流開啟失敗 | fstream / iostream |
-| 0:4 | 1:4 | 2:4 |
-| 0:5 | 1:5 | 2:5 |
-| 0:6 | 1:6 | 2:6 |
-| 0:7 | 1:7 | 2:7 |
-| 0:8 | 1:8 | 2:8 |
-| 0:9 | 1:9 | 2:9 |
-| 0:10 | 1:10 | 2:10 |
-| 0:11 | 1:11 | 2:11 |
-| 0:12 | 1:12 | 2:12 |
-| 0:13 | 1:13 | 2:13 |
-| 0:14 | 1:14 | 2:14 |
-| 0:15 | 1:15 | 2:15 |
-| 0:16 | 1:16 | 2:16 |
-| 0:17 | 1:17 | 2:17 |
+| stream_var.close(); | 關閉串流 | fstream / iostream |
+| \*stream_var.bad(); | stream_var 為 corrupted 時為 true | fstream / iostream |
+| stream_var.eof(); | 用預讀下一個字來判別是否為 stream_var 結束。 | fstream / iostream |
+| stream_var.get(char_varable); | 從 stream_var 讀入一個字元<br>存於 char_variable 中 | fstream / iostream |
+| stream_var.getline(string_variable, max_char+1);| 從 stream_var 讀入一行字串，讀入長度為 max_char+1  | fstream / iostream |
+| 0:9 | 1:9 | fstream / iostream |
+| 0:10 | 1:10 | fstream / iostream |
+| 0:11 | 1:11 | fstream / iostream |
+| 0:12 | 1:12 | fstream / iostream |
+| 0:13 | 1:13 | fstream / iostream |
+| 0:14 | 1:14 | fstream / iostream |
+| 0:15 | 1:15 | fstream / iostream |
+| 0:16 | 1:16 | fstream / iostream |
+| 0:17 | 1:17 | fstream / iostream |
 
 
 
