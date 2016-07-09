@@ -158,7 +158,35 @@ style="border: 1px solid green; background: rgba(255,128,0,0.5);";
 </body>
 ```
 
+* 範例三-二：表單送出及輸入資料判斷
 
+```html
+<head>
+	<script src="jquery-1.11.1.min_ori.js"></script>
+</head>
+<body>
+	<form action="javascript:alert( 'success!' );">
+	  <div>
+		<input type="text">
+		<input type="submit">
+	  </div>
+	</form>
+	<span></span>
+	<script type="text/javascript">
+		$( "form" ).submit(function( event ) {
+		  if ( $( "input:first" ).val() === "correct" ) {
+			$( "span" ).text( "Validated..." ).show();
+			return;
+		  }
+		  // ---------------------------------------------------
+          // 表示字會出現一秒後再消失
+          // ---------------------------------------------------
+		  $( "span" ).text( "Not valid!" ).show().fadeOut( 1000 );
+		  event.preventDefault();
+		});
+	</script>
+</body>
+```
 
 
 
