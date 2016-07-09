@@ -11,7 +11,7 @@
 * [Webpage](chapter1.md)
    * [Syntax Compare](12_syntax_compare.md)
        * [Javascript vs. jQuery](javascript_jquery.md)
-   * jQuery
+   * [jQuery](webpage/jquery.md)
    * [GitBook](gitbook.md)
    * [AngularJS](angularjs.md)
        * [不同資料型態的操作](angularjs_basis_data_type_operation.md)
