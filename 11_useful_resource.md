@@ -38,6 +38,10 @@
 * Run on Server
   * [Node.js](https://nodejs.org/en/)
   * [io.js](https://iojs.org/en/)
+* Charts
+  * [Chart.js](http://www.chartjs.org/) ([中文版](http://www.bootcss.com/p/chart.js/docs/))
+  * [Google chart](https://google-developers.appspot.com/chart/interactive/docs/gallery)
+
 * MVC
   * AngularJS
     * [jqLite](https://docs.angularjs.org/api/ng/function/angular.element) : support DOM operations
@@ -50,8 +54,7 @@
   * [CKEditor (link)](http://ckeditor.com/)
 * [LaTex Math Symbols](http://web.ift.uib.no/Teori/KURS/WRK/TeX/symALL.html)
 * [MathJax](https://www.mathjax.org/)
-* [Chart.js](http://www.chartjs.org/) ([中文版](http://www.bootcss.com/p/chart.js/docs/))
-* [Google chart](https://google-developers.appspot.com/chart/interactive/docs/gallery)
+
 * [Plotly project](https://plot.ly/feed/)
 
 * [Cytoscape.js](http://js.cytoscape.org/)
