@@ -75,7 +75,7 @@
 | (void\*) strchr(c-string_var, char); | 檢查 character 在 c-string_var 中的位置，顯示之後字串，回
 傳 null 為沒有(可用 bool 來檢測) | cstring |
 | (void\*) strrchr(c-string_var, char) | 檢查 character 在 c-string_var 中最後的位置，顯示之後字串，回傳  null 為沒有(可用 bool 來檢測) | cstring |
-| 0:15 | 1:15 | cstring |
+| (void) memset(array, initValue, sizeof(array)) | 針對 array 內所有元素進行初始化，其初始值為 initValue  | cstring |
 
 
 
