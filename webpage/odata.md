@@ -577,7 +577,7 @@ public async Task<IHttpActionResult> Delete([FromODataUri] int key)
 
   * 最後因為本 Web API 已經使用 .NET Framework 4.0 版本，故於「應用程式集區」下，選擇 「webAPIODataModelIIS」，並在 .NET Framework 版本選擇「.NET Framework v4.0.30319」。
 
-![](images/web-api-app-pool.png)
+![](../images/web-api-app-pool.png)
 
 ###使用方式
 #####假設以 192.681.1.24 作 IP address 為例
