@@ -61,7 +61,6 @@
    * [S4 Class 使用](scientific/s4_class.md)
 * [Parallel](parallel/parallel.md)
    * [Threading in Java](static/threading_in_java.md)
-   * test
 * [Compression](compression/compression.md)
    * [lz-string](compression/lz-string.md)
    * [gzip in Python](compression/gzip_in_python.md)
