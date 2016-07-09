@@ -2,7 +2,7 @@
 
 <script type="text/javascript" src="../js/general.js"></script>
 
-###Circle in CSS
+###Circle
 ---
 
 ```html
@@ -12,13 +12,13 @@
 	height: 40px;
 	float: left;
 	margin-left: 5px;
-	
 }
-#cirImage { height: 30px;
+#cirImage { 
+	height: 30px;
 	margin-left: 15px;
 	text-align: center;
 	clear: both;
-	}
+}
 #cirRight { 
 	width: 40px;
 	height: 40px;
@@ -46,12 +46,14 @@
 	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f1f1f1', endColorstr='#ff0000',GradientType=1 );
 	/* IE6-9 */
 }
-#cirText { height: 10px;
+#cirText { 
+	height: 10px;
 	clear: both;
-	}
-#cirShape, #cirImage, #cirText { width: 70px;
+}
+#cirShape, #cirImage, #cirText { 
+	width: 70px;
 	text-align: center;
-	}
+}
 </style>
 
 # ----------------------------
@@ -64,3 +66,11 @@
 	<div id="cirText">circle</div>
 </div>
 ```
+
+###Triangle
+---
+
+
+
+
+
