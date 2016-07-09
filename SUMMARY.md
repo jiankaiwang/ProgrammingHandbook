@@ -55,7 +55,7 @@
    * [PHP access MySQL](database/php_access_mysql.md)
    * [PDO access MySQL](database/pdo_access_mysql.md)
    * [Query from SQL Server in C#](database/query_from_sql_server_in_csharp.md)
-* [Scientific](scientific.md)
+* [Scientific](scientific\scientific.md)
    * [Data accessed by R](scientific/r_access_multiple_source_data.md)
    * [S4 Class 使用](scientific/s4_class.md)
 * [Parallel](parallel/parallel.md)
