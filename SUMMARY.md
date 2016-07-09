@@ -22,7 +22,7 @@
        * [dedicated worker](dedicated_worker.md)
        * [shared worker](shared_worker.md)
    * [Web Method](webmethod/web_method.md)
-   * Javascript
+   * [Javascript](webpage/javascript.md)
    * [jQuery](webpage/jquery.md)
        * [JQuery activities](webpage/jquery_activities.md)
    * [TypeScript](typescript.md)
