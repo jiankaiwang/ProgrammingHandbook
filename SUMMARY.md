@@ -12,6 +12,7 @@
 * [Webpage](chapter1.md)
    * [AngularJS](angularjs.md)
        * [不同資料型態的操作](angularjs_basis_data_type_operation.md)
+   * CSS
    * [Web API](web_api.md)
        * [MVC-based Web API](mvc-based_web_api.md)
        * [OData](odata.md)
@@ -27,7 +28,6 @@
        * [JQuery activities](webpage/jquery_activities.md)
    * [TypeScript](typescript.md)
    * [Plotly](webpage/plotly.md)
-   * CSS
    * [D3.js](d3js.md)
    * [Highcharts.js](highchartsjs.md)
    * [jQuery Editor](jquery_editor.md)
