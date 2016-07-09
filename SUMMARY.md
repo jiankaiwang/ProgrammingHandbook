@@ -31,7 +31,7 @@
        * [JQuery activities](webpage/jquery_activities.md)
    * [TypeScript](typescript.md)
    * [Plotly](webpage/plotly.md)
-   * [D3.js](d3js.md)
+   * [D3.js](webpage/d3js.md)
    * [Highcharts.js](highchartsjs.md)
    * [jQuery Editor](jquery_editor.md)
        * [CKEditor](webpage/ckeditor.md)
