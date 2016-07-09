@@ -3,7 +3,7 @@
 * [Introduction](README.md)
 * [Useful Resource](11_useful_resource.md)
 * [License](license.md)
-   * [BSD License](license/bsdlicense_md.md)
+   * [BSD License](license/bsd_license.md)
 * [Software Engineering](software_engineering/software_engineering.md)
    * [rules for declearing variables](software_engineering/rules_for_declearing_variables.md)
    * [Simian : a similarity analyser](software_engineering/simian_a_similarity_analyser.md)
