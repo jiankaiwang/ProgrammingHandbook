@@ -13,7 +13,7 @@
    * [CSS](webpage/css.md)
        * [Circle, Triangle, Rectangle, Hexagonal in CSS](webpage/circle_triangle_rectangle_hexagonal_in_css.md)
    * [AngularJS](webpage/angularjs.md)
-       * [不同資料型態的操作](angularjs_basis_data_type_operation.md)
+       * [不同資料型態的操作](webpage/angularjs_basis_data_type_operation.md)
    * [Web API](web_api.md)
        * [MVC-based Web API](mvc-based_web_api.md)
        * [OData](odata.md)
