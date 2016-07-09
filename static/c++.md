@@ -73,7 +73,7 @@
 | (void) strncpy(c-string_var, c-string_exp, limit) | c-string_exp 中取出 limit 個<br>字複製到 c-string_var | cstring |
 | (void\*) strstr(c-string_var, pattern); | pattern 是否在 c-string_var<br>中，回傳 null 為沒有(可用<br>bool 來檢測)，若有回傳<br>pointer，顯示相同字串 | cstring |
 | (void\*) strchr(c-string_var, char); | 檢查 character 在 c-string_var 中的位置，顯示之後字串，回
-傳 null 為沒有(可用 bool 來<br>檢測) | cstring |
+傳 null 為沒有(可用 bool 來檢測) | cstring |
 | (void\*) strrchr(c-string_var, char) | 檢查 character 在 c-string_var 中最後的位置，顯示之後字串，回傳  null 為沒有(可用 bool 來檢測) | cstring |
 | 0:15 | 1:15 | cstring |
 
