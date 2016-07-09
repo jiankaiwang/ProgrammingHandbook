@@ -60,7 +60,7 @@
    * [S4 Class 使用](s4_class.md)
 * [Parallel](parallel/parallel.md)
 * [Compression](compression/compression.md)
-   * [lz-string](lz-string.md)
+   * [lz-string](compression/lz-string.md)
    * [gzip in Python](compression/gzip_in_python.md)
 * [Network](network/network.md)
    * [FTP in C#](network/ftp_in_csharp.md)
