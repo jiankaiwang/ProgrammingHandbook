@@ -29,7 +29,7 @@
    * [jQuery](webpage/jquery.md)
        * [Basic jQuery](webpage/basic_jquery.md)
        * [JQuery activities](webpage/jquery_activities.md)
-   * [TypeScript](typescript.md)
+   * [TypeScript](webpage/typescript.md)
    * [Plotly](webpage/plotly.md)
    * [D3.js](webpage/d3js.md)
    * [Highcharts.js](webpage/highchartsjs.md)
