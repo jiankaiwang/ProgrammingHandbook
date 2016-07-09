@@ -16,7 +16,7 @@
        * [不同資料型態的操作](webpage/angularjs_basis_data_type_operation.md)
    * [Web API](webpage/web_api.md)
        * [MVC-based Web API](webpage/mvc-based_web_api.md)
-       * [OData](odata.md)
+       * [OData](webpage/odata.md)
        * [JSON.NET](webpage/jsonnet.md)
    * [Web Workers](webpage/web_workers.md)
        * [dedicated worker](webpage/dedicated_worker.md)
