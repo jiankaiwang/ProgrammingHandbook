@@ -26,7 +26,6 @@
        * [Javascript vs. jQuery](javascript_jquery.md)
        * [List and Dictionary](webpage/list_and_dictionary.md)
        * [Regular expression](webpage/js_regular_expression.md)
-       * [Function](webpage/function.md)
    * [jQuery](webpage/jquery.md)
        * [JQuery activities](webpage/jquery_activities.md)
    * [TypeScript](typescript.md)
