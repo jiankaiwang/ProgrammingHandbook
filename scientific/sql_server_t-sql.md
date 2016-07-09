@@ -1,5 +1,7 @@
 # SQL Server (T-SQL)
 
+<script type="text/javascript" src="../js/general.js"></script>
+
 ###更新資料表
 ---
 
