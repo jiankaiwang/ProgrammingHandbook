@@ -95,7 +95,7 @@
 
 | 使用 | 取得範圍 |
 | -- | -- |
-| void srand((unsigned) time(0)) <br>// #ctime | int rand() % (range); |
+| //#ctime<br>void srand((unsigned) time(0)) | int rand() % (range); |
 
 ###三角函數：皆須引用 cmath 
 ---
