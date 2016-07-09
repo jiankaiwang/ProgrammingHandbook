@@ -1,5 +1,7 @@
 # Array and Dictionary
 
+<script type="text/javascript" src="../js/general.js"></script>
+
 ###List structure
 ---
 
