@@ -1,7 +1,6 @@
 # Open Source License
 
-<script type="text/javascript" src="gitbook/app.js"></script>
-<script type="text/javascript" src="js/general.js"></script>
+<script type="text/javascript" src="../js/general.js"></script>
 
 現今存在的開源協議很多，目前經過 Open Source Initiative (OSI) 組織通過批准的開源協議目前有 78 種 (參考[連結](https://opensource.org/licenses/alphabetical))。
 
