@@ -2,6 +2,11 @@
 
 <script type="text/javascript" src="../js/general.js"></script>
 
+| label | desc |
+| -- | -- |
+| self | self-constructed functions |
+
+
 ###List
 ---
 
