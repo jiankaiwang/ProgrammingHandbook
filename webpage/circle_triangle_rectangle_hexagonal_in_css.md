@@ -56,9 +56,6 @@
 }
 </style>
 
-# ----------------------------
-# html body
-# ----------------------------
 <div id="cirShape">
 	<div id="cirImage">	
 		<div id="cirRight"></div>
