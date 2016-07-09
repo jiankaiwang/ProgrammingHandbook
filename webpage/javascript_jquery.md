@@ -1,7 +1,6 @@
 # Javascript vs. jQuery
 
-<script type="text/javascript" src="gitbook/app.js"></script>
-<script type="text/javascript" src="js/general.js"></script>
+<script type="text/javascript" src="../js/general.js"></script>
 
 ###取得 JSON 資料 (GET)
 ---
