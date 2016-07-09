@@ -40,5 +40,8 @@
 | stream_var.setf(Flag); | 依旗標來調整輸入輸出格式<br>如 ios::showpoint 小數點<br>ios::fixed 顯示精確位小數點 | fstream / iostream |
 | stream_var.unsetf(Flag); | 將輸入輸出 Flag 設定取消 | fstream / iostream |
 
+###Character Functions 
+---
+
 
 
