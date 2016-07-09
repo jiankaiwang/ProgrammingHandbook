@@ -67,6 +67,10 @@
 * Network
   * [Cytoscape.js](http://js.cytoscape.org/)
 
+###Static
+---
+
+
 ###Database
 ---
 
