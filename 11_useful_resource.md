@@ -41,7 +41,7 @@
 * Charts
   * [Chart.js](http://www.chartjs.org/) ([中文版](http://www.bootcss.com/p/chart.js/docs/))
   * [Google chart](https://google-developers.appspot.com/chart/interactive/docs/gallery)
-
+  * [HighCharts.js (official link)](http://www.highcharts.com/)
 * MVC
   * AngularJS
     * [jqLite](https://docs.angularjs.org/api/ng/function/angular.element) : support DOM operations
@@ -49,7 +49,6 @@
 * [JSBin](http://jsbin.com/?html,output) : 一套線上 HTML/CSS/Javascript 的開發環境
 * TypeScript :
   * [下載與安裝 (連結)](http://www.typescriptlang.org/)
-* [HighCharts.js (official link)](http://www.highcharts.com/)
 * jQuery Editor :
   * [CKEditor (link)](http://ckeditor.com/)
 * [LaTex Math Symbols](http://web.ift.uib.no/Teori/KURS/WRK/TeX/symALL.html)
