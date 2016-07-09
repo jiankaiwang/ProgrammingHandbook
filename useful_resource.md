@@ -22,6 +22,7 @@
 
 * Codeblock highlighting
 * CSS Styleable reference
+* Cover
 * 
 
 ###Webpage
