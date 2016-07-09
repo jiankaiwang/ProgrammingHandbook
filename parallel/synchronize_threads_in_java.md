@@ -64,6 +64,8 @@ public class useThreadInSafe {
 ###Synchronized by sections
 ---
 
+* In most cases, the first method could meet needs. Sometimes, the function synchronized would be not allowed, the method of section synchronized would be the solution.
+
 ```Java
 class synLockFunSection extends Thread {
 	// resource locking method for solving critical section issues
