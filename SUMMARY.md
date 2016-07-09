@@ -59,7 +59,7 @@
    * [Data accessed by R](r_access_multiple_source_data.md)
    * [S4 Class 使用](s4_class.md)
 * [Parallel](parallel/parallel.md)
-* [Compression](compression.md)
+* [Compression](compression/compression.md)
    * [lz-string](lz-string.md)
    * [gzip in Python](compression/gzip_in_python.md)
 * [Network](network/network.md)
