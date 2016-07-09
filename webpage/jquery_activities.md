@@ -285,13 +285,175 @@ function(data) {
 </body>
 ```
 
+###Environment condition
+---
 
+* 底下例子，可以取得包含畫面、瀏覽器與視窗的長度與寬度。
 
+```html
+<html>
+	<head>
+		<script type="text/javascript" src="./jquery-1.11.1.min_ori.js"></script>
+		<style type="text/css">
+			ul { list-style:none; }
+		</style>
+	</head>
+	<body>
+		<ul id="showSize">
+			<li>Method.1 jQuery</li>
+		</ul>
+		<script type="text/javascript">
+			$(window).resize(function() {
+				$("ul#showSize li.show").remove();
+				$("ul#showSize").append("<li class=\"show\">Browser viewport in height: " + $(window).height() + "</li>");
+				$("ul#showSize").append("<li class=\"show\">Browser viewport in width: " + $(window).width() + "</li>");
+				$("ul#showSize").append("<li class=\"show\">Html document in height: " + $(document).height() + "</li>");
+				$("ul#showSize").append("<li class=\"show\">Html document in width: " + $(document).width() + "</li>");
+				$("ul#showSize").append("<li class=\"show\">Screen size in height: " + screen.height + "</li>");
+				$("ul#showSize").append("<li class=\"show\">Screen size in width: " + screen.width + "</li>");
+			});
+		</script>
+	</body>
+</html>
+```
 
+###Slide Vertically/Horizontally
+---
 
+* Animate Vertically : 底下的例子，可以將選單用垂直的方式移動到 tag 的位置。
 
+```html
+<html>
+<head>
+	<script type='text/javascript' src="./jquery-1.11.1.min_ori.js"></script>
+	<script type='text/javascript'>
+	// move to special section
+	$(function() {
+		$("#moveTOP").click(function() {
+			$('html,body').animate({scrollTop: '0px'},1000);
+		});
+		$("#moveMIDDLE").click(function() {
+			$('html,body').animate({scrollTop: $('#MIDDLE').offset().top},1000);
+		});
+		$("#moveEND").click(function() {
+			$('html,body').animate({scrollTop: $('#END').offset().top},1000);
+		});
+	});
+	</script>
+	<style type='text/css'>
+		div { clear:both; }
+		div#TOP, div#MIDDLE, div#END { height: 500px; }
+	</style>
+</head>
+<body>
+	<div>
+		<div id="moveTOP">TOP</div>
+		<div id="moveMIDDLE">MIDDLE</div>
+		<div id="moveEND">END</div>
+	</div>
+	<p>
+	<div id="TOP">Abstract</div>
+	<div id="MIDDLE">Body</div>
+	<div id="END">Summary</div>
+</body>
+</html>
+```
 
+* Animate Horizontally : 底下的例子可以促使畫面進行水平移動。
 
+```html
+<html>
+<head>
+	<script type='text/javascript' src="./jquery-1.11.1.min_ori.js"></script>
+	<script type='text/javascript'>
+	// move to special section
+	$(document).ready(function(){
+		var docw = 100;
+		$("#moveRight").click(function(){
+			$("#view").animate({
+				scrollLeft: $("#view").scrollLeft() + docw
+			}, 500,function(){});   
+		});
+		$("#moveLeft").click(function(){
+			$("#view").animate({
+				scrollLeft: $("#view").scrollLeft() - docw
+			}, 500,function(){});   
+		});
+	});
+	</script>
+	<style type='text/css'>
+		div.btn, div#view { clear: both; }
+		div.left { float:left; }
+		div#body { width:500px; } /* equal to contain all components inline */
+		div#view { margin: 0px auto; overflow: hidden; width: 100px; height: 100px; }
+	</style>
+</head>
+<body>
+	<div class="btn">
+		<input type="button" id="moveLeft" value="<"/>
+		<input type="button" id="moveRight" value=">"/>
+	</div>
+	<div id="view">
+		<div id="body">
+			<div class="left"><img src="new_facebook.png" width="100px" /></div>
+			<div class="left"><img src="new_google.png" width="100px" /></div>
+			<div class="left"><img src="new_googleSite.png" width="100px" /></div>
+			<div class="left"><img src="new_name.png" width="100px" /></div>
+			<div class="left"><img src="new_ntu.png" width="100px" /></div>
+		</div>
+   </div>
+</body>
+</html>
+```
+
+###time interval function
+---
+
+* 底下的例子，透過 jQuery 進行 time period 的控制。
+
+```html
+<html>
+<head>
+	<script type='text/javascript' src="./jquery-1.11.1.min_ori.js"></script>
+	<script type='text/javascript'>
+	// move to special section
+	var count = 0;
+	setInterval(
+		function(){
+			count += 1;
+			if(count == 5) {
+				$("#view").animate({
+					scrollLeft: $("#view").scrollLeft() - 100*count
+				}, 2000,function(){});
+				count = 0;
+			}
+			else {
+				$("#view").animate({
+					scrollLeft: $("#view").scrollLeft() + 100
+				}, 1000,function(){});  				
+			}
+		}, 3000);
+	</script>
+	<style type='text/css'>
+		div.btn, div#view { clear: both; }
+		div.left { float:left; }
+		div#body { width:500px; } /* equal to contain all components inline */
+		div#view { margin: 0px auto; overflow: hidden; width: 100px; height: 100px; }
+	</style>
+</head>
+<body>
+	<div id="view">
+		<div id="body">
+			<div class="left"><img src="new_facebook.png" width="100px" /></div>
+			<div class="left"><img src="new_google.png" width="100px" /></div>
+			<div class="left"><img src="new_googleSite.png" width="100px" /></div>
+			<div class="left"><img src="new_name.png" width="100px" /></div>
+			<div class="left"><img src="new_ntu.png" width="100px" /></div>
+		</div>
+   </div>
+</body>
+</html>
+```
 
 
 
