@@ -30,7 +30,7 @@
 | stream_var.eof(); | 用預讀下一個字來判別<br>是否為 stream_var 結束。 | fstream / iostream |
 | stream_var.get(char_varable); | 從 stream_var 讀入一個字元<br>存於 char_variable 中 | fstream / iostream |
 | stream_var.getline(string_variable, max_char+1);| 從 stream_var 讀入一行字串，<br>讀入長度為 max_char+1  | fstream / iostream |
-| stream_var.peek(); <br> //return char | 預先讀一個字，但讀完又放回去，用 get 仍可讀這個字，可用於欲讀判斷  | fstream / iostream |
+| stream_var.peek(); <br> //return char | 預先讀一個字，但讀完又放回去，<br>用 get 仍可讀這個字，可用於欲讀判斷  | fstream / iostream |
 | stream_var.put(char_exp); | 將 char 放入 stream_var 中，<br>可顯示或輸出檔案 | fstream / iostream |
 | stream_var.clear(); | 清除 stream_var 讀取指標 | fstream / iostream |
 | stream_var.seekg(int_pos); | 移動讀取指標到那個位置 <br> 如 0 或 ios::beg 表示初始 | fstream / iostream |
