@@ -1,5 +1,7 @@
 # GitBook
 
+<script type="text/javascript" src="js/general.js"></script>
+
 ### Gitbook Codeblock highlighting
 ---
 
@@ -13,8 +15,7 @@
 }
 ```
 
-### Configuration
----
+* Configuration
 
 * You can map file extensions that don't match syntax used in contents by adding a mapping in your book.json plugin configuration section。
 
@@ -33,22 +34,23 @@
 }
 ```
 
-#### Usage
+* Usage
 
-1. Click the Code button 。
-2. It shows \`\`\` (here is the code) \`\`\` 
-3. Add the 「Language Name」 just after the first \`\`\`
-4. for example,<br><br>
-\`\`\`Python<br>
-(python code here)<br>
-\`\`\`<br><br>
+  1. Click the Code button 。
+  2. It shows \`\`\` (here is the code) \`\`\` 
+  3. Add the 「Language Name」 just after the first \`\`\`
+  4. for example,<br>
+```text
+```python
+  python code ...
+``````
 
 ### [CSS Styleable reference](http://highlightjs.readthedocs.org/en/latest/css-classes-reference.html)
 ---
 
 * Just remember the 「Language Name」 above must be one of the 「Language names and aliases」
 
- ### GitBook Cover
+### GitBook Cover
  ---
  * Simply add a image named 「cover.jpg」 (notice: only this file name with .jpg extension is accepted) in the file directory.
  * Use plugin named autocover:
@@ -82,6 +84,7 @@
 
 ### Programming Languages Supported
 ---
+
 * Jinja2 in Ckan: the block tag, {, would cause gitbook parsing errors.
 
 
