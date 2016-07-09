@@ -20,7 +20,7 @@
        * [JSON.NET](jsonnet.md)
    * [Web Workers](web_workers.md)
        * [dedicated worker](webpage/dedicated_worker.md)
-       * [shared worker](shared_worker.md)
+       * [shared worker](webpage/shared_worker.md)
    * [Web Method](webpage/web_method.md)
    * [Javascript](webpage/javascript.md)
        * [Javascript vs. jQuery](javascript_jquery.md)
