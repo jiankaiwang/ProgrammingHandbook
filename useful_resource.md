@@ -70,6 +70,14 @@
 ###Static
 ---
 
+* C library
+  1. [CPlusPlus](http://www.cplusplus.com/reference/clibrary/)
+* C++ library
+  1. [CPlusPlus](http://www.cplusplus.com/reference/)
+* Java
+  1. [SE7 library](http://docs.oracle.com/javase/7/docs/api/)
+* Csharp
+  1. [MSDN](https://msdn.microsoft.com/en-us/library/aa287477.aspx)
 
 ###Database
 ---
