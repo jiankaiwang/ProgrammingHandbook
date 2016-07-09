@@ -1,7 +1,6 @@
 # CKEditor
 
-<script type="text/javascript" src="gitbook/app.js"></script>
-<script type="text/javascript" src="js/general.js"></script>
+<script type="text/javascript" src="../js/general.js"></script>
 
 ###開始使用
 ---
@@ -41,7 +40,7 @@
 
 其中 textarea 中 id 名稱定義主要被 jquery 使用，而相較於 name ，則是可以搭配 form submit 使用來，而 row 與 column 分別定義 textarea 的編輯區域有多少列與多少欄。若是透過瀏覽器查看該頁面，如下畫面；
 
-![](images/webpage/ckeditor.png)
+![](../images/ckeditor.png)
 
 如此便可視成初步建置完成。
 
