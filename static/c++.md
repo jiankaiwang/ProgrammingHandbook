@@ -90,7 +90,24 @@
 | to const char array | str.c_str(); //需用指標或一個一個存入 char 陣列中 |
 | 取得長度 | Str.length(); //類似 strlen(cstr_exp) ，不含  ‘\0’  |
 
+###Random Number Generator：以時間種子為例 
+---
 
+| 使用 | 取得範圍 |
+| -- | -- |
+| void srand((unsigned) time(0)) <br>// #ctime | int rand() % (range); |
 
+###三角函數：皆須引用 cmath 
+---
 
+| 使用 | 說明 |
+| -- | -- |
+| double (TrigonFunc)(double); |  TrigonFunc 為 sin、cos、tan、acos、sinh |
+
+###演算法
+---
+
+| 宣告 | 說明/例子 | 標頭檔 |
+| -- | -- | -- |
+| (void) sort(memPos, memPos+Length); | 對記憶體位址 memPos，及此位址開始往後 Length 個元素，進行排序 | algorithm |
 
