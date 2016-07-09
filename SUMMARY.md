@@ -27,7 +27,7 @@
        * [List and Dictionary](webpage/list_and_dictionary.md)
        * [Regular expression](webpage/js_regular_expression.md)
    * [jQuery](webpage/jquery.md)
-       * Basic jQuery
+       * [Basic jQuery](webpage/basic_jquery.md)
        * [JQuery activities](webpage/jquery_activities.md)
    * [TypeScript](typescript.md)
    * [Plotly](webpage/plotly.md)
