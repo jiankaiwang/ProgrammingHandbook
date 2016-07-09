@@ -16,11 +16,11 @@ Restful API 為目前主流的資料傳輸方式之一，其 JSON 資料格式�
 ---
 由「檔案」 > 「新增」 > 「專案」 > 選擇 Visual C-sharp 「Web」 > 「ASP.NET Web 應用程式」 > 選擇 「Web API」 > 右側「變更驗證」 > 「無驗證」
 
-![](images/webapi-jsonnet-vs-create.png)
+![](../images/webapi-jsonnet-vs-create.png)
 
 開啟後，可以直接點擊瀏覽器來執行，此時會出現下列畫面，其網址為 ** http://localhost:9000 **
 
-![](images/webapi/webapi-jsonnet-vs-create-frontpage.png)
+![](../images/webapi/webapi-jsonnet-vs-create-frontpage.png)
 
 ###創建一個 Controller
 ---
