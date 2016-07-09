@@ -172,4 +172,127 @@
 </div>
 ```
 
+###hexagonal
+---
+
+```html
+<style type="text/css">
+/* octagon */
+#octShape { 
+	height: 40px;
+	float: left;
+	margin-left: 5px;
+}
+#octImage { 
+	height: 30px;
+	margin-left: 15px;
+	text-align: center;
+	clear: both;
+}
+#octRight { 
+	width: 40px;
+	height: 40px;
+	position: relative;
+	float: left;
+	background: #f1f1f1;
+	/* Old browsers */
+	background: -moz-linear-gradient(left,  #f1f1f1 0%, #f1f1f1 49%, #00ff00 51%, #00ff00 100%);
+	/* FF3.6+ */
+	background: -webkit-gradient(linear, left top, right top, color-stop(0%,#f1f1f1), color-stop(49%,#f1f1f1), color-stop(51%,#00ff00), color-stop(100%,#00ff00));
+	/* Chrome,Safari4+ */
+	background: -webkit-linear-gradient(left,  #f1f1f1 0%,#f1f1f1 49%,#00ff00 51%,#00ff00 100%);
+	/* Chrome10+,Safari5.1+ */
+	background: -o-linear-gradient(left,  #f1f1f1 0%,#f1f1f1 49%,#00ff00 51%,#00ff00 100%);
+	/* Opera 11.10+ */
+	background: -ms-linear-gradient(left,  #f1f1f1 0%,#f1f1f1 49%,#00ff00 51%,#00ff00 100%);
+	/* IE10+ */
+	background: linear-gradient(to right,  #f1f1f1 0%,#f1f1f1 49%,#00ff00 51%,#00ff00 100%);
+	/* W3C */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f1f1f1', endColorstr='#00ff00',GradientType=1 );
+	/* IE6-9 */
+}
+#octRight:before {
+	content: "";
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 16px;
+	height: 0;
+	float: left;
+	border: 12px;
+	border-left-style: solid;
+	border-left-color: rgba(255,255,255,1);
+	border-right-style: solid;
+	border-right-color: rgba(255,255,255,1);
+	border-bottom-style: solid;
+	border-bottom-color: rgba(255,255,255,0);
+	background: #f1f1f1;
+	/* Old browsers */
+	background: -moz-linear-gradient(left,  #f1f1f1 0%, #f1f1f1 49%, #00ff00 51%, #00ff00 100%);
+	/* FF3.6+ */
+	background: -webkit-gradient(linear, left top, right top, color-stop(0%,#f1f1f1), color-stop(49%,#f1f1f1), color-stop(51%,#00ff00), color-stop(100%,#00ff00));
+	/* Chrome,Safari4+ */
+	background: -webkit-linear-gradient(left,  #f1f1f1 0%,#f1f1f1 49%,#00ff00 51%,#00ff00 100%);
+	/* Chrome10+,Safari5.1+ */
+	background: -o-linear-gradient(left,  #f1f1f1 0%,#f1f1f1 49%,#00ff00 51%,#00ff00 100%);
+	/* Opera 11.10+ */
+	background: -ms-linear-gradient(left,  #f1f1f1 0%,#f1f1f1 49%,#00ff00 51%,#00ff00 100%);
+	/* IE10+ */
+	background: linear-gradient(to right,  #f1f1f1 0%,#f1f1f1 49%,#00ff00 51%,#00ff00 100%);
+	/* W3C */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f1f1f1', endColorstr='#00ff00',GradientType=1 );
+	/* IE6-9 */
+}
+#octRight:after {
+	content: "";
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	width: 16px;
+	height: 0;
+	float: left;
+	border: 12px;
+	border-left-style: solid;
+	border-left-color: rgba(255,255,255,1);
+	border-right-style: solid;
+	border-right-color: rgba(255,255,255,1);
+	border-top-style: solid;
+	border-top-color: rgba(255,255,255,0);
+	background: #f1f1f1;
+	/* Old browsers */
+	background: -moz-linear-gradient(left,  #f1f1f1 0%, #f1f1f1 49%, #00ff00 51%, #00ff00 100%);
+	/* FF3.6+ */
+	background: -webkit-gradient(linear, left top, right top, color-stop(0%,#f1f1f1), color-stop(49%,#f1f1f1), color-stop(51%,#00ff00), color-stop(100%,#00ff00));
+	/* Chrome,Safari4+ */
+	background: -webkit-linear-gradient(left,  #f1f1f1 0%,#f1f1f1 49%,#00ff00 51%,#00ff00 100%);
+	/* Chrome10+,Safari5.1+ */
+	background: -o-linear-gradient(left,  #f1f1f1 0%,#f1f1f1 49%,#00ff00 51%,#00ff00 100%);
+	/* Opera 11.10+ */
+	background: -ms-linear-gradient(left,  #f1f1f1 0%,#f1f1f1 49%,#00ff00 51%,#00ff00 100%);
+	/* IE10+ */
+	background: linear-gradient(to right,  #f1f1f1 0%,#f1f1f1 49%,#00ff00 51%,#00ff00 100%);
+	/* W3C */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f1f1f1', endColorstr='#00ff00',GradientType=1 );
+	/* IE6-9 */
+}
+#octText { 
+	height: 10px;
+	clear: both;
+}
+#octShape, #octImage, #octText { 
+	width: 70px;
+	text-align: center;
+}
+</style>
+
+<div id="octShape">
+	<div id="octImage">
+		<div id="octRight"></div>
+	</div>
+	<div id="octText">hexagonal</div>
+</div>
+```
+
+
+
 
