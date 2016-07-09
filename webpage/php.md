@@ -71,3 +71,21 @@ $getAllKey = array_keys($newHashList);
 # the length of the hash
 echo count(array_keys($newHashList));
 ```
+
+###Function declear
+---
+
+```php
+# function declear
+function getString($str1, $str2) {
+	# in php, string concatenating is achieved by '.'
+	return($str1.$str2);
+}
+
+# function usage
+echo getString("Hello "."world.");
+```
+
+
+
+
