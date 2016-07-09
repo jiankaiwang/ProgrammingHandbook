@@ -60,7 +60,7 @@
    * [Data accessed by R](scientific/r_access_multiple_source_data.md)
    * [S4 Class 使用](scientific/s4_class.md)
 * [Parallel](parallel/parallel.md)
-   * [Threading in Java](static/threading_in_java.md)
+   * [Threading in Java](parallel/threadingin_java_md.md)
 * [Compression](compression/compression.md)
    * [lz-string](compression/lz-string.md)
    * [gzip in Python](compression/gzip_in_python.md)
