@@ -2,7 +2,7 @@
 
 <script type="text/javascript" src="js/general.js"></script>
 
-### Gitbook Codeblock highlighting
+###Codeblock highlighting
 ---
 
 * Install
