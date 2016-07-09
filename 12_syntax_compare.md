@@ -15,5 +15,5 @@
 * List/Array Struct
 * Hash/Dictionary structure
 * Function
-
+* Regular expression
 
