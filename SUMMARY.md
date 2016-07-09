@@ -23,7 +23,7 @@
    * [TypeScript](typescript.md)
    * [D3.js](d3js.md)
    * [Highcharts.js](highchartsjs.md)
-   * [Plotly](plotly.md)
+   * [Plotly](webpage/plotly.md)
    * [Web Workers](web_workers.md)
        * [dedicated worker](dedicated_worker.md)
        * [shared worker](shared_worker.md)
