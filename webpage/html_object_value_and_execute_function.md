@@ -1,6 +1,5 @@
 # 取得 HTML 物件內容與執行函式方法
 
-<script type="text/javascript" src="../gitbook/app.js"></script>
 <script type="text/javascript" src="../js/general.js"></script>
 
 常見的伺服器程式開發語言如 ASPX, PHP, JSP, Python (搭配 Jinja) 等，與 HTML, CSS, Javascript 等瀏覽器端的框架共同組成開發網站。為了最佳化網頁視覺效果，CSS 與 Javascript 共同開發瀏覽器端呈現內容。每種伺服器網頁開發語言有不同取得 html 物件値的方式，底下說明數種伺服器端網頁語言的取得方法與執行方法。
