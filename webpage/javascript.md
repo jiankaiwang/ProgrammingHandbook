@@ -5,6 +5,28 @@
 ###List
 ---
 
+| desc | api |
+| -- | -- |
+| declear a list | var newList = [10,20,30]; |
+| push a element | newList.push(100); |
+| pop a element | var getEle = newList.pop(); |
+| index of the element | var index = newList.indexOf(10); |
+| exists in a list | if(newList.indexOf("notShowed") > -1) |
+| delete the element | newList.splice(newList.indexOf(10),1); |
+| the length of a list | var listlen = newList.length; |
+
+###Dictionary
+---
+
+| desc | api |
+| -- | -- |
+| declear a list | var newList = [10,20,30]; |
+| push a element | newList.push(100); |
+| pop a element | var getEle = newList.pop(); |
+| index of the element | var index = newList.indexOf(10); |
+| exists in a list | if(newList.indexOf("notShowed") > -1) |
+| delete the element | newList.splice(newList.indexOf(10),1); |
+| delete the element | newList.splice(newList.indexOf(10),1); |
 
 
 ###Function declear
