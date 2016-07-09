@@ -24,7 +24,7 @@
 | 宣告 | 說明/例子 | 標頭檔 |
 | -- | -- | -- |
 | stream_var.open(); | 串流輸入輸出的開啟<br>fin.open(); fout.open(); | fstream |
-| 0:3 | 1:3 | 2:3 |
+| stream_var.fail(); | 搭配 .open() 使用<br>return true 當串流開啟失敗 | fstream / iostream |
 | 0:4 | 1:4 | 2:4 |
 | 0:5 | 1:5 | 2:5 |
 | 0:6 | 1:6 | 2:6 |
