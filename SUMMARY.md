@@ -48,6 +48,7 @@
    * [Node.js](webpage/nodejs.md)
    * [io.js](webpage/iojs.md)
    * [leaflet.js](webpage/leafletjs.md)
+* Static
 * [Database](database/database.md)
    * [Syntax comparison](database/syntax_comparison.md)
    * [SQL Server (T-SQL)](scientific/sql_server_t-sql.md)
@@ -65,5 +66,4 @@
 * [Network](network/network.md)
    * [FTP in C#](network/ftp_in_csharp.md)
    * [Firewall by IP Address in C#](network/firewall_by_ip_address_in_csharp.md)
-* Static
 
