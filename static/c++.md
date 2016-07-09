@@ -65,8 +65,8 @@
 | long atol(const char a[]); | 將 c-string array 轉成 long | cstdlib |
 | double atof(const char a[]); | 將 c-string array 轉成 double | cstdlib |
 | (void) strcat(c-string_var, c-string_exp); | 將 c-string_exp 的內容接在<br>c-string_var 後，沒有長度檢查 | cstring |
-| 0:6 | 1:6 | cstring |
-| 0:7 | 1:7 | cstring |
+| (bool) strcmp(c-string_var1,c-string_var2); | 比較兩個字串是否不同，傳 T，是不同；傳回 F，相同 | cstring |
+| (void) strcpy(c-string_var, c-string_exp); | 將 c-string_exp 的內容一併複製到 c-string_var，沒有長度檢查 | cstring |
 | 0:8 | 1:8 | cstring |
 | 0:9 | 1:9 | cstring |
 | 0:10 | 1:10 | cstring |
