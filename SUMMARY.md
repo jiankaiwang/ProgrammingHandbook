@@ -18,7 +18,7 @@
        * [MVC-based Web API](webpage/mvc-based_web_api.md)
        * [OData](odata.md)
        * [JSON.NET](webpage/jsonnet.md)
-   * [Web Workers](web_workers.md)
+   * [Web Workers](webpage/web_workers.md)
        * [dedicated worker](webpage/dedicated_worker.md)
        * [shared worker](webpage/shared_worker.md)
    * [Web Method](webpage/web_method.md)
