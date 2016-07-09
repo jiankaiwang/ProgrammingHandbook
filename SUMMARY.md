@@ -9,7 +9,6 @@
    * [Simian : a similarity analyser](software_engineering/simian_a_similarity_analyser.md)
    * [SourceMonitor : 程式碼複雜度分析工具](software_engineering/sourcemonitor.md)
 * [Webpage](chapter1.md)
-   * [Javascript vs. jQuery](javascript_jquery.md)
    * [Syntax Compare](12_syntax_compare.md)
        * [Javascript vs. jQuery](javascript_jquery.md)
        * [取得 HTML 物件內容與執行函式方法](webpage/html_object_value_and_execute_function.md)
