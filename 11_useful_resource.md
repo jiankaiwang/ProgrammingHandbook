@@ -21,14 +21,11 @@
 ---
 
 * **[W3school.com (link)](http://www.w3schools.com/)** ，包含 HTML 架構、CSS、Javascript 等。
-* JQuery library: 
-  * [jQuery (link)](http://jquery.com/) ，幾乎可以說是網頁程式發展的重要推手。
-* PHP document:
-  * [PHP reference (link)](http://php.net/manual/en/language.references.php) ，重要網頁語言之一，從 LAMP 就可以知道。
-* ASP.NET: 微軟系統的網頁語言
+* [jQuery (link)](http://jquery.com/) ，幾乎可以說是網頁程式發展的重要推手。
+* [PHP reference (link)](http://php.net/manual/en/language.references.php) ，重要網頁語言之一，從 LAMP 就可以知道。
+* ASP.NET 
   * [MSDN 版本](https://msdn.microsoft.com/zh-tw/library/ms178463.aspx)
-* ASP.NET MVC Odata
-  * [技術支援](http://www.asp.net/web-api/overview/odata-support-in-aspnet-web-api/odata-v4/create-an-odata-v4-endpoint) : OData v4 EndPoint using ASP.NET Web API 2.2
+  * [MVC Odata 技術支援](http://www.asp.net/web-api/overview/odata-support-in-aspnet-web-api/odata-v4/create-an-odata-v4-endpoint) : OData v4 EndPoint using ASP.NET Web API 2.2
   * [MSDN](https://msdn.microsoft.com/library/azure/gg312156.aspx) : 支援的 OData 查詢選項
   * [OData Version 3.0 Core Protocol](http://www.odata.org/documentation/odata-version-3-0/odata-version-3-0-core-protocol/) : 包含多種 filter 方式 
 * GitBook
@@ -39,7 +36,6 @@
 * [JSBin](http://jsbin.com/?html,output) : 一套線上 HTML/CSS/Javascript 的開發環境
 * TypeScript :
   * [下載與安裝 (連結)](http://www.typescriptlang.org/)
-* Business Intelligence
 * [D3.js (官方網站連結)](https://d3js.org/)
   * [D3 教學連結](https://github.com/mbostock/d3/wiki/Tutorials)
   * [D3 API Reference link (English version)](https://github.com/mbostock/d3/wiki/API-Reference)
