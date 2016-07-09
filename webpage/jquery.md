@@ -144,8 +144,10 @@ style="border: 1px solid green; background: rgba(255,128,0,0.5);";
 		<span id="tip">欄位必填</span>
 	</form>
 	<script type="text/javascript">
+        // --------------------------------------------------
         // event 的 preventDefault 用於避免欄位恢復成一開始的狀態
         // .val() 用來取出 input 內的資料
+        // --------------------------------------------------
 		$("form").submit(function(event) {
 			if($("#username").val() == "") {
 				$("span#tip").show();
