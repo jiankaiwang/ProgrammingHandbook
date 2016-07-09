@@ -1,7 +1,6 @@
 # PHP access MySQL
 
-<script type="text/javascript" src="gitbook/app.js"></script>
-<script type="text/javascript" src="js/general.js"></script>
+<script type="text/javascript" src="../js/general.js"></script>
 
 網頁取得資料庫內容一直都是常會遇見的情境，底下實作數種 PHP 連接資料庫的方式。
 
