@@ -1,5 +1,7 @@
 # AngularJS
 
+<script type="text/javascript" src="js/general.js"></script>
+
 一套由 Google 主力開發的 Javascript 架構，其關注的議題為 CRUD 的操作。而 AngularJS 有數項特性；
 
   * 宣告式語法 (Directives)
