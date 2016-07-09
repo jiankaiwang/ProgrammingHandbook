@@ -15,8 +15,11 @@
 | double exp(double); | double res = exp(2.0); //res = 7.389 | cmath |
 | double log(double); | 返回 $$log_{e}$$ 的值| cmath |
 | double log10(double); | 返回 $$log_{10}$$ 的值 | cmath |
-| double ceil(double); | 返回最接近的大整數 | cmath |
-| double floor(double); | 返回最接近的小整數 | cmath |
+| double ceil(double); | 返回最接近的大整數<br>double res = ceil(-1.2); //res = -1.0;  | cmath |
+| double floor(double); | 返回最接近的小整數<br>double res = floor(-1.2); //res = -2.0;  | cmath |
+
+###檔案 I/O 成員函式
+---
 
 
 
