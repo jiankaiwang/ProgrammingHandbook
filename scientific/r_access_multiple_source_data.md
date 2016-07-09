@@ -1,4 +1,7 @@
 # R access multiple source data
+
+<script type="text/javascript" src="../js/general.js"></script>
+
 ###目前測試過的來源如下
 *  txt (純文字檔，含以 Tab 分隔檔案)
 *  csv (以逗號分隔檔案)
