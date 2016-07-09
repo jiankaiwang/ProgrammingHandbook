@@ -26,6 +26,14 @@
 | delete the whole Hash | unset($preparedForDelete); |
 | show the whole key | $getAllKey = array_keys($newHashList); |
 
+###Regular Expression
+---
+
+| desc | api |
+| -- | -- |
+| Match and Test a String | if(preg_match("/motif_(\S)_(\d\*).png/",$getStr)) |
+| Extract from the string | preg_match("/motif_(\S)_(\d\*).png/",$getStr,$matches); |
+
 ###Function declear
 ---
 
