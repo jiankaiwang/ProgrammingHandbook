@@ -48,7 +48,7 @@
    * [Node.js](webpage/nodejs.md)
    * [io.js](webpage/iojs.md)
    * [leaflet.js](webpage/leafletjs.md)
-* Static
+* [Static](static/static.md)
 * [Database](database/database.md)
    * [Syntax comparison](database/syntax_comparison.md)
    * [SQL Server (T-SQL)](scientific/sql_server_t-sql.md)
