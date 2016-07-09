@@ -21,7 +21,7 @@
    * [Web Workers](web_workers.md)
        * [dedicated worker](dedicated_worker.md)
        * [shared worker](shared_worker.md)
-   * [Web Method](webpage/webmethod_md.md)
+   * [Web Method](webpage/web_method.md)
    * [Javascript](webpage/javascript.md)
        * [Javascript vs. jQuery](javascript_jquery.md)
        * [List and Dictionary](webpage/list_and_dictionary.md)
