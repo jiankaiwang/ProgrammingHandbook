@@ -23,8 +23,8 @@
 
 | 宣告 | 說明/例子 | 標頭檔 |
 | -- | -- | -- |
-| stream_var.open(); | 串流輸入輸出的開啟fin.open(); fout.open(); | fstream |
-| stream_var.fail(); | 搭配 .open() 使用return true 當串流開啟失敗 | fstream / iostream |
+| stream_var.open(); | 串流輸入輸出的開啟，fin.open(); fout.open(); | fstream |
+| stream_var.fail(); | 搭配 .open() 使用，return true 當串流開啟失敗 | fstream / iostream |
 | stream_var.close(); | 關閉串流 | fstream / iostream |
 | \*stream_var.bad(); | stream_var 為 corrupted 時為 true | fstream / iostream |
 | stream_var.eof(); | 用預讀下一個字來判別是否為 stream_var 結束。 | fstream / iostream |
@@ -35,9 +35,9 @@
 | stream_var.clear(); | 清除 stream_var 讀取指標 | fstream / iostream |
 | stream_var.seekg(int_pos); | 移動讀取指標到那個位置  如 0 或 ios::beg 表示初始 | fstream / iostream |
 | stream_var.putback(char_exp); | 改變下一個要讀入的 char 成剛 putback 的 char | fstream / iostream |
-| stream_var.precision(int_exp);  //cout.precision(4);  //cout << 100.12345 << endl;  | 設定數字輸出的精確度達幾位，含整數(先)與小數(後)。 //輸出  100.1 | fstream / iostream |
+| stream_var.precision(int_exp);<br>//cout.precision(4);<br>//cout << 100.12345 << endl; | 設定數字輸出的精確度達幾位，含整數(先)與小數(後)。<br>//輸出 100.1 | fstream / iostream |
 | stream_var.width(int_exp); | 設定用多少寬度來表示輸出 (靠右顯示) | fstream / iostream |
-| stream_var.setf(Flag); | 依旗標來調整輸入輸出格式如 ios::showpoint 小數點ios::fixed 顯示精確位小數點 | fstream / iostream |
+| stream_var.setf(Flag); | 依旗標來調整輸入輸出格式，如<br>ios::showpoint 小數點<br>ios::fixed 顯示精確位小數點 | fstream / iostream |
 | stream_var.unsetf(Flag); | 將輸入輸出 Flag 設定取消 | fstream / iostream |
 
 ###Character Functions 
@@ -83,7 +83,7 @@
 | -- | -- |
 | 建構子(x3) | string name, name2(string), name3(c-string); |
 | 取得字串內元素 | name[i]; name.at[i]; name.substr(Pos, Length); |
-| 指定/修飾 | name1 = name2; name1 += name2; name1.empty(); name1.insert(Pos,Str); //插入 Str 字串於  name1 中 |
+| 指定/修飾 | name1 = name2; name1 += name2; name1.empty();<br>name1.insert(Pos,Str); //插入 Str 字串於  name1 中 |
 | 比較 | ==; !=; <; >; <= ; >= //依  ascii  及每個字比，似字典 |
 | find | (int) name.find(str); (int) name.find(Str,Pos); //沒有 null |
 | swap | swap(a,b); //a,b  相同資料型態，亦含  struct，class  |
