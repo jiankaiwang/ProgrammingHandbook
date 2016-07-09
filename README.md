@@ -19,6 +19,11 @@ So, let us explore wonderful software world.
 
 * 軟體開發的心法。
 
+###Gitbook
+---
+
+* 此編輯器的相關編輯與 plugin 使用方法。
+
 ###Webpage
 ---
 
