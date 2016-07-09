@@ -1,7 +1,7 @@
 # Summary
 
 * [Introduction](README.md)
-* [Useful Resource](11_useful_resource.md)
+* [Useful Resource](useful_resource.md)
 * [License](license.md)
    * [BSD License](license/bsd_license.md)
 * [Software Engineering](software_engineering/software_engineering.md)
