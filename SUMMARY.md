@@ -24,7 +24,7 @@
    * [Web Method](webmethod/web_method.md)
    * [Javascript](webpage/javascript.md)
        * [Javascript vs. jQuery](javascript_jquery.md)
-       * List and Dictionary
+       * [List and Dictionary](webpage/list_and_dictionary.md)
        * [Regular expression](webpage/js_regular_expression.md)
    * [jQuery](webpage/jquery.md)
        * [JQuery activities](webpage/jquery_activities.md)
