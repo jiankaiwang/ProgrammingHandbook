@@ -52,7 +52,7 @@
    * [Syntax comparison](database/syntax_comparison.md)
    * [SQL Server (T-SQL)](sql_server_t-sql.md)
    * [MySQL](database/mysql.md)
-   * [PHP access MySQL](php_access_mysql.md)
+   * [PHP access MySQL](database\php_access_mysql.md)
    * [PDO access MySQL](database/pdo_access_mysql.md)
    * [Query from SQL Server in C#](database/query_from_sql_server_in_csharp.md)
 * [Scientific](scientific.md)
