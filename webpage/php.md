@@ -13,6 +13,19 @@
 | exists in a list | if(in_array("checkEles", $newList)) |
 | the length of a list | $listLen = count($newList); |
 
+###Dictionary
+---
+
+| desc | api |
+| -- | -- |
+| declear a hash | $emptyHashList = array(); |
+| key exists in list | if(array_key_exists("key1", $newHashList)) |
+| add a pair | $newHashList["new_key"] = "new_value"; |
+| modify the value of the key | $preparedForDelete["k5"] = "new_v5"; |
+| delete a pair | unset($preparedForDelete["k4"]); |
+| delete the whole Hash | unset($preparedForDelete); |
+| show the whole key |$getAllKey = array_keys($newHashList); |
+
 ###Function declear
 ---
 
