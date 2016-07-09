@@ -50,7 +50,7 @@
 
 * Just remember the 「Language Name」 above must be one of the 「Language names and aliases」
 
-### GitBook Cover
+### Cover
  ---
  * Simply add a image named 「cover.jpg」 (notice: only this file name with .jpg extension is accepted) in the file directory.
  * Use plugin named autocover:
