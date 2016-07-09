@@ -81,14 +81,14 @@
 
 | 類型 | 方法 |
 | -- | -- |
-| 0:2 | 1:2 |
-| 0:3 | 1:3 |
-| 0:4 | 1:4 |
-| 0:5 | 1:5 |
-| 0:6 | 1:6 |
-| 0:7 | 1:7 |
-| 0:8 | 1:8 |
-| 0:9 | 1:9 |
+| 建構子(x3) | string name, name2(string), name3(c-string); |
+| 取得字串內元素 | name[i]; name.at[i]; name.substr(Pos, Length); |
+| 指定/修飾 | name1 = name2; name1 += name2; name1.empty(); name1.insert(Pos,Str); //插入 Str 字串於  name1 中 |
+| 比較 | ==; !=; <; >; <= ; >= //依  ascii  及每個字比，似字典 |
+| find | (int) name.find(str); (int) name.find(Str,Pos); //沒有 null |
+| swap | swap(a,b); //a,b  相同資料型態，亦含  struct，class  |
+| to const char array | str.c_str(); //需用指標或一個一個存入 char 陣列中 |
+| 取得長度 | Str.length(); //類似 strlen(cstr_exp) ，不含  ‘\0’  |
 
 
 
