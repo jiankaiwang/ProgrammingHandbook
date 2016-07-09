@@ -28,6 +28,7 @@
        * [Regular expression](webpage/js_regular_expression.md)
    * [jQuery](webpage/jquery.md)
        * [JQuery activities](webpage/jquery_activities.md)
+       * Basic jQuery
    * [TypeScript](typescript.md)
    * [Plotly](webpage/plotly.md)
    * [D3.js](d3js.md)
