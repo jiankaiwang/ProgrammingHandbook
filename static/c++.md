@@ -59,6 +59,22 @@
 ###C-String functions 
 ---
 
+| 宣告 | 說明/例子 | 標頭檔 |
+| -- | -- | -- |
+| int atoi(const char a[]); | 將 c-string array 轉成 int | cstdlib |
+| long atol(const char a[]); | 將 c-string array 轉成 long | cstdlib |
+| double atof(const char a[]); | 將 c-string array 轉成 double | cstdlib |
+| (void) strcat(c-string_var, c-string_exp); | 將 c-string_exp 的內容接在<br>c-string_var 後，沒有長度檢查 | cstring |
+| 0:6 | 1:6 | cstring |
+| 0:7 | 1:7 | cstring |
+| 0:8 | 1:8 | cstring |
+| 0:9 | 1:9 | cstring |
+| 0:10 | 1:10 | cstring |
+| 0:11 | 1:11 | cstring |
+| 0:12 | 1:12 | cstring |
+| 0:13 | 1:13 | cstring |
+| 0:14 | 1:14 | cstring |
+| 0:15 | 1:15 | cstring |
 
 
 
