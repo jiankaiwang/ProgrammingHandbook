@@ -29,6 +29,11 @@
 ###Function declear
 ---
 
+| desc | api |
+| -- | -- |
+| declear a function | function funName = function(parm1, param2) { return (); } |
+| declear a function | var funName = function(parm1, param2) { return (); } |
+
 ```javascript
 //method.1
 function getString = function(str1,str2,str3) {
