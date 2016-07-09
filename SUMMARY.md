@@ -22,7 +22,7 @@
    * [Web Method](webmethod/web_method.md)
    * [Javascript](webpage/javascript.md)
        * [Javascript vs. jQuery](javascript_jquery.md)
-       * Regular expression
+       * [Regular expression](webpage/js_regular_expression.md)
    * [jQuery](webpage/jquery.md)
        * [JQuery activities](webpage/jquery_activities.md)
    * [TypeScript](typescript.md)
