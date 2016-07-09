@@ -39,3 +39,13 @@
 | -- | -- |
 | declear a function | function funName = function(parm1, param2) { return (); } |
 | declear a function | var funName = function(parm1, param2) { return (); } |
+
+###Regular expression
+---
+
+| desc | api |
+| -- | -- |
+| Regular Expression | var re = /^([\w-]+(?:\.[\w-]+)*)@((?:[\w-]+\.)*\w[\w-]{0,66})\.([a-z]{2,6}(?:\.[a-z]{2})?)$/i; |
+| Test a String | var boolRes = re.test(var testString); |
+| Extract from the string | var getHcodeTtl = "hcode d31b3".match(/hcode\t(\S\*)/i); |
+
