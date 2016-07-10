@@ -51,3 +51,73 @@ new_matrx <- matrix(
 ```R
 transZ <- t(Z)
 ```
+
+###Loop
+---
+
+| api | desc |
+| -- | -- |
+| for(i in 1:100) { ... } | for loop with setp 1 |
+| while(a == "same") { ... } | while loop with condition |
+| for(i in seq(1,101,by=10)) { ... } | foreach loop |
+
+###Branch
+---
+
+| api | desc |
+| -- | -- |
+| is.numeric(number) | is numeric |
+| is.matrix(matrix) | is matrix |
+
+* if else
+
+```R
+if() { ... }
+else if() { ... }
+else { ... }
+```
+
+* try catch
+
+```R
+tryCatch(
+	res <- as.numeric(input),
+	warning = function(w) { ... },
+	error = function(e) { ... },
+	finally { ... }
+)
+```
+
+###System Interaction
+---
+
+* system parameters
+
+```R
+# trailingOnly = TRUE/FALSE to show all default parameters
+sysArgs <- commandArgs(trailingOnly = TRUE)
+```
+
+* start from index 1
+
+```R
+for(i in 1:length(sysArgs)) { ... }
+```
+
+###Set theory
+---
+
+| api | desc |
+| -- | -- |
+| ttlUnion <- union(A, B) | union |
+| ttlIntersection <- intersect(A, B) | intersect |
+| ttlDiff <- setdiff(A, B) | A-B |
+| ttlEqual <- setequal(A, B) | A == B |
+| if(is.element("abc",C)) | abc in set.C |
+| if(ele %in% A) | element in set.A |
+
+
+
+
+
+
