@@ -13,6 +13,34 @@
 | varToInt = int(var) | to integer |
 | varToFloat = float(var) | to float |
 
+###Loop
+---
+
+```python
+# for loop-index
+for i in range(1,10,1):
+  print i
+```
+
+```python
+# for loop similar with foreach
+items = ["a string","123","1.37"]
+for element in items:
+  print element
+```
+
+```python
+# while loop
+while True:
+  break
+```
+
+###Function
+---
+
+
+
+
 ###List
 ---
 
