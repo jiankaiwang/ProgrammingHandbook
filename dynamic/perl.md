@@ -16,6 +16,10 @@
 ###Loop
 ---
 
+| api | desc |
+| -- | -- |
+| sub getNum {<br> my ($para1, $para2) = @\_;<br> return 1;<br> } | declear function |
+| my $getRes = getNum("input",1); | use function |
 
 
 ###List
