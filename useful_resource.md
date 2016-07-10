@@ -108,6 +108,7 @@
   * [C++ 11](http://en.cppreference.com/w/cpp/language/lambda)
   * [Intel](https://software.intel.com/en-us/intel-sdp-home)
 * [CUDA](http://docs.nvidia.com/cuda/)
+* [OpenMP](https://computing.llnl.gov/tutorials/openMP/)
 
 ###Compression
 ---
