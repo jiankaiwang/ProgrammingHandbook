@@ -36,6 +36,12 @@ So, let us explore wonderful software world.
 * static 程式語言開發。
 * Include C, C++, Java, C#, etc. Besides, also note the essential tools used to develop, debug, testing with them.
 
+###Dynamic
+---
+
+* dynamic 語言程式開發。
+* Include python, perl, ruby, etc. Also, provide several specific programs to implement security issues.
+
 ###Database
 ---
 
