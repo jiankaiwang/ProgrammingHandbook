@@ -71,13 +71,16 @@
 ---
 
 * C library
-  1. [CPlusPlus](http://www.cplusplus.com/reference/clibrary/)
+  * [CPlusPlus](http://www.cplusplus.com/reference/clibrary/)
 * C++ library
-  1. [CPlusPlus](http://www.cplusplus.com/reference/)
+  * [CPlusPlus](http://www.cplusplus.com/reference/)
 * Java
-  1. [SE7 library](http://docs.oracle.com/javase/7/docs/api/)
+  * [SE7 library](http://docs.oracle.com/javase/7/docs/api/)
 * Csharp
-  1. [MSDN](https://msdn.microsoft.com/en-us/library/aa287477.aspx)
+  * [MSDN](https://msdn.microsoft.com/en-us/library/aa287477.aspx)
+* QT
+  * [Qt 学习之路 2](http://www.devbean.net/2012/08/qt-study-road-2-catelog/)
+  * [Qt5 Cadaques 正體中文版](https://ycheng.gitbooks.io/qt5_cadaques-zh_tw/content/index.html)
 
 ###Dynamic
 ---
