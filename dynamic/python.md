@@ -2,6 +2,17 @@
 
 <script type="text/javascript" src="../js/general.js"></script>
 
+###Data type
+---
+
+| api | desc |
+| -- | -- |
+| var = 100 | define a variable |
+| varToStr = str(var) | to string |
+| var = "100" | define a string |
+| varToInt = int(var) | to integer |
+| varToFloat = float(var) | to float |
+
 ###List
 ---
 
