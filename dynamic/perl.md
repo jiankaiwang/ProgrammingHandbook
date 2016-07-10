@@ -46,6 +46,22 @@ my $total = scalar(@ARGV);
 for(my $i = 0; $i < scalar(@ARGV); $i++) { }
 ```
 
+###Function
+---
+
+```perl
+# declear function
+sub getNum {
+	my ($getString, $getOption) = @_;
+    return 1;
+}
+```
+
+```Perl
+# use function
+my $getRes = getNum("input",1);
+```
+
 ###List
 ---
 
