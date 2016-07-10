@@ -36,10 +36,15 @@ while(($key,$value)=each %hash) { }
 ###System interaction
 ---
 
-| api | desc |
-| -- | -- |
-| my $total = scalar(@ARGV); | count the parameters passed |
-| for(my $i = 0; $i < scalar(@ARGV); $i++) {<br> print "$ARGV[i]";<br> } | show the parameters |
+```Perl
+# count the parameters passed
+my $total = scalar(@ARGV);		
+```
+
+```Perl
+# show the parameters, start from 0, the first parameter, not file name
+for(my $i = 0; $i < scalar(@ARGV); $i++) { }
+```
 
 ###List
 ---
@@ -66,3 +71,22 @@ while(($key,$value)=each %hash) { }
 | length(keys(%newHash)) | length |
 | $newHash{"newKey"} = "newValue"; | add a pair |
 | delete $newHash{"newKey"}; | delete the pair |
+
+###File I/O
+---
+
+```Perl
+# Read file
+open(fin,"data.txt") or die("Error: File input error.\n");
+foreach my $line (<fin>) { }
+close(fin);
+```
+
+```Perl
+# Write file
+open(fout,"> data.out") or die("Error: File output error.\n");
+print fout $i."\n";
+close(fout);
+```
+
+
