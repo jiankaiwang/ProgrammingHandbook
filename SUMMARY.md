@@ -50,7 +50,7 @@
    * [leaflet.js](webpage/leafletjs.md)
 * [Static](static/static.md)
    * [C++](static/c++.md)
-* Dynamic
+* [Dynamic](dynamic/dynamic.md)
 * [Database](database/database.md)
    * [Syntax comparison](database/syntax_comparison.md)
    * [SQL Server (T-SQL)](scientific/sql_server_t-sql.md)
