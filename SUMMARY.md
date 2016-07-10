@@ -74,7 +74,7 @@
    * [Synchronize threads in Java](parallel/synchronize_threads_in_java.md)
    * [Parallelism in R](parallel/parallelism_in_r.md)
    * [Parallelism in Python](parallel/parallelism_in_python.md)
-   * Parallelism in C++
+   * [Parallelism in C++](parallel/parallelism_in_c++.md)
 * [Compression](compression/compression.md)
    * [lz-string](compression/lz-string.md)
    * [gzip in Python](compression/gzip_in_python.md)
