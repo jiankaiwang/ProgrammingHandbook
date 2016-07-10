@@ -51,6 +51,7 @@
 * [Static](static/static.md)
    * [C++](static/c++.md)
        * [Object-Oriented Programming](static/object-oriented_programming.md)
+       * Memory allocation
 * [Dynamic](dynamic/dynamic.md)
    * [Memory allocation : C++ vs. Perl](dynamic/memory_allocation_c++_vs_perl.md)
 * [Database](database/database.md)
