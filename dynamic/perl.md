@@ -11,5 +11,5 @@
 | push(@aList,"new element"); | push a element |
 | my $getEle = pop(@aList); | pop a element |
 | scalar(@aList); | length of a list |
-| if(existInList("element",@aList)) | length of a list |
-| scalar(@aList); | length of a list |
+| if(existInList("element",@aList)) [self][common.pl] | length of a list |
+| indexOfList("A", @aList) [self][common.pl] | length of a list |
