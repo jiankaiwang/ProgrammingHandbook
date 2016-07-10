@@ -16,11 +16,30 @@
 ###Loop
 ---
 
+```Perl
+# for loop-index				
+for(my $i = 0; $i < 10; $i++) { }
+```
+
+```Perl
+# for-each loop
+my @total = ("is","a","string.");
+foreach my $element (@total) { }
+```
+
+```Perl
+# while loop
+my %hash = ( "k1" => "v1", "k2" => "v3", "k3" => "v3");
+while(($key,$value)=each %hash) { }
+```
+
+###System interaction
+---
+
 | api | desc |
 | -- | -- |
-| sub getNum {<br> my ($para1, $para2) = @\_;<br> return 1;<br> } | declear function |
-| my $getRes = getNum("input",1); | use function |
-
+| my $total = scalar(@ARGV); | count the parameters passed |
+| for(my $i = 0; $i < scalar(@ARGV); $i++) {<br> print "$ARGV[i]";<br> } | show the parameters |
 
 ###List
 ---
