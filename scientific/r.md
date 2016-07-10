@@ -39,7 +39,10 @@ Y <- c(4,5,6)
 Z <- as.matrix(rbind(X,Y))
 
 # method.2
-new_matrx <- matrix(rnorm(100, mean=4, sd=1), nrow = 10)
+new_matrx <- matrix(
+  rnorm(100, mean=4, sd=1),
+  nrow = 10
+)
 ```
 
 * transpose matrix by " t() "
