@@ -53,8 +53,8 @@
        * [Memory allocation](static/cpp_memory_allocation.md)
        * [Object-Oriented Programming](static/cpp_object-oriented_programming.md)
 * [Dynamic](dynamic/dynamic.md)
-   * [Memory allocation : C++ vs. Perl](dynamic/memory_allocation_c++_vs_perl.md)
    * Perl
+   * [Memory allocation : C++ vs. Perl](dynamic/memory_allocation_c++_vs_perl.md)
 * [Database](database/database.md)
    * [Syntax comparison](database/syntax_comparison.md)
    * [SQL Server (T-SQL)](scientific/sql_server_t-sql.md)
