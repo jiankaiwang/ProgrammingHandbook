@@ -2,6 +2,22 @@
 
 <script type="text/javascript" src="../js/general.js"></script>
 
+###Type transformation
+---
+
+| api | desc |
+| -- | -- |
+| my $var = 100; | define a variable |
+| my $varToStr = $var." is a string\n";| concatenate as string |
+| my $var = "100"; | transform into string |
+| my $varToInt = $var + 200; | to integer |
+| my $varToFloat = $var + 200.12; | to float |
+
+###Loop
+---
+
+
+
 ###List
 ---
 
