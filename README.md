@@ -51,6 +51,7 @@ So, let us explore wonderful software world.
 ---
 
 * 與科學軟體或軟體技術有關之說明。
+* Include R, matlab, etc. Also, provide drawing calculated results in 2D or 3D. Conduct modeling and many statistical problems.
 
 ###Parallel
 ---
