@@ -73,7 +73,7 @@
    * [Threading in Java](parallel/threading_in_java.md)
    * [Synchronize threads in Java](parallel/synchronize_threads_in_java.md)
    * [Parallelism in R](parallel/parallelism_in_r.md)
-   * Parallelism in Python
+   * [Parallelism in Python](parallel/parallelism_in_python.md)
 * [Compression](compression/compression.md)
    * [lz-string](compression/lz-string.md)
    * [gzip in Python](compression/gzip_in_python.md)
