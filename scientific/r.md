@@ -117,7 +117,16 @@ for(i in 1:length(sysArgs)) { ... }
 | if(ele %in% A) | element in set.A |
 
 
+###File I/O
+---
 
+* write a text file
+
+```R
+sink("out.txt", append = TRUE)
+cat( ... )
+sink()
+```
 
 
 
