@@ -69,6 +69,7 @@
    * [Data accessed by R](scientific/r_access_multiple_source_data.md)
    * [S4 Class 使用](scientific/s4_class.md)
    * [R](scientific/r.md)
+       * test
 * [Parallel](parallel/parallel.md)
    * [Threading in Java](parallel/threading_in_java.md)
    * [Synchronize threads in Java](parallel/synchronize_threads_in_java.md)
