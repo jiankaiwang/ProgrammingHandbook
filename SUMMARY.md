@@ -56,6 +56,7 @@
    * [Perl](dynamic/perl.md)
        * [Memory allocation](dynamic/perl_memory_allocation.md)
        * [Object-Oriented Programming](dynamic/perl_object-oriented_programming.md)
+   * Python
 * [Database](database/database.md)
    * [Syntax comparison](database/syntax_comparison.md)
    * [SQL Server (T-SQL)](scientific/sql_server_t-sql.md)
