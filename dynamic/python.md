@@ -38,8 +38,35 @@ while True:
 ###Function
 ---
 
+```python
+# declear function
+def getString(str1, str2, str3):
+  return str1 + str2 + str3
+```
 
+```python
+# use function
+getRes = getString("This ","is ","a string.")
+```
 
+###System interaction
+---
+
+```python
+import sys
+```
+
+```python
+# count the parameters passed
+total = len(sys.argv)	
+```
+
+```python
+# show the parameters, start from 0(file name)
+# 1-n: passed parameters
+for i in range(0,len(sys.argv),1):
+  print sys.argv[i]
+```
 
 ###List
 ---
