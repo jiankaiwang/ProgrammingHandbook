@@ -51,6 +51,7 @@
 * [Static](static/static.md)
    * [C++](static/c++.md)
 * [Dynamic](dynamic/dynamic.md)
+   * Memory allocation : C++ vs. Perl
 * [Database](database/database.md)
    * [Syntax comparison](database/syntax_comparison.md)
    * [SQL Server (T-SQL)](scientific/sql_server_t-sql.md)
