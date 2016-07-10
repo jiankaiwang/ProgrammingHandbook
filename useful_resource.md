@@ -79,6 +79,14 @@
 * Csharp
   1. [MSDN](https://msdn.microsoft.com/en-us/library/aa287477.aspx)
 
+###Dynamic
+---
+
+* [Python library](https://docs.python.org/2/library/index.html)
+* [Perl library](http://perldoc.perl.org/index.html)
+* Ruby
+  * [Ruby on Rails 實戰聖經](https://ihower.tw/rails4/ruby.html)
+
 ###Database
 ---
 
