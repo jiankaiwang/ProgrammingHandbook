@@ -65,6 +65,7 @@
    * [PHP access MySQL](database/php_access_mysql.md)
    * [PDO access MySQL](database/pdo_access_mysql.md)
    * [Query from SQL Server in C#](database/query_from_sql_server_in_csharp.md)
+   * Python access MySQL
 * [Scientific](scientific/scientific.md)
    * [R](scientific/r.md)
        * [S4 Class 使用](scientific/s4_class.md)
