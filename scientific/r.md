@@ -41,7 +41,8 @@ Z <- as.matrix(rbind(X,Y))
 # method.2
 new_matrx <- matrix(
   rnorm(100, mean=4, sd=1),
-  nrow = 10
+  nrow = 10,
+  ncol = 10
 )
 ```
 
