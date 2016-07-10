@@ -1,4 +1,4 @@
-# Object-Oriented Programming
+# Object-Oriented Programming in Perl
 
 <script type="text/javascript" src="../js/general.js"></script>
 
