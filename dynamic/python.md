@@ -93,3 +93,22 @@ for i in range(0,len(sys.argv),1):
 | len(newDict.keys()) | length |
 | newDict.setdefault("newKey","newValue") | add a pair |
 | del newDict["newKey"] | delete the pair |
+
+###File I/O
+---
+
+```python
+# Read file
+fin = open("data","r")
+with fin as inputObject:
+  for line in fin:
+    print line
+fin.close()
+```
+
+```python
+# Write file
+fout = open("output.txt","w")
+fout.write(str(i) + "\n")
+fout.close()
+```
