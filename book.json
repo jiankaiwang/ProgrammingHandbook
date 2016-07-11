@@ -1,5 +1,5 @@
 {
-  "plugins" : [ "include-highlight", "addcssjs" ],
+  "plugins" : [ "include-highlight", "autocover", "addcssjs" ],
   "pluginsConfig": {
     "include-highlight": {
       "extensionToLanguage": {
@@ -9,7 +9,23 @@
         "Java": "java",
         "Python": "py",
         "SQL": "sql"
-      }
+      },
+      "autocover": {
+              "title": "IT and IoT System",
+              "author": "J.K. Wang",
+              "font": {
+                  "size": null,
+                  "family": "Impact",
+                  "color": "#000"
+              },
+              "size": {
+                  "w": 1800,
+                  "h": 2360
+              },
+              "background": {
+                  "color": "#FFF"
+              }
+        }
     }
   },
   "addcssjs": {
