@@ -55,7 +55,7 @@ Web.config 在微軟 Web 系統開發中扮演著硬體、伺服器設定或是�
       <mimeMap fileExtension=".woff" mimeType="application/font-woff" />
       <remove fileExtension=".woff2" />
       <mimeMap fileExtension=".woff2" mimeType="application/font-woff2" />
-      <mimeMap fileExtension="." mimeType="application/octet-stream" />
+      <mimeMap fileExtension=".*" mimeType="application/octet-stream" />
     </staticContent>
   </system.webServer>  
 </configuration>
