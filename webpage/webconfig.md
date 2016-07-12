@@ -107,7 +107,7 @@ Web.config 在微軟 Web 系統開發中扮演著硬體、伺服器設定或是�
     <mimeMap fileExtension=".css" mimeType="text/css" />
     <remove fileExtension=".woff" />
     <mimeMap fileExtension=".woff" mimeType="application/font-woff" />
-    <mimeMap fileExtension="." mimeType="application/octet-stream" />
+    <mimeMap fileExtension=".*" mimeType="application/octet-stream" />
   </staticContent>
 <system.webServer>
 ```
