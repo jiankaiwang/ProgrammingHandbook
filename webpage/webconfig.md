@@ -65,6 +65,8 @@ Web.config 在微軟 Web 系統開發中扮演著硬體、伺服器設定或是�
 
 * appSettings : 常定義使用的常數値
 
+* customErrors : 出現錯誤時是否於頁面顯示錯誤。
+
 * rewrite : IIS 或 Azure 的頁面重導原則，底下為 Azure 上強制使用 https 的設定
 
 ```XML
