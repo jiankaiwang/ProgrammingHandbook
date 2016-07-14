@@ -152,6 +152,10 @@ public int ftpUpload(String ftpUser, String ftpPassword, String upload_from, Str
 ###FTP 下載函式
 ---
 
+* 底下實作出 FTP 下載資料的內容
+  1. 下載是否成功可以透過檢核狀態來達成
+  2. 下載結果會取得字串串流，可以視狀況決定是否寫入檔案
+
 ```C#
 /*
  * desc : download file from ftp server
@@ -164,6 +168,7 @@ public int ftpUpload(String ftpUser, String ftpPassword, String upload_from, Str
  * -2 : download process is not complete
  * (other) : the content of downloaded file
  */
+
 public String ftpDownloadBody(String ftpUser, String ftpPwd, String ftpFullDownloadPath) {
     String retRes = String.Empty;
 
