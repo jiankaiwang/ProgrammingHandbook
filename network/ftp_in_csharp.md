@@ -66,13 +66,24 @@ private string upload_to = System.Web.Configuration.WebConfigurationManager.AppS
 private string upload_from = System.Web.Configuration.WebConfigurationManager.AppSettings["upload_from"];
 ```
 
-ftp 上傳實作內容，執行後會回傳一個 ftp 上傳狀態字串，如下；
+ftp 上傳實作內容，執行後會回傳一個 ftp 上傳狀態字串，可以透過檢核此上傳狀態進行上傳結果確認；相關內容如下：
 
 ```C#
-private String ftpUpload()
+/*
+ * desc : upload file to ftp server
+ * parameter :
+ * 1. ftpUser : ftp user
+ * 2. ftpPassword : used password
+ * 3. upload_from : the local file in complete path ready for uploading to ftp server
+ * 4. upload_to : the complete path on the server for get the file
+ */
+
+public int ftpUpload(String ftpUser, String ftpPassword, String upload_from, String upload_to)
 {
     // Get the object used to communicate with the server.
     FtpWebRequest request = (FtpWebRequest)WebRequest.Create(upload_to);
+    
+    // set ftp connection type to uploadfile
     request.Method = WebRequestMethods.Ftp.UploadFile;
 
     // Use user and its password to login the ftp server
@@ -86,23 +97,22 @@ private String ftpUpload()
 
     sourceStream.Close();
 
+    // get content length
     request.ContentLength = fileContents.Length;
 
     // make sure access to the remote is connected
     try
     {
         Stream requestStream = request.GetRequestStream();
-
         requestStream.Write(fileContents, 0, fileContents.Length);
-
         requestStream.Close();
     }
     catch (Exception e)
     {
-        return e.Message;
+        // can not access the ftp server
+        return 1;
     }
 
-    // get status of ftp
     FtpWebResponse response = (FtpWebResponse)request.GetResponse();
 
     // regular expression to check 226 status reporting
@@ -123,9 +133,11 @@ private String ftpUpload()
     switch(checkStatus)
     {
         case 1:
-            return "Status : FTP upload successfully.";
+            // Status : FTP upload successfully.
+            return 0;
         default:
-            return "Status : FTP uploading is failure.";
+            // Status : FTP uploading is failure.
+            return 2;
     }
 }
 ```
