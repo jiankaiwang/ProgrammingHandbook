@@ -1,4 +1,4 @@
-# MD5 hash and checksum in C#
+# MD5 hash and checksum in CSharp
 
 <script type="text/javascript" src="../js/general.js"></script>
 
