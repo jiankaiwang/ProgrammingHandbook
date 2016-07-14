@@ -5,7 +5,7 @@
 ###Compute MD5 Hash code
 ---
 
-* 透過 byte array 頗析 UTF8 string，然後透過 md5 物件將之計算產生 hash code
+* 透過 byte array 頗析 UTF8 string，然後透過 md5 物件將之計算產生 hash code 後，在將此 hash code 轉成 string。
 
 ```csharp
 // generate a MD5 object
