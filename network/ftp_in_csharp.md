@@ -76,6 +76,10 @@ ftp 上傳實作內容，執行後會回傳一個 ftp 上傳狀態字串，可�
  * 2. ftpPassword : used password
  * 3. upload_from : the local file in complete path ready for uploading to ftp server
  * 4. upload_to : the complete path on the server for get the file
+ * return :
+ * 0 : upload successfully
+ * 1 : can not access to the ftp server
+ * 2 : ftp uploading is failure
  */
 
 public int ftpUpload(String ftpUser, String ftpPassword, String upload_from, String upload_to)
