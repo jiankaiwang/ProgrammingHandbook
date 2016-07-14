@@ -2,6 +2,8 @@
 
 <script type="text/javascript" src="../js/general.js"></script>
 
+* API 及範例 : [https://github.com/jiankaiwang/seed/blob/master/csharp/MD5HashChecksum.cs](https://github.com/jiankaiwang/seed/blob/master/csharp/MD5HashChecksum.cs)
+
 ###Compute MD5 Hash code
 ---
 
