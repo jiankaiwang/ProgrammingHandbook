@@ -76,6 +76,7 @@
    * [Parallelism in R](parallel/parallelism_in_r.md)
    * [Parallelism in Python](parallel/parallelism_in_python.md)
    * [Parallelism in C++](parallel/parallelism_in_c++.md)
+* Information Security
 * [Compression](compression/compression.md)
    * [lz-string](compression/lz-string.md)
    * [gzip in Python](compression/gzip_in_python.md)
@@ -84,5 +85,4 @@
    * [Firewall by IP Address in C#](network/firewall_by_ip_address_in_csharp.md)
 * [Android](android/android.md)
 * [Arduino](arduino/arduino.md)
-* Information Security
 
