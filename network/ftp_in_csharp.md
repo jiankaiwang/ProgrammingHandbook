@@ -2,7 +2,8 @@
 
 <script type="text/javascript" src="../js/general.js"></script>
 
-範例檔案 : 20160519_FTPinCSharpTemplate.rar
+* 範例檔案 : 20160519_FTPinCSharpTemplate.rar
+* API 
 
 ### Web.config 設定
 
