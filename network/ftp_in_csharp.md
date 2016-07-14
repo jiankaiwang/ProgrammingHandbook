@@ -3,7 +3,9 @@
 <script type="text/javascript" src="../js/general.js"></script>
 
 * 範例檔案 : 20160519_FTPinCSharpTemplate.rar
-* API 
+* API 及範例 : 
+  1. FTPUpload : [https://github.com/jiankaiwang/seed/blob/master/csharp/FTPUpload.cs](https://github.com/jiankaiwang/seed/blob/master/csharp/FTPUpload.cs)
+  2. FTPDownload : [https://github.com/jiankaiwang/seed/blob/master/csharp/FTPDownload.cs](https://github.com/jiankaiwang/seed/blob/master/csharp/FTPDownload.cs)
 
 ### Web.config 設定
 
