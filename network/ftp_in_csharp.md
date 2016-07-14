@@ -149,7 +149,64 @@ public int ftpUpload(String ftpUser, String ftpPassword, String upload_from, Str
 }
 ```
 
-###
+###FTP 下載函式
+---
+
+```C#
+/*
+ * desc : download file from ftp server
+ * parameter :
+ * 1. ftpUser : ftp user
+ * 2. ftpPwd : used password
+ * 3. ftpFullDownloadPath : the file path on the ftp server
+ * return :
+ * -1 : can not login ftp server
+ * -2 : download process is not complete
+ * (other) : the content of downloaded file
+ */
+public String ftpDownloadBody(String ftpUser, String ftpPwd, String ftpFullDownloadPath) {
+    String retRes = String.Empty;
+
+    // Get the object used to communicate with the ftp server.
+    FtpWebRequest request = (FtpWebRequest)WebRequest.Create(String.Format("{0}", ftpFullDownloadPath));
+
+    // set ftp connection type is download
+    request.Method = WebRequestMethods.Ftp.DownloadFile;
+
+    // Login FTP Server
+    request.Credentials = new NetworkCredential(ftpUser, ftpPwd);
+
+    // get FTP response
+    try {
+        FtpWebResponse response = (FtpWebResponse)request.GetResponse();
+
+        // convert to stream ready for data stream
+        Stream responseStream = response.GetResponseStream();
+
+        // create a object to read data by stream
+        StreamReader reader = new StreamReader(responseStream);
+
+        // get all data
+        retRes = reader.ReadToEnd();
+
+        // check download status
+        string pattern = "226";
+        foreach (Match match in Regex.Matches(response.StatusDescription, pattern, RegexOptions.IgnoreCase)) {
+            if (! match.Value.Equals(pattern)) {
+                retRes = "-2";
+            }
+        }
+
+        reader.Close();
+        response.Close();
+    }
+    catch {
+        retRes = "-1";
+    }
+
+    return retRes;
+}
+```
 
 
 
