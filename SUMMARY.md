@@ -77,6 +77,7 @@
    * [Parallelism in Python](parallel/parallelism_in_python.md)
    * [Parallelism in C++](parallel/parallelism_in_c++.md)
 * [Information Security](information_security/information_security.md)
+   * MD5 hash and checksum in C#
 * [Compression](compression/compression.md)
    * [lz-string](compression/lz-string.md)
    * [gzip in Python](compression/gzip_in_python.md)
