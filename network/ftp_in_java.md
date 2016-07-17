@@ -41,7 +41,10 @@ public int ftpUploadBody(
     FTPClient ftp = new FTPClient();
 
     try {
+        // connect to the server, but this is void function in version 3.4
         ftp.connect(ftpHost, ftpPort);
+        
+        // try to login the ftp server, while login success, return true
         if(! ftp.login(ftpUser, ftpPwd)) {
             return -1;
         }
