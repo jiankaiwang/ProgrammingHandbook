@@ -15,7 +15,7 @@
 
 * Parameter :
   * ftpHost : FTP 主機的 URL 或 IP 位址
-  * ftpPort : FTP 服務於 FTP 主機上的開啟 port
+  * ftpPort : FTP 服務於 FTP 主機上的開啟 port (command port)
   * ftpUser : 登入 FTP 主機的使用者
   * ftpPwd : 使用者的密碼
   * ftpKeepAliveTime : FTP 連線存活時間
@@ -90,3 +90,83 @@ if(ftp.changeWorkingDirectory("/home/user/")) {
 
 ###FTP Download 函式
 ---
+
+底下為實作出 FTP Download 的函式
+
+* ftpDataString : 為下載檔案後的內容，以 String 方式儲存。
+* Parameter
+  * ftpHost : ftp server URL 或 IP 位址
+  * ftpPort : FTP 服務於 FTP 主機上的開啟 port (command port)
+  * ftpUser : 登入 FTP 主機的使用者
+  * ftpPwd : 使用者的密碼
+  * ftpKeepAliveTime : FTP 連線存活時間
+  * ftpFullDownloadFilePath : 要從 FTP Server 下載的檔案位址
+* return
+  * 0 : success
+  * -1 : can not login ftp server
+  * -2 : can not read the file or file does not exist
+
+```Java
+private String ftpDataString;
+
+public int FTPDownloadBody(
+  String ftpHost,
+  int ftpPort,
+  String ftpUser,
+  String ftpPwd,
+  int ftpKeepAliveTime,
+  String ftpFullDownloadFilePath
+) {
+  int ftpDownloadStatus = 0;
+
+  FTPClient ftpClient = new FTPClient();
+
+  try {
+      ftpClient.connect(ftpHost, ftpPort);
+
+      if(! ftpClient.login(ftpUser, ftpPwd)) {
+          // ftp login is failure
+          return -1;
+      }
+
+      // time for ftp keep alive
+      ftpClient.setControlKeepAliveTimeout(ftpKeepAliveTime);
+      ftpClient.setConnectTimeout(ftpKeepAliveTime);
+      ftpClient.setControlKeepAliveReplyTimeout(ftpKeepAliveTime);
+
+      // enable passive mode to prevent 500 illegal port number
+      ftpClient.enterLocalPassiveMode();
+
+      // download ftp data as stream	
+      BufferedReader input = new BufferedReader(new InputStreamReader(ftpClient.retrieveFileStream(ftpFullDownloadFilePath),"UTF-8"));
+      int str = input.read();
+      if(str != -1) {
+          while(str >= 0) {
+              ftpDataString = String.format("%s%c", ftpDataString, (char)str);
+              str = input.read();
+          }
+          input.close();
+      } else {
+          input.close();
+          return -2;
+      }
+
+      // ftp disconnect
+      ftpClient.disconnect();
+
+  } catch (IOException e) {
+      // ftp connection is failure
+      ftpDownloadStatus = -1;
+  } 
+
+  return ftpDownloadStatus;
+}
+```
+
+
+
+
+
+
+
+
