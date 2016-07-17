@@ -91,8 +91,8 @@ if(ftp.changeWorkingDirectory("/home/user/")) {
 ###FTP Download 函式
 ---
 
-底下為實作出 FTP Download 的函式，並透過 ** UTF-8 ** 編碼方式下載資料。
-
+* 底下為實作出 FTP Download 的函式，並透過 ** UTF-8 ** 編碼方式下載資料。
+* 下載若為成功，可以透過讀取 ftpDataString 字串將下載內容取出。
 * ftpDataString : 為下載檔案後的內容，以 String 方式儲存。
 * Parameter
   * ftpHost : ftp server URL 或 IP 位址
@@ -107,7 +107,7 @@ if(ftp.changeWorkingDirectory("/home/user/")) {
   * -2 : can not read the file or file does not exist
 
 ```Java
-private String ftpDataString;
+public String ftpDataString;
 
 public int FTPDownloadBody(
   String ftpHost,
