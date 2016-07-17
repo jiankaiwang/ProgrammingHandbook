@@ -107,8 +107,10 @@ if(ftp.changeWorkingDirectory("/home/user/")) {
   * -2 : can not read the file or file does not exist
 
 ```Java
+// 儲存自 FTP Server 下載的資料內容
 public String ftpDataString;
 
+// FTP 下載的流程控制
 public int FTPDownloadBody(
   String ftpHost,
   int ftpPort,
