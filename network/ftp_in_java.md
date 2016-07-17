@@ -73,5 +73,17 @@ public int ftpUploadBody(
 }
 ```
 
+* 其他函式
+
+  1. 移動 FTP Server 目錄位址
+
+```java
+// change the ftp server directory path
+// return true (change successfully), false (can not change to the directory)
+if(ftp.changeWorkingDirectory("/home/user/")) {
+   ...
+}
+```
+
 ###FTP Download 函式
 ---
