@@ -83,8 +83,8 @@
    * [gzip in Python](compression/gzip_in_python.md)
 * [Network](network/network.md)
    * [FTP in C#](network/ftp_in_csharp.md)
-   * [Firewall by IP Address in C#](network/firewall_by_ip_address_in_csharp.md)
    * FTP in Java
+   * [Firewall by IP Address in C#](network/firewall_by_ip_address_in_csharp.md)
 * [Android](android/android.md)
 * [Arduino](arduino/arduino.md)
 
