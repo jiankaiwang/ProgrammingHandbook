@@ -11,7 +11,21 @@
 ###FTP Upload 函式
 ---
 
-* 底下為實作出將串流傳入上傳至 ftp 的內容
+底下為實作出將串流傳入上傳至 ftp 的內容
+
+* Parameter :
+  * ftpHost : FTP 主機的 URL 或 IP 位址
+  * ftpPort : FTP 服務於 FTP 主機上的開啟 port
+  * ftpUser : 登入 FTP 主機的使用者
+  * ftpPwd : 使用者的密碼
+  * ftpKeepAliveTime : FTP 連線存活時間
+  * ftpFulUploadFilePath : 上傳至 FTP 伺服器的哪個位址
+  * getDataString : 要上傳的內容，可以從文字透過 ByteArray 而成，或是透過 FileInputStream 建立
+
+* 回傳値 :
+  * 0 : 上傳成功
+  * -1 : 該 user 不能登入 FTP Server
+  * -2 : 串流不能上傳至 FTP Server 的檔案位址 (可能該位址不存在或無法讀寫等)
 
 ```Java
 public int ftpUploadBody(
