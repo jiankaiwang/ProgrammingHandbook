@@ -11,7 +11,7 @@
 ###FTP Upload 函式
 ---
 
-底下為實作出將串流傳入上傳至 ftp 的內容
+底下為實作出將串流傳入上傳至 ftp 的內容。
 
 * Parameter :
   * ftpHost : FTP 主機的 URL 或 IP 位址
@@ -91,7 +91,7 @@ if(ftp.changeWorkingDirectory("/home/user/")) {
 ###FTP Download 函式
 ---
 
-底下為實作出 FTP Download 的函式
+底下為實作出 FTP Download 的函式，並透過 ** UTF-8 ** 編碼方式下載資料。
 
 * ftpDataString : 為下載檔案後的內容，以 String 方式儲存。
 * Parameter
