@@ -238,8 +238,32 @@ Build:
 ### 執行專案建置工作 (Task)
 ---
 
+* Target 中的每一項執行，都是一個 task (如前述的 message)，除 MsBuild 本身支援的 task 外，亦可以使用第三方軟體的 Task，如下範例的 StyleCop，並配合上述所提的 ItemGroup 與 PropertyGroup 使用進行專案建置：
 
+```xml
+<?xml version="1.0" encoding="utf-8"?>
+<Project Defaulttargets="StyleCop" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+	<UsingTask AssemblyFile="C:\Program Files (x86)\StyleCop 4.7\StyleCop.dll" TaskName="StyleCopTask" />
 
+	<ItemGroup>		
+		<StyleCopFiles Include="C:\Users\JianKaiWang\Desktop\demo\demo\demo\**\*.cs" Exclude="C:\Users\JianKaiWang\Desktop\demo\demo\demo\**\*Test.cs" />		
+	</ItemGroup>
+	
+	<PropertyGroup>
+		<ProjectFullPath>C:\Users\JianKaiWang\Desktop\demo\demo</ProjectFullPath>		
+	</PropertyGroup>
+	
+	<Target Name="StyleCop">
+		<StyleCopTask
+			ProjectFullPath="$(ProjectFullPath)"
+			SourceFiles="@(StyleCopFiles)"
+			ForceFullAnalysis="true"
+			TreatErrorsAsWarnings="true"
+			OutputFile="$(ProjectFullPath)\StyleCopReport.xml"
+			CacheResults="true" />    
+	</Target>
+</Project>
+```
 
 
 
