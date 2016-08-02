@@ -108,7 +108,7 @@ Step 3:
 * MsBuild 中透過 Item 指定專案建置中所包含的項目，ItemGroup 為 Item 的集合
 
 * ItemGroup 中可以定義 Item 名稱與內容，如下範例：
-  1. ProjectFiles 為 item 名稱，而 item 包含要建置的內容，此處以建置 csharp 檔案為例。
+  1. ProjectFiles 為 item 的自定義名稱，而 item 包含要建置的內容，此處以建置 csharp 檔案為例。
 
 ```xml
 <?xml version="1.0" encoding="utf-8"?>
