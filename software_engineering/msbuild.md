@@ -47,3 +47,64 @@ Build:
 經過時間 00:00:00.11
 ```
 
+### 依序建置多個任務
+---
+
+* 建置定義檔案如下 :
+  1. CallTarget 定義要建置的目標
+  2. Target 定義建置的內容
+
+```xml
+<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+	<Target Name="Build">		
+		<CallTarget Targets="Step 1"/>
+		<CallTarget Targets="Step 2"/>
+		<CallTarget Targets="Step 3"/>		
+	</Target>
+	
+	<Target Name="Step 1">	
+		<Message Text="Step 1" />
+	</Target>
+	
+	<Target Name="Step 2">
+		<Message Text="Step 2" />
+	</Target>
+	
+	<Target Name="Step 3">
+		<Message Text="Step 3" />
+	</Target>
+</Project>
+```
+
+* 建置結果如下
+
+```bash
+C:\Users\JianKaiWang\Desktop>MsBuild example.xml
+Microsoft (R) Build Engine version 14.0.24723.2
+Copyright (C) Microsoft Corporation. 著作權所有，並保留一切權利。
+
+已經開始建置於 2016/8/2 上午 10:56:58。
+節點 1 (預設目標) 上的專案 "C:\Users\JianKaiWang\Desktop\example.xml"。
+Step 1:
+  Step 1
+Step 2:
+  Step 2
+Step 3:
+  Step 3
+專案 "C:\Users\JianKaiWang\Desktop\example.xml" (預設目標) 建置完成。
+
+
+建置成功。
+    0 個警告
+    0 個錯誤
+
+經過時間 00:00:00.04
+```
+
+
+
+
+
+
+
