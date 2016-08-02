@@ -109,6 +109,7 @@ Step 3:
 
 * ItemGroup 中可以定義 Item 名稱與內容，如下範例：
   1. ProjectFiles 為 item 的自定義名稱，而 item 包含要建置的內容，此處以建置 csharp 檔案為例。
+  2. 建置時透過 @(ProjectFiles) 來輸出內容。
 
 ```xml
 <?xml version="1.0" encoding="utf-8"?>
