@@ -151,7 +151,50 @@ Build:
 經過時間 00:00:00.04
 ```
 
+* 客製化顯示結果：
+  1. 因 item 輸出內容以分號作為區隔，可以透過 @(ItemName,'Seperator') 指定分隔符號
+  2. 例如透過 @(ItemName->'Files:%(FullPath)','%0a') 來換行顯示
 
+```xml
+<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+	<ItemGroup>		
+		<ProjectFiles Include="C:\Users\JianKaiWang\Desktop\demo\demo\demo\**\*.cs" />		
+	</ItemGroup>
+	
+	<Target Name="Build">
+		<Message Text="@(ProjectFiles->'Files:%(FullPath)','%0a')" />
+	</Target>
+</Project>
+```
+
+* 客製化建置結果如下 :
+
+```bash
+C:\Users\JianKaiWang\Desktop>MsBuild example.xml
+Microsoft (R) Build Engine version 14.0.24723.2
+Copyright (C) Microsoft Corporation. 著作權所有，並保留一切權利。
+
+已經開始建置於 2016/8/2 上午 11:08:43。
+節點 1 (預設目標) 上的專案 "C:\Users\JianKaiWang\Desktop\example.xml"。
+Build:
+  Files:C:\Users\JianKaiWang\Desktop\demo\demo\demo\obj\Debug\TemporaryGenerate
+  dFile_036C0B5B-1481-4323-8D20-8F5ADCB23D92.cs
+  Files:C:\Users\JianKaiWang\Desktop\demo\demo\demo\obj\Debug\TemporaryGenerate
+  dFile_5937a670-0e60-4077-877b-f7221da3dda1.cs
+  Files:C:\Users\JianKaiWang\Desktop\demo\demo\demo\obj\Debug\TemporaryGenerate
+  dFile_E7A71F73-0F8D-4B9B-B56E-8E70B10BC5D3.cs
+  Files:C:\Users\JianKaiWang\Desktop\demo\demo\demo\Program.cs
+  Files:C:\Users\JianKaiWang\Desktop\demo\demo\demo\Properties\AssemblyInfo.cs
+專案 "C:\Users\JianKaiWang\Desktop\example.xml" (預設目標) 建置完成。
+
+
+建置成功。
+    0 個警告
+    0 個錯誤
+
+經過時間 00:00:00.05
+```
 
 
 
