@@ -196,7 +196,23 @@ Build:
 經過時間 00:00:00.05
 ```
 
+### PropertyGroup 與 Property 的使用
+---
 
+* Property 為使用者定義的屬性與値，一般而言常用來放置可變更之變數，如輸出路徑 (包含如 SourceMonitor 職行路徑) 等，此可以透過 $(PropertyName) 來呼叫結果，執行範例如下 :
+
+```xml
+<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">	
+	<PropertyGroup>
+		<SimianPath>"C:\Program Files (x86)\simian\bin\simian-2.4.0.exe"</SimianPath>		
+	</PropertyGroup>
+	
+	<Target Name="Build">
+		<Message Text="$(SimianPath)" />
+	</Target>
+</Project>
+```
 
 
 
