@@ -205,7 +205,7 @@ Build:
 <?xml version="1.0" encoding="utf-8"?>
 <Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">	
 	<PropertyGroup>
-		<SimianPath>"C:\Program Files (x86)\simian\bin\simian-2.4.0.exe"</SimianPath>		
+		<SimianPath>C:\Program Files (x86)\simian\bin\simian-2.4.0.exe</SimianPath>		
 	</PropertyGroup>
 	
 	<Target Name="Build">
