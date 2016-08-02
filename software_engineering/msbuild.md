@@ -265,6 +265,116 @@ Build:
 </Project>
 ```
 
+| 註解 |
+| -- |
+| 請注意呼叫 ItemGroup 與 PropertyGroup 的變數方式不同，為 @ 與 $。 |
+
+* 建置結果如下
+
+```bash
+C:\Users\JianKaiWang\Desktop>MsBuild example.xml
+Microsoft (R) Build Engine version 14.0.24723.2
+Copyright (C) Microsoft Corporation. 著作權所有，並保留一切權利。
+
+已經開始建置於 2016/8/2 上午 11:31:54。
+節點 1 (預設目標) 上的專案 "C:\Users\JianKaiWang\Desktop\example.xml"。
+StyleCop:
+  Skipping: demo - \demo\obj\Debug\TemporaryGeneratedFile_036C0B5B-1481-4323-8D
+  20-8F5ADCB23D92.cs
+  Skipping: demo - \demo\obj\Debug\TemporaryGeneratedFile_5937a670-0e60-4077-87
+  7b-f7221da3dda1.cs
+  Skipping: demo - \demo\obj\Debug\TemporaryGeneratedFile_E7A71F73-0F8D-4B9B-B5
+  6E-8E70B10BC5D3.cs
+C:\Users\JianKaiWang\Desktop\demo\demo\demo\Program.cs(9,1): warning : SA1600 :
+ CSharp.Documentation : The class must have a documentation header. [C:\Users\J
+ianKaiWang\Desktop\example.xml]
+C:\Users\JianKaiWang\Desktop\demo\demo\demo\Program.cs(11,1): warning : SA1600
+: CSharp.Documentation : The method must have a documentation header. [C:\Users
+\JianKaiWang\Desktop\example.xml]
+C:\Users\JianKaiWang\Desktop\demo\demo\demo\Program.cs(1,1): warning : SA1633 :
+ CSharp.Documentation : The file has no header, the header Xml is invalid, or t
+he header is not located at the top of the file. [C:\Users\JianKaiWang\Desktop\
+example.xml]
+C:\Users\JianKaiWang\Desktop\demo\demo\demo\Program.cs(9,1): warning : SA1400 :
+ CSharp.Maintainability : The class must have an access modifier. [C:\Users\Jia
+nKaiWang\Desktop\example.xml]
+C:\Users\JianKaiWang\Desktop\demo\demo\demo\Program.cs(11,1): warning : SA1400
+: CSharp.Maintainability : The method must have an access modifier. [C:\Users\J
+ianKaiWang\Desktop\example.xml]
+C:\Users\JianKaiWang\Desktop\demo\demo\demo\Program.cs(7,1): warning : SA1300 :
+ CSharp.Naming : namespace names begin with an upper-case letter: demo. [C:\Use
+rs\JianKaiWang\Desktop\example.xml]
+C:\Users\JianKaiWang\Desktop\demo\demo\demo\Program.cs(1,1): warning : SA1200 :
+ CSharp.Ordering : All using directives must be placed inside of the namespace.
+ [C:\Users\JianKaiWang\Desktop\example.xml]
+C:\Users\JianKaiWang\Desktop\demo\demo\demo\Program.cs(2,1): warning : SA1200 :
+ CSharp.Ordering : All using directives must be placed inside of the namespace.
+ [C:\Users\JianKaiWang\Desktop\example.xml]
+C:\Users\JianKaiWang\Desktop\demo\demo\demo\Program.cs(3,1): warning : SA1200 :
+ CSharp.Ordering : All using directives must be placed inside of the namespace.
+ [C:\Users\JianKaiWang\Desktop\example.xml]
+C:\Users\JianKaiWang\Desktop\demo\demo\demo\Program.cs(4,1): warning : SA1200 :
+ CSharp.Ordering : All using directives must be placed inside of the namespace.
+ [C:\Users\JianKaiWang\Desktop\example.xml]
+C:\Users\JianKaiWang\Desktop\demo\demo\demo\Program.cs(5,1): warning : SA1200 :
+ CSharp.Ordering : All using directives must be placed inside of the namespace.
+ [C:\Users\JianKaiWang\Desktop\example.xml]
+C:\Users\JianKaiWang\Desktop\demo\demo\demo\Properties\AssemblyInfo.cs(1,1): wa
+rning : SA1633 : CSharp.Documentation : The file has no header, the header Xml
+is invalid, or the header is not located at the top of the file. [C:\Users\Jian
+KaiWang\Desktop\example.xml]
+  12 violations encountered.
+專案 "C:\Users\JianKaiWang\Desktop\example.xml" (預設目標) 建置完成。
+
+
+建置成功。
+
+"C:\Users\JianKaiWang\Desktop\example.xml" (預設目標) (1) ->
+(StyleCop 目標) ->
+  C:\Users\JianKaiWang\Desktop\demo\demo\demo\Program.cs(9,1): warning : SA1600
+ : CSharp.Documentation : The class must have a documentation header. [C:\Users
+\JianKaiWang\Desktop\example.xml]
+  C:\Users\JianKaiWang\Desktop\demo\demo\demo\Program.cs(11,1): warning : SA160
+0 : CSharp.Documentation : The method must have a documentation header. [C:\Use
+rs\JianKaiWang\Desktop\example.xml]
+  C:\Users\JianKaiWang\Desktop\demo\demo\demo\Program.cs(1,1): warning : SA1633
+ : CSharp.Documentation : The file has no header, the header Xml is invalid, or
+ the header is not located at the top of the file. [C:\Users\JianKaiWang\Deskto
+p\example.xml]
+  C:\Users\JianKaiWang\Desktop\demo\demo\demo\Program.cs(9,1): warning : SA1400
+ : CSharp.Maintainability : The class must have an access modifier. [C:\Users\J
+ianKaiWang\Desktop\example.xml]
+  C:\Users\JianKaiWang\Desktop\demo\demo\demo\Program.cs(11,1): warning : SA140
+0 : CSharp.Maintainability : The method must have an access modifier. [C:\Users
+\JianKaiWang\Desktop\example.xml]
+  C:\Users\JianKaiWang\Desktop\demo\demo\demo\Program.cs(7,1): warning : SA1300
+ : CSharp.Naming : namespace names begin with an upper-case letter: demo. [C:\U
+sers\JianKaiWang\Desktop\example.xml]
+  C:\Users\JianKaiWang\Desktop\demo\demo\demo\Program.cs(1,1): warning : SA1200
+ : CSharp.Ordering : All using directives must be placed inside of the namespac
+e. [C:\Users\JianKaiWang\Desktop\example.xml]
+  C:\Users\JianKaiWang\Desktop\demo\demo\demo\Program.cs(2,1): warning : SA1200
+ : CSharp.Ordering : All using directives must be placed inside of the namespac
+e. [C:\Users\JianKaiWang\Desktop\example.xml]
+  C:\Users\JianKaiWang\Desktop\demo\demo\demo\Program.cs(3,1): warning : SA1200
+ : CSharp.Ordering : All using directives must be placed inside of the namespac
+e. [C:\Users\JianKaiWang\Desktop\example.xml]
+  C:\Users\JianKaiWang\Desktop\demo\demo\demo\Program.cs(4,1): warning : SA1200
+ : CSharp.Ordering : All using directives must be placed inside of the namespac
+e. [C:\Users\JianKaiWang\Desktop\example.xml]
+  C:\Users\JianKaiWang\Desktop\demo\demo\demo\Program.cs(5,1): warning : SA1200
+ : CSharp.Ordering : All using directives must be placed inside of the namespac
+e. [C:\Users\JianKaiWang\Desktop\example.xml]
+  C:\Users\JianKaiWang\Desktop\demo\demo\demo\Properties\AssemblyInfo.cs(1,1):
+warning : SA1633 : CSharp.Documentation : The file has no header, the header Xm
+l is invalid, or the header is not located at the top of the file. [C:\Users\Ji
+anKaiWang\Desktop\example.xml]
+
+    12 個警告
+    0 個錯誤
+
+經過時間 00:00:00.43
+```
 
 
 
