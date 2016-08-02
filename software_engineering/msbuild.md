@@ -153,7 +153,7 @@ Build:
 
 * 客製化顯示結果：
   1. 因 item 輸出內容以分號作為區隔，可以透過 @(ItemName,'Seperator') 指定分隔符號
-  2. 例如透過 @(ItemName->'Files:%(FullPath)','%0a') 來換行顯示
+  2. 例如透過 @(ItemName->'Files:%(FullPath)','%0a') 來換行顯示，%0a 表示換行符號
 
 ```xml
 <?xml version="1.0" encoding="utf-8"?>
