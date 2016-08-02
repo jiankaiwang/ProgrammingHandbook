@@ -28,6 +28,6 @@
 C:\>MsBuild <project.xml>
 
 # 範例如下
-C:\Users\JianKaiWang\Desktop>MsBuild example.xml
+C:\Users\user\Desktop>MsBuild example.xml
 ```
 
