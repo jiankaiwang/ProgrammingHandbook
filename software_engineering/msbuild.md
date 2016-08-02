@@ -102,6 +102,34 @@ Step 3:
 經過時間 00:00:00.04
 ```
 
+### ItemGroup 與 Item 的使用
+---
+
+* MsBuild 中透過 Item 指定專案建置中所包含的項目，ItemGroup 為 Item 的集合
+
+* ItemGroup 中可以定義 Item 名稱與內容如下範例
+
+```xml
+<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+	<ItemGroup>		
+		<ProjectFiles Include="C:\Users\JianKaiWang\Desktop\demo\demo\demo\**\*.cs" />		
+	</ItemGroup>
+	
+	<Target Name="Build">
+		<Message Text="@(ProjectFiles)" />
+	</Target>
+</Project>
+```
+
+
+
+
+
+
+
+
+
 
 
 
