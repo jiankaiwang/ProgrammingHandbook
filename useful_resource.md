@@ -15,6 +15,7 @@
   2. [CodePlex download](https://fxcopinstaller.codeplex.com/)
 * [Simian (程式碼相似度分析工具)](http://www.harukizaemon.com/simian/)
 * [SourceMonitor (程式碼複雜度分析程式)](http://www.campwoodsw.com/sourcemonitor.html)
+* [MsBuild (微軟專案開發建置工具)](https://msdn.microsoft.com/zh-tw/library/0k6kkbsd.aspx)
 
 ###Gitbook
 ---
