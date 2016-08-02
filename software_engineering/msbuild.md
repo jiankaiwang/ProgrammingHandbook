@@ -28,6 +28,22 @@
 C:\>MsBuild <project.xml>
 
 # 範例如下
-C:\Users\JiankaiWang\Desktop>MsBuild example.xml
+C:\Program Files (x86)\Microsoft Visual Studio 14.0>cd C:\Users\JianKaiWang\Desktop\
+C:\Users\JianKaiWang\Desktop>MsBuild example.xml
+Microsoft (R) Build Engine version 14.0.24723.2
+Copyright (C) Microsoft Corporation. 著作權所有，並保留一切權利。
+
+已經開始建置於 2016/8/2 上午 10:40:08。
+節點 1 (預設目標) 上的專案 "C:\Users\JianKaiWang\Desktop\example.xml"。
+Build:
+  Hello Msbuild!
+專案 "C:\Users\JianKaiWang\Desktop\example.xml" (預設目標) 建置完成。
+
+
+建置成功。
+    0 個警告
+    0 個錯誤
+
+經過時間 00:00:00.11
 ```
 
