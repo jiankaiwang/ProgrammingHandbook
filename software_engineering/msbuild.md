@@ -122,7 +122,32 @@ Step 3:
 </Project>
 ```
 
+* 建置結果如下 :
 
+```bash
+C:\Users\JianKaiWang\Desktop>MsBuild example.xml
+Microsoft (R) Build Engine version 14.0.24723.2
+Copyright (C) Microsoft Corporation. 著作權所有，並保留一切權利。
+
+已經開始建置於 2016/8/2 上午 11:03:14。
+節點 1 (預設目標) 上的專案 "C:\Users\JianKaiWang\Desktop\example.xml"。
+Build:
+  C:\Users\JianKaiWang\Desktop\demo\demo\demo\obj\Debug\TemporaryGeneratedFile_
+  036C0B5B-1481-4323-8D20-8F5ADCB23D92.cs;C:\Users\JianKaiWang\Desktop\demo\dem
+  o\demo\obj\Debug\TemporaryGeneratedFile_5937a670-0e60-4077-877b-f7221da3dda1.
+  cs;C:\Users\JianKaiWang\Desktop\demo\demo\demo\obj\Debug\TemporaryGeneratedFi
+  le_E7A71F73-0F8D-4B9B-B56E-8E70B10BC5D3.cs;C:\Users\JianKaiWang\Desktop\demo\
+  demo\demo\Program.cs;C:\Users\JianKaiWang\Desktop\demo\demo\demo\Properties\A
+  ssemblyInfo.cs
+專案 "C:\Users\JianKaiWang\Desktop\example.xml" (預設目標) 建置完成。
+
+
+建置成功。
+    0 個警告
+    0 個錯誤
+
+經過時間 00:00:00.04
+```
 
 
 
