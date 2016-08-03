@@ -19,20 +19,19 @@
 ```python
 # for loop-index
 for i in range(1,10,1):
-  print i
+  ...
 ```
 
 ```python
 # for loop similar with foreach
-items = ["a string","123","1.37"]
-for element in items:
-  print element
+for element in ["a string","123","1.37"]:
+  ...
 ```
 
 ```python
 # while loop
 while True:
-  break
+  ...
 ```
 
 ###Function
@@ -52,14 +51,20 @@ getRes = getString("This ","is ","a string.")
 ###System interaction
 ---
 
+* library
+
 ```python
 import sys
 ```
+
+* parameter
 
 ```python
 # count the parameters passed
 total = len(sys.argv)	
 ```
+
+* get each parameters
 
 ```python
 # show the parameters, start from 0(file name)
@@ -83,16 +88,16 @@ for i in range(0,len(sys.argv),1):
 ###Dictionary
 ---
 
-| api | desc |
-| -- | -- |
-| newDict = {"k1" : 123, "k2" : 456} | declear a dictionary |
-| getKeys = newDict.keys() | all keys |
-| getValues = newDict.values() | all values |
-| print newDict["k1"] | find a value by key |
-| if newDict.has_key("testKey"): | key exists |
-| len(newDict.keys()) | length |
-| newDict.setdefault("newKey","newValue") | add a pair |
-| del newDict["newKey"] | delete the pair |
+```python
+newDict = { key1 : value1, key2 : value2 }                # declear a dictionary
+getKeys = newDict.keys()                                  # all keys
+getValues = newDict.values()                              # all values
+print newDict["k1"]                                       # find a value by key
+if newDict.has_key("testKey"):                            # key exists
+len(newDict.keys())                                       # dictionary length
+newDict.setdefault("newKey","newValue")                   # add a pair
+del newDict["newKey"]                                     # delete the pair
+```
 
 ###File I/O
 ---
@@ -119,6 +124,6 @@ while True:
 ```python
 # Write into file named output.txt
 fout = open("output.txt","w")
-fout.write(str(i) + "\n")
+fout.write( ... )
 fout.close()
 ```
