@@ -76,27 +76,27 @@ for i in range(0,len(sys.argv),1):
 ###List
 ---
 
-| api | desc |
-| -- | -- |
-| aList = [123,"A","the string"] | declear a list |
-| aList.append("newOne") | push a element |
-| getEle = aList.pop() | pop a element |
-| if "the string" in aList: | exists in a list |
-| aList.index("element") | index of the element |
-| len(aList) | length of a list |
+```python
+aList = [123,"A","the string"]                      # declear a list
+aList.append("value")                               # push a element
+getEle = aList.pop()                                # pop a element
+if element in aList:                                # exists in a list
+aList.index("element")                              # index of the element
+len(aList)                                          # length of a list
+```
 
 ###Dictionary
 ---
 
 ```python
-newDict = { key1 : value1, key2 : value2 }                # declear a dictionary
-getKeys = newDict.keys()                                  # all keys
-getValues = newDict.values()                              # all values
-print newDict["k1"]                                       # find a value by key
-if newDict.has_key("testKey"):                            # key exists
-len(newDict.keys())                                       # dictionary length
-newDict.setdefault("newKey","newValue")                   # add a pair
-del newDict["newKey"]                                     # delete the pair
+d = { key1 : value1, key2 : value2 }                # declear a dictionary
+getKeys = d.keys()                                  # all keys
+getValues = d.values()                              # all values
+print d["k1"]                                       # find a value by key
+if d.has_key("testKey"):                            # key exists
+len(d.keys())                                       # dictionary length
+d.setdefault("newKey","newValue")                   # add a pair
+del d["newKey"]                                     # delete the pair
 ```
 
 ###File I/O
