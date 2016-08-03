@@ -98,7 +98,7 @@ for i in range(0,len(sys.argv),1):
 ---
 
 ```python
-# Read file named data
+# Read file, named data, line by line
 fin = open("data","r")
 with fin as inputObject:
   for line in fin:
