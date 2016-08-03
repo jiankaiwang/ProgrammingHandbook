@@ -105,7 +105,7 @@ with fin as inputObject:
     print line
 fin.close()
 
-# Write file
+# Write into file named input.txt
 fout = open("output.txt","w")
 fout.write(str(i) + "\n")
 fout.close()
