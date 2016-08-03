@@ -98,15 +98,13 @@ for i in range(0,len(sys.argv),1):
 ---
 
 ```python
-# Read file
+# Read file named data
 fin = open("data","r")
 with fin as inputObject:
   for line in fin:
     print line
 fin.close()
-```
 
-```python
 # Write file
 fout = open("output.txt","w")
 fout.write(str(i) + "\n")
