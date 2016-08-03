@@ -97,6 +97,8 @@ for i in range(0,len(sys.argv),1):
 ###File I/O
 ---
 
+* File Input
+
 ```python
 # Read file, named data, line by line
 fin = open("data","r")
@@ -105,6 +107,16 @@ with fin as inputObject:
     print line
 fin.close()
 
+# Read by character
+while True:
+  chunk = sys.stdin.read(1)
+  if chunk == '':
+    break
+```
+
+* File Output
+
+```python
 # Write into file named output.txt
 fout = open("output.txt","w")
 fout.write(str(i) + "\n")
