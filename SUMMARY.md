@@ -32,7 +32,7 @@
        * [JQuery activities](webpage/jquery_activities.md)
    * [TypeScript](webpage/typescript.md)
    * [Plotly](webpage/plotly.md)
-       * Responsive Web Design
+       * [Responsive Web Design](webpage/responsive_web_design.md)
    * [D3.js](webpage/d3js.md)
    * [Highcharts.js](webpage/highchartsjs.md)
    * [jQuery Editor](webpage/jquery_editor.md)
