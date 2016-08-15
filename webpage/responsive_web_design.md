@@ -22,16 +22,18 @@
     desc : RWD 
 */
 function rendering() {
-  // clear the image
-  Plotly.d3.select('#linechartBody svg').html('');
+  if(window.jQuery && $('#linechartContainer').length > 0 && $('#linechartBody').length > 0) {
+    // clear the image
+    Plotly.d3.select('#linechartBody svg').html('');
 
-  // set layout options
-  layout["height"] = parseInt(Plotly.d3.select("#linechartContainer").style("height"), 10);
-  layout["width"] = parseInt(Plotly.d3.select("#linechartContainer").style("width"), 10);
-  layout["autosize"] = false;
+    // set layout options
+    layout["height"] = parseInt(Plotly.d3.select("#linechartContainer").style("height"), 10);
+    layout["width"] = parseInt(Plotly.d3.select("#linechartContainer").style("width"), 10);
+    layout["autosize"] = false;
 
-  // try to plot a new one image
-  Plotly.newPlot('linechartBody', data, layout);
+    // try to plot a new one image
+    Plotly.newPlot('linechartBody', data, layout);
+  }
 }
 
 // listen to the resize event
