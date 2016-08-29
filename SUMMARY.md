@@ -78,7 +78,7 @@
    * [Parallelism in R](parallel/parallelism_in_r.md)
    * [Parallelism in Python](parallel/parallelism_in_python.md)
    * [Parallelism in C++](parallel/parallelism_in_c++.md)
-   * Threading in Python
+   * [Threading in Python](parallel/threading_in_python.md)
 * [Information Security](information_security/information_security.md)
    * [MD5 hash and checksum in C#](information_security/md5_hash_and_checksum_in_csharp.md)
 * [Compression](compression/compression.md)
