@@ -1,5 +1,5 @@
 {
-  "plugins" : [ "include-highlight", "autocover", "addcssjs" ],
+  "plugins" : [ "autocover", "addcssjs" ],
   "pluginsConfig": {
     "include-highlight": {
       "extensionToLanguage": {
