@@ -47,7 +47,7 @@
        * [Background processes](webpage/background_processes.md)
        * [Array and Dictionary](webpage/array_and_dictionary.md)
        * [Regular Expression](webpage/regular_expression.md)
-       * upload 與 post 上限
+       * upload & post in PHP
    * [Node.js](webpage/nodejs.md)
    * [io.js](webpage/iojs.md)
    * [leaflet.js](webpage/leafletjs.md)
