@@ -16,6 +16,9 @@ upload_max_filesize = 50M
 
 # 調整 POST 請求限制
 post_max_size = 20M
+
+# 重新啟動 apache 取得最新組態値
+$ sudo systemctl restart httpd
 ```
 
 
