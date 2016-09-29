@@ -45,6 +45,19 @@ if __name__ == "__main__":
         thread.start_new_thread(Threadfun, ("ThreadFun in id " + str(i), i))
 ```
 
+* 類似輸出結果
+
+```bash
+ThreadFun in id 1_start
+ThreadFun in id 3_start
+ThreadFun in id 4_start
+ThreadFun in id 2_start
+ThreadFun in id 1_end
+ThreadFun in id 2_end
+ThreadFun in id 3_end
+ThreadFun in id 4_end
+```
+
 ### Not Synchronized Threading but a Critical Section issue
 ---
 
