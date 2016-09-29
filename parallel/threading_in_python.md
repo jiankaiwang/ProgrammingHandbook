@@ -64,13 +64,19 @@ if __name__ == "__main__":
 import threading
 import time
 
+#
+# desc : execution body for the test thread group, no locking operation
+#
 def worker(num):
     global execThreadTest
     
     time.sleep(1)   
     execThreadTest += num  
     return
-    
+
+#
+# desc : execution body for the control thread group, there is the locking operation
+#
 def workerControl(num):
     global execThreadControl
     
@@ -85,19 +91,29 @@ def workerControl(num):
     link.release()    
     return
 
-# variable execThreadTest and execThreadControl to simulate the critial object
+#
+# desc : variable execThreadTest and execThreadControl to simulate the critial objects
+#
 execThreadTest = 0
 execThreadControl = 0
 
-# variable link to control critial section
+#
+# desc : variable link to control critial section
+#
 link = threading.Lock()
 
+#
+# desc : main entry to start different threads
+#
 for index in range(1,1001,1):
     test = threading.Thread(target=worker, args=(index,))
     test.start()    
     control = threading.Thread(target=workerControl, args=(index,))
     control.start()
 
+#
+# desc : show results
+#
 while execThreadTest < 1 or  execThreadControl < 1:       
     time.sleep(2)
     print "Control (lock) : ", execThreadControl,", and TEST (no lock) : ", execThreadTest
