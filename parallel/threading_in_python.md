@@ -2,10 +2,14 @@
 
 <script type="text/javascript" src="../js/general.js"></script>
 
-### Not Synchronized Threading and No Critical Section issue
+### Supported Package
 ---
 
-* package : thread
+* thread
+* threading
+
+### Not Synchronized Threading and No Critical Section issue
+---
 
 ```python
 # coding:utf-8
