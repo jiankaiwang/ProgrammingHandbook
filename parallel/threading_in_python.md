@@ -25,3 +25,6 @@ if __name__ == "__main__":
         # thread passed values by tuple
         thread.start_new_thread(Threadfun, ("ThreadFun in id " + str(i), i))
 ```
+
+### Not Synchronized Threading but a Critical Section issue
+---
