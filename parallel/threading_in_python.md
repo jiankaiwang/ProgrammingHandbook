@@ -48,14 +48,15 @@ if __name__ == "__main__":
 ### Not Synchronized Threading but a Critical Section issue
 ---
 
-* 使用狀況 : 大多數的使用狀況，如不同使用者啟動功能後
+* 使用狀況 : 大多數的使用狀況，如不同使用者啟動功能後，獨立完成一連串功能後，將狀態値紀錄起來等
   * 執行緒運行中各自不需要溝通
-  * 並無關鍵區域(存取相同變數値)問題
+  * ** 有關鍵區域(存取相同變數値)問題 **
 
 * 範例 :
-  * package : thread
-  * 將字串傳入不同執行緒，每一個執行緒皆等待數秒後標準輸出字串
-  * 需要注意傳入 thread 主體中要以 tuple 為資料結構
+  * package : threading
+  * 關鍵區域問題透過 lock 方式解決，針對共同存取的變數值進行鎖定，一次僅一個執行緒能寫入。透過定義threading.Lock() 來標示要鎖定的對象，而透過鎖定此對象的 acquire 與 release 區域來達成關鍵變數値存取即可。
+  * 需要注意傳入執行緒主體中要以 tuple 為資料結構
+  * 本範例分成 control (有進行 lock) 與 test (無 lock) 的結果
 
 ```python
 # coding: utf-8 
