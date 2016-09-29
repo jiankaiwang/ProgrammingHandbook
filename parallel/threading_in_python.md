@@ -47,3 +47,67 @@ if __name__ == "__main__":
 
 ### Not Synchronized Threading but a Critical Section issue
 ---
+
+* 使用狀況 : 大多數的使用狀況，如不同使用者啟動功能後
+  * 執行緒運行中各自不需要溝通
+  * 並無關鍵區域(存取相同變數値)問題
+
+* 範例 :
+  * package : thread
+  * 將字串傳入不同執行緒，每一個執行緒皆等待數秒後標準輸出字串
+  * 需要注意傳入 thread 主體中要以 tuple 為資料結構
+
+```python
+# coding: utf-8 
+
+import threading
+import time
+
+def worker(num):
+    global execThreadTest
+    
+    time.sleep(1)   
+    execThreadTest += num  
+    return
+    
+def workerControl(num):
+    global execThreadControl
+    
+    time.sleep(1)
+    
+    # critial section beginning
+    link.acquire()
+    
+    execThreadControl += num
+    
+    # critial section ending
+    link.release()    
+    return
+
+# variable execThreadTest and execThreadControl to simulate the critial object
+execThreadTest = 0
+execThreadControl = 0
+
+# variable link to control critial section
+link = threading.Lock()
+
+for index in range(1,1001,1):
+    test = threading.Thread(target=worker, args=(index,))
+    test.start()    
+    control = threading.Thread(target=workerControl, args=(index,))
+    control.start()
+
+while execThreadTest < 1 or  execThreadControl < 1:       
+    time.sleep(2)
+    print "Control (lock) : ", execThreadControl,", and TEST (no lock) : ", execThreadTest
+```
+
+* 類似輸出結果
+
+```bash
+# example.1
+Control (lock) :  500500 , and TEST (no lock) :  495619
+
+# example.2
+Control (lock) :  500500 , and TEST (no lock) :  499587
+```
