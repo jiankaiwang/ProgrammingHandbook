@@ -51,7 +51,7 @@
    * [Node.js](webpage/nodejs.md)
    * [io.js](webpage/iojs.md)
    * [leaflet.js](webpage/leafletjs.md)
-   * htaccess configuration
+   * [htaccess configuration](webpage/htaccess_configuration.md)
 * [Static](static/static.md)
    * [C++](static/c++.md)
        * [Memory allocation](static/cpp_memory_allocation.md)
