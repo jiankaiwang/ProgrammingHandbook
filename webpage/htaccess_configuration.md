@@ -2,7 +2,7 @@
 
 <script type="text/javascript" src="../js/general.js"></script>
 
-* Apache Server
+* Apache Server as the target
 
 ```bash
 # not to listing the directory
