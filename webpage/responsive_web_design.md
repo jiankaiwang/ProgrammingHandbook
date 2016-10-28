@@ -52,11 +52,20 @@ Plotly.d3.select(window).on('resize', rendering);
 ```javascript
 // ...
 
+function renderingEvent1() {
+  // ...
+}
+
 // listen to the resize event 1
-Plotly.d3.select(window).on('resize.event1', rendering);
+Plotly.d3.select(window).on('resize.event1', renderingEvent1);
+
+
+function renderingEvent2() {
+  // ...
+}
 
 // listen to the resize event 2
-Plotly.d3.select(window).on('resize.event2', rendering);
+Plotly.d3.select(window).on('resize.event2', renderingEvent2);
 
 // ...
 ```
