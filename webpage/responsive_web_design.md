@@ -43,9 +43,13 @@ Plotly.d3.select(window).on('resize', rendering);
 ### allow multiple resize events
 ---
 
-* 透過 namespace 來達成，需要注意的是需要每個 resize event 都有 namespace 定義
+* 透過 namespace 來達成，需要注意的是需要每個 resize event 都有 namespace 定義，如下 API 說明及範例
 
-```
+| 註解 |
+| -- |
+| If an event listener was already registered for the same type on the selected element, the existing listener is removed before the new listener is added. To register multiple listeners for the same event type, the type may be followed by an optional namespace, such as "click.foo" and "click.bar". |
+
+```javascript
 // ...
 
 // listen to the resize event 1
