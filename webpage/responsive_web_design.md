@@ -39,3 +39,22 @@ function rendering() {
 // listen to the resize event
 Plotly.d3.select(window).on('resize', rendering);
 ```
+
+### allow multiple resize events
+---
+
+* 透過 namespace 來達成，需要注意的是需要每個 resize event 都有 namespace 定義
+
+```
+// ...
+
+// listen to the resize event 1
+Plotly.d3.select(window).on('resize.event1', rendering);
+
+// listen to the resize event 2
+Plotly.d3.select(window).on('resize.event2', rendering);
+
+// ...
+```
+
+
