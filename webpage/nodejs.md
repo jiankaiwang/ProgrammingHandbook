@@ -13,4 +13,7 @@ $ npm init
 // --save 將此模組資訊加入 package.json 中
 // -g 將此模組加入本機 node.js 運行環境中，而非僅於此專案
 $ npm install [--save] [-g] (module-name)
+
+// 運行一個 node.js 服務
+$ node index.js
 ```
