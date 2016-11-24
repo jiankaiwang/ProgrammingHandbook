@@ -49,5 +49,6 @@
 | [Jenkins](https://jenkins.io/) | - | Continuous Integration | windows / linux |
 | [hadoop](http://hadoop.apache.org/) | - | distributed computing | windows / linux |
 | [openstack](https://www.openstack.org/) | - | cloud computing | windows / linx |
-
+| [MongoDB](https://github.com/mongo-express/mongo-express) | NoSQL | Database | windows / linux |
+| [mosca](https://github.com/mcollina/mosca) | MQTT | Server | windows / linux |
 
