@@ -2,6 +2,7 @@
 
 * [Introduction](README.md)
 * [Useful Resource](useful_resource.md)
+* IDE List
 * [License](license/license.md)
    * [BSD License](license/bsd_license.md)
 * [Software Engineering](software_engineering/software_engineering.md)
@@ -92,5 +93,4 @@
    * [FTP in Java](network/ftp_in_java.md)
    * [Firewall by IP Address in C#](network/firewall_by_ip_address_in_csharp.md)
 * [Android](android/android.md)
-* IDE List
 
