@@ -2,7 +2,7 @@
 
 * [Introduction](README.md)
 * [Useful Resource](useful_resource.md)
-* [Tool List](ide_list.md)
+* [Tool List](tool_list.md)
 * [License](license/license.md)
    * [BSD License](license/bsd_license.md)
 * [Software Engineering](software_engineering/software_engineering.md)
