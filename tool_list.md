@@ -31,6 +31,7 @@
 | [MySQL Workbench](http://www.mysql.com/products/workbench/) | MySQL | Database | windows |
 | [pgAdmin](https://www.pgadmin.org/) | PostgreSQL | Database | windows |
 | [SQLite Studio](http://sqlitestudio.pl/) | SQLite | Database | windows |
+| [Oracle Database Express](http://www.oracle.com/technetwork/database/database-technologies/express-edition/overview/index.html) | Oracle DB | Database | windows |
 | [Informatica PowerCenter Express](https://marketplace.informatica.com/solutions/pcexpress) | - | ETL | windows |
 | [VirtualBox](https://www.virtualbox.org/) | - | virtualization | windows / linux |
 | [VMware Workstation](http://www.vmware.com/tw/products/workstation.html) | - | virtualization | windows / linux |
@@ -46,4 +47,7 @@
 | [Github](https://github.com/) | - | git version control | windows |
 | [smartGit](http://www.syntevo.com/smartgit/) | - | git version control | windows / linux |
 | [Jenkins](https://jenkins.io/) | - | Continuous Integration | windows / linux |
+| [hadoop](http://hadoop.apache.org/) | - | distributed computing | windows / linux |
+| [openstack](https://www.openstack.org/) | - | cloud computing | windows / linx |
+
 
