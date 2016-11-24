@@ -121,6 +121,7 @@
 
 ###Compression
 ---
+
 * lz-string
   * [Github (Link)](https://github.com/pieroxy/lz-string)
   * [Document (Link)](http://pieroxy.net/blog/pages/lz-string/index.html)
@@ -136,11 +137,4 @@
 
 * android developer
   * [Google official](https://developer.android.com/index.html)
-
-###Arduino
----
-
-* [官方網站](https://www.arduino.cc/)
-
-
 
