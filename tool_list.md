@@ -51,4 +51,7 @@
 | [openstack](https://www.openstack.org/) | - | cloud computing | windows / linx |
 | [MongoDB](https://github.com/mongo-express/mongo-express) | NoSQL | Database | windows / linux |
 | [mosca](https://github.com/mcollina/mosca) | MQTT | Server | windows / linux |
+| [Xamarin](https://www.xamarin.com/) | CSharp | Cross Platform built on Visual Studio | android / iOS |
+| [React Native](https://facebook.github.io/react-native/) | javascript | Cross Platform | android / iOS / Facebook |
+| [Silver](http://elementscompiler.com/elements/silver/) | Swift | Cross Platform | android / iOS |
 
