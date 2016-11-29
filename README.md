@@ -9,6 +9,11 @@ So, let us explore wonderful software world.
 
 * 資通訊的世界都是一點一滴累積而成的結果，也感謝前人的種樹才有後人的乘涼，亦可以說是站巨人的肩膀上。
 
+### TooL List
+---
+
+* 包含多種開發的 IDE, 使用的環境等。
+
 ###License
 ---
 
