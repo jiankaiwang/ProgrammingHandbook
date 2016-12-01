@@ -53,6 +53,7 @@
    * [io.js](webpage/iojs.md)
    * [leaflet.js](webpage/leafletjs.md)
    * [htaccess configuration](webpage/htaccess_configuration.md)
+   * tracking.js
 * [Static](static/static.md)
    * [C++](static/c++.md)
        * [Memory allocation](static/cpp_memory_allocation.md)
