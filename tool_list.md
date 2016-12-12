@@ -50,6 +50,7 @@
 | [hadoop](http://hadoop.apache.org/) | - | distributed computing | windows / linux |
 | [openstack](https://www.openstack.org/) | - | cloud computing | windows / linx |
 | [MongoDB](https://github.com/mongo-express/mongo-express) | NoSQL | Database | windows / linux |
+| [Mongo Management Studio](http://mms.litixsoft.de/index.php?lang=de/) | NongoDB | Database | Windows / linux / MacOS |
 | [mosca](https://github.com/mcollina/mosca) | MQTT | Server | windows / linux |
 | [Xamarin](https://www.xamarin.com/) | CSharp | Cross Platform built on Visual Studio | android / iOS |
 | [React Native](https://facebook.github.io/react-native/) | javascript | Cross Platform | android / iOS / Facebook |
