@@ -35,6 +35,7 @@
 | [Informatica PowerCenter Express](https://marketplace.informatica.com/solutions/pcexpress) | - | ETL | windows |
 | [VirtualBox](https://www.virtualbox.org/) | - | virtualization | windows / linux |
 | [VMware Workstation](http://www.vmware.com/tw/products/workstation.html) | - | virtualization | windows / linux |
+| [docker](https://www.docker.com/) | - | virtualization | windows / linux / Mac |
 | [SteamVR](http://store.steampowered.com/steamvr) | - | VR | windows |
 | [Putty](http://www.chiark.greenend.org.uk/~sgtatham/putty/download.html) | - | SSH | windows |
 | [Unity](https://unity3d.com/) | - | 2D, 3D Gaming, Building Modeling, Animation | windows |
