@@ -57,3 +57,20 @@
 | [React Native](https://facebook.github.io/react-native/) | javascript | Cross Platform | android / iOS / Facebook |
 | [Silver](http://elementscompiler.com/elements/silver/) | Swift | Cross Platform | android / iOS |
 | [Corona](https://coronalabs.com/) | Lua | Cross Platform | android / iOS |
+
+
+### Public Cloud Service
+---
+
+| Name | Field / Description | Platform |
+| -- | -- | -- |
+| [Azure](Microsoft Azure：雲端計算平台與服務) | multiple | - |
+| [Amazon Web Services](https://aws.amazon.com/tw/) | multiple | - |
+| [Google Cloud Platform](https://cloud.google.com/) | multiple | | 
+| [Openshift](https://www.openshift.com/) | PaaS | - |
+| [Modulus](https://modulus.io/) | App Container Platform | - |
+| [mLab](https://mlab.com/) | PaaS | MongoDB |
+
+
+
+
