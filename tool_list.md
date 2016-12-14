@@ -33,6 +33,7 @@
 | [SQLite Studio](http://sqlitestudio.pl/) | SQLite | Database | windows |
 | [Oracle Database Express](http://www.oracle.com/technetwork/database/database-technologies/express-edition/overview/index.html) | Oracle DB | Database | windows |
 | [Informatica PowerCenter Express](https://marketplace.informatica.com/solutions/pcexpress) | - | ETL | windows |
+| [SQL Server Data Tools](https://msdn.microsoft.com/zh-tw/library/mt204009.aspx) | - | ETL | SQL Server |
 | [VirtualBox](https://www.virtualbox.org/) | - | virtualization | windows / linux |
 | [VMware Workstation](http://www.vmware.com/tw/products/workstation.html) | - | virtualization | windows / linux |
 | [docker](https://www.docker.com/) | - | virtualization | windows / linux / Mac |
