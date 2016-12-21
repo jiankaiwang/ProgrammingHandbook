@@ -60,6 +60,7 @@
 | [Corona](https://coronalabs.com/) | Lua | Cross Platform | android / iOS |
 | [WebGLStudio](https://webglstudio.org/demo/) | - | WebGL | Browser |
 | [PLAYCANVAS](https://playcanvas.com/) | - | WebGL | Browser |
+| [SoapUI](https://www.soapui.org/) | - | Web Service | Browser |
 
 ### Public Cloud Service
 ---
