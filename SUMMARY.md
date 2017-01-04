@@ -78,6 +78,7 @@
     * [R](scientific/r.md)
         * [S4 Class 使用](scientific/s4_class.md)
         * [Data accessed by R](scientific/r_access_multiple_source_data.md)
+    * [Matlab](scientific/matlab.md)
 * [Parallel](parallel/parallel.md)
     * [Multiprogramming, Multiprocessing, Multitasking](parallel/multiprogramming,_multiprocessing,_multitasking.md)
     * [Threading in Java](parallel/threading_in_java.md)
