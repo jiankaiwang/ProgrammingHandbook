@@ -39,7 +39,7 @@
 | [docker](https://www.docker.com/) | - | virtualization | windows / linux / Mac |
 | [SteamVR](http://store.steampowered.com/steamvr) | - | VR | windows |
 | [Putty](http://www.chiark.greenend.org.uk/~sgtatham/putty/download.html) | - | SSH | windows |
-| [Unity](https://unity3d.com/) | - | 2D, 3D Gaming, Building Modeling, Animation | windows |
+| [Unity](https://unity3d.com/) | - | 2D, 3D Gaming, Building Modeling, Animation, VR | windows |
 | [SketchUp](http://www.sketchup.com/zh-TW) | - | 3D Modeling | windows |
 | [autoCAD](http://www.autodesk.com/products/autocad/overview) | - | 2D, 3D Modeling | windows |
 | [3dsMax](http://www.autodesk.com.tw/products/3ds-max/overview) | - | 2D, 3D Modeling | windows |
@@ -47,6 +47,7 @@
 | [Subversion](https://subversion.apache.org/) | - | version control, Client-Server development | windows / linux | 
 | [git](https://git-scm.com/) | - | version control, distributed development | windows / linux | 
 | [Github](https://github.com/) | - | git version control | windows |
+| [SourceTree](https://www.sourcetreeapp.com/) | - | git version control | windows |
 | [smartGit](http://www.syntevo.com/smartgit/) | - | git version control | windows / linux |
 | [Jenkins](https://jenkins.io/) | - | Continuous Integration | windows / linux |
 | [hadoop](http://hadoop.apache.org/) | - | distributed computing | windows / linux |
@@ -56,6 +57,7 @@
 | [mosca](https://github.com/mcollina/mosca) | MQTT | Server | windows / linux |
 | [Xamarin](https://www.xamarin.com/) | CSharp | Cross Platform built on Visual Studio | android / iOS |
 | [React Native](https://facebook.github.io/react-native/) | javascript | Cross Platform | android / iOS / Facebook |
+| [CodeIn](https://github.com/jiankaiwang/codein) | Swift | Cross Platform | Docker |
 | [Silver](http://elementscompiler.com/elements/silver/) | Swift | Cross Platform | android / iOS |
 | [Corona](https://coronalabs.com/) | Lua | Cross Platform | android / iOS |
 | [WebGLStudio](https://webglstudio.org/demo/) | - | WebGL | Browser |
