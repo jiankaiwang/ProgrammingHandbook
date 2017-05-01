@@ -2,7 +2,7 @@
 
 <script type="text/javascript" src="../js/general.js"></script>
 
-### Commands
+### 運行指令
 ---
 
 ```javascript
@@ -14,6 +14,62 @@ $ npm init
 // -g 將此模組加入本機 node.js 運行環境中，而非僅於此專案
 $ npm install [--save] [-g] (module-name)
 
-// 運行一個 node.js 服務
+/* 
+ * desc : 運行 node.js 服務
+ * 單一入口 : node index.js
+ * 依 package.json 啟動整個服務 : npm start
+ */
 $ node index.js
+$ npm start
 ```
+
+### Node.js 基礎
+---
+
+```nodejs
+/*
+ * 引用 http 套件
+ */
+var http = require("http");
+
+/*
+ * 自訂套件函式輸出
+ * expFun : 外部引用套件函式名
+ * funName : 原套件函式名
+ */
+exports.expFun = funName;
+
+// 啟動伺服器
+http.createServer(function(request, response) {
+ // request : client 請求，包含 GET/POST、Pathname 與 query 等
+ 
+ /*
+  * response : 回應內容
+  * status_code : 200 (OK), 404 (not found), 500 (internal error) 等
+  */
+ response.writeHead(status_code, {"Content-type" : "text/plain"});
+ response.write("回應內容");
+ response.end();		
+ 
+}).listen(Port);
+```
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
