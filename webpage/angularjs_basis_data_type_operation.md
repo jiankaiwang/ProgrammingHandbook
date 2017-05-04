@@ -1,4 +1,7 @@
 # 不同資料型態的操作
+
+<script type="text/javascript" src="../js/general.js"></script>
+
 ###記得加入 Javascript Framework
 ---
 
