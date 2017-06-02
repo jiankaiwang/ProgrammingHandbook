@@ -56,7 +56,7 @@ newHash["key2"] = "value2";
 newHash["key1"] = "new_value1";
 
 // delete a pair of key => value from the hash
-newHash.splice("key2",1);
+delete newHash["key2"];
 
 // show the whole key of the hash and its length
 var hashLength = 0;
