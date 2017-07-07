@@ -79,6 +79,7 @@
   * [Python access MySQL](database/python_access_mysql.md)
   * [R access SQLite](database/r_access_sqlite.md)
   * [Mongodb](database/mongodb.md)
+  * [Redis](database/redis.md)
 * [Scientific](scientific/scientific.md)
   * [R](scientific/r.md)
     * [S4 Class 使用](scientific/s4_class.md)
