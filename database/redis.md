@@ -7,3 +7,5 @@
 
 * [Redis Official](https://redis.io/)
     * GUI : [Redis Desktop Manager](https://redisdesktop.com/)
+    
+* Cheat Sheet
