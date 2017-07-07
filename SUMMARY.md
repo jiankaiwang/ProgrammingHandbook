@@ -86,6 +86,7 @@
     * [Data accessed by R](scientific/r_access_multiple_source_data.md)
   * [Matlab](scientific/matlab.md)
 * [Parallel](parallel/parallel.md)
+  * [Introduction of Parallel Computing](parallel/parallel_concept.md)
   * [Multiprogramming, Multiprocessing, Multitasking](parallel/multiprogramming,_multiprocessing,_multitasking.md)
   * [Threading in Java](parallel/threading_in_java.md)
   * [Synchronize threads in Java](parallel/synchronize_threads_in_java.md)
