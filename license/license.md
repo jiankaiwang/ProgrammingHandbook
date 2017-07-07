@@ -6,3 +6,10 @@
 
 目前常見的開源協議有 5 種，分別是 BSD, Apache, GPL, LGPL, MIT 等。若是要開源自己的代碼，也盡量依據在被允許(或認可)的開源協議上為佳。
 
+### Resource
+---
+
+* Open Source Initiative
+  * [License Summary](https://opensource.org/licenses/alphabetical)
+
+
