@@ -54,6 +54,8 @@
 | [openstack](https://www.openstack.org/) | - | cloud computing | windows / linx |
 | [MongoDB](https://docs.mongodb.com/) | NoSQL | Database | windows / linux |
 | [Mongo Management Studio](http://mms.litixsoft.de/index.php?lang=de/) | NongoDB | Database | Windows / linux / MacOS |
+| [Redis](https://redis.io/) | NoSQL | Database | windows / linux |
+| [Redis Desktop Manager](https://redisdesktop.com/) | NoSQL | Database | Windows / linux / MacOS |
 | [mosca](https://github.com/mcollina/mosca) | MQTT | Server | windows / linux |
 | [Xamarin](https://www.xamarin.com/) | CSharp | Cross Platform built on Visual Studio | android / iOS |
 | [React Native](https://facebook.github.io/react-native/) | javascript | Cross Platform | android / iOS / Facebook |
