@@ -29,9 +29,9 @@
     },
     "mathjax":{
         "forceSVG": true
+    },
+    "addcssjs": {
+      "js": ["js/general.js"]
     }
-  },
-  "addcssjs": {
-    "js": ["js/general.js"]
   }
 }
