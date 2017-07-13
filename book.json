@@ -1,5 +1,5 @@
 {
-  "plugins" : [ "autocover", "addcssjs" ],
+  "plugins" : [ "mathjax","autocover", "addcssjs" ],
   "pluginsConfig": {
     "include-highlight": {
       "extensionToLanguage": {
