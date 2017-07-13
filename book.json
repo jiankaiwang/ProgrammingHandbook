@@ -9,23 +9,26 @@
         "Java": "java",
         "Python": "py",
         "SQL": "sql"
-      },
-      "autocover": {
-              "title": "Programming Language Handbook",
-              "author": "J.K. Wang",
-              "font": {
-                  "size": null,
-                  "family": "Impact",
-                  "color": "#000"
-              },
-              "size": {
-                  "w": 1800,
-                  "h": 2360
-              },
-              "background": {
-                  "color": "#FFF"
-              }
+      }
+    },
+    "autocover": {
+        "title": "Programming Language Handbook",
+        "author": "J.K. Wang",
+        "font": {
+            "size": null,
+            "family": "Impact",
+            "color": "#000"
+        },
+        "size": {
+            "w": 1800,
+            "h": 2360
+        },
+        "background": {
+            "color": "#FFF"
         }
+    },
+    "mathjax":{
+        "forceSVG": true
     }
   },
   "addcssjs": {
