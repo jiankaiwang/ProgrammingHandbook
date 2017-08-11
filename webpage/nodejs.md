@@ -54,7 +54,46 @@ http.createServer(function(request, response) {
 }).listen(Port);
 ```
 
+### 建立 Node.js 服務
+---
 
+* 建立 /etc/systemd/system/nodeapp.service 服務
+
+```bash
+$ sudo vim /etc/systemd/system/nodeapp.service
+```
+
+```conf
+[Unit]
+Description=Nodejs application
+After=network.target
+
+[Service]
+User=root
+Group=root
+ExecStart=/usr/bin/node /home/user/nodeapp/app.js > /var/tmp/nodeapp.log & 2>&1
+Restart=always
+Environment=PATH=/usr/bin:/usr/local/bin
+Environment=NODE_ENV=production
+WorkingDirectory=/home/user/nodeapp
+
+[Install]
+WantedBy=multi-user.target
+```
+
+* 管理服務
+
+```bash
+# 服務管理
+sudo systemctl start redis
+sudo systemctl stop redis
+sudo systemctl restart redis
+sudo systemctl status redis
+
+# 開機啟動
+sudo systemctl enable redis
+sudo systemctl disable redis
+```
 
 
 
