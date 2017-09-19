@@ -5,74 +5,86 @@ This book is designed to summarize different kinds of programming languages, inc
 So, let us explore wonderful software world.
 
 ### TooL List
+
 ---
 
 * 包含多種開發的 IDE, 使用的環境等。
 
 ### License
+
 ---
 
 * 開放軟體的授權說明。
 
 ### Software Enginnering
+
 ---
 
 * 軟體開發的心法。
 
 ### Gitbook
+
 ---
 
 * 此編輯器的相關編輯與 plugin 使用方法。
 
 ### Webpage
+
 ---
 
 * 與網頁開發有關之技術或設計。
 * Include HTML5, CSS3, Javascript, PHP, ASP.NET, LaTex, etc. Provide several designs combining many of them.
 
 ### Static
+
 ---
 
 * static 程式語言開發。
 * Include C, C++, Java, C\#, etc. Besides, also note the essential tools used to develop, debug, testing with them.
 
 ### Dynamic
+
 ---
 
 * dynamic 語言程式開發。
 * Include python, perl, ruby, etc. Also, provide several specific programs to implement security issues.
 
 ### Database
+
 ---
 
 * 與資料庫有關之開發或設計。
 
 ### Scientific
+
 ---
 
 * 與科學軟體或軟體技術有關之說明。
 * Include R, matlab, etc. Also, provide drawing calculated results in 2D or 3D. Conduct modeling and many statistical problems.
 
 ### Parallel
+
 ---
 
 * 平行化設計的技術或原理說明。
 
 ### Compression
+
 ---
 
 * 壓縮資料的處理或設計方式。
 
 ### Network
+
 ---
 
 * 與網路開發有關之軟體設計。
 
 ### Android
+
 ---
 
 * Google andorid APP 開發。
-
 
 
 
