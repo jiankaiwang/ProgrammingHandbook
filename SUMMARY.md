@@ -62,6 +62,7 @@
   * [C++](static/c++.md)
     * [Memory allocation](static/cpp_memory_allocation.md)
     * [Object-Oriented Programming](static/cpp_object-oriented_programming.md)
+  * [GO](static/go.md)
 * [Dynamic](dynamic/dynamic.md)
   * [Perl](dynamic/perl.md)
     * [Memory allocation](dynamic/perl_memory_allocation.md)
