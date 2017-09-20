@@ -69,6 +69,7 @@
     * [Object-Oriented Programming](dynamic/perl_object-oriented_programming.md)
   * [Python](dynamic/python.md)
     * [Object-Oriented Programming](dynamic/python_object-oriented_programming.md)
+    * [Pandas](dynamic/pandas.md)
   * [Ruby](dynamic/ruby.md)
 * [Database](database/database.md)
   * [Syntax comparison](database/syntax_comparison.md)
