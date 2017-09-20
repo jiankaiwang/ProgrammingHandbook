@@ -2,6 +2,12 @@
 
 <script type="text/javascript" src="../js/general.js"></script>
 
+### Necessary Resources
+---
+
+* Effective GO : [https://golang.org/doc/effective_go.html](https://golang.org/doc/effective_go.html)
+* 《Effective Go》中英双语版 : [https://www.gitbook.com/book/bingohuang/effective-go-zh-en/details](https://www.gitbook.com/book/bingohuang/effective-go-zh-en/details)
+
 ### Environment Variable Setting
 ---
 
@@ -20,6 +26,9 @@
 ---
 
 ```batch
+# build the source code
 > go build
+
+# download and install the package
 > go get
 ```
