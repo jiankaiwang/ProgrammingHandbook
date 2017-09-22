@@ -36,8 +36,12 @@
 ### Necessary Resources
 ---
 
+* The Go Programming Language Specification : [https://golang.org/ref/spec](https://golang.org/ref/spec)
+* A tour of GO : [https://tour.golang.org](https://tour.golang.org)
+* How to write GO code : [https://golang.org/doc/code.html](https://golang.org/doc/code.html)
 * Effective GO : [https://golang.org/doc/effective_go.html](https://golang.org/doc/effective_go.html)
 * 《Effective Go》中英双语版 : [https://www.gitbook.com/book/bingohuang/effective-go-zh-en/details](https://www.gitbook.com/book/bingohuang/effective-go-zh-en/details)
+* Effective go 正體中文翻譯 : [https://ronmi.github.io/post/go/effectivego/](https://ronmi.github.io/post/go/effectivego/)
 
 ### Environment Variable Setting
 ---
