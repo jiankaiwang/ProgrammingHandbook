@@ -2,6 +2,37 @@
 
 <script type="text/javascript" src="../js/general.js"></script>
 
+### Background
+---
+
+* Developed By **Google**
+* Designer : 
+    * Robert Griesemer, 
+    * Rob Pike, 
+    * Ken Thompson
+* Released at **2009**
+* Based on **Inferno** (Distributed System)
+* **BSD** License
+* Environment : Windows / Linux / Mac OS
+* Invoked Languages : **C** / Oberon / Limbo
+
+
+### Programming Language
+---
+
+* static type / strong data type
+* Compiled : gc, gccgo
+* Compared C / C++
+    * Unsupported : exception, inheritance, template, assertion, virtual function
+    * Supported : slice, parallel, interface, garbage collection, hash
+* Style : 
+    * No need comma
+    * {} can’t be replaced on the next line
+    * No () for the branch (IF) or loop
+* Parallelized : Goroutine
+    * Non-blocked by go syntax
+
+
 ### Necessary Resources
 ---
 
@@ -26,9 +57,15 @@
 ---
 
 ```batch
+# go version
+> go version
+
 # build the source code
-> go build
+> go build filePath
 
 # download and install the package
-> go get
+> go get packageURI
+
+# format the source code
+> go fmt filePath
 ```
