@@ -35,6 +35,7 @@
   * [Firewall](csharp/firewall_by_ip_address_in_csharp.md)
   * [FTP](csharp/ftp_in_csharp.md)
 * [GO](go/README.md)
+* [Swift](swift/README.md)
 * [Python](python/README.md)
   * [Object-Oriented Programming](python/python_object-oriented_programming.md)
   * [Threading](python/threading_in_python.md)
