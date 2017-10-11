@@ -34,6 +34,7 @@
 * [GO](go/README.md)
 * [Python](python/README.md)
   * [Object-Oriented Programming](python/python_object-oriented_programming.md)
+  * [Threading](python/threading_in_python.md)
   * [Parallelism](python/parallelism_in_python.md)
   * [Pandas](python/pandas.md)
   * [sklearn](python/sklearn.md)
@@ -93,5 +94,4 @@
 * [Parallel](parallel/parallel.md)
   * [Introduction of Parallel Computing](parallel/parallel_concept.md)
   * [Multiprogramming, Multiprocessing, Multitasking](parallel/multiprogramming,_multiprocessing,_multitasking.md)
-  * [Threading in Python](parallel/threading_in_python.md)
 
