@@ -93,7 +93,7 @@
   * [Python access MySQL](database/python_access_mysql.md)
   * [R access SQLite](database/r_access_sqlite.md)
   * [Mongodb](database/mongodb.md)
-  * [Redis](database/redis.md)
+* [Redis](redis/README.md)
 * [Parallel](parallel/README.md)
   * [Introduction of Parallel Computing](parallel/parallel_concept.md)
   * [Multiprogramming, Multiprocessing, Multitasking](parallel/multiprogramming,_multiprocessing,_multitasking.md)
