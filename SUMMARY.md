@@ -62,6 +62,7 @@
   * [Memory allocation](cpp/cpp_memory_allocation.md)
   * [Object-Oriented Programming](cpp/cpp_object-oriented_programming.md)
 * [Java](java/README.md)
+* [C\#/ASP.NET](csharp/README.md)
 * [GO](go/README.md)
 * [Dynamic](dynamic/dynamic.md)
   * [Perl](dynamic/perl.md)
@@ -102,9 +103,5 @@
 * [Compression](compression/compression.md)
   * [lz-string](compression/lz-string.md)
   * [gzip in Python](compression/gzip_in_python.md)
-* [Network](network/network.md)
-  * [FTP in C\#](network/ftp_in_csharp.md)
-  * [FTP in Java](network/ftp_in_java.md)
-  * [Firewall by IP Address in C\#](network/firewall_by_ip_address_in_csharp.md)
-* [Java](java/README.md)
+* C\#/ASP.NET
 
