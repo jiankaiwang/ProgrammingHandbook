@@ -42,6 +42,7 @@
   * [Access MySQL](python/python_access_mysql.md)
   * [Pandas](python/pandas.md)
   * [sklearn](python/sklearn.md)
+  * [gzip compression](python/gzip_in_python.md)
 * [Perl](perl/README.md)
   * [Memory allocation](perl/perl_memory_allocation.md)
   * [Object-Oriented Programming](perl/perl_object-oriented_programming.md)
@@ -95,4 +96,6 @@
 * [Parallel](parallel/README.md)
   * [Introduction of Parallel Computing](parallel/parallel_concept.md)
   * [Multiprogramming, Multiprocessing, Multitasking](parallel/multiprogramming,_multiprocessing,_multitasking.md)
+* [Compression](compression/README.md)
+  * [lz-string](compression/lz-string.md)
 
