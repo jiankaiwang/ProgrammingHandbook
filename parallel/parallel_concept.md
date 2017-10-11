@@ -2,24 +2,24 @@
 
 <script type="text/javascript" src="../js/general.js"></script>
 
-###Fine-grained, coarse-grained, and embarrassing parallelism
+### Fine-grained, coarse-grained, and embarrassing parallelism
 ---
 
 Applications are often classified according to ** how often their subtasks need to synchronize or communicate with each other **. An application exhibits ** fine-grained parallelism ** if its subtasks must communicate many times per second; it exhibits ** coarse-grained parallelism ** if they do not communicate many times per second, and it is ** embarrassingly parallel ** if they rarely or never have to communicate. Embarrassingly parallel applications are considered the easiest to parallelize.
 
-###Cluster
+### Cluster
 ---
 
 In a computer system, a cluster is ** a group of servers and other resources that act like a single system ** and enable high availability and, in some cases, load balancing and parallel processing.
 
-###Symmetric Multi-Processing (SMP)
+### Symmetric Multi-Processing (SMP)
 ---
 
 * Symmetric multiprocessing (SMP) ** involves a symmetric multiprocessor system hardware and software architecture where two or more identical processors connect to a single, shared main memory, have full access to all I/O devices, and are controlled by a single operating system instance that treats all processors equally **, reserving none for special purposes. Most multiprocessor systems today use an SMP architecture. ** In the case of multi-core processors, the SMP architecture applies to the cores, treating them as separate processors **.
 
 * SMP systems are tightly coupled multiprocessor systems with a pool of homogeneous processors running independently, each processor executing different programs and working on different data and with capability of sharing common resources (memory, I/O device, interrupt system and so on) and connected using a system bus or a crossbar.
 
-###Computing compare 
+### Computing compare 
 ---
 
 * Symmetric Multiprocessing
