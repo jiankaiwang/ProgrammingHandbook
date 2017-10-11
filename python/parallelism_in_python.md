@@ -1,4 +1,4 @@
-# Parallelism in Python
+# Parallelism
 
 <script type="text/javascript" src="../js/general.js"></script>
 
