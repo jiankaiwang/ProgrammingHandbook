@@ -1,16 +1,6 @@
 {
-  "plugins" : [ "mathjax","autocover", "addcssjs" ],
+  "plugins" : [ "autocover", "addcssjs" ],
   "pluginsConfig": {
-    "include-highlight": {
-      "extensionToLanguage": {
-        "R": "r",
-        "Javascript": "js",
-        "C++": "cpp",
-        "Java": "java",
-        "Python": "py",
-        "SQL": "sql"
-      }
-    },
     "autocover": {
         "title": "Programming Language Handbook",
         "author": "J.K. Wang",
@@ -26,9 +16,6 @@
         "background": {
             "color": "#FFF"
         }
-    },
-    "mathjax":{
-        "forceSVG": true
     },
     "addcssjs": {
       "js": ["js/general.js"]
