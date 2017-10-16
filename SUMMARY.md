@@ -44,7 +44,7 @@
   * [gzip compression](python/gzip_in_python.md)
   * [Pandas](python/pandas.md)
   * [sklearn](python/sklearn.md)
-  * scipy
+  * [scipy](python/scipy.md)
 * [Perl](perl/README.md)
   * [Memory allocation](perl/perl_memory_allocation.md)
   * [Object-Oriented Programming](perl/perl_object-oriented_programming.md)
