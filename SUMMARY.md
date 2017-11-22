@@ -98,10 +98,10 @@
 * [MySQL](mysql/README.md)
 * [Mongodb](mongodb/README.md)
 * [Redis](redis/README.md)
+* [Cassandra](cassandra/README.md)
 * [Parallel](parallel/README.md)
   * [Introduction of Parallel Computing](parallel/parallel_concept.md)
   * [Multiprogramming, Multiprocessing, Multitasking](parallel/multiprogramming,_multiprocessing,_multitasking.md)
 * [Compression](compression/README.md)
   * [lz-string](compression/lz-string.md)
-* [Cassandra](cassandra/README.md)
 
