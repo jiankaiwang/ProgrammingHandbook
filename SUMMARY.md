@@ -1,7 +1,6 @@
 # Summary
 
 * [Introduction](README.md)
-* [Tool List](tool_list.md)
 * [License](license/license.md)
   * [BSD License](license/bsd_license.md)
   * [Apache License](license/apache-license.md)
@@ -86,6 +85,8 @@
   * [List and Dictionary](javascript/list_and_dictionary.md)
   * [Javascript vs. jQuery](javascript/javascript_jquery.md)
   * [Regular expression](javascript/js_regular_expression.md)
+  * [WebAssembly](javascript/webassembly.md)
+    * [Quick Start](javascript/webassembly_quickstart.md)
 * [TypeScript](typescript/README.md)
 * [CSS](css/README.md)
   * [Circle, Triangle, Rectangle, Hexagonal in CSS](css/circle_triangle_rectangle_hexagonal_in_css.md)
