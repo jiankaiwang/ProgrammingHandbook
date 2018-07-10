@@ -1,14 +1,13 @@
 # Parallelism
 
-<script type="text/javascript" src="../js/general.js"></script>
+
 
 ###Background
----
-
 * OpenMP is the kind of open-sourced tools used in parallel computing. Mostly it is used in complied languages, e.g. C, C++, etc. The following are some examples showing how to use OpenMP.
 
+
+
 ###Used in Visual Studio C++
----
 
 ```cpp
 // OpenMP might be activated by manual
@@ -41,8 +40,9 @@ int main() {
 }
 ```
 
+
+
 ###Used in C++ by GNU compiler
----
 
 ```cpp
 /*

@@ -1,6 +1,6 @@
 # FTP in Java
 
-<script type="text/javascript" src="../js/general.js"></script>
+
 
 * Necessary resource : [commons-net-3.4.jar (org.apache)](http://commons.apache.org/proper/commons-net/download_net.html)
 
@@ -8,8 +8,9 @@
   1. FTP Upload : [https://github.com/jiankaiwang/seed/blob/master/java/FTPUpload.java](https://github.com/jiankaiwang/seed/blob/master/java/FTPUpload.java)
   2. FTP Download : [https://github.com/jiankaiwang/seed/blob/master/java/FTPDownload.java](https://github.com/jiankaiwang/seed/blob/master/java/FTPDownload.java)
 
+
+
 ###FTP Upload 函式
----
 
 底下為實作出將串流傳入上傳至 ftp 的內容。
 

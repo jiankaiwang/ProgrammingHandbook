@@ -1,10 +1,8 @@
 # GO Language
 
-<script type="text/javascript" src="../js/general.js"></script>
 
-### Background
----
 
+## Background
 * Developed By **Google**
 * Designer : 
     * Robert Griesemer, 
@@ -17,8 +15,8 @@
 * Invoked Languages : **C** / Oberon / Limbo
 
 
-### Programming Language
----
+
+## Programming Language
 
 * static type / strong data type
 * Compiled : gc, gccgo
@@ -33,9 +31,17 @@
     * Non-blocked by go syntax
 
 
-### Necessary Resources
----
 
+## Content
+
+
+
+* [Quickstart](quickstart.md)
+
+
+
+
+## Necessary Resources
 * A tour of GO : [https://tour.golang.org](https://tour.golang.org)
 * How to write GO code : [https://golang.org/doc/code.html](https://golang.org/doc/code.html)
 * The Go Programming Language Specification : [https://golang.org/ref/spec](https://golang.org/ref/spec)
@@ -43,33 +49,4 @@
 * 《Effective Go》中英双语版 : [https://www.gitbook.com/book/bingohuang/effective-go-zh-en/details](https://www.gitbook.com/book/bingohuang/effective-go-zh-en/details)
 * Effective go 正體中文翻譯 : [https://ronmi.github.io/post/go/effectivego/](https://ronmi.github.io/post/go/effectivego/)
 
-### Environment Variable Setting
----
 
-* Windows
-    * Set **GOPATH** in environment setting with the value pointing to the specific directory, e.g. **C:\work**.
-
-### Necessary tools
----    
-
-* GO Core : [https://golang.org/](https://golang.org/)
-
-* Suggested Tool : [Visual Studio Code](https://code.visualstudio.com/)
-    * install Necessary Debug tool on VSCode : ```go get github.com/derekparker/delve/cmd/dlv```
-    
-### Action On Command
----
-
-```batch
-# go version
-> go version
-
-# build the source code
-> go build filePath
-
-# download and install the package
-> go get packageURI
-
-# format the source code
-> go fmt filePath
-```

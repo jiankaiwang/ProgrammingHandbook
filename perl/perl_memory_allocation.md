@@ -1,6 +1,6 @@
 # Memory allocation in perl
 
-<script type="text/javascript" src="../js/general.js"></script>
+
 
 ###Perl (dynamic-typed)
 ---

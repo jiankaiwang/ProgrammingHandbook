@@ -1,10 +1,8 @@
 # Object-Oriented Programming in C++
 
-<script type="text/javascript" src="../js/general.js"></script>
+
 
 ###Class definition
----
-
 ```cpp
 // the header containing the object information
 #include <string>
@@ -38,8 +36,9 @@ class person {
 };
 ```
 
+
+
 ###Create a object
----
 
 ```cpp
 // the main programming body use the header containing the object information	

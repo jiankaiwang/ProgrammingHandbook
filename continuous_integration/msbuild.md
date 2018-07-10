@@ -1,10 +1,8 @@
 # MsBuild : 開發 Windows 軟體的建置工具
 
-<script type="text/javascript" src="../js/general.js"></script>
+
 
 ### 基本 MsBuild 框架
----
-
 * 由 XML 格式定義一個專案中有哪些要進行建置的 Target，並可以依照參數來執行建置。
 
 * 基本格式如下 (可以直接複製)

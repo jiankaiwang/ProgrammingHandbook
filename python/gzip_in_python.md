@@ -1,6 +1,6 @@
 # gzip in Python
 
-<script type="text/javascript" src="../js/general.js"></script>
+
 
 gzip 為 Unix 中常見的檔案壓縮與解壓縮演算法，底下透過 Python 實作 gzip 壓縮。
 
