@@ -1,10 +1,8 @@
 # Python access MySQL
 
-<script type="text/javascript" src="../js/general.js"></script>
 
-###Class-based definition
----
 
+##Class-based definition
 ```python
 # file name: GCS.def.py
 # the object designed would be used on the entry
@@ -139,9 +137,7 @@ class import_def:
     #---------------------------------
 ```
 
-###Usage
----
-
+##Usage
 * 底下是在 python 中產生物件的使用方法。
 
 ```python

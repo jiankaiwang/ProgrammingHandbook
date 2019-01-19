@@ -14,7 +14,7 @@ This book is designed to summarize different kinds of programming languages, inc
   
 
 * Reference
-  * Github (main) : https://github.com/jiankaiwang/ProgrammingHandbook.git
+  * Github (main) : https://github.com/jiankaiwang/ProgrammingHandbook
   * Gitbook (update no more) : https://jiankaiwang.gitbooks.io/programming_languages/content/
 
 

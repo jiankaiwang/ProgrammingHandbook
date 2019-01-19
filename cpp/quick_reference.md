@@ -2,7 +2,7 @@
 
 
 
-### Arithmetic functions
+## Arithmetic functions
 
 | 宣告                       | 說明/例子                                                 | 標頭檔  |
 | -------------------------- | --------------------------------------------------------- | ------- |
@@ -17,7 +17,7 @@
 | double ceil(double);       | 返回最接近的大整數double res = ceil(-1.2); //res = -1.0;  | cmath   |
 | double floor(double);      | 返回最接近的小整數double res = floor(-1.2); //res = -2.0; | cmath   |
 
-### 檔案 I/O 成員函式
+## 檔案 I/O 成員函式
 
 | 宣告                                                         | 說明/例子                                                    | 標頭檔             |
 | ------------------------------------------------------------ | ------------------------------------------------------------ | ------------------ |
@@ -38,7 +38,7 @@
 | stream_var.setf(Flag);                                       | 依旗標來調整輸入輸出格式，如<br>ios::showpoint 小數點<br>ios::fixed 顯示精確位小數點 | fstream / iostream |
 | stream_var.unsetf(Flag);                                     | 將輸入輸出 Flag 設定取消                                     | fstream / iostream |
 
-### Character Functions
+## Character Functions
 
 | 宣告                | 說明/例子                                       | 標頭檔 |
 | ------------------- | ----------------------------------------------- | ------ |
@@ -53,7 +53,7 @@
 | int tolower(char);  | 回傳小寫的 ascii code number                    | cctype |
 | int toupper(char);  | 回傳大寫的 ascii code number                    | cctype |
 
-### C-String functions
+## C-String functions
 
 | 宣告                                               | 說明/例子                                                    | 標頭檔  |
 | -------------------------------------------------- | ------------------------------------------------------------ | ------- |
@@ -72,7 +72,7 @@
 | (void\*) strrchr(c-string_var, char)               | 檢查 character 在 c-string_var 中最後的位置，顯示之後字串，回傳  null 為沒有(可用 bool 來檢測) | cstring |
 | (void) memset(array, initValue, sizeof(array))     | 針對 array 內所有元素進行初始化，其初始值為 initValue        | cstring |
 
-### String function：皆須 header string
+## String function：皆須 header string
 
 | 類型                | 方法                                                         |
 | ------------------- | ------------------------------------------------------------ |
@@ -85,21 +85,39 @@
 | to const char array | str.c_str(); //需用指標或一個一個存入 char 陣列中            |
 | 取得長度            | Str.length(); //類似 strlen(cstr_exp) ，不含  ‘\0’           |
 
-### Random Number Generator：以時間種子為例
+## vector
+
+| 宣告                     | 說明             | 標頭   |
+| ------------------------ | ---------------- | ------ |
+| vector<T> v1             | 初始化           | vector |
+| vector<T> v1(v2)         | 初始化           | vector |
+| vector<T> v1(n, i)       | 初始化           | vector |
+| vector.empty()           | 是否為空         | vector |
+| vector.size()            | 大小             | vector |
+| vector.begin()           | 初始位置         | vector |
+| vector.end()             | 結束位置         | vector |
+| vector[index]            | 取得值           | vector |
+| vector.push_back()       | 加入最後一個位置 | vector |
+| vector<T>::iterator iter | 指標使用         | vector |
+
+
+
+## Random Number Generator：以時間種子為例
 
 | 使用                                         | 取得範圍              |
 | -------------------------------------------- | --------------------- |
 | //#ctime<br />void srand((unsigned) time(0)) | int rand() % (range); |
 
-### 三角函數：皆須引用 cmath
+## 三角函數：皆須引用 cmath
 
 | 使用                         | 說明                                    |
 | ---------------------------- | --------------------------------------- |
 | double (TrigonFunc)(double); | TrigonFunc 為 sin、cos、tan、acos、sinh |
 
-### 演算法
+## 演算法
 
-| 宣告                                | 說明/例子                                                    | 標頭檔    |
-| ----------------------------------- | ------------------------------------------------------------ | --------- |
-| (void) sort(memPos, memPos+Length); | 對記憶體位址 memPos，及此位址開始往後 Length 個元素，進行排序 | algorithm |
+| 宣告                                             | 說明/例子                                                    | 標頭檔    |
+| ------------------------------------------------ | ------------------------------------------------------------ | --------- |
+| (void) sort(memPos, memPos+Length);              | 對記憶體位址 memPos，及此位址開始往後 Length 個元素，進行排序 | algorithm |
+| find(container.begin(), container.end(), target) | vector<int>::iterator iter = find(nums.begin(), nums.end(), 10) | algorithm |
 

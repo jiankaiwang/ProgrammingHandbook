@@ -12,6 +12,9 @@
 # import base module
 import matplotlib as mb
 print('Matplotlib version ' + mb.__version__)
+
+# suggested import
+import matplotlib.pyplot as plt
 ```
 
 
@@ -19,12 +22,10 @@ print('Matplotlib version ' + mb.__version__)
 ## Plot
 
 ```python
-# plot the trend line
-df['Births'].plot()
-df['Births'].plot(figsize=(15,5))
-
-# plot the bar chart
-df['Births'].plot.bar()
+# basic plot
+plt.plot(x, y1)
+plt.plot(x, y2, linestyle="--", label="cos")
+plt.show()
 ```
 
 
@@ -32,10 +33,10 @@ df['Births'].plot.bar()
 ## Annotation 
 
 ```python
-# get max value of column Births
-MaxValue = df['Births'].max()
-showText = str(MaxValue) + ":" + \
-        df['Names'][df['Births'] == MaxValue].values,
+plt.xlabel("x")
+plt.ylabel("y")
+plt.title("sin & cos")
+plt.legend()
 
 # plot a image
 # params
@@ -55,5 +56,18 @@ plt.annotate(\
     xycoords=('axes fraction', 'data'), \
     textcoords='offset points'\
 )
+
+plt.show()
 ```
 
+
+
+## Read the Image
+
+```python
+from matplotlib.image import imread
+
+img = imread('lena.jpg')
+plt.imshow(img)
+plt.show()
+```
