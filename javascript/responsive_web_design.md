@@ -1,6 +1,5 @@
 # Responsive Web Design
 
-<script type="text/javascript" src="../js/general.js"></script>
 
 ### 透過 resize 事件與 rendering 函式來達成
 ---
