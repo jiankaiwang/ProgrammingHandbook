@@ -1,6 +1,5 @@
 # CKEditor
 
-<script type="text/javascript" src="../js/general.js"></script>
 
 ###開始使用
 ---

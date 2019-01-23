@@ -1,6 +1,5 @@
 # JQuery activities
 
-<script type="text/javascript" src="../js/general.js"></script>
 
 ###連續使用函式的特性
 ---

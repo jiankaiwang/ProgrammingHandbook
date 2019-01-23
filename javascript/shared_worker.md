@@ -1,7 +1,5 @@
 # shared worker
 
-<script type="text/javascript" src="../js/general.js"></script>
-
 shared worker 能夠被多個程式腳本存取，包含 window、iframe 或其他 worker 執行緒，底下範例實作兩種狀況；
 1. 當其中一個前端頁面傳入參數值給 shared worker 並經過其執行後，會將計算後的値同步傳回給 **所有** 註冊 (透過 port 的形式) 於該 shared worker 的前端頁面。
 2. 當第一個前端頁面創造一個 shared worker，此 worker 便會自行計算與執行，其他前端頁面便可以直接取得已計算的結果，不需重新計算或傳入參數。(** 第一個前端頁面不需要傳入參數 **)
@@ -42,7 +40,7 @@ var myWorker = new SharedWorker("worker.js");
 myWorker.port.postMessage([value.1, value.2]);
 console.log('Message posted to worker');
 ```
- 
+
 * 而在 shared worker 方面，則是透過 ** onconnect() ** 進行監聽，然後透過 ** onmessage() ** 接收來自前端的資料，並利用 ** postMessage ** 將資料回傳給前端頁面，如下範例；
 
 ```Javascript

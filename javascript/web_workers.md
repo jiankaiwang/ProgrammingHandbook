@@ -1,6 +1,5 @@
 # Web Workers
 
-<script type="text/javascript" src="../js/general.js"></script>
 
 ###簡介
 ---
