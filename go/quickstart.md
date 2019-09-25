@@ -21,7 +21,7 @@
 
 ## Action On Command
 
-```go
+```shell
 # go version
 > go version
 
@@ -33,4 +33,7 @@
 
 # format the source code
 > go fmt filePath
+
+# run a golang script
+> go run example.go
 ```
