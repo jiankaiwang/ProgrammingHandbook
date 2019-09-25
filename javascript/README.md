@@ -40,5 +40,6 @@
     * [making a promise object](making_a_promise_object.md)
     * [Async and Await](async_await.md)
     * [Promise.all()](promise_all.md)
+* Module (after ES6)
 
-
+    *   Basis

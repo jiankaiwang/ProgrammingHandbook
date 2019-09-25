@@ -21,12 +21,14 @@
 * static type / strong data type
 * Compiled : gc, gccgo
 * Compared C / C++
-    * Unsupported : exception, inheritance, template, assertion, virtual function
+    * Unsupported : class, exception, inheritance, template, assertion, virtual function
     * Supported : slice, parallel, interface, garbage collection, hash
 * Style : 
     * No need comma
     * {} can’t be replaced on the next line
     * No () for the branch (IF) or loop
+    * declear cases in switch syntax is not required
+        * cases need not to be constants
 * Parallelized : Goroutine
     * Non-blocked by go syntax
 
@@ -34,9 +36,8 @@
 
 ## Content
 
-
-
 * [Quickstart](quickstart.md)
+* [Reference](reference.md)
 
 
 
@@ -46,7 +47,5 @@
 * How to write GO code : [https://golang.org/doc/code.html](https://golang.org/doc/code.html)
 * The Go Programming Language Specification : [https://golang.org/ref/spec](https://golang.org/ref/spec)
 * Effective GO : [https://golang.org/doc/effective_go.html](https://golang.org/doc/effective_go.html)
-* 《Effective Go》中英双语版 : [https://www.gitbook.com/book/bingohuang/effective-go-zh-en/details](https://www.gitbook.com/book/bingohuang/effective-go-zh-en/details)
-* Effective go 正體中文翻譯 : [https://ronmi.github.io/post/go/effectivego/](https://ronmi.github.io/post/go/effectivego/)
 
 
