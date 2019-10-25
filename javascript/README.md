@@ -19,7 +19,6 @@
     * [Javascript vs. JQuery](javascript_jquery.md)
     * [iframe](jquery_iframe.md)
     * [activities](jquery_activities.md)
-
 * Plotly.js
     * [QuickStart](plotly.md)
 * [Leatlet.js](leaflet.js)
@@ -43,3 +42,5 @@
 * Module (after ES6)
 
     *   Basis
+* Advanced
+    * [Best Practices](best_practices.md)
