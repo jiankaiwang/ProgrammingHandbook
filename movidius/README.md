@@ -1,6 +1,0 @@
-# Movidius
-
-
-
-## Content
-
