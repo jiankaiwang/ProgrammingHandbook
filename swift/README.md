@@ -42,3 +42,5 @@ Swift is a general-purpose programming language. This tour guides you on program
   - function declaration with generic data type
   - enumerations with generic data type
   - requirements using where
+* [InOut Arguments](inout.swift)
+  - passed by the reference
